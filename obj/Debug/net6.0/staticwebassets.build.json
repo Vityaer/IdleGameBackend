@@ -1,37 +1,11 @@
 {
   "Version": 1,
-  "Hash": "XXLBcT/mV9Aa13NWEpObkPVu0yZWErPAf1eUvGU7eVI=",
-  "Source": "IdleGameServer",
-  "BasePath": "_content/IdleGameServer",
+  "Hash": "YZqQfAtgU7EudcTAGGXVFd0FnQWADvcXmOQIAKdXGFk=",
+  "Source": "UniverseRift",
+  "BasePath": "_content/UniverseRift",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [
-    {
-      "Name": "IdleGameServer\\wwwroot",
-      "Source": "IdleGameServer",
-      "ContentRoot": "C:\\Users\\vitya\\source\\repos\\IdleGameServer\\wwwroot\\",
-      "BasePath": "_content/IdleGameServer",
-      "Pattern": "**"
-    }
-  ],
-  "Assets": [
-    {
-      "Identity": "C:\\Users\\vitya\\source\\repos\\IdleGameServer\\wwwroot\\index.html",
-      "SourceId": "IdleGameServer",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\vitya\\source\\repos\\IdleGameServer\\wwwroot\\",
-      "BasePath": "_content/IdleGameServer",
-      "RelativePath": "index.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\index.html"
-    }
-  ]
+  "DiscoveryPatterns": [],
+  "Assets": []
 }

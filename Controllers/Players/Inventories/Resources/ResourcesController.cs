@@ -1,0 +1,76 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using UniverseRift.Contexts;
+using UniverseRift.Models.Resources;
+using UniverseRift.Models.Results;
+
+namespace UniverseRift.Controllers.Players.Inventories.Resources
+{
+    public class ResourcesController : Controller, IResourceController
+    {
+        private readonly AplicationContext _context;
+
+        public ResourcesController(AplicationContext context)
+        {
+            _context = context;
+        }
+
+        public async Task CreateResources(int playerId)
+        {
+            foreach (var type in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
+            {
+                await _context.Resources.AddAsync(new Resource { PlayerId = playerId, Type = type, Count = 200, E10 = 0 });
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task AddResources(Resource newRes)
+        {
+            var resources = await _context.Resources.ToListAsync();
+            var resource = resources.Find(res => res.PlayerId == newRes.PlayerId && res.Type == newRes.Type);
+
+            if (resource == null)
+                return;
+
+            resource.Add(newRes);
+            await _context.SaveChangesAsync();
+
+        }
+
+        public async Task SubstactResources(Resource newRes)
+        {
+            var resources = await _context.Resources.ToListAsync();
+            var resource = resources.Find(res => res.PlayerId == newRes.PlayerId && res.Type == newRes.Type);
+
+            if (resource == null)
+                return;
+
+            resource.Subtract(newRes);
+            await _context.SaveChangesAsync();
+        }
+
+
+        public async Task<bool> CheckResource(int playerId, Resource resource, AnswerModel answer)
+        {
+            var resources = await _context.Resources.ToListAsync();
+            var playerResource = resources.Find(res => res.PlayerId == playerId && res.Type == resource.Type);
+
+            if (playerResource == null)
+            {
+                answer.Error = "Player havn't this resource";
+                return false;
+            }
+
+            var enough = playerResource.CheckCount(resource.Count, resource.E10);
+
+            if (!enough)
+            {
+                answer.Error = "Not enough resources";
+                return false;
+            }
+
+            return true;
+        }
+    }
+}
