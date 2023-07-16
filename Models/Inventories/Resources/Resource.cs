@@ -1,9 +1,22 @@
-﻿using UniverseRift.Models.Common;
+﻿using UniverseRift.GameModels;
+using UniverseRift.Models.Common;
 
 namespace UniverseRift.Models.Resources
 {
     public class Resource : BaseInventoryObject
     {
+        public Resource()
+        {
+        }
+
+        public Resource(int playerId, GameResource resource)
+        {
+            PlayerId = playerId;
+            Type = resource.Type;
+            Count = resource.Amount.Mantissa;
+            E10 = resource.Amount.E10;
+        }
+
         public ResourceType Type { get; set; }
 
         public void Add(Resource newRes)

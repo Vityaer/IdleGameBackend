@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Misc.Json;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Common;
 using UniverseRift.Controllers.Players.Inventories.Resources;
+using UniverseRift.MessageData;
 using UniverseRift.Misc;
 using UniverseRift.Models.Heroes;
-using UniverseRift.Models.Inventories.Resources;
+using UniverseRift.Models.Resources;
+using UniverseRift.Models.Results;
 
 namespace UniverseRift.Controllers.Players.Heroes
 {
@@ -12,10 +16,15 @@ namespace UniverseRift.Controllers.Players.Heroes
     {
         private readonly AplicationContext _context;
         private readonly IResourceController _resourcesController;
+        private readonly IJsonConverter _jsonConverter;
+        private readonly ICommonDictionaries _commonDictionaries;
+
         private readonly Random _random = new Random();
 
-        public HeroesController(AplicationContext context, IResourceController resourcesController)
+        public HeroesController(AplicationContext context, IJsonConverter jsonConverter, IResourceController resourcesController, ICommonDictionaries commonDictionaries)
         {
+            _commonDictionaries = commonDictionaries;
+            _jsonConverter = jsonConverter;
             _context = context;
             _resourcesController = resourcesController;
         }
@@ -37,24 +46,52 @@ namespace UniverseRift.Controllers.Players.Heroes
 
         [HttpPost]
         [Route("Heroes/LevelUp")]
-        public async Task LevelUp(int playerId, int heroId)
+        public async Task<AnswerModel> LevelUp(int playerId, int heroId)
         {
+            var answer = new AnswerModel();
+
             var hero = await GetHero(playerId, heroId);
-            
+
             if (hero == null)
-                return;
+            {
+                answer.Error = "Not found hero";
+                return answer;
+            }
 
             if (hero.PlayerId != playerId)
-                return;
-            
+            {
+                answer.Error = "wrong playerId";
+                return answer;
+            }
+            var costContainer = _commonDictionaries.HeroesCostLevelUps["Heroes"];
+
+            var cost = costContainer.GetCostForLevelUp(hero.Level, playerId);
+
+            var checkResource = await _resourcesController.CheckResource(playerId, cost, answer);
+            if(checkResource == false)
+                return answer;
+
+            foreach ( var resource in cost)
+            {
+                //TODO: заменить на функцию для списка ресурсов
+                await _resourcesController.SubstactResources(resource);
+            }
+
+            hero.Level += 1;
             await _context.SaveChangesAsync();
+            answer.Result = "Success";
+            return answer;
         }
 
         [HttpPost]
         [Route("Heroes/GetSimpleHeroes")]
-        public async Task<List<Hero>> GetSimpleHeroes(int playerId, int count)
+        public async Task<AnswerModel> GetSimpleHeroes(int playerId, int count)
         {
-            List<Hero> result = new List<Hero>();
+            Console.WriteLine($"GetSimpleHeroes playerId: {playerId}");
+            var answer = new AnswerModel();
+            var heroesData = new List<HeroData>();
+
+            List<Hero> heroes = new List<Hero>();
             var cost = new Resource { PlayerId = playerId, Type = ResourceType.SimpleHireCard, Count = count, E10 = 0 };
 
             var allHeroes = await _context.HeroTemplates.ToListAsync();
@@ -98,10 +135,14 @@ namespace UniverseRift.Controllers.Players.Heroes
 
                 var hero = new Hero(playerId, heroTemplate);
                 _context.Heroes.Add(hero);
-                result.Add(hero);
+                await _context.SaveChangesAsync();
+
+                var heroData = new HeroData(hero);
+                heroesData.Add(heroData);
             }
-            await _context.SaveChangesAsync();
-            return result;
+
+            answer.Result = _jsonConverter.ToJson(heroesData);
+            return answer;
         }
 
         [HttpPost]
@@ -159,6 +200,33 @@ namespace UniverseRift.Controllers.Players.Heroes
         {
             var hero = await _context.Heroes.FindAsync(heroId);
             return hero;
+        }
+
+
+        [HttpPost]
+        [Route("Heroes/GetPlayerAllHeroes")]
+        public async Task<AnswerModel> GetPlayerAllHeroes(int playerId)
+        {
+            var answer = new AnswerModel();
+
+            var heroes = await _context.Heroes.ToListAsync();
+
+            var playerHeroes = heroes.Where(hero => hero.PlayerId == playerId).ToList();
+
+            answer.Result = _jsonConverter.ToJson(playerHeroes);
+            return answer;
+        }
+
+        [HttpPost]
+        [Route("Heroes/GetAllHeroes")]
+        public async Task<AnswerModel> GetAllHeroes()
+        {
+            var answer = new AnswerModel();
+
+            var heroes = await _context.Heroes.ToListAsync();
+
+            answer.Result = _jsonConverter.ToJson(heroes);
+            return answer;
         }
     }
 }

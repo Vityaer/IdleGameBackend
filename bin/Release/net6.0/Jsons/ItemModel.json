@@ -1,0 +1,818 @@
+[
+  {
+    "Type": 0,
+    "SetName": "Pupil",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 32.0
+      }
+    ],
+    "Rating": "Common",
+    "Id": "PupilWeapon"
+  },
+  {
+    "Type": 2,
+    "SetName": "Pupil",
+    "Bonuses": [
+      {
+        "Name": 3,
+        "Count": 5.0
+      }
+    ],
+    "Rating": null,
+    "Id": "PupilBoots"
+  },
+  {
+    "Type": 1,
+    "SetName": "Pupil",
+    "Bonuses": [
+      {
+        "Name": 1,
+        "Count": 11.0
+      }
+    ],
+    "Rating": null,
+    "Id": "PupilArmor"
+  },
+  {
+    "Type": 3,
+    "SetName": "Pupil",
+    "Bonuses": [
+      {
+        "Name": 2,
+        "Count": 1.0
+      }
+    ],
+    "Rating": null,
+    "Id": "PupilAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Peasant",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 51.0
+      }
+    ],
+    "Rating": null,
+    "Id": "PeasantWeapon"
+  },
+  {
+    "Type": 2,
+    "SetName": "Peasant",
+    "Bonuses": [
+      {
+        "Name": 3,
+        "Count": 8.0
+      }
+    ],
+    "Rating": null,
+    "Id": "PeasantBoots"
+  },
+  {
+    "Type": 1,
+    "SetName": "Peasant",
+    "Bonuses": [
+      {
+        "Name": 1,
+        "Count": 18.0
+      }
+    ],
+    "Rating": null,
+    "Id": "PeasantArmor"
+  },
+  {
+    "Type": 3,
+    "SetName": "Peasant",
+    "Bonuses": [
+      {
+        "Name": 3,
+        "Count": 11.0
+      }
+    ],
+    "Rating": null,
+    "Id": "PeasantAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Militiaman",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 82.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MilitiamanWeapon"
+  },
+  {
+    "Type": 2,
+    "SetName": "Militiaman",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MilitiamanBoots"
+  },
+  {
+    "Type": 1,
+    "SetName": "Militiaman",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MilitiamanArmor"
+  },
+  {
+    "Type": 3,
+    "SetName": "Militiaman",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MilitiamanAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Monk",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MonkWeapon"
+  },
+  {
+    "Type": 2,
+    "SetName": "Monk",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MonkBoots"
+  },
+  {
+    "Type": 1,
+    "SetName": "Monk",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MonkArmor"
+  },
+  {
+    "Type": 3,
+    "SetName": "Monk",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MonkAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Warrior",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "WarriorWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Warrior",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "WarriorArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Warrior",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "WarriorBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Warrior",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "WarriorAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Feller",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "FellerWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Feller",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "FellerArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Feller",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "FellerBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Feller",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "FellerAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Soldier",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "SoldierWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Soldier",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "SoldierArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Soldier",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "SoldierBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Soldier",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "SoldierAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Minotaur",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MinotaurWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Minotaur",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MinotaurArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Minotaur",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MinotaurBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Minotaur",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "MinotaurAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Demon",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DemonWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Demon",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DemonArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Demon",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DemonBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Demon",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DemonAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Druid",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DruidWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Druid",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DruidArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Druid",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DruidBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Druid",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DruidAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Obedient",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "ObedientWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Obedient",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "ObedientArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Obedient",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "ObedientBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Obedient",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "ObedientAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Devil",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DevilWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Devil",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DevilArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Devil",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DevilBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Devil",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DevilAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Destiny",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DestinyWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Destiny",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DestinyArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Destiny",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DestinyBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Destiny",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "DestinyAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Archangel",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "ArchangelWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Archangel",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "ArchangelArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Archangel",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "ArchangelBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Archangel",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "ArchangelAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Titan",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "TitanWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Titan",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "TitanArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Titan",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "TitanBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Titan",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "TitanAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "God",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "GodWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "God",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "GodArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "God",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "GodBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "God",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "GodAmulet"
+  },
+  {
+    "Type": 0,
+    "SetName": "Rubbish",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "RubbishWeapon"
+  },
+  {
+    "Type": 1,
+    "SetName": "Rubbish",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "RubbishArmor"
+  },
+  {
+    "Type": 2,
+    "SetName": "Rubbish",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "RubbishBoots"
+  },
+  {
+    "Type": 3,
+    "SetName": "Rubbish",
+    "Bonuses": [
+      {
+        "Name": 0,
+        "Count": 0.0
+      }
+    ],
+    "Rating": null,
+    "Id": "RubbishAmulet"
+  }
+]

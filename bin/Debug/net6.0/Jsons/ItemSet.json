@@ -1,0 +1,87 @@
+[
+  {
+    "Name": "Rubbish",
+    "ExtraBonuses": [],
+    "Id": "Rubbish"
+  },
+  {
+    "Name": "Peasant",
+    "ExtraBonuses": [],
+    "Id": "Peasant"
+  },
+  {
+    "Name": "Militiaman",
+    "ExtraBonuses": [],
+    "Id": "Militiaman"
+  },
+  {
+    "Name": "Monk",
+    "ExtraBonuses": [],
+    "Id": "Monk"
+  },
+  {
+    "Name": "Warrior",
+    "ExtraBonuses": [],
+    "Id": "Warrior"
+  },
+  {
+    "Name": "Feller",
+    "ExtraBonuses": [],
+    "Id": "Feller"
+  },
+  {
+    "Name": "Soldier",
+    "ExtraBonuses": [],
+    "Id": "Soldier"
+  },
+  {
+    "Name": "Minotaur",
+    "ExtraBonuses": [],
+    "Id": "Minotaur"
+  },
+  {
+    "Name": "Demon",
+    "ExtraBonuses": [],
+    "Id": "Demon"
+  },
+  {
+    "Name": "Druid",
+    "ExtraBonuses": [],
+    "Id": "Druid"
+  },
+  {
+    "Name": "Obedient",
+    "ExtraBonuses": [],
+    "Id": "Obedient"
+  },
+  {
+    "Name": "Devil",
+    "ExtraBonuses": [],
+    "Id": "Devil"
+  },
+  {
+    "Name": "Destiny",
+    "ExtraBonuses": [],
+    "Id": "Destiny"
+  },
+  {
+    "Name": "Archangel",
+    "ExtraBonuses": [],
+    "Id": "Archangel"
+  },
+  {
+    "Name": "Titan",
+    "ExtraBonuses": [],
+    "Id": "Titan"
+  },
+  {
+    "Name": "God",
+    "ExtraBonuses": [],
+    "Id": "God"
+  },
+  {
+    "Name": "Pupil",
+    "ExtraBonuses": [],
+    "Id": "Pupil"
+  }
+]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vitya\\source\\repos\\UniverseRift\\UniverseRift.csproj": {}
+    "C:\\Users\\vitya\\source\\repos\\Backend\\IdleGameBackend\\UniverseRift.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vitya\\source\\repos\\UniverseRift\\UniverseRift.csproj": {
+    "C:\\Users\\vitya\\source\\repos\\Backend\\IdleGameBackend\\UniverseRift.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitya\\source\\repos\\UniverseRift\\UniverseRift.csproj",
+        "projectUniqueName": "C:\\Users\\vitya\\source\\repos\\Backend\\IdleGameBackend\\UniverseRift.csproj",
         "projectName": "UniverseRift",
-        "projectPath": "C:\\Users\\vitya\\source\\repos\\UniverseRift\\UniverseRift.csproj",
+        "projectPath": "C:\\Users\\vitya\\source\\repos\\Backend\\IdleGameBackend\\UniverseRift.csproj",
         "packagesPath": "C:\\Users\\vitya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitya\\source\\repos\\UniverseRift\\obj\\",
+        "outputPath": "C:\\Users\\vitya\\source\\repos\\Backend\\IdleGameBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vitya\\AppData\\Roaming\\NuGet\\NuGet.Config",

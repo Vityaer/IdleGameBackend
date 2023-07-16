@@ -25,6 +25,10 @@
 
   <ItemGroup>
     <Folder Include="Controllers\Players\Inventories\Splinters\" />
+    <Folder Include="Views\Heroes\" />
+    <Folder Include="Views\Players\" />
+    <Folder Include="Views\Resources\" />
+    <Folder Include="Jsons\" />
   </ItemGroup>
 
 </Project>

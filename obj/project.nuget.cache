@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2lX/tFacviqkhLONHBERPV9Bu0yqFGMfRzrG8cdjz/7mnC0A6bsiDZ5nz5m7yUgeEV9Il6b4LOQUO1JlbOupjw==",
+  "dgSpecHash": "qqa5scPaKX+qU0DNMSMIY3SCZG0QsHdyJJI0puUk5+vDP/d2gDlg+2JLabdkPP83ms+xPDc1xkymafH1ckiDGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vitya\\source\\repos\\UniverseRift\\UniverseRift.csproj",
+  "projectFilePath": "C:\\Users\\vitya\\source\\repos\\Backend\\IdleGameBackend\\UniverseRift.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vitya\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\vitya\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

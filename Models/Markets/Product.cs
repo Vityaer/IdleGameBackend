@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using UniverseRift.Models.Inventories.Resources;
+using UniverseRift.Models.Resources;
 
 namespace UniverseRift.Models.Markets
 {

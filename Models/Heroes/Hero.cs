@@ -22,6 +22,7 @@
             PlayerId = playerId;
             HeroTemplateId = heroTemplate.Id;
             ViewId = heroTemplate.DefaultViewId;
+            Level = 1;
             Rating = 1;
         }
     }

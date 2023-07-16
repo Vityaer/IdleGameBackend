@@ -1,0 +1,71 @@
+[
+  {
+    "Resources": [
+      {
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 3,
+        "Amount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 9,
+        "Amount": {
+          "Mantissa": 5.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 15,
+        "Amount": {
+          "Mantissa": 3.0,
+          "E10": 0
+        }
+      }
+    ],
+    "Items": [],
+    "Splinters": [],
+    "Id": "Registration",
+    "Objects": [
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 3,
+        "Amount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 9,
+        "Amount": {
+          "Mantissa": 5.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 15,
+        "Amount": {
+          "Mantissa": 3.0,
+          "E10": 0
+        }
+      }
+    ]
+  }
+]

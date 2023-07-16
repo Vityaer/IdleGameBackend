@@ -23,6 +23,10 @@ namespace UniverseRift.Controllers.Players.Inventories.Resources
             }
 
             await _context.SaveChangesAsync();
+
+            var result = await _context.Players.ToListAsync();
+            var resources = await _context.Resources.ToListAsync();
+
         }
 
         public async Task AddResources(Resource newRes)
@@ -50,6 +54,52 @@ namespace UniverseRift.Controllers.Players.Inventories.Resources
             await _context.SaveChangesAsync();
         }
 
+        public async Task<bool> CheckResource(int playerId, List<Resource> resources, AnswerModel answer)
+        {
+            var allResources = await _context.Resources.ToListAsync();
+
+            var playerResource = new List<Resource>();
+            foreach (var resource in resources)
+            {
+                var res = allResources.Find(res => res.PlayerId == playerId && res.Type == resource.Type);
+                if(res != null)
+                    playerResource.Add(res);
+            }
+
+            if (playerResource.Count == 0)
+            {
+                answer.Error = "Player havn't this resource";
+                return false;
+            }
+
+            var enough = true;
+
+            foreach (var resource in resources)
+            {
+                var res = playerResource.Find(res => res.Type == resource.Type);
+                if (res != null)
+                {
+                    if (!res.CheckCount(resource.Count, resource.E10))
+                    {
+                        enough = false;
+                        break;
+                    }
+                }
+                else
+                {
+                    enough = false;
+                    break;
+                }
+            }
+
+            if (!enough)
+            {
+                answer.Error = "Not enough resources";
+                return false;
+            }
+
+            return true;
+        }
 
         public async Task<bool> CheckResource(int playerId, Resource resource, AnswerModel answer)
         {

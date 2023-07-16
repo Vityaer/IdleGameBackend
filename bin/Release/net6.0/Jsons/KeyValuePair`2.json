@@ -1,0 +1,12 @@
+[
+  {
+    "Key": "ForgeModel",
+    "Value": {
+      "$type": "Models.City.Forges.ForgeModel, Assembly-CSharp",
+      "Sets": [
+        "Obedient"
+      ],
+      "Id": "forge"
+    }
+  }
+]

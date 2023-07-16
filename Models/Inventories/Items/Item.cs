@@ -7,6 +7,8 @@ namespace UniverseRift.Models.Items
     {
         public string Name { get; set; } = string.Empty;
 
+        public Item() { }
+
         public Item(int playerId, string name, int count = 1)
         {
             PlayerId = playerId;

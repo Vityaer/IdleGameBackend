@@ -53,7 +53,7 @@ namespace UniverseRift.Controllers.Buildings
         }
 
         [HttpPost]
-        [Route("TaskBoard/StartTask")]
+        [Route("TaskBoard/CompleteTask")]
         public async Task<AnswerModel> CompleteTask(int taskId, int playerId)
         {
             var answer = new AnswerModel();

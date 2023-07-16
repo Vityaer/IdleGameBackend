@@ -11,7 +11,7 @@ namespace UniverseRift.Models.Heroes
         public string Id { get; set; } = string.Empty;
         public Race Race { get; set; }
         public Rare Rare { get; set; }
-        public int Rating { get; set; }
+        public int Rating { get; set; } = 1;
         public string DefaultViewId { get; set; } = string.Empty;
     }
 }

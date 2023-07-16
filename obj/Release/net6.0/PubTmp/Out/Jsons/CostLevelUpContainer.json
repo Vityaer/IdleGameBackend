@@ -1,0 +1,31 @@
+[
+  {
+    "LevelsCost": [
+      {
+        "level": 1,
+        "Cost": [
+          {
+            "Type": 0,
+            "Amount": {
+              "Mantissa": 40.0,
+              "E10": 0
+            }
+          },
+          {
+            "Type": 0,
+            "Amount": {
+              "Mantissa": 15.0,
+              "E10": 0
+            }
+          }
+        ],
+        "typeIncrease": 0,
+        "ListIncrease": [
+          10.0,
+          8.0
+        ]
+      }
+    ],
+    "Id": "Heroes"
+  }
+]

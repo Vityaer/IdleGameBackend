@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "Common",
+    "Name": "Common"
+  },
+  {
+    "Id": "Rare",
+    "Name": "Rare"
+  }
+]

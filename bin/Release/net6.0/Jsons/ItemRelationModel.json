@@ -1,0 +1,834 @@
+[
+  {
+    "ResultItemName": "PeasantWeapon",
+    "ItemIngredientName": "PupilWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipePeasantWeapon"
+  },
+  {
+    "ResultItemName": "PeasantArmor",
+    "ItemIngredientName": "PupilArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipePeasantArmor"
+  },
+  {
+    "ResultItemName": "PeasantBoots",
+    "ItemIngredientName": "PupilBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipePeasantBoots"
+  },
+  {
+    "ResultItemName": "PeasantAmulet",
+    "ItemIngredientName": "PupilAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipePeasantAmulet"
+  },
+  {
+    "ResultItemName": "MilitiamanWeapon",
+    "ItemIngredientName": "PeasantWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMilitiamanWeapon"
+  },
+  {
+    "ResultItemName": "MilitiamanArmor",
+    "ItemIngredientName": "PeasantArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMilitiamanArmor"
+  },
+  {
+    "ResultItemName": "MilitiamanBoots",
+    "ItemIngredientName": "PeasantBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMilitiamanBoots"
+  },
+  {
+    "ResultItemName": "MilitiamanAmulet",
+    "ItemIngredientName": "PeasantAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMilitiamanAmulet"
+  },
+  {
+    "ResultItemName": "MonkWeapon",
+    "ItemIngredientName": "MilitiamanWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMonkWeapon"
+  },
+  {
+    "ResultItemName": "MonkArmor",
+    "ItemIngredientName": "MilitiamanArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMonkArmor"
+  },
+  {
+    "ResultItemName": "MonkBoots",
+    "ItemIngredientName": "MilitiamanBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMonkBoots"
+  },
+  {
+    "ResultItemName": "MonkAmulet",
+    "ItemIngredientName": "MilitiamanAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMonkAmulet"
+  },
+  {
+    "ResultItemName": "WarriorWeapon",
+    "ItemIngredientName": "MonkWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeWarriorWeapon"
+  },
+  {
+    "ResultItemName": "WarriorArmor",
+    "ItemIngredientName": "MonkArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeWarriorArmor"
+  },
+  {
+    "ResultItemName": "WarriorBoots",
+    "ItemIngredientName": "MonkBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeWarriorBoots"
+  },
+  {
+    "ResultItemName": "WarriorAmulet",
+    "ItemIngredientName": "MonkAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeWarriorAmulet"
+  },
+  {
+    "ResultItemName": "FellerWeapon",
+    "ItemIngredientName": "WarriorWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeFellerWeapon"
+  },
+  {
+    "ResultItemName": "FellerArmor",
+    "ItemIngredientName": "WarriorArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeFellerArmor"
+  },
+  {
+    "ResultItemName": "FellerBoots",
+    "ItemIngredientName": "WarriorBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeFellerBoots"
+  },
+  {
+    "ResultItemName": "FellerAmulet",
+    "ItemIngredientName": "WarriorAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeFellerAmulet"
+  },
+  {
+    "ResultItemName": "SoldierWeapon",
+    "ItemIngredientName": "FellerWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeSoldierWeapon"
+  },
+  {
+    "ResultItemName": "SoldierArmor",
+    "ItemIngredientName": "FellerArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeSoldierArmor"
+  },
+  {
+    "ResultItemName": "SoldierBoots",
+    "ItemIngredientName": "FellerBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeSoldierBoots"
+  },
+  {
+    "ResultItemName": "SoldierAmulet",
+    "ItemIngredientName": "FellerAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeSoldierAmulet"
+  },
+  {
+    "ResultItemName": "MinotaurWeapon",
+    "ItemIngredientName": "SoldierWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMinotaurWeapon"
+  },
+  {
+    "ResultItemName": "MinotaurArmor",
+    "ItemIngredientName": "SoldierArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMinotaurArmor"
+  },
+  {
+    "ResultItemName": "MinotaurBoots",
+    "ItemIngredientName": "SoldierBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMinotaurBoots"
+  },
+  {
+    "ResultItemName": "MinotaurAmulet",
+    "ItemIngredientName": "SoldierAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeMinotaurAmulet"
+  },
+  {
+    "ResultItemName": "DemonWeapon",
+    "ItemIngredientName": "MinotaurWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDemonWeapon"
+  },
+  {
+    "ResultItemName": "DemonArmor",
+    "ItemIngredientName": "MinotaurArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDemonArmor"
+  },
+  {
+    "ResultItemName": "DemonBoots",
+    "ItemIngredientName": "MinotaurBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDemonBoots"
+  },
+  {
+    "ResultItemName": "DemonAmulet",
+    "ItemIngredientName": "MinotaurAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDemonAmulet"
+  },
+  {
+    "ResultItemName": "DruidWeapon",
+    "ItemIngredientName": "DemonWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDruidWeapon"
+  },
+  {
+    "ResultItemName": "DruidArmor",
+    "ItemIngredientName": "DemonArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDruidArmor"
+  },
+  {
+    "ResultItemName": "DruidBoots",
+    "ItemIngredientName": "DemonBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDruidBoots"
+  },
+  {
+    "ResultItemName": "DruidAmulet",
+    "ItemIngredientName": "DemonAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDruidAmulet"
+  },
+  {
+    "ResultItemName": "ObedientWeapon",
+    "ItemIngredientName": "DruidWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeObedientWeapon"
+  },
+  {
+    "ResultItemName": "ObedientArmor",
+    "ItemIngredientName": "DruidArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeObedientArmor"
+  },
+  {
+    "ResultItemName": "ObedientBoots",
+    "ItemIngredientName": "DruidBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeObedientBoots"
+  },
+  {
+    "ResultItemName": "ObedientAmulet",
+    "ItemIngredientName": "DruidAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeObedientAmulet"
+  },
+  {
+    "ResultItemName": "DevilWeapon",
+    "ItemIngredientName": "ObedientWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDevilWeapon"
+  },
+  {
+    "ResultItemName": "DevilArmor",
+    "ItemIngredientName": "ObedientArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDevilArmor"
+  },
+  {
+    "ResultItemName": "DevilBoots",
+    "ItemIngredientName": "ObedientBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDevilBoots"
+  },
+  {
+    "ResultItemName": "DevilAmulet",
+    "ItemIngredientName": "ObedientAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDevilAmulet"
+  },
+  {
+    "ResultItemName": "DestinyWeapon",
+    "ItemIngredientName": "DevilWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDestinyWeapon"
+  },
+  {
+    "ResultItemName": "DestinyArmor",
+    "ItemIngredientName": "DevilArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDestinyArmor"
+  },
+  {
+    "ResultItemName": "DestinyBoots",
+    "ItemIngredientName": "DevilBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDestinyBoots"
+  },
+  {
+    "ResultItemName": "DestinyAmulet",
+    "ItemIngredientName": "DevilAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeDestinyAmulet"
+  },
+  {
+    "ResultItemName": "ArchangelWeapon",
+    "ItemIngredientName": "DestinyWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeArchangelWeapon"
+  },
+  {
+    "ResultItemName": "ArchangelArmor",
+    "ItemIngredientName": "DestinyArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeArchangelArmor"
+  },
+  {
+    "ResultItemName": "ArchangelBoots",
+    "ItemIngredientName": "DestinyBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeArchangelBoots"
+  },
+  {
+    "ResultItemName": "ArchangelAmulet",
+    "ItemIngredientName": "DestinyAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeArchangelAmulet"
+  },
+  {
+    "ResultItemName": "TitanWeapon",
+    "ItemIngredientName": "ArchangelWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeTitanWeapon"
+  },
+  {
+    "ResultItemName": "TitanArmor",
+    "ItemIngredientName": "ArchangelArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeTitanArmor"
+  },
+  {
+    "ResultItemName": "TitanBoots",
+    "ItemIngredientName": "ArchangelBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeTitanBoots"
+  },
+  {
+    "ResultItemName": "TitanAmulet",
+    "ItemIngredientName": "ArchangelAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeTitanAmulet"
+  },
+  {
+    "ResultItemName": "GodWeapon",
+    "ItemIngredientName": "TitanWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeGodWeapon"
+  },
+  {
+    "ResultItemName": "GodArmor",
+    "ItemIngredientName": "TitanArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeGodArmor"
+  },
+  {
+    "ResultItemName": "GodBoots",
+    "ItemIngredientName": "TitanBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeGodBoots"
+  },
+  {
+    "ResultItemName": "GodAmulet",
+    "ItemIngredientName": "TitanAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipeGodAmulet"
+  },
+  {
+    "ResultItemName": "PupilWeapon",
+    "ItemIngredientName": "RubbishWeapon",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipePupilWeapon"
+  },
+  {
+    "ResultItemName": "PupilArmor",
+    "ItemIngredientName": "RubbishArmor",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipePupilArmor"
+  },
+  {
+    "ResultItemName": "PupilBoots",
+    "ItemIngredientName": "RubbishBoots",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipePupilBoots"
+  },
+  {
+    "ResultItemName": "PupilAmulet",
+    "ItemIngredientName": "RubbishAmulet",
+    "RequireCount": 3,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Id": "RecipePupilAmulet"
+  }
+]
