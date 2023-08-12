@@ -2,7 +2,7 @@
 {
     public interface IJsonConverter
     {
-        T FromJson<T>(string value);
-        string ToJson<T>(T obj);
+        T Deserialize<T>(string value);
+        string Serialize<T>(T obj);
     }
 }

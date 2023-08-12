@@ -28,6 +28,7 @@ namespace UniverseRift.Controllers.Jsons
                 a = a.Replace("\r", string.Empty);
                 a = a.Replace("\n", string.Empty);
                 a = a.Replace("\\", string.Empty);
+                a = a.Replace("\"", string.Empty);
                 answer = string.Concat(answer, a);
             }
             return answer;

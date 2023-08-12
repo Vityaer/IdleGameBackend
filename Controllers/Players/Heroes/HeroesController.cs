@@ -3,25 +3,26 @@ using Microsoft.EntityFrameworkCore;
 using Misc.Json;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
-using UniverseRift.Controllers.Players.Inventories.Resources;
+using UniverseRift.GameModelDatas.Players;
 using UniverseRift.MessageData;
 using UniverseRift.Misc;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
+using UniverseRift.Services.Resources;
 
 namespace UniverseRift.Controllers.Players.Heroes
 {
     public class HeroesController : Controller, IHeroesController
     {
         private readonly AplicationContext _context;
-        private readonly IResourceController _resourcesController;
+        private readonly IResourceManager _resourcesController;
         private readonly IJsonConverter _jsonConverter;
         private readonly ICommonDictionaries _commonDictionaries;
 
         private readonly Random _random = new Random();
 
-        public HeroesController(AplicationContext context, IJsonConverter jsonConverter, IResourceController resourcesController, ICommonDictionaries commonDictionaries)
+        public HeroesController(AplicationContext context, IJsonConverter jsonConverter, IResourceManager resourcesController, ICommonDictionaries commonDictionaries)
         {
             _commonDictionaries = commonDictionaries;
             _jsonConverter = jsonConverter;
@@ -99,7 +100,7 @@ namespace UniverseRift.Controllers.Players.Heroes
             HeroTemplate heroTemplate;
 
             await _resourcesController.SubstactResources(cost);
-
+            //вынести в json
             for (int i = 0; i < count; i++)
             {
                 var rand = _random.Next(0, 10001);
@@ -141,7 +142,7 @@ namespace UniverseRift.Controllers.Players.Heroes
                 heroesData.Add(heroData);
             }
 
-            answer.Result = _jsonConverter.ToJson(heroesData);
+            answer.Result = _jsonConverter.Serialize(heroesData);
             return answer;
         }
 
@@ -213,7 +214,7 @@ namespace UniverseRift.Controllers.Players.Heroes
 
             var playerHeroes = heroes.Where(hero => hero.PlayerId == playerId).ToList();
 
-            answer.Result = _jsonConverter.ToJson(playerHeroes);
+            answer.Result = _jsonConverter.Serialize(playerHeroes);
             return answer;
         }
 
@@ -225,8 +226,26 @@ namespace UniverseRift.Controllers.Players.Heroes
 
             var heroes = await _context.Heroes.ToListAsync();
 
-            answer.Result = _jsonConverter.ToJson(heroes);
+            answer.Result = _jsonConverter.Serialize(heroes);
             return answer;
+        }
+
+        public async Task<HeroesStorage> GetPlayerSave(int playerId)
+        {
+            var result = new HeroesStorage();
+
+            var heroes = await _context.Heroes.ToListAsync();
+
+            var playerHeroes = heroes.FindAll(hero => hero.PlayerId == playerId);
+
+            foreach (var hero in playerHeroes)
+            {
+                result.ListHeroes.Add(new HeroData(hero));
+            }
+
+            result.MaxCountHeroes = 100;
+
+            return result;
         }
     }
 }

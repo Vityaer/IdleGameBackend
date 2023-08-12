@@ -11,10 +11,10 @@ namespace UniverseRift.Controllers.Server
     {
         private readonly AplicationContext _context;
 
-        public readonly ReactiveCommand OnChangeDay = new ReactiveCommand();
-        public readonly ReactiveCommand OnChangeWeek = new ReactiveCommand();
-        public readonly ReactiveCommand OnChangeMonth = new ReactiveCommand();
-        public readonly ReactiveCommand OnChangeGameCycle = new ReactiveCommand();
+        public readonly ReactiveCommand _onChangeDay = new ReactiveCommand();
+        public readonly ReactiveCommand _onChangeWeek = new ReactiveCommand();
+        public readonly ReactiveCommand _onChangeMonth = new ReactiveCommand();
+        public readonly ReactiveCommand _onChangeGameCycle = new ReactiveCommand();
 
         private readonly TimeSpan Day = new TimeSpan(24, 0, 0);
         private readonly TimeSpan Week = new TimeSpan(7, 0, 0, 0);
@@ -24,14 +24,24 @@ namespace UniverseRift.Controllers.Server
         private ServerLifeTime _server;
         private CancellationTokenSource _cancellationTokenSource;
 
+        public ReactiveCommand OnChangeDay => _onChangeDay;
+        public ReactiveCommand OnChangeWeek => _onChangeWeek;
+        public ReactiveCommand OnChangeMonth => _onChangeMonth;
+        public ReactiveCommand OnChangeGameCycle => _onChangeGameCycle;
+
+
         public ServerController(AplicationContext context)
         {
             _context = context;
             _cancellationTokenSource = new CancellationTokenSource();
+        }
+
+        public void OnStartProject()
+        {
             Start(_cancellationTokenSource.Token).Forget();
         }
 
-        public async UniTaskVoid Start(CancellationToken cancellationToken)
+        private async UniTaskVoid Start(CancellationToken cancellationToken)
         {
             var servers = await _context.ServerLifeTimes.ToListAsync();
 
@@ -49,33 +59,83 @@ namespace UniverseRift.Controllers.Server
                 _server.NexGameCycle = startCurrentDay.Add(GameCycle).ToString();
 
                 await _context.ServerLifeTimes.AddAsync(_server);
+
             }
             else
             {
                 _server = servers[0];
             }
-
-            WaitTime(_server.NextDay, Day, OnChangeDay, cancellationToken).Forget();
-            WaitTime(_server.NextWeek, Week, OnChangeWeek, cancellationToken).Forget();
-            WaitTime(_server.NextMonth, Month, OnChangeMonth, cancellationToken).Forget();
-            WaitTime(_server.NexGameCycle, GameCycle, OnChangeGameCycle, cancellationToken).Forget();
+            _onChangeDay.Execute();
+            WaitTime(DelayType.Day, Day, OnChangeDay, cancellationToken).Forget();
+            WaitTime(DelayType.Week, Week, OnChangeWeek, cancellationToken).Forget();
+            WaitTime(DelayType.Month, Month, OnChangeMonth, cancellationToken).Forget();
+            WaitTime(DelayType.GameCycle, GameCycle, OnChangeGameCycle, cancellationToken).Forget();
 
             await _context.SaveChangesAsync();
         }
 
-        private async UniTaskVoid WaitTime(string recordTime, TimeSpan nextTime, ReactiveCommand onFinishWait, CancellationToken cancellationToken)
+        private async UniTaskVoid WaitTime(DelayType delayType, TimeSpan waitTime, ReactiveCommand onFinishWait, CancellationToken cancellationToken)
         {
+            var recordTime = GetRecordTime(delayType);
             var dateTime = DateTime.Parse(recordTime);
             var now = DateTime.UtcNow;
-            var delay = (dateTime - now).TotalMilliseconds;
-            await Task.Delay((int) delay, cancellationToken);
+            if (dateTime > now)
+            {
+                var delay = (dateTime - now).TotalMilliseconds;
+                await Task.Delay((int) delay, cancellationToken);
+            }
 
             onFinishWait.Execute();
-            
-            recordTime = DateTime.Now.Add(nextTime).ToString();
-            await _context.SaveChangesAsync();
-            WaitTime(recordTime, nextTime, onFinishWait, cancellationToken).Forget();
 
+            var nextTime = DateTime.Now.Add(waitTime);
+            var extraTime = new TimeSpan(0, nextTime.Hour, nextTime.Minute, nextTime.Second);
+            nextTime = nextTime.Subtract(extraTime);
+            recordTime = nextTime.ToString();
+
+            SetRecordTime(delayType, recordTime);
+            await _context.SaveChangesAsync();
+            WaitTime(delayType, waitTime, onFinishWait, cancellationToken).Forget();
+
+        }
+
+        private string GetRecordTime(DelayType delayType)
+        {
+            var result = string.Empty;
+            switch (delayType)
+            {
+                case DelayType.Day:
+                    result = _server.NextDay;
+                    break;
+                case DelayType.Month:
+                    result = _server.NextMonth;
+                    break;
+                case DelayType.Week:
+                    result = _server.NextWeek;
+                    break;
+                case DelayType.GameCycle:
+                    result = _server.NexGameCycle;
+                    break;
+            }
+            return result;
+        }
+
+        private void SetRecordTime(DelayType delayType, string value)
+        {
+            switch (delayType)
+            {
+                case DelayType.Day:
+                    _server.NextDay = value;
+                    break;
+                case DelayType.Month:
+                    _server.NextMonth = value;
+                    break;
+                case DelayType.Week:
+                    _server.NextWeek = value;
+                    break;
+                case DelayType.GameCycle:
+                    _server.NexGameCycle = value;
+                    break;
+            }
         }
 
         public void Dispose()
@@ -85,6 +145,11 @@ namespace UniverseRift.Controllers.Server
                 _cancellationTokenSource.Cancel();
                 _cancellationTokenSource.Dispose();
             }
+        }
+
+        public void StopApplication()
+        {
+            throw new NotImplementedException();
         }
     }
 }

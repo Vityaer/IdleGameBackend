@@ -1,4 +1,5 @@
-﻿using UniverseRift.Models.Common;
+﻿using UniverseRift.GameModelDatas.Players;
+using UniverseRift.Models.Common;
 
 namespace UniverseRift.Controllers.Players
 {
@@ -6,5 +7,6 @@ namespace UniverseRift.Controllers.Players
     {
         Task<Player> GetPlayer(int playerId);
         UniRx.IObservable<int> OnRegistrationPlayer { get; }
+        async Task<PlayerData> GetPlayerSave(int playerId) { return null; }
     }
 }

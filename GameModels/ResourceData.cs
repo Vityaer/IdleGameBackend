@@ -1,6 +1,7 @@
-﻿using UniverseRift.Models.Resources;
+﻿using Models.Common.BigDigits;
+using UniverseRift.Models.Resources;
 
-namespace UniverseRift.GameModels
+namespace Models.Data.Inventories
 {
     public class ResourceData : InventoryBaseItem
     {

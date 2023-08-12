@@ -1,0 +1,48 @@
+[
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 5.0,
+        "E10": 3
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "MiniGold"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 40.0,
+        "E10": 0
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "MiniDiamond"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "RubbishArmor",
+      "Amount": 1
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "RubbishArmor"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "RubbishBoots",
+      "Amount": 1
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "RubbishBoots"
+  }
+]

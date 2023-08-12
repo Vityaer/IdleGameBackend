@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniverseRift.Contexts;
+using UniverseRift.Models.Results;
 
 namespace UniverseRift.Controllers.Buildings
 {
@@ -15,10 +16,14 @@ namespace UniverseRift.Controllers.Buildings
 
         [HttpPost]
         [Route("Altar/RemoveHeroes")]
-        public async Task RemoveHeroes(int playerId, List<int> heroIds)
+        public async Task<AnswerModel> RemoveHeroes(int playerId, List<int> heroIds)
         {
+            var answer = new AnswerModel();
             if (heroIds.Count == 0)
-                return;
+            {
+                answer.Error = $"data error, hero count: {heroIds.Count}";
+                return answer;
+            }
 
             var heroes = await _context.Heroes.ToListAsync();
             foreach (var id in heroIds)
@@ -29,6 +34,9 @@ namespace UniverseRift.Controllers.Buildings
             }
 
             await _context.SaveChangesAsync();
+
+            answer.Result = "Success";
+            return answer;
         }
     }
 }

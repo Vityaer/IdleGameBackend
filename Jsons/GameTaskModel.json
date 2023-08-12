@@ -1,0 +1,62 @@
+[
+  {
+    "Rating": 5,
+    "RequireHour": 10,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 120.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 120.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Kill dragon"
+  },
+  {
+    "Rating": 3,
+    "RequireHour": 6,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 50.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 50.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Buy artifact"
+  }
+]

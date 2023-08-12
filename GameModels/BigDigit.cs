@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UniverseRift.GameModels
+namespace Models.Common.BigDigits
 {
     public class BigDigit
     {

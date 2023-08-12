@@ -1,0 +1,96 @@
+[
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 3,
+      "Amount": {
+        "Mantissa": 5.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 500.0,
+        "E10": 3
+      }
+    },
+    "Type": 0,
+    "Id": "SimpleHireMiniSet"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 4,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 1,
+      "Amount": {
+        "Mantissa": 150.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "SpecialHireMiniSet"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 4,
+      "Amount": {
+        "Mantissa": 8.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 1,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 3
+      }
+    },
+    "Type": 0,
+    "Id": "SpecialHireSet"
+  },
+  {
+    "$type": "Models.City.Markets.ItemProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PupilWeapon",
+      "Amount": 1
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 3
+      }
+    },
+    "Type": 0,
+    "Id": "PupilWeapon"
+  },
+  {
+    "$type": "Models.City.Markets.ItemProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "RubbishAmulet",
+      "Amount": 1
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 500.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "RubbishAmulet"
+  }
+]

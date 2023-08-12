@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "Products": [
+      "PupilWeapon",
+      "SimpleHireMiniSet",
+      "SpecialHireMiniSet",
+      "SpecialHireSet",
+      "RubbishAmulet"
+    ],
+    "RecoveryType": 1,
+    "Id": "CityMarket"
+  }
+]

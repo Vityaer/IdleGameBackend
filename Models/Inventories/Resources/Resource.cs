@@ -1,6 +1,6 @@
 ﻿using UniverseRift.GameModels;
 using UniverseRift.Models.Common;
-
+using UniverseRift.Heplers.MathOperations;
 namespace UniverseRift.Models.Resources
 {
     public class Resource : BaseInventoryObject
@@ -27,7 +27,7 @@ namespace UniverseRift.Models.Resources
 
         public void Subtract(Resource newRes)
         {
-            Count -= Count * (float)Math.Pow(10f, newRes.E10 - E10);
+            Count -= newRes.Count * (float)Math.Pow(10f, newRes.E10 - E10);
             NormalizeDigit();
         }
 
@@ -73,11 +73,11 @@ namespace UniverseRift.Models.Resources
 
             if (E10 == 0)
             {
-                Count = (float)Math.Round(Count);
+                Count = CustomMath.RoundToNearestInt(Count);
             }
             else
             {
-                Count = (float)Math.Round(Count * 1000f) * 0.001f;
+                Count = (float)Math.Round(Count, 3);
             }
         }
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Common;
 using UniverseRift.Models.Items;
 using UniverseRift.Models.Results;
 
@@ -9,52 +10,53 @@ namespace UniverseRift.Controllers.Buildings
     public class ForgeController : ControllerBase
     {
         private readonly AplicationContext _context;
+        private readonly ICommonDictionaries _commonDictionaries;
 
-        public ForgeController(AplicationContext context)
+        public ForgeController(
+            AplicationContext context,
+            ICommonDictionaries commonDictionaries
+            )
         {
+            _commonDictionaries = commonDictionaries;
             _context = context;
         }
 
         [HttpPost]
         [Route("Forge/CreateItem")]
-        public async Task<AnswerModel> CreateItem(int playerId, string itemTemplateName, int count = 1)
+        public async Task<AnswerModel> CreateItem(int playerId, string itemId, int count = 1)
         {
             var answer = new AnswerModel();
 
             if (count <= 0)
             {
-                answer.Error = "Data {count} error";
+                answer.Error = $"Data {count} error";
                 return answer;
             }
 
-            var itemTemplates = await _context.ItemTemplates.ToListAsync();
-            var itemTemplate = itemTemplates.Find(template => template.Name == itemTemplateName);
-            if (itemTemplate == null)
+            if (!_commonDictionaries.Items.TryGetValue(itemId, out var itemTemplate))
             {
-                answer.Error = "Data {itemTemplateName} error";
+                answer.Error = $"item id: {itemId} not found";
                 return answer;
             }
-            
-            var itemSynthesisRelations = await _context.ItemSynthesisRelations.ToListAsync();
-            var relation = itemSynthesisRelations.Find(relation => relation.ResultItemName == itemTemplateName);
-            if (relation == null)
+
+            if (!_commonDictionaries.ItemRelations.TryGetValue(itemId, out var relation))
             {
-                answer.Error = "Item {Relation} not found";
+                answer.Error = $"Item relation {relation} not found";
                 return answer;
             }
 
             var items = await _context.Items.ToListAsync();
             var playerIngredientItem = items.Find(item => (item.PlayerId == playerId) && (item.Name == relation.ItemIngredientName));
-            if (playerIngredientItem == null) 
+            if (playerIngredientItem == null)
             {
-                answer.Error = "Item {playerIngredientItem} not found";
+                answer.Error = $"Item ingredients {playerIngredientItem} not found";
                 return answer;
             }
 
             var requireCountItem = relation.RequireCount * count;
             if (playerIngredientItem.Count < requireCountItem)
             {
-                answer.Error = "Item {requireCountItem} not enough";
+                answer.Error = $"Item {requireCountItem} not enough";
                 return answer;
             }
 

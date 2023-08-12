@@ -1,4 +1,6 @@
-﻿namespace UniverseRift.GameModels
+﻿using Models.Data.Inventories;
+
+namespace UniverseRift.GameModels
 {
     public class SplinterData : InventoryBaseItem
     {

@@ -4,28 +4,32 @@ using Misc.Json;
 using UniRx;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
-using UniverseRift.Controllers.Services.Rewarders;
+using UniverseRift.GameModelDatas.Cities;
 using UniverseRift.Models.Players;
 using UniverseRift.Models.Results;
+using UniverseRift.Services.Rewarders;
 
 namespace UniverseRift.Controllers.Buildings.Campaigns
 {
     public class CampaignController : Controller, ICampaignController, IDisposable
     {
+        private const string NAME_RECORD_NUM_CURRENT_MISSION = "CurrentMission";
+        private const string NAME_RECORD_NUM_MAX_MISSION = "MaxMission";
+        private const string NAME_RECORD_AUTOFIGHT_PREVIOUS_DATETIME = "AutoFight";
+
         private const int CHAPTER_MISSION_COUNT = 20;
 
         private readonly AplicationContext _context;
         private readonly ICommonDictionaries _commonDictionaries;
-        private readonly IClientRewardService _clientRewardService;
+        private readonly IRewardService _clientRewardService;
         private readonly IJsonConverter _jsonConverter;
         
         private CompositeDisposable _disposables = new CompositeDisposable();
-        public AplicationContext Context => _context;
 
         public CampaignController(
             AplicationContext context,
             ICommonDictionaries commonDictionaries,
-            IClientRewardService clientRewardService,
+            IRewardService clientRewardService,
             IJsonConverter jsonConverter
             )
         {
@@ -37,11 +41,9 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
 
         public async Task CreatePlayerProgress(int playerId)
         {
-            var playerProgress = new PlayerProgress() { PlayerId = playerId, CampaignProgress = -1, ChellangeTowerProgress = -1, LastGetAutoFightReward = string.Empty };
+            var playerProgress = new PlayerProgress() { PlayerId = playerId, CampaignProgress = 0, ChellangeTowerProgress = 0, LastGetAutoFightReward = string.Empty };
             await _context.AddAsync(playerProgress);
             await _context.SaveChangesAsync();
-
-            var players = await _context.PlayerProgresses.ToListAsync();
         }
 
         [HttpPost]
@@ -77,7 +79,7 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
 
             await _context.SaveChangesAsync();
 
-            answer.Result = _jsonConverter.ToJson(rewardData);
+            answer.Result = _jsonConverter.Serialize(rewardData);
             return answer;
         }
 
@@ -94,8 +96,6 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
         [Route("Campaign/CompleteNextMission")]
         public async Task<AnswerModel> CompleteNextMission(int playerId)
         {
-            Console.WriteLine($"CompleteNextMission playerId: {playerId}");
-
             var answer = new AnswerModel();
             var result = await _context.Players.FindAsync(playerId);
 
@@ -119,9 +119,27 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
             return answer;
         }
 
-        public void Dispose()
+        public async Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId)
+        {
+            var playerProgresses = await _context.PlayerProgresses.ToListAsync();
+            var playerProgress = playerProgresses.Find(progress => progress.PlayerId == playerId);
+
+            var result = new BuildingWithFightTeamsData();
+            
+            if (playerProgress != null)
+            {
+                result.IntRecords.SetRecord(NAME_RECORD_NUM_MAX_MISSION, playerProgress.CampaignProgress);
+                var date = string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward) ? DateTime.Now : DateTime.Parse(playerProgress.LastGetAutoFightReward);
+                result.DateRecords.SetRecord(NAME_RECORD_AUTOFIGHT_PREVIOUS_DATETIME, date);
+            }
+
+            return result;
+        }
+
+        public new void Dispose()
         {
             _disposables.Dispose();
+            base.Dispose();
         }
     }
 }

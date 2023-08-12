@@ -57,7 +57,7 @@ namespace UniverseRift.Controllers.Buildings
             await _context.Heroes.AddAsync(newHero);
             await _context.SaveChangesAsync();
 
-            answer.Result = _jsonConverter.ToJson(newHero);
+            answer.Result = _jsonConverter.Serialize(newHero);
             return answer;
         }
     }

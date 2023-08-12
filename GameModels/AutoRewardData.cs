@@ -1,4 +1,5 @@
-﻿using UniverseRift.Models.Resources;
+﻿using Models.Data.Inventories;
+using UniverseRift.Models.Resources;
 
 namespace UniverseRift.GameModels
 {
@@ -12,7 +13,7 @@ namespace UniverseRift.GameModels
             foreach (var resourceData in BaseResource.Values)
             {
                 var resource = new GameResource(resourceData.Type, resourceData.Amount) * countTact;
-                reward.Resources.Add(new ResourceData {Type = resource.Type, Amount = resource.Amount });
+                reward.Resources.Add(new ResourceData { Type = resource.Type, Amount = resource.Amount });
             }
             return reward;
         }

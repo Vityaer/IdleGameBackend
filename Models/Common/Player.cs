@@ -8,5 +8,6 @@
         public int Level { get; set; } = 1;
         public int GuildId { get; set; } = 0;
         public int VipLevel { get; set; } = 0;
+        public string LastEnteredDateTime { get; set; } = string.Empty;
     }
 }

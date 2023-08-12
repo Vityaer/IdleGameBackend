@@ -1,4 +1,5 @@
-﻿using UniverseRift.Models.Heroes;
+﻿using UniverseRift.Controllers.Players.Inventories.Items;
+using UniverseRift.Models.Heroes;
 
 namespace UniverseRift.MessageData
 {
@@ -19,6 +20,19 @@ namespace UniverseRift.MessageData
             HeroId = hero.HeroTemplateId;
             Level = hero.Level;
             Rating = hero.Rating;
+            
+            Costume = new CostumeData();
+            if (!string.IsNullOrEmpty(hero.WeaponItemId))
+                Costume.Items.Add(ItemType.Weapon, hero.WeaponItemId);
+
+            if (!string.IsNullOrEmpty(hero.ArmorItemId))
+                Costume.Items.Add(ItemType.Armor, hero.ArmorItemId);
+
+            if (!string.IsNullOrEmpty(hero.AmuletItemId))
+                Costume.Items.Add(ItemType.Amulet, hero.AmuletItemId);
+
+            if (!string.IsNullOrEmpty(hero.BootsItemId))
+                Costume.Items.Add(ItemType.Boots, hero.BootsItemId);
         }
     }
 }

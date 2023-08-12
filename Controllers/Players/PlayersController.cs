@@ -3,20 +3,22 @@ using Microsoft.EntityFrameworkCore;
 using UniRx;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Campaigns;
+using UniverseRift.Controllers.Buildings.ChallengeTowers;
 using UniverseRift.Controllers.Common;
-using UniverseRift.Controllers.Players.Inventories.Resources;
-using UniverseRift.Controllers.Services.Rewarders;
+using UniverseRift.GameModelDatas.Players;
 using UniverseRift.Models.Common;
 using UniverseRift.Models.Results;
+using UniverseRift.Services.Resources;
+using UniverseRift.Services.Rewarders;
 
 namespace UniverseRift.Controllers.Players
 {
     public class PlayersController : Controller, IPlayersController
     {
         private readonly AplicationContext _context;
-        private readonly IResourceController _resourcesController;
+        private readonly IResourceManager _resourcesController;
         private readonly ICommonDictionaries _commonDictionaries;
-        private readonly IClientRewardService _clientRewardService;
+        private readonly IRewardService _clientRewardService;
         private readonly ICampaignController _campaignController;
 
         private ReactiveCommand<int> _onPlayerRegistration = new ReactiveCommand<int>();
@@ -25,9 +27,9 @@ namespace UniverseRift.Controllers.Players
 
         public PlayersController(
             AplicationContext context,
-            IResourceController resourcesController,
+            IResourceManager resourcesController,
             ICommonDictionaries commonDictionaries,
-            IClientRewardService clientRewardService,
+            IRewardService clientRewardService,
             ICampaignController campaignController
             )
         {
@@ -77,6 +79,13 @@ namespace UniverseRift.Controllers.Players
             await _context.SaveChangesAsync();
             answer.Result = "Success";
             return answer;
+        }
+
+        public async Task<PlayerData> GetPlayerSave(int playerId)
+        {
+            var player = await GetPlayer(playerId);
+            var result = new PlayerData(player);
+            return result;
         }
     }
 }

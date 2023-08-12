@@ -1,64 +1,89 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Common;
 using UniverseRift.Controllers.Players.Heroes;
 using UniverseRift.Models.Items;
+using UniverseRift.Models.Results;
 
 namespace UniverseRift.Controllers.Players.Inventories.Items
 {
-    public class ItemsController : Controller
+    public class ItemsController : Controller, IItemsController
     {
         private readonly AplicationContext _context;
         private readonly IHeroesController _heroesController;
+        private readonly ICommonDictionaries _commonDictionaries;
 
-        public ItemsController(AplicationContext context, IHeroesController heroesController)
+        public ItemsController(
+            AplicationContext context,
+            IHeroesController heroesController,
+            ICommonDictionaries commonDictionaries
+            )
         {
+            _commonDictionaries = commonDictionaries;
             _context = context;
             _heroesController = heroesController;
         }
 
         [HttpPost]
         [Route("Items/SetItem")]
-        public async Task SetItemOnHero(int playerId, int heroId, string itemName)
+        public async Task<AnswerModel> SetItemOnHero(int playerId, int heroId, string ItemId)
         {
-            //TODO: await many tasks
-            var items = await _context.Items.ToListAsync();
+            var answer = new AnswerModel();
             var hero = await _heroesController.GetHero(playerId, heroId);
 
-            var itemTemplates = await _context.ItemTemplates.ToListAsync();
-            var itemTemplate = itemTemplates.Find(template => template.Name == itemName);
+            if (hero == null)
+            {
+                answer.Error = $"Hero id error: {heroId}";
+                return answer;
+            }
 
-            if (itemTemplate == null)
-                return;
+            if (!_commonDictionaries.Items.ContainsKey(ItemId))
+            {
+                answer.Error = $"Error data: {ItemId}";
+                return answer;
+            }
 
-            await TakeOffItemFromHero(playerId, heroId, itemTemplate.Type);
+            var itemTemplate = _commonDictionaries.Items[ItemId];
 
-            await RemoveItem(playerId, itemName);
+            await TakeOffItemFromHero(playerId, heroId, (int) itemTemplate.Type);
+
+            await RemoveItem(playerId, ItemId);
             switch (itemTemplate.Type)
             {
                 case ItemType.Weapon:
-                    hero.WeaponItemId = itemTemplate.Name;
+                    hero.WeaponItemId = itemTemplate.Id;
                     break;
                 case ItemType.Armor:
-                    hero.ArmorItemId = itemTemplate.Name;
+                    hero.ArmorItemId = itemTemplate.Id;
                     break;
                 case ItemType.Boots:
-                    hero.BootsItemId = itemTemplate.Name;
+                    hero.BootsItemId = itemTemplate.Id;
                     break;
                 case ItemType.Amulet:
-                    hero.AmuletItemId = itemTemplate.Name;
+                    hero.AmuletItemId = itemTemplate.Id;
                     break;
             }
+            await _context.SaveChangesAsync();
+            answer.Result = Constants.Common.SUCCESS_RUSULT;
+            return answer;
         }
 
         [HttpPost]
         [Route("Items/TakeOffItem")]
-        public async Task TakeOffItemFromHero(int playerId, int heroId, ItemType itemType)
+        public async Task<AnswerModel> TakeOffItemFromHero(int playerId, int heroId, int intItemType)
         {
+            var answer = new AnswerModel();
+
             var hero = await _heroesController.GetHero(playerId, heroId);
 
             if (hero == null)
-                return;
+            {
+                answer.Error = $"Data error: {heroId}";
+                return answer;
+            }
+
+            var itemType = (ItemType)intItemType;
 
             var currentItemName = string.Empty;
             switch (itemType)
@@ -81,34 +106,33 @@ namespace UniverseRift.Controllers.Players.Inventories.Items
                     break;
             }
 
-            if (string.IsNullOrEmpty(currentItemName))
-                return;
-
-            await AddItem(playerId, currentItemName);
+            if (!string.IsNullOrEmpty(currentItemName))
+            {
+                await AddItem(playerId, currentItemName);
+            }
+            await _context.SaveChangesAsync();
+            answer.Result = "Success";
+            return answer;
         }
 
-        [HttpPost]
-        [Route("Items/AddItem")]
-        public async Task AddItem(int playerId, string itemName)
+        public async Task AddItem(int playerId, string itemName, int count = 1)
         {
             var items = await _context.Items.ToListAsync();
             var item = items.Find(item => item.PlayerId == playerId && item.Name == itemName);
 
             if (item != null)
             {
-                item.Count += 1;
+                item.Count += count;
             }
             else
             {
                 var newItem = new Item(playerId, itemName);
-                items.Add(newItem);
+                _context.Items.Add(newItem);
             }
             await _context.SaveChangesAsync();
         }
 
-        [HttpPost]
-        [Route("Items/RemoveItem")]
-        public async Task RemoveItem(int playerId, string itemName)
+        public async Task RemoveItem(int playerId, string itemName, int count = 1)
         {
             var items = await _context.Items.ToListAsync();
             var item = items.Find(item => item.PlayerId == playerId && item.Name == itemName);
@@ -116,47 +140,13 @@ namespace UniverseRift.Controllers.Players.Inventories.Items
             if (item == null)
                 return;
 
-            item.Count -= 1;
+            item.Count -= count;
+            if (item.Count == 0)
+            {
+                _context.Items.Remove(item);
+            }
+
             await _context.SaveChangesAsync();
-        }
-
-        // GET: Items
-        public async Task<IActionResult> Index()
-        {
-            return _context.Items != null ?
-                        View(await _context.Items.ToListAsync()) :
-                        Problem("Entity set 'AplicationContext.Items'  is null.");
-        }
-
-        // GET: Items/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Items == null)
-            {
-                return NotFound();
-            }
-
-            var item = await _context.Items
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (item == null)
-            {
-                return NotFound();
-            }
-
-            return View(item);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Type,Id,PlayerId,Count,E10")] Item item)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(item);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(item);
         }
     }
 }

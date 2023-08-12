@@ -1,4 +1,5 @@
-﻿namespace UniverseRift.GameModels
+﻿
+namespace Models.Data.Inventories
 {
     public class ItemData : InventoryBaseItem
     {
