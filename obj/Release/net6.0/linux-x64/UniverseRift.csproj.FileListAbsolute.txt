@@ -13,7 +13,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\MarketModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\MineModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\MonthlyTasksModel.json
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\ProductModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\RaceModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\RarityModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\RatingModel.json
@@ -21,7 +20,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\RewardModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\SplinterModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\StorageChallengeModel.json
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\TaskModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\VocationModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\UniverseRift
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\UniverseRift.deps.json
@@ -589,4 +587,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\libmscordbi.so
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\MySqlConnector.dll
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Pomelo.EntityFrameworkCore.MySql.dll
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\String.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\BaseProductModel.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\FortuneRewardModel.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\linux-x64\Jsons\GameTaskModel.json

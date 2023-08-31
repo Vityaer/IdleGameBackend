@@ -1,6 +1,10 @@
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Misc.Json;
 using Misc.Json.Impl;
+using System.Diagnostics;
+using System.Net;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Buildings.Arenas;
@@ -37,7 +41,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
-builder.Services.AddHostedService<MyHostedService>();
 builder.Services.AddSingleton<IServerController, ServerController>();
 builder.Services.AddSingleton<IResourceManager, ResourcesManager>();
 builder.Services.AddSingleton<IJsonConverter, JsonConverter>();
@@ -65,10 +68,13 @@ builder.Services.AddSingleton<ITimeManagerController, TimeManagerController>();
 builder.Services.AddSingleton<IGuildController, GuildController>();
 builder.Services.AddSingleton<IFortuneWheelController, FortuneWheelController>();
 
+builder.Services.AddHostedService<MyHostedService>();
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseAuthorization();
 
 app.MapControllers();
 app.UseDefaultFiles();
@@ -79,5 +85,30 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseExceptionHandler(
+        options =>
+        {
+            options.Run(
+                async context =>
+                {
+                    var directoryPath = "Logs";
+                    var fileName = "UniverseRift_error.txt";
+                    var writer = TextUtils.GetFileWriterStream(directoryPath, fileName, true);
+                    var exceptionObject = context.Features.Get<IExceptionHandlerFeature>();
+                    var Message = "Unknown";
+                    var StackTrace = "Unknown";
+
+                    if (null != exceptionObject)
+                    {
+                        Message = exceptionObject.Error.Message;
+                        StackTrace = exceptionObject.Error.StackTrace;
+                    }
+                    writer.WriteLine($"{DateTime.Now.ToString("MM.dd.yyyy HH:mm:ss.ff")} [{HttpStatusCode.InternalServerError.ToString().ToUpper()}]\nMessage: {Message}\nStackTrace: {StackTrace}\n");
+                    writer.Close();
+                    writer.Dispose();
+                });
+        }
+    );
 
 app.Run();

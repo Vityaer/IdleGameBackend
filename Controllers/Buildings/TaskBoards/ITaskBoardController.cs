@@ -4,6 +4,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 {
     public interface ITaskBoardController
     {
-        Task<TaskBoardData> GetPlayerSave(int playerId);
+        Task<TaskBoardData> GetPlayerSave(int playerId, bool flagCreateNewData);
+        Task DeleteTasks();
     }
 }

@@ -88,15 +88,20 @@ namespace UniverseRift.Controllers.Players.Heroes
         [Route("Heroes/GetSimpleHeroes")]
         public async Task<AnswerModel> GetSimpleHeroes(int playerId, int count)
         {
-            Console.WriteLine($"GetSimpleHeroes playerId: {playerId}");
             var answer = new AnswerModel();
-            var heroesData = new List<HeroData>();
 
-            List<Hero> heroes = new List<Hero>();
             var cost = new Resource { PlayerId = playerId, Type = ResourceType.SimpleHireCard, Count = count, E10 = 0 };
 
+            var permission = await _resourcesController.CheckResource(playerId, cost, answer);
+            if (!permission)
+            {
+                return answer;
+            }
+
+            var heroesData = new List<HeroData>();
+            var heroes = new List<Hero>();
             var allHeroes = await _context.HeroTemplates.ToListAsync();
-            List<HeroTemplate> workList = new List<HeroTemplate>();
+            var workList = new List<HeroTemplate>();
             HeroTemplate heroTemplate;
 
             await _resourcesController.SubstactResources(cost);
@@ -148,11 +153,18 @@ namespace UniverseRift.Controllers.Players.Heroes
 
         [HttpPost]
         [Route("Heroes/GetSpecialHeroes")]
-        public async Task<List<Hero>> GetSpecialHeroes(int playerId, int count)
+        public async Task<AnswerModel> GetSpecialHeroes(int playerId, int count)
         {
-            List<Hero> result = new List<Hero>();
+            var answer = new AnswerModel();
 
             var cost = new Resource { PlayerId = playerId, Type = ResourceType.SpecialHireCard, Count = count, E10 = 0 };
+            var permission = await _resourcesController.CheckResource(playerId, cost, answer);
+            if (!permission)
+            {
+                return answer;
+            }
+
+            List<Hero> heroes = new List<Hero>();
             await _resourcesController.SubstactResources(cost);
 
             var allHeroes = await _context.HeroTemplates.ToListAsync();
@@ -190,11 +202,12 @@ namespace UniverseRift.Controllers.Players.Heroes
 
                 var hero = new Hero(playerId, heroTemplate);
                 _context.Heroes.Add(hero);
-                result.Add(hero);
+                heroes.Add(hero);
             }
 
             await _context.SaveChangesAsync();
-            return result;
+            answer.Result = _jsonConverter.Serialize(heroes);
+            return answer;
         }
 
         public async Task<Hero> GetHero(int playerId, int heroId)

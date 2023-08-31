@@ -622,7 +622,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Debug\net6.0\Jsons\Ratin
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Debug\net6.0\Jsons\ResistanceModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Debug\net6.0\Jsons\SplinterModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Debug\net6.0\Jsons\StorageChallengeModel.json
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Debug\net6.0\Jsons\TaskModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Debug\net6.0\Jsons\VocationModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Debug\net6.0\Jsons\RewardModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Debug\net6.0\MySqlConnector.dll

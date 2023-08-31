@@ -58,5 +58,443 @@
       ]
     },
     "Id": "Buy artifact"
+  },
+  {
+    "Rating": 4,
+    "RequireHour": 7,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 2,
+          "Amount": {
+            "Mantissa": 80.0,
+            "E10": 3
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 2,
+          "Amount": {
+            "Mantissa": 80.0,
+            "E10": 3
+          }
+        }
+      ]
+    },
+    "Id": "Create artifact"
+  },
+  {
+    "Rating": 6,
+    "RequireHour": 12,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [],
+      "Items": [
+        {
+          "Id": "PeasantWeapon",
+          "Amount": 1
+        }
+      ],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+          "Id": "PeasantWeapon",
+          "Amount": 1
+        }
+      ]
+    },
+    "Id": "DestroyWorld"
+  },
+  {
+    "Rating": 5,
+    "RequireHour": 9,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 9,
+          "Amount": {
+            "Mantissa": 2.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 9,
+          "Amount": {
+            "Mantissa": 2.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "FortuneWheel"
+  },
+  {
+    "Rating": 3,
+    "RequireHour": 4,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 0,
+          "Amount": {
+            "Mantissa": 20.0,
+            "E10": 3
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 0,
+          "Amount": {
+            "Mantissa": 20.0,
+            "E10": 3
+          }
+        }
+      ]
+    },
+    "Id": "Kill bandits"
+  },
+  {
+    "Rating": 6,
+    "RequireHour": 11,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 5,
+          "Amount": {
+            "Mantissa": 100.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 5,
+          "Amount": {
+            "Mantissa": 100.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Defend princess"
+  },
+  {
+    "Rating": 2,
+    "RequireHour": 5,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 6,
+          "Amount": {
+            "Mantissa": 3.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 6,
+          "Amount": {
+            "Mantissa": 3.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Build fort"
+  },
+  {
+    "Rating": 2,
+    "RequireHour": 4,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [],
+      "Items": [
+        {
+          "Id": "PupilAmulet",
+          "Amount": 1
+        }
+      ],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+          "Id": "PupilAmulet",
+          "Amount": 1
+        }
+      ]
+    },
+    "Id": "Repair amulet"
+  },
+  {
+    "Rating": 6,
+    "RequireHour": 12,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 15,
+          "Amount": {
+            "Mantissa": 1.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 15,
+          "Amount": {
+            "Mantissa": 1.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Fight with Devil"
+  },
+  {
+    "Rating": 1,
+    "RequireHour": 2,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 10,
+          "Amount": {
+            "Mantissa": 300.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 10,
+          "Amount": {
+            "Mantissa": 300.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Speak with people"
+  },
+  {
+    "Rating": 1,
+    "RequireHour": 2,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 20.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 20.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Collect flowers"
+  },
+  {
+    "Rating": 3,
+    "RequireHour": 5,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 0,
+          "Amount": {
+            "Mantissa": 5.0,
+            "E10": 3
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 0,
+          "Amount": {
+            "Mantissa": 5.0,
+            "E10": 3
+          }
+        }
+      ]
+    },
+    "Id": "Patrol city"
+  },
+  {
+    "Rating": 3,
+    "RequireHour": 4,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 3,
+          "Amount": {
+            "Mantissa": 1.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 3,
+          "Amount": {
+            "Mantissa": 1.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Training"
+  },
+  {
+    "Rating": 1,
+    "RequireHour": 2,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 6,
+          "Amount": {
+            "Mantissa": 1.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 6,
+          "Amount": {
+            "Mantissa": 1.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Running"
+  },
+  {
+    "Rating": 1,
+    "RequireHour": 2,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 10,
+          "Amount": {
+            "Mantissa": 800.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 10,
+          "Amount": {
+            "Mantissa": 800.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Finght with guy"
+  },
+  {
+    "Rating": 3,
+    "RequireHour": 5,
+    "FactorDelta": 0.0,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 9,
+          "Amount": {
+            "Mantissa": 1.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 9,
+          "Amount": {
+            "Mantissa": 1.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "Id": "Find fortune"
   }
 ]

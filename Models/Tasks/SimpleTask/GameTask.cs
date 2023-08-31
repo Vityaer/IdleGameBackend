@@ -1,4 +1,5 @@
-﻿using UniverseRift.Models.Common;
+﻿using System.Globalization;
+using UniverseRift.Controllers.Common;
 
 namespace UniverseRift.Models.Tasks.SimpleTask
 {
@@ -16,7 +17,7 @@ namespace UniverseRift.Models.Tasks.SimpleTask
 
         public GameTask(int playerId, GameTaskModel taskModel, float randFactor)
         {
-            DateTimeCreate = DateTime.UtcNow.ToString();
+            DateTimeCreate = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
             PlayerId = playerId;
             TaskModelId = taskModel.Id;
             Status = TaskStatusType.NotStart;
@@ -27,7 +28,7 @@ namespace UniverseRift.Models.Tasks.SimpleTask
         public void Start()
         {
             Status = TaskStatusType.InProgress;
-            DateTimeStart = DateTime.UtcNow.ToString();
+            DateTimeStart = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
         }
 
         public bool CheckComplete(int hours)
@@ -37,12 +38,19 @@ namespace UniverseRift.Models.Tasks.SimpleTask
                 return true;
             }
 
+            if (string.IsNullOrEmpty(DateTimeStart))
+                return false;
+
             var now = DateTime.UtcNow;
-            var dateTimeStart = DateTime.Parse(DateTimeStart);
+            var dateTimeStart = DateTime.ParseExact(
+                DateTimeStart,
+                Constants.Common.DateTimeFormat,
+                CultureInfo.InvariantCulture
+                );
+
             var delta = now - dateTimeStart;
             if (delta.TotalHours > hours)
             {
-                Status = TaskStatusType.Completed;
                 return true;
             }
 

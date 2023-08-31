@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using UniRx;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
-using UniverseRift.Controllers.Server;
 using UniverseRift.Models.City.Markets;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
@@ -20,25 +19,18 @@ namespace UniverseRift.Controllers.Buildings.Shops
         private readonly IResourceManager _resourceController;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IRewardService _clientRewardService;
-        private readonly IServerController _serverController;
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
 
         public MarketController(
             AplicationContext context,
             IRewardService clientRewardService,
             IResourceManager resourceController,
-            IServerController serverController,
             ICommonDictionaries commonDictionaries)
         {
             _clientRewardService = clientRewardService;
             _context = context;
             _resourceController = resourceController;
-            _serverController = serverController;
             _commonDictionaries = commonDictionaries;
-            _serverController.OnChangeDay.Subscribe(_ => RefreshProducts(RecoveryType.Day).Forget()).AddTo(_disposables);
-            _serverController.OnChangeWeek.Subscribe(_ => RefreshProducts(RecoveryType.Week).Forget()).AddTo(_disposables);
-            _serverController.OnChangeMonth.Subscribe(_ => RefreshProducts(RecoveryType.Month).Forget()).AddTo(_disposables);
-            _serverController.OnChangeGameCycle.Subscribe(_ => RefreshProducts(RecoveryType.GameCycle).Forget()).AddTo(_disposables);
         }
 
         [HttpPost]
@@ -104,7 +96,7 @@ namespace UniverseRift.Controllers.Buildings.Shops
             return answer;
         }
 
-        private async UniTaskVoid RefreshProducts(RecoveryType recoveryType)
+        public async Task RefreshProducts(RecoveryType recoveryType)
         {
             var products = _commonDictionaries.Products;
             var markets = _commonDictionaries.Markets;
@@ -123,7 +115,10 @@ namespace UniverseRift.Controllers.Buildings.Shops
                 foreach (var product in recoveryProducts)
                 {
                     var recoveryPurchases = purchases.FindAll(purchase => purchase.ProductId == product.Id);
-                    _context.Purchases.RemoveRange(recoveryPurchases);
+                    if (recoveryPurchases.Count > 0)
+                    {
+                        _context.Purchases.RemoveRange(recoveryPurchases);
+                    }
                 }
             }
 

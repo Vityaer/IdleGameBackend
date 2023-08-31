@@ -7,6 +7,6 @@ namespace UniverseRift.Controllers.Players
     {
         Task<Player> GetPlayer(int playerId);
         UniRx.IObservable<int> OnRegistrationPlayer { get; }
-        async Task<PlayerData> GetPlayerSave(int playerId) { return null; }
+        Task<PlayerData> GetPlayerSave(int playerId);
     }
 }

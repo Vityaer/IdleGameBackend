@@ -52,5 +52,18 @@ namespace UniverseRift.Controllers.Common
             var path = Path.Combine(Constants.Common.DictionariesPath, $"{name}.json");
             return path;
         }
+
+        public static StreamWriter GetFileWriterStream(string path, string fileName, bool append)
+        {
+            var filePath = Path.Combine(path, fileName);
+
+            if (!File.Exists(filePath))
+            {
+                if (!File.Exists(path))
+                    Directory.CreateDirectory(path);
+            }
+
+            return new StreamWriter(filePath, append: append);
+        }
     }
 }

@@ -32,8 +32,8 @@
       {
         "Type": 0,
         "Amount": {
-          "Mantissa": 4.0,
-          "E10": 6
+          "Mantissa": 1.0,
+          "E10": 3
         }
       }
     ],
@@ -77,8 +77,8 @@
         "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
         "Type": 0,
         "Amount": {
-          "Mantissa": 4.0,
-          "E10": 6
+          "Mantissa": 1.0,
+          "E10": 3
         }
       }
     ]

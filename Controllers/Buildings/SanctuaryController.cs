@@ -4,6 +4,7 @@ using UniverseRift.Contexts;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Results;
 using Misc.Json;
+using UniverseRift.MessageData;
 
 namespace UniverseRift.Controllers.Buildings
 {
@@ -57,7 +58,8 @@ namespace UniverseRift.Controllers.Buildings
             await _context.Heroes.AddAsync(newHero);
             await _context.SaveChangesAsync();
 
-            answer.Result = _jsonConverter.Serialize(newHero);
+            var heroData = new HeroData(newHero);
+            answer.Result = _jsonConverter.Serialize(heroData);
             return answer;
         }
     }

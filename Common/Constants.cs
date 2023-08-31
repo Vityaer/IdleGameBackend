@@ -22,6 +22,8 @@ namespace UniverseRift.Controllers.Common
                     return "Jsons";
                 }
             }
+
+            public static string DateTimeFormat = "dd.MM.yyyy HH:mm:ss";
         }
     }
 }

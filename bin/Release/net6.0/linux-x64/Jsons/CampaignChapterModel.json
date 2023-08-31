@@ -194,127 +194,11 @@
             "Costume": {
               "Items": null
             }
-          }
-        ],
-        "WinReward": {
-          "Resources": [
-            {
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 100.0,
-                "E10": 0
-              }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            }
-          ],
-          "Items": [
-            {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ],
-          "Splinters": [],
-          "Id": null,
-          "Objects": [
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 100.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ]
-        }
-      },
-      {
-        "AutoFightReward": {
-          "BaseResource": {
-            "Gold": {
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 5.0,
-                "E10": 0
-              }
-            },
-            "ContinuumStone": {
-              "Type": 2,
-              "Amount": {
-                "Mantissa": 4.0,
-                "E10": 0
-              }
-            },
-            "Exp": {
-              "Type": 10,
-              "Amount": {
-                "Mantissa": 3.0,
-                "E10": 0
-              }
-            }
           },
-          "Resources": [
-            {
-              "Value": {
-                "Type": 0,
-                "Amount": {
-                  "Mantissa": 0.0,
-                  "E10": 0
-                }
-              },
-              "Posibility": 50.0
-            }
-          ],
-          "Items": [],
-          "Splinters": [],
-          "Objects": [
-            {
-              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
-              "Value": {
-                "Type": 0,
-                "Amount": {
-                  "Mantissa": 0.0,
-                  "E10": 0
-                }
-              },
-              "Posibility": 50.0
-            }
-          ]
-        },
-        "Name": "1",
-        "Location": null,
-        "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Peasant",
+            "Level": 3,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -330,25 +214,9 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
             }
           ],
-          "Items": [
-            {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ],
+          "Items": [],
           "Splinters": [],
           "Id": null,
           "Objects": [
@@ -359,24 +227,6 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
-              "Amount": 1
             }
           ]
         }
@@ -439,8 +289,28 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Raccoon",
+            "Level": 8,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Raccoon",
+            "Level": 8,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Pegasus",
+            "Level": 10,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -456,25 +326,9 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
             }
           ],
-          "Items": [
-            {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ],
+          "Items": [],
           "Splinters": [],
           "Id": null,
           "Objects": [
@@ -485,24 +339,6 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
-              "Amount": 1
             }
           ]
         }
@@ -565,8 +401,38 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Militia",
+            "Level": 10,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Demoniac",
+            "Level": 10,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "DeathKnight",
+            "Level": 15,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Robin",
+            "Level": 10,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -582,20 +448,9 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
             }
           ],
           "Items": [
-            {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
             {
               "Id": "PupilBoots",
               "Amount": 1
@@ -611,19 +466,6 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
             },
             {
               "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
@@ -691,8 +533,38 @@
         "Units": [
           {
             "Id": 0,
+            "HeroId": "Spirit",
+            "Level": 18,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Spirit",
+            "Level": 18,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "TempleGuard",
+            "Level": 25,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
             "HeroId": "Imp",
-            "Level": 1,
+            "Level": 30,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -708,22 +580,11 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
             }
           ],
           "Items": [
             {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
+              "Id": "PupilArmor",
               "Amount": 1
             }
           ],
@@ -739,21 +600,8 @@
               }
             },
             {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
               "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
+              "Id": "PupilArmor",
               "Amount": 1
             }
           ]
@@ -817,8 +665,48 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Peasant",
+            "Level": 30,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "DeathKnight",
+            "Level": 30,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 35,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Demoniac",
+            "Level": 30,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Militia",
+            "Level": 32,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -834,22 +722,11 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
             }
           ],
           "Items": [
             {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
+              "Id": "PupilAmulet",
               "Amount": 1
             }
           ],
@@ -865,21 +742,8 @@
               }
             },
             {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
               "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
+              "Id": "PupilAmulet",
               "Amount": 1
             }
           ]
@@ -943,8 +807,48 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Militia",
+            "Level": 35,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 36,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Demoniac",
+            "Level": 40,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "DeathKnight",
+            "Level": 40,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Peasant",
+            "Level": 40,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -960,22 +864,11 @@
                 "Mantissa": 100.0,
                 "E10": 0
               }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
             }
           ],
           "Items": [
             {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
+              "Id": "PupilAmulet",
               "Amount": 1
             }
           ],
@@ -991,21 +884,8 @@
               }
             },
             {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
               "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
+              "Id": "PupilAmulet",
               "Amount": 1
             }
           ]
@@ -1069,386 +949,28 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Militia",
+            "Level": 45,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
             }
-          }
-        ],
-        "WinReward": {
-          "Resources": [
-            {
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 100.0,
-                "E10": 0
-              }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            }
-          ],
-          "Items": [
-            {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ],
-          "Splinters": [],
-          "Id": null,
-          "Objects": [
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 100.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ]
-        }
-      },
-      {
-        "AutoFightReward": {
-          "BaseResource": {
-            "Gold": {
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 5.0,
-                "E10": 0
-              }
-            },
-            "ContinuumStone": {
-              "Type": 2,
-              "Amount": {
-                "Mantissa": 4.0,
-                "E10": 0
-              }
-            },
-            "Exp": {
-              "Type": 10,
-              "Amount": {
-                "Mantissa": 3.0,
-                "E10": 0
-              }
-            }
           },
-          "Resources": [
-            {
-              "Value": {
-                "Type": 0,
-                "Amount": {
-                  "Mantissa": 0.0,
-                  "E10": 0
-                }
-              },
-              "Posibility": 50.0
-            }
-          ],
-          "Items": [],
-          "Splinters": [],
-          "Objects": [
-            {
-              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
-              "Value": {
-                "Type": 0,
-                "Amount": {
-                  "Mantissa": 0.0,
-                  "E10": 0
-                }
-              },
-              "Posibility": 50.0
-            }
-          ]
-        },
-        "Name": "1",
-        "Location": null,
-        "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Pegasus",
+            "Level": 45,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
             }
-          }
-        ],
-        "WinReward": {
-          "Resources": [
-            {
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 100.0,
-                "E10": 0
-              }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            }
-          ],
-          "Items": [
-            {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ],
-          "Splinters": [],
-          "Id": null,
-          "Objects": [
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 100.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ]
-        }
-      },
-      {
-        "AutoFightReward": {
-          "BaseResource": {
-            "Gold": {
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 5.0,
-                "E10": 0
-              }
-            },
-            "ContinuumStone": {
-              "Type": 2,
-              "Amount": {
-                "Mantissa": 4.0,
-                "E10": 0
-              }
-            },
-            "Exp": {
-              "Type": 10,
-              "Amount": {
-                "Mantissa": 3.0,
-                "E10": 0
-              }
-            }
           },
-          "Resources": [
-            {
-              "Value": {
-                "Type": 0,
-                "Amount": {
-                  "Mantissa": 0.0,
-                  "E10": 0
-                }
-              },
-              "Posibility": 50.0
-            }
-          ],
-          "Items": [],
-          "Splinters": [],
-          "Objects": [
-            {
-              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
-              "Value": {
-                "Type": 0,
-                "Amount": {
-                  "Mantissa": 0.0,
-                  "E10": 0
-                }
-              },
-              "Posibility": 50.0
-            }
-          ]
-        },
-        "Name": "1",
-        "Location": null,
-        "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
-            "Rating": 1,
-            "CurrentBreakthrough": 0,
-            "Costume": {
-              "Items": null
-            }
-          }
-        ],
-        "WinReward": {
-          "Resources": [
-            {
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 100.0,
-                "E10": 0
-              }
-            },
-            {
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            }
-          ],
-          "Items": [
-            {
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ],
-          "Splinters": [],
-          "Id": null,
-          "Objects": [
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 100.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
-              "Type": 11,
-              "Amount": {
-                "Mantissa": 1.0,
-                "E10": 0
-              }
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilWeapon",
-              "Amount": 1
-            },
-            {
-              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
-              "Id": "PupilBoots",
-              "Amount": 1
-            }
-          ]
-        }
-      },
-      {
-        "AutoFightReward": {
-          "BaseResource": {
-            "Gold": {
-              "Type": 0,
-              "Amount": {
-                "Mantissa": 5.0,
-                "E10": 0
-              }
-            },
-            "ContinuumStone": {
-              "Type": 2,
-              "Amount": {
-                "Mantissa": 4.0,
-                "E10": 0
-              }
-            },
-            "Exp": {
-              "Type": 10,
-              "Amount": {
-                "Mantissa": 3.0,
-                "E10": 0
-              }
-            }
-          },
-          "Resources": [
-            {
-              "Value": {
-                "Type": 0,
-                "Amount": {
-                  "Mantissa": 0.0,
-                  "E10": 0
-                }
-              },
-              "Posibility": 50.0
-            }
-          ],
-          "Items": [],
-          "Splinters": [],
-          "Objects": [
-            {
-              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
-              "Value": {
-                "Type": 0,
-                "Amount": {
-                  "Mantissa": 0.0,
-                  "E10": 0
-                }
-              },
-              "Posibility": 50.0
-            }
-          ]
-        },
-        "Name": "1",
-        "Location": null,
-        "Units": [
-          {
-            "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "DeathKnight",
+            "Level": 45,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -1550,7 +1072,27 @@
           {
             "Id": 0,
             "HeroId": "Imp",
-            "Level": 1,
+            "Level": 60,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 60,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 60,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -1651,8 +1193,8 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Peasant",
+            "Level": 100,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -1753,8 +1295,48 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Pegasus",
+            "Level": 75,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Peasant",
+            "Level": 70,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Demoniac",
+            "Level": 70,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Pegasus",
+            "Level": 73,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Robin",
+            "Level": 60,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -1855,8 +1437,28 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Spirit",
+            "Level": 80,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 80,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "TempleGuard",
+            "Level": 82,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -1957,8 +1559,28 @@
         "Units": [
           {
             "Id": 0,
+            "HeroId": "Peasant",
+            "Level": 90,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
             "HeroId": "Imp",
-            "Level": 1,
+            "Level": 90,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "DeathKnight",
+            "Level": 100,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -2059,8 +1681,38 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Raccoon",
+            "Level": 110,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 120,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Demoniac",
+            "Level": 100,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Pegasus",
+            "Level": 90,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -2161,8 +1813,18 @@
         "Units": [
           {
             "Id": 0,
+            "HeroId": "Spirit",
+            "Level": 150,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
             "HeroId": "Imp",
-            "Level": 1,
+            "Level": 120,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {
@@ -2263,8 +1925,476 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Imp",
-            "Level": 1,
+            "HeroId": "Peasant",
+            "Level": 140,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Demoniac",
+            "Level": 140,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Raccoon",
+            "Level": 140,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [
+            {
+              "Id": "PupilAmulet",
+              "Amount": 1
+            }
+          ],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+              "Id": "PupilAmulet",
+              "Amount": 1
+            }
+          ]
+        }
+      },
+      {
+        "AutoFightReward": {
+          "BaseResource": {
+            "Gold": {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            "ContinuumStone": {
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 4.0,
+                "E10": 0
+              }
+            },
+            "Exp": {
+              "Type": 10,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            }
+          },
+          "Resources": [
+            {
+              "Value": {
+                "Type": 0,
+                "Amount": {
+                  "Mantissa": 0.0,
+                  "E10": 0
+                }
+              },
+              "Posibility": 50.0
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Objects": [
+            {
+              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+              "Value": {
+                "Type": 0,
+                "Amount": {
+                  "Mantissa": 0.0,
+                  "E10": 0
+                }
+              },
+              "Posibility": 50.0
+            }
+          ]
+        },
+        "Name": "1",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Militia",
+            "Level": 180,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "DeathKnight",
+            "Level": 180,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [
+            {
+              "Id": "PupilAmulet",
+              "Amount": 1
+            }
+          ],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+              "Id": "PupilAmulet",
+              "Amount": 1
+            }
+          ]
+        }
+      },
+      {
+        "AutoFightReward": {
+          "BaseResource": {
+            "Gold": {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            "ContinuumStone": {
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 4.0,
+                "E10": 0
+              }
+            },
+            "Exp": {
+              "Type": 10,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            }
+          },
+          "Resources": [
+            {
+              "Value": {
+                "Type": 0,
+                "Amount": {
+                  "Mantissa": 0.0,
+                  "E10": 0
+                }
+              },
+              "Posibility": 50.0
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Objects": [
+            {
+              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+              "Value": {
+                "Type": 0,
+                "Amount": {
+                  "Mantissa": 0.0,
+                  "E10": 0
+                }
+              },
+              "Posibility": 50.0
+            }
+          ]
+        },
+        "Name": "1",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Demoniac",
+            "Level": 200,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [
+            {
+              "Id": "PupilAmulet",
+              "Amount": 1
+            }
+          ],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+              "Id": "PupilAmulet",
+              "Amount": 1
+            }
+          ]
+        }
+      },
+      {
+        "AutoFightReward": {
+          "BaseResource": {
+            "Gold": {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            "ContinuumStone": {
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 4.0,
+                "E10": 0
+              }
+            },
+            "Exp": {
+              "Type": 10,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            }
+          },
+          "Resources": [
+            {
+              "Value": {
+                "Type": 0,
+                "Amount": {
+                  "Mantissa": 0.0,
+                  "E10": 0
+                }
+              },
+              "Posibility": 50.0
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Objects": [
+            {
+              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+              "Value": {
+                "Type": 0,
+                "Amount": {
+                  "Mantissa": 0.0,
+                  "E10": 0
+                }
+              },
+              "Posibility": 50.0
+            }
+          ]
+        },
+        "Name": "1",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Militia",
+            "Level": 190,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 180,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Peasant",
+            "Level": 195,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [
+            {
+              "Id": "PupilAmulet",
+              "Amount": 1
+            }
+          ],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+              "Id": "PupilAmulet",
+              "Amount": 1
+            }
+          ]
+        }
+      },
+      {
+        "AutoFightReward": {
+          "BaseResource": {
+            "Gold": {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            "ContinuumStone": {
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 4.0,
+                "E10": 0
+              }
+            },
+            "Exp": {
+              "Type": 10,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            }
+          },
+          "Resources": [
+            {
+              "Value": {
+                "Type": 0,
+                "Amount": {
+                  "Mantissa": 0.0,
+                  "E10": 0
+                }
+              },
+              "Posibility": 50.0
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Objects": [
+            {
+              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+              "Value": {
+                "Type": 0,
+                "Amount": {
+                  "Mantissa": 0.0,
+                  "E10": 0
+                }
+              },
+              "Posibility": 50.0
+            }
+          ]
+        },
+        "Name": "1",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Robin",
+            "Level": 250,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Demoniac",
+            "Level": 240,
             "Rating": 1,
             "CurrentBreakthrough": 0,
             "Costume": {

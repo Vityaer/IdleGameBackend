@@ -26,6 +26,110 @@
     "Id": "MiniDiamond"
   },
   {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 2,
+      "Amount": {
+        "Mantissa": 10.0,
+        "E10": 3
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "MiniContinuum"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 3,
+      "Amount": {
+        "Mantissa": 2.0,
+        "E10": 0
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "SimpleHireCard"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 4,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 0
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "SpecialHireCard"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 6,
+      "Amount": {
+        "Mantissa": 2.0,
+        "E10": 0
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "TicketArena"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 11,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 0
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "SimpleTask"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 5,
+      "Amount": {
+        "Mantissa": 50.0,
+        "E10": 0
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "ForceStone"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 14,
+      "Amount": {
+        "Mantissa": 10.0,
+        "E10": 0
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "StoneReplacement"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneResourseRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 7,
+      "Amount": {
+        "Mantissa": 100.0,
+        "E10": 0
+      }
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "GenePet"
+  },
+  {
     "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
     "Subject": {
       "Id": "RubbishArmor",
@@ -44,5 +148,65 @@
     "Probability": 20.0,
     "FactorDelta": 0.0,
     "Id": "RubbishBoots"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "RubbishAmulet",
+      "Amount": 1
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "RubbishAmulet"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "RubbishWeapon",
+      "Amount": 1
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "RubbishWeapon"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PupilArmor",
+      "Amount": 1
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "PupilArmor"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PupilBoots",
+      "Amount": 1
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "PupilBoots"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PupilAmulet",
+      "Amount": 1
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "PupilAmulet"
+  },
+  {
+    "$type": "Models.City.FortuneRewards.FortuneItemRewardModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PupilWeapon",
+      "Amount": 1
+    },
+    "Probability": 20.0,
+    "FactorDelta": 0.0,
+    "Id": "PupilWeapon"
   }
 ]

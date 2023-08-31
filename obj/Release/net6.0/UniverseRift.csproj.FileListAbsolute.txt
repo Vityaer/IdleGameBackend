@@ -13,7 +13,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\Loc
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\MarketModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\MineModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\MonthlyTasksModel.json
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\ProductModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\RaceModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\RarityModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\RatingModel.json
@@ -21,7 +20,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\Res
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\RewardModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\SplinterModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\StorageChallengeModel.json
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\TaskModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\VocationModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\UniverseRift.exe
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\UniverseRift.deps.json
@@ -315,4 +313,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\UniverseR
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\ref\UniverseRift.dll
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\MySqlConnector.dll
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\String.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\BaseProductModel.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\FortuneRewardModel.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\bin\Release\net6.0\Jsons\GameTaskModel.json

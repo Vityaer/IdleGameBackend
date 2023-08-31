@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
+using Models.City.FortuneRewards;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModels;
+using UniverseRift.GameModels.FortuneWheels;
 using UniverseRift.Models.City.FortuneWheels;
 using UniverseRift.Models.FortuneWheels;
 using UniverseRift.Models.Resources;
@@ -64,17 +66,28 @@ namespace UniverseRift.Controllers.Buildings.FortuneWheels
             var posibleReward = _jsonConverter.Deserialize<FortuneWheelData>(playerWheel.RewardsJson);
             var reward = new RewardModel();
 
+            var rand = 0;
             for(var i = 0; i < count; i++)
             {
-                var rand = _random.Next(0, posibleReward.Rewards.Count);
+                rand = _random.Next(0, posibleReward.Rewards.Count);
                 var id = posibleReward.Rewards.ElementAt(rand).RewardModelId;
                 var rewardModel = _commonDictionaries.FortuneRewardModels[id];
-                reward.Add(rewardModel.Subject);
+
+                switch (rewardModel)
+                {
+                    case FortuneResourseRewardModel resourseRewardModel:
+                        reward.Add(resourseRewardModel.Subject);
+                        break;
+                    case FortuneItemRewardModel itemRewardModel:
+                        reward.Add(itemRewardModel.Subject);
+                        break;
+                }
             }
 
             await _resourceController.SubstactResources(cost);
             await _clientRewardService.AddReward(playerId, reward);
-            answer.Result = _jsonConverter.Serialize(reward);
+            var rewardContainer = new FortuneRewardContainer{ Reward = reward, ResultItemIndex = rand };
+            answer.Result = _jsonConverter.Serialize(rewardContainer);
             return answer;
         }
 
@@ -117,6 +130,7 @@ namespace UniverseRift.Controllers.Buildings.FortuneWheels
                 var randomReward = rewardModels[rand].Value;
                 rewardsData.Rewards.Add(new FortuneRewardData { RewardModelId = randomReward.Id });
             }
+            newWheel.PlayerId = playerId;
             newWheel.RewardsJson = _jsonConverter.Serialize(rewardsData);
 
             if (playerWheel == null)
@@ -137,9 +151,14 @@ namespace UniverseRift.Controllers.Buildings.FortuneWheels
             return playerWheel;
         }
 
-        public async Task<FortuneWheelData> GetPlayerSave(int playerId)
+        public async Task<FortuneWheelData> GetPlayerSave(int playerId, bool flagCreateNewData)
         {
-            var playerWheel = await GetWheelModel(playerId);
+            var playerWheel = await LoadFortuneWheel(playerId);
+
+            if (playerWheel == null || flagCreateNewData)
+            {
+                playerWheel = await CreateFortuneWheel(playerId);
+            }
 
             var result = _jsonConverter.Deserialize<FortuneWheelData>(playerWheel.RewardsJson);
 

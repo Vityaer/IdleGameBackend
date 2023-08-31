@@ -13,7 +13,7 @@ namespace UniverseRift.Controllers.Buildings.TravelCircles
             _context = context;
         }
 
-        public async Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId)
+        public async Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId, bool flagCreateNewData)
         {
             var result = new BuildingWithFightTeamsData();
             return result;

@@ -1,11 +1,17 @@
 [
   {
     "Products": [
-      "PupilWeapon",
       "SimpleHireMiniSet",
       "SpecialHireMiniSet",
       "SpecialHireSet",
-      "RubbishAmulet"
+      "RedDastSet",
+      "RaceHireStone",
+      "FortuneCoinSet",
+      "ForceStoneBigSet",
+      "ForceStoneMiniSet",
+      "ContinuumStoneBigSet",
+      "RubbishAmulet",
+      "PupilWeapon"
     ],
     "RecoveryType": 1,
     "Id": "CityMarket"

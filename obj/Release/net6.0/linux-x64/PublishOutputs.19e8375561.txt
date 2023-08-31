@@ -1,10 +1,13 @@
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.Development.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\AchievmentModel.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\BaseProductModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\BuildingModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\CampaignChapterModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\ConfigVersion.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\CostLevelUpContainer.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\FortuneRewardModel.json
+C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\GameTaskModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\HeroModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\ItemModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\ItemRelationModel.json
@@ -13,7 +16,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\MarketModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\MineModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\MonthlyTasksModel.json
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\ProductModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\RaceModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\RarityModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\RatingModel.json
@@ -21,8 +23,6 @@ C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\RewardModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\SplinterModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\StorageChallengeModel.json
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\String.json
-C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\TaskModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\Jsons\VocationModel.json
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\UniverseRift.pdb
 C:\Users\vitya\source\repos\Backend\IdleGameBackend\obj\Release\net6.0\linux-x64\PubTmp\Out\libe_sqlite3.so

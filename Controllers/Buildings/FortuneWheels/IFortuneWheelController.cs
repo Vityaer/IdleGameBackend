@@ -4,6 +4,6 @@ namespace UniverseRift.Controllers.Buildings.FortuneWheels
 {
     public interface IFortuneWheelController
     {
-        Task<FortuneWheelData> GetPlayerSave(int playerId);
+        Task<FortuneWheelData> GetPlayerSave(int playerId, bool flagCreateNewData);
     }
 }

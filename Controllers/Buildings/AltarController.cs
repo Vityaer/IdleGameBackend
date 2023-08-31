@@ -1,6 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Misc.Json;
+using Models.Common.BigDigits;
+using Models.Data.Inventories;
+using Newtonsoft.Json;
+using System.Text;
 using UniverseRift.Contexts;
+using UniverseRift.GameModels;
+using UniverseRift.Models.Heroes;
+using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
 
 namespace UniverseRift.Controllers.Buildings
@@ -8,17 +16,33 @@ namespace UniverseRift.Controllers.Buildings
     public class AltarController : ControllerBase
     {
         private readonly AplicationContext _context;
+        private readonly IJsonConverter _jsonConverter;
 
-        public AltarController(AplicationContext context)
+        public AltarController(
+            AplicationContext context,
+            IJsonConverter jsonConverter
+            )
         {
+            _jsonConverter = jsonConverter;
             _context = context;
         }
 
         [HttpPost]
         [Route("Altar/RemoveHeroes")]
-        public async Task<AnswerModel> RemoveHeroes(int playerId, List<int> heroIds)
+        public async Task<AnswerModel> RemoveHeroes(int playerId, string jsonContainer)
         {
             var answer = new AnswerModel();
+            var fireContainer = JsonConvert.DeserializeObject<FireContainer>(jsonContainer);
+            
+            if(fireContainer == null)
+            {
+                answer.Error = "Wrong data";
+                return answer;
+            }
+
+            var heroIds = fireContainer.HeroesIds;
+            var heroCount = heroIds.Count;
+
             if (heroIds.Count == 0)
             {
                 answer.Error = $"data error, hero count: {heroIds.Count}";
@@ -33,9 +57,13 @@ namespace UniverseRift.Controllers.Buildings
                     _context.Heroes.Remove(hero);
             }
 
+            var reward = new RewardModel();
+            var resource = new ResourceData { Type = ResourceType.RedDust, Amount = new BigDigit(10 * heroCount) };
+            reward.Add(resource);
+
             await _context.SaveChangesAsync();
 
-            answer.Result = "Success";
+            answer.Result = _jsonConverter.Serialize(reward);
             return answer;
         }
     }

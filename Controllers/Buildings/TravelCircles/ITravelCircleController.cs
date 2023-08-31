@@ -4,6 +4,6 @@ namespace UniverseRift.Controllers.Buildings.TravelCircles
 {
     public interface ITravelCircleController
     {
-        async Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId) { return null; }
+        Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId, bool flagCreateNewData);
     }
 }

@@ -1,4 +1,5 @@
-﻿using UniverseRift.Controllers.Buildings.Shops;
+﻿using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Shops;
 using UniverseRift.Controllers.Buildings.TaskBoards;
 using UniverseRift.Controllers.Server;
 
@@ -7,17 +8,11 @@ namespace UniverseRift.Services
     public class MyHostedService : IHostedService
     {
         private readonly IServerController _serverController;
-        private readonly IMarketController _marketController;
-        private readonly ITaskBoardController _taskBoardController;
         public MyHostedService(
-            IServerController someService, 
-            IMarketController marketController,
-            ITaskBoardController taskBoardController
+            IServerController serverController
             )
         {
-            _taskBoardController = taskBoardController;
-            _serverController = someService;
-            _marketController = marketController;
+            _serverController = serverController;
         }
 
         public Task StartAsync(CancellationToken cancellationToken)

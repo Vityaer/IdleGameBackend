@@ -4,6 +4,6 @@ namespace UniverseRift.Controllers.Jsons
 {
     public interface IJsonDataController
     {
-        string GetJsonFile(string name);
+        Task<AnswerModel> GetJsonFile(string name);
     }
 }
