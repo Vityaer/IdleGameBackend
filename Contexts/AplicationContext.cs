@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.Misc;
+using UniverseRift.Models.City.DailyRewards;
 using UniverseRift.Models.City.Markets;
 using UniverseRift.Models.Common;
 using UniverseRift.Models.Common.Server;
@@ -7,6 +9,7 @@ using UniverseRift.Models.FortuneWheels;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Inventories.Splinters;
 using UniverseRift.Models.Items;
+using UniverseRift.Models.Mines;
 using UniverseRift.Models.Players;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Rewards;
@@ -29,6 +32,8 @@ namespace UniverseRift.Contexts
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<GameTask> GameTasks { get; set; }
         public DbSet<FortuneWheelModel> FortuneWheels { get; set; }
+        public DbSet<DailyRewardProgress> DailyRewardProgresses { get; set; }
+        public DbSet<MineData> MineDatas { get; set; }
 
         public AplicationContext(DbContextOptions<AplicationContext> options)
             : base(options)

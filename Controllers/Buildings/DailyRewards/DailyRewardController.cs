@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using UniverseRift.Contexts;
-using UniverseRift.GameModelDatas.Cities;
+using UniverseRift.Models.City.DailyRewards;
 
 namespace UniverseRift.Controllers.Buildings.DailyRewards
 {
@@ -13,10 +14,25 @@ namespace UniverseRift.Controllers.Buildings.DailyRewards
             _context = context;
         }
 
-        public async Task<SimpleBuildingData> GetPlayerSave(int playerId)
+        public async Task<DailyRewardContainer> GetPlayerSave(int playerId, bool flagCreateNewData)
         {
-            var result = new SimpleBuildingData();
+            var dailyRewardSaves = await _context.DailyRewardProgresses.ToListAsync();
+            var playerData = dailyRewardSaves.Find(save => save.PlayerId == playerId);
+
+            if (playerData == null)
+            {
+                playerData = new DailyRewardProgress();
+                playerData.PlayerId = playerId;
+                //playerData.RewardId = CreateRewards();
+            }
+            var result = new DailyRewardContainer();
+
             return result;
         }
+
+        //private string CreateRewards()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

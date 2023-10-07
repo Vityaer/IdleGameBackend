@@ -6,12 +6,13 @@ namespace UniverseRift.Services.Resources
 {
     public interface IResourceManager
     {
-        public async Task<bool> CheckResource(int playerId, Resource resource, AnswerModel answer) { return false; }
-        public async Task<bool> CheckResource(int playerId, List<Resource> resources, AnswerModel answer) { return false; }
-        public async Task CreateResources(int playerId) { }
-        public async Task SubstactResources(Resource res) { }
-        public async Task AddResources(Resource res) { }
+        Task<bool> CheckResource(int playerId, Resource resource, AnswerModel answer);
+        Task<bool> CheckResource(int playerId, List<Resource> resources, AnswerModel answer);
+        Task CreateResources(int playerId);
+        Task SubstactResources(Resource res);
+        Task SubstactResources(List<Resource> resources);
+        Task AddResources(Resource res);
 
-        async Task<List<ResourceData>> GetPlayerSave(int playerId) { return null; }
+        Task<List<ResourceData>> GetPlayerSave(int playerId);
     }
 }

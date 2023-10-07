@@ -1,9 +1,10 @@
 ﻿using UniverseRift.GameModelDatas.Cities;
+using UniverseRift.Models.City.DailyRewards;
 
 namespace UniverseRift.Controllers.Buildings.DailyRewards
 {
     public interface IDailyRewardController
     {
-        async Task<SimpleBuildingData> GetPlayerSave(int playerId) { return null; }
+        Task<DailyRewardContainer> GetPlayerSave(int playerId, bool flagCreateNewData);
     }
 }

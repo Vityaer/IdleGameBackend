@@ -164,20 +164,40 @@
     "Subject": {
       "Type": 5,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1500.0,
+        "E10": 0
       }
     },
     "CountSell": 1,
     "Cost": {
       "Type": 1,
       "Amount": {
-        "Mantissa": 300.0,
+        "Mantissa": 400.0,
         "E10": 0
       }
     },
     "Type": 0,
     "Id": "ForceStoneBigSet"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 6,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 1,
+      "Amount": {
+        "Mantissa": 50.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "TicketOnArena"
   },
   {
     "$type": "Models.City.Markets.ItemProductModel, Assembly-CSharp",

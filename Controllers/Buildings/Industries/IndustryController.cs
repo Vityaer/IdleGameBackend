@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using UniverseRift.Contexts;
 using UniverseRift.GameModelDatas.Cities.Industries;
 
@@ -13,9 +14,12 @@ namespace UniverseRift.Controllers.Buildings.Industries
             _context = context;
         }
 
-        public async Task<IndustryModel> GetPlayerSave(int playerId)
+        public async Task<IndustryData> GetPlayerSave(int playerId, bool flagCreateNewData)
         {
-            var result = new IndustryModel();
+            var result = new IndustryData();
+            var mineDatas = await _context.MineDatas.ToListAsync();
+            var playerMineDatas = mineDatas.FindAll(data => data.PlayerId == playerId);
+            result.Mines.AddRange(playerMineDatas);
             return result;
         }
     }

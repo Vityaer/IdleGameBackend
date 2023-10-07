@@ -1,0 +1,39 @@
+[
+  {
+    "Type": 0,
+    "ProgressType": 1,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "Id": "GetLevel"
+  }
+]

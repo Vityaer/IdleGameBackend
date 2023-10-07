@@ -417,7 +417,7 @@
         "Defense": 4,
         "Speed": 3,
         "MovementType": 0,
-        "Mellee": true,
+        "Mellee": false,
         "AttackType": 0,
         "CanRetaliation": true,
         "CountCouterAttack": 1
@@ -982,7 +982,7 @@
         "Defense": 0,
         "Speed": 0,
         "MovementType": 0,
-        "Mellee": true,
+        "Mellee": false,
         "AttackType": 0,
         "CanRetaliation": true,
         "CountCouterAttack": 1

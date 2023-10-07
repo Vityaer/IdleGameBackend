@@ -1,6 +1,6 @@
 ﻿namespace UniverseRift.GameModelDatas.Cities.Industries
 {
-    public enum TypeMine
+    public enum MineType
     {
         Diamond = 0,
         Gold = 1,

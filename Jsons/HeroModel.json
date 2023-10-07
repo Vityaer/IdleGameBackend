@@ -417,7 +417,7 @@
         "Defense": 4,
         "Speed": 3,
         "MovementType": 0,
-        "Mellee": true,
+        "Mellee": false,
         "AttackType": 0,
         "CanRetaliation": true,
         "CountCouterAttack": 1
@@ -982,7 +982,7 @@
         "Defense": 0,
         "Speed": 0,
         "MovementType": 0,
-        "Mellee": true,
+        "Mellee": false,
         "AttackType": 0,
         "CanRetaliation": true,
         "CountCouterAttack": 1
@@ -1142,7 +1142,54 @@
     "ArrowPrefabPath": null,
     "Evolutions": {
       "CurrentBreakthrough": 0,
-      "Stages": []
+      "Stages": [
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 0,
+          "NewLimitLevel": 30,
+          "IncCharacts": {
+            "increaseDamage": 2.0,
+            "increaseHP": 2.0,
+            "increaseInitiative": 2.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          },
+          "IsSeriousChange": false,
+          "NewName": "",
+          "NewRace": null,
+          "NewClassHero": null,
+          "NewModelId": null
+        },
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 30,
+          "NewLimitLevel": 60,
+          "IncCharacts": {
+            "increaseDamage": 5.0,
+            "increaseHP": 5.0,
+            "increaseInitiative": 5.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          },
+          "IsSeriousChange": false,
+          "NewName": "",
+          "NewRace": null,
+          "NewClassHero": null,
+          "NewModelId": null
+        }
+      ]
     },
     "Characteristics": {
       "limitLevel": 30,

@@ -1,13 +1,11 @@
-﻿using UniverseRift.Contexts;
-using UniverseRift.GameModelDatas.Cities;
-using UniverseRift.Models.Players;
+﻿using UniverseRift.GameModelDatas.Cities;
 
 namespace UniverseRift.Controllers.Buildings.Campaigns
 {
     public interface ICampaignController
     {
-        async Task CreatePlayerProgress(int playerId) { }
+        Task CreatePlayerProgress(int playerId);
 
-        async Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId) { return null; }
+        Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId);
     }
 }

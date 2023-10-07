@@ -16,6 +16,7 @@ using UniverseRift.Controllers.Buildings.FortuneWheels;
 using UniverseRift.Controllers.Buildings.GameCycles;
 using UniverseRift.Controllers.Buildings.Guilds;
 using UniverseRift.Controllers.Buildings.Industries;
+using UniverseRift.Controllers.Buildings.Industries.Mines;
 using UniverseRift.Controllers.Buildings.Shops;
 using UniverseRift.Controllers.Buildings.TaskBoards;
 using UniverseRift.Controllers.Buildings.TimeMenagers;
@@ -55,6 +56,7 @@ builder.Services.AddSingleton<IItemsController, ItemsController>();
 builder.Services.AddSingleton<IChallengeTowerController, ChallengeTowerController>();
 builder.Services.AddSingleton<ITaskBoardController, TaskBoardController>();
 builder.Services.AddSingleton<IMarketController, MarketController>();
+builder.Services.AddSingleton<IMineController, MineController>();
 builder.Services.AddSingleton<IDailyRewardController, DailyRewardController>();
 builder.Services.AddSingleton<IDailyTasksController, DailyTasksController>();
 builder.Services.AddSingleton<IIndustryController, IndustryController>();
@@ -104,7 +106,7 @@ app.UseExceptionHandler(
                         Message = exceptionObject.Error.Message;
                         StackTrace = exceptionObject.Error.StackTrace;
                     }
-                    writer.WriteLine($"{DateTime.Now.ToString("MM.dd.yyyy HH:mm:ss.ff")} [{HttpStatusCode.InternalServerError.ToString().ToUpper()}]\nMessage: {Message}\nStackTrace: {StackTrace}\n");
+                    writer.WriteLine($"{DateTime.UtcNow.ToString("MM.dd.yyyy HH:mm:ss.ff")} [{HttpStatusCode.InternalServerError.ToString().ToUpper()}]\nMessage: {Message}\nStackTrace: {StackTrace}\n");
                     writer.Close();
                     writer.Dispose();
                 });

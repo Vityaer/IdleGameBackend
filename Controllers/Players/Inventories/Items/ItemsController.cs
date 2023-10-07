@@ -126,7 +126,7 @@ namespace UniverseRift.Controllers.Players.Inventories.Items
             }
             else
             {
-                var newItem = new Item(playerId, itemName);
+                var newItem = new Item(playerId, itemName, count);
                 _context.Items.Add(newItem);
             }
             await _context.SaveChangesAsync();

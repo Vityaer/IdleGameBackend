@@ -1,8 +1,10 @@
 ﻿using Misc.Json;
 using Models.City.FortuneRewards;
 using Models.City.Markets;
+using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.Items;
+using UniverseRift.Models.City.Mines;
 using UniverseRift.Models.Tasks.SimpleTask;
 
 namespace UniverseRift.Controllers.Common
@@ -19,6 +21,11 @@ namespace UniverseRift.Controllers.Common
         private Dictionary<string, GameTaskModel> _gameTaskModels = new Dictionary<string, GameTaskModel>();
         private Dictionary<string, MarketModel> _markets = new Dictionary<string, MarketModel>();
         private Dictionary<string, FortuneRewardModel> _fortuneRewardModels = new Dictionary<string, FortuneRewardModel>();
+        private Dictionary<string, CostLevelUpContainer> _costContainers = new Dictionary<string, CostLevelUpContainer>();
+        
+        private Dictionary<string, MineModel> _mines = new Dictionary<string, MineModel>();
+        private Dictionary<string, MineRestrictionModel> _mineRestrictions = new Dictionary<string, MineRestrictionModel>();
+
         private readonly IJsonConverter _converter;
         private bool _isInited;
 
@@ -32,6 +39,10 @@ namespace UniverseRift.Controllers.Common
         public Dictionary<string, MarketModel> Markets => _markets;
         public Dictionary<string, GameTaskModel> GameTaskModels => _gameTaskModels;
         public Dictionary<string, FortuneRewardModel> FortuneRewardModels => _fortuneRewardModels;
+        public Dictionary<string, CostLevelUpContainer> CostContainers => _costContainers;
+        public Dictionary<string, MineRestrictionModel> MineRestrictions => _mineRestrictions;
+        public Dictionary<string, MineModel> Mines => _mines;
+
 
         public CommonDictionaries(IJsonConverter converter)
         {
@@ -56,6 +67,9 @@ namespace UniverseRift.Controllers.Common
             _markets = GetModels<MarketModel>();
             _gameTaskModels = GetModels<GameTaskModel>();
             _fortuneRewardModels = GetModels<FortuneRewardModel>();
+            _costContainers = GetModels<CostLevelUpContainer>();
+            _mineRestrictions = GetModels<MineRestrictionModel>();
+            _mines = GetModels<MineModel>();
             //_posibleObjects = GetModels<PosibleObjectModel>();
         }
 

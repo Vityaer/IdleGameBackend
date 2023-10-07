@@ -10,7 +10,7 @@ namespace UniverseRift.Heplers.GameLogging
             var fileName = "UniverseRift_game_log.txt";
             var writer = TextUtils.GetFileWriterStream(directoryPath, fileName, true);
 
-            writer.WriteLine($"{DateTime.Now.ToString("MM.dd.yyyy HH:mm:ss.ff")}\n{message}\n");
+            writer.WriteLine($"{DateTime.UtcNow.ToString("MM.dd.yyyy HH:mm:ss.ff")}\n{message}\n");
             writer.Close();
             writer.Dispose();
         }

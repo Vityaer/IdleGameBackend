@@ -4,6 +4,6 @@ namespace UniverseRift.Controllers.Buildings.Industries
 {
     public interface IIndustryController
     {
-        async Task<IndustryModel> GetPlayerSave(int playerId) { return null; }
+        Task<IndustryData> GetPlayerSave(int playerId, bool flagCreateNewData);
     }
 }

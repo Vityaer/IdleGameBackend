@@ -1,12 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Misc.Json;
+using Models.Common.BigDigits;
+using Models.Data.Inventories;
 using UniRx;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Campaigns;
 using UniverseRift.Controllers.Buildings.ChallengeTowers;
+using UniverseRift.Controllers.Buildings.Industries.Mines;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Players;
+using UniverseRift.GameModels;
 using UniverseRift.Models.Common;
+using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
 using UniverseRift.Services.Resources;
 using UniverseRift.Services.Rewarders;
@@ -20,6 +26,8 @@ namespace UniverseRift.Controllers.Players
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IRewardService _clientRewardService;
         private readonly ICampaignController _campaignController;
+        private readonly IJsonConverter _jsonConverter;
+        private readonly IMineController _mineController;
 
         private ReactiveCommand<int> _onPlayerRegistration = new ReactiveCommand<int>();
 
@@ -30,20 +38,23 @@ namespace UniverseRift.Controllers.Players
             IResourceManager resourcesController,
             ICommonDictionaries commonDictionaries,
             IRewardService clientRewardService,
-            ICampaignController campaignController
+            ICampaignController campaignController,
+            IJsonConverter jsonConverter,
+            IMineController mineController
             )
         {
             _commonDictionaries = commonDictionaries;
             _context = context;
+            _jsonConverter = jsonConverter;
             _resourcesController = resourcesController;
             _clientRewardService = clientRewardService;
             _campaignController = campaignController;
+            _mineController = mineController;
         }
 
         public async Task<Player> GetPlayer(int playerId)
         {
-            var result = await _context.Players.ToListAsync();
-            var player = result.Find(player => player.Id == playerId);
+            var player = await _context.Players.FindAsync(playerId);
             return player;
         }
 
@@ -61,6 +72,7 @@ namespace UniverseRift.Controllers.Players
             await _clientRewardService.AddReward(player.Id, rewardData);
 
             await _campaignController.CreatePlayerProgress(player.Id);
+            await _mineController.CreateMainMine(player.Id);
 
             answer.Result = player.Id.ToString();
             var result = await _context.Players.ToListAsync();
@@ -78,6 +90,41 @@ namespace UniverseRift.Controllers.Players
             player.Name = newName;
             await _context.SaveChangesAsync();
             answer.Result = "Success";
+            return answer;
+        }
+
+        [HttpPost]
+        [Route("Players/PlayerLevelUp")]
+        public async Task<AnswerModel> PlayerLevelUp(int playerId)
+        {
+            var answer = new AnswerModel();
+
+            var player = await GetPlayer(playerId);
+
+            if(player == null)
+            {
+                answer.Error = "Wrong data";
+                return answer;
+            }
+            var requireExp = _commonDictionaries.CostContainers["PlayerLevels"].GetCostForLevelUp(player.Level, playerId)[0];
+            var enoughResource = await _resourcesController.CheckResource(playerId, requireExp, answer);
+
+            if (!enoughResource)
+                return answer;
+
+            player.Level += 1;
+
+            var resoureData = new ResourceData { Type = ResourceType.Diamond, Amount = new BigDigit(100) };
+            var gameResource = new GameResource(resoureData);
+            var rewardResource = new Resource(playerId, gameResource);
+            await _resourcesController.AddResources(rewardResource);
+
+            await _context.SaveChangesAsync();
+            
+            var rewardModel = new RewardModel();
+            rewardModel.Add(resoureData);
+
+            answer.Result = _jsonConverter.Serialize(rewardModel);
             return answer;
         }
 

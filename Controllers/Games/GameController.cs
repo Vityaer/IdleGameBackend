@@ -9,6 +9,7 @@ using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Buildings.Arenas;
 using UniverseRift.Controllers.Buildings.Campaigns;
 using UniverseRift.Controllers.Buildings.ChallengeTowers;
+using UniverseRift.Controllers.Buildings.DailyRewards;
 using UniverseRift.Controllers.Buildings.DailyTasks;
 using UniverseRift.Controllers.Buildings.FortuneWheels;
 using UniverseRift.Controllers.Buildings.GameCycles;
@@ -65,6 +66,7 @@ namespace UniverseRift.Controllers.Games
         private readonly IFortuneWheelController _fortuneWheelController;
         private readonly IServerController _serverController;
         private readonly ICommonDictionaries _commonDictionaries;
+        private readonly IDailyRewardController _dailyRewardController;
         private readonly AplicationContext _context;
 
         private bool _isCreated = false;
@@ -93,6 +95,7 @@ namespace UniverseRift.Controllers.Games
             IFortuneWheelController fortuneWheelController,
             ICommonDictionaries commonDictionaries,
             IServerController serverController,
+            IDailyRewardController dailyRewardController,
             AplicationContext context
             )
         {
@@ -119,6 +122,7 @@ namespace UniverseRift.Controllers.Games
             _fortuneWheelController = fortuneWheelController;
             _serverController = serverController;
             _commonDictionaries = commonDictionaries;
+            _dailyRewardController = dailyRewardController;
         }
 
         [HttpPost]
@@ -164,15 +168,16 @@ namespace UniverseRift.Controllers.Games
             playerSave.City.MallSave = await GetMarketSave(playerId);
             playerSave.City.FortuneWheelData = await GetFortuneSave(playerId, flagCreateNewData);
             playerSave.City.TaskBoardData = await GetTaskboardSave(playerId, flagCreateNewData);
-            
+            playerSave.City.DailyReward = await _dailyRewardController.GetPlayerSave(playerId, flagCreateNewData);
+
+
             playerSave.HeroesStorage = await GetHeroesSave(playerId);
             playerSave.InventoryData = await GetInventory(playerId);
             playerSave.Resources = await GetResourceSave(playerId);
-
             //playerSave.City.TimeManagementSave = await _timeManagerController.GetPlayerSave(playerId);
             //playerSave.City.ChallengeTowerSave = await _challengeTowerController.GetPlayerSave(playerId);
             //playerSave.City.DailyTaskContainer = await _dailyTasksController.GetPlayerSave(playerId);
-            //playerSave.City.IndustrySave = await _industryController.GetPlayerSave(playerId);
+            playerSave.City.IndustrySave = await _industryController.GetPlayerSave(playerId, flagCreateNewData);
             //playerSave.City.VoyageSave = await _voyageController.GetPlayerSave(playerId);
             //playerSave.City.ArenaSave = await _arenaController.GetPlayerSave(playerId);
             //playerSave.City.TravelCircleSave = await _travelCircleController.GetPlayerSave(playerId, flagCreateNewData);

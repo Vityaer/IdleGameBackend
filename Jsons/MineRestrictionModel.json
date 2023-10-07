@@ -1,0 +1,12 @@
+[
+  {
+    "MineId": "GoldMine",
+    "MaxCount": 2,
+    "Id": "GoldMineRestriction"
+  },
+  {
+    "MineId": "DiamondMine",
+    "MaxCount": 2,
+    "Id": "DiamondMineRestriction"
+  }
+]

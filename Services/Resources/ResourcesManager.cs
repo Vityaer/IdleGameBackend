@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Models.Common.BigDigits;
 using Models.Data.Inventories;
 using UniverseRift.Contexts;
+using UniverseRift.Heplers.GameLogging;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
 
@@ -53,6 +54,18 @@ namespace UniverseRift.Services.Resources
                 return;
 
             resource.Subtract(newRes);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task SubstactResources(List<Resource> resources)
+        {
+            var allResources = await _context.Resources.ToListAsync();
+            foreach (var resource in resources)
+            {
+                var playerResource = allResources.Find(res => res.PlayerId == resource.PlayerId && res.Type == resource.Type);
+                playerResource.Subtract(resource);
+            }
+
             await _context.SaveChangesAsync();
         }
 

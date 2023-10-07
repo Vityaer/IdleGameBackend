@@ -96,7 +96,7 @@ namespace UniverseRift.Controllers.Server
 
             await onFinishWait();
 
-            var nextTime = DateTime.Now.Add(waitTime);
+            var nextTime = DateTime.UtcNow.Add(waitTime);
             var extraTime = new TimeSpan(0, nextTime.Hour, nextTime.Minute, nextTime.Second);
             nextTime = nextTime.Subtract(extraTime);
             recordTime = nextTime.ToString();

@@ -1,0 +1,467 @@
+[
+  {
+    "Missions": [
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 25,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Militia",
+            "Level": 75,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Legolas",
+            "Level": 50,
+            "Rating": 1,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": []
+        }
+      }
+    ],
+    "Id": "ChallengeTower"
+  }
+]

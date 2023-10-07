@@ -1,5 +1,4 @@
 ﻿using Models.City.Markets;
-using Models.Data.Inventories;
 using UniverseRift.Controllers.Players.Inventories.Items;
 using UniverseRift.GameModels;
 using UniverseRift.Models.Resources;

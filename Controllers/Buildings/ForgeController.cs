@@ -39,7 +39,7 @@ namespace UniverseRift.Controllers.Buildings
                 return answer;
             }
 
-            if (!_commonDictionaries.ItemRelations.TryGetValue(itemId, out var relation))
+            if (!_commonDictionaries.ItemRelations.TryGetValue($"Recipe{itemId}", out var relation))
             {
                 answer.Error = $"Item relation {relation} not found";
                 return answer;

@@ -1,1 +1,192 @@
-[]
+[
+  {
+    "Type": 0,
+    "SpritePath": "Assets/Resources/UI/Mines/icon_1 #287814.png",
+    "IncomesContainer": {
+      "LevelsCost": [
+        {
+          "level": 1,
+          "Cost": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 3
+              }
+            }
+          ],
+          "typeIncrease": 0,
+          "ListIncrease": [
+            5.0
+          ]
+        }
+      ],
+      "Id": null
+    },
+    "CostLevelUpContainer": {
+      "LevelsCost": [
+        {
+          "level": 1,
+          "Cost": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 20.0,
+                "E10": 3
+              }
+            },
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 20.0,
+                "E10": 0
+              }
+            }
+          ],
+          "typeIncrease": 0,
+          "ListIncrease": [
+            10.0,
+            5.0
+          ]
+        }
+      ],
+      "Id": null
+    },
+    "CreateCost": [
+      {
+        "Type": 0,
+        "Amount": {
+          "Mantissa": 5.0,
+          "E10": 3
+        }
+      },
+      {
+        "Type": 2,
+        "Amount": {
+          "Mantissa": 1.0,
+          "E10": 3
+        }
+      }
+    ],
+    "Id": "GoldMine"
+  },
+  {
+    "Type": 0,
+    "SpritePath": "Assets/Resources/UI/Mines/icon_2 #287872.png",
+    "IncomesContainer": {
+      "LevelsCost": [
+        {
+          "level": 1,
+          "Cost": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1.0,
+                "E10": 0
+              }
+            }
+          ],
+          "typeIncrease": 1,
+          "ListIncrease": [
+            1.0
+          ]
+        }
+      ],
+      "Id": null
+    },
+    "CostLevelUpContainer": {
+      "LevelsCost": [
+        {
+          "level": 1,
+          "Cost": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 3
+              }
+            },
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 40.0,
+                "E10": 0
+              }
+            }
+          ],
+          "typeIncrease": 0,
+          "ListIncrease": [
+            10.0,
+            6.0
+          ]
+        }
+      ],
+      "Id": null
+    },
+    "CreateCost": [
+      {
+        "Type": 0,
+        "Amount": {
+          "Mantissa": 20.0,
+          "E10": 3
+        }
+      },
+      {
+        "Type": 2,
+        "Amount": {
+          "Mantissa": 10.0,
+          "E10": 3
+        }
+      }
+    ],
+    "Id": "DiamondMine"
+  },
+  {
+    "Type": 0,
+    "SpritePath": "Assets/Resources/UI/Mines/Icon_Shop.png",
+    "IncomesContainer": {
+      "LevelsCost": [
+        {
+          "level": 1,
+          "Cost": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "typeIncrease": 0,
+          "ListIncrease": [
+            1.0
+          ]
+        }
+      ],
+      "Id": null
+    },
+    "CostLevelUpContainer": {
+      "LevelsCost": [
+        {
+          "level": 1,
+          "Cost": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            }
+          ],
+          "typeIncrease": 0,
+          "ListIncrease": [
+            10.0
+          ]
+        }
+      ],
+      "Id": null
+    },
+    "CreateCost": [],
+    "Id": "MainMineBuilding"
+  }
+]

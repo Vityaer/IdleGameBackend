@@ -67,12 +67,12 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
 
             var previousDateTime = string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward)
                 ?
-                DateTime.Now
+                DateTime.UtcNow
                 :
                 DateTime.Parse(playerProgress.LastGetAutoFightReward);
 
             var tact = CalculateCountTact(previousDateTime);
-            playerProgress.LastGetAutoFightReward = DateTime.Now.ToString();
+            playerProgress.LastGetAutoFightReward = DateTime.UtcNow.ToString();
             var rewardData = autoReward.GetCaculateReward(tact, playerId);
             
             await _clientRewardService.AddReward(playerId, rewardData);
@@ -85,7 +85,7 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
 
         private int CalculateCountTact(DateTime previousDateTime, int MaxCount = 8640, int lenthTact = 5)
         {
-            var localDate = DateTime.Now;
+            var localDate = DateTime.UtcNow;
             var interval = localDate - previousDateTime;
             var tact = (int)interval.TotalSeconds / lenthTact;
             tact = Math.Min(tact, MaxCount);
@@ -106,7 +106,7 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
 
             playerProgress.CampaignProgress += 1;
             if (string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward))
-                playerProgress.LastGetAutoFightReward = DateTime.Now.ToString();
+                playerProgress.LastGetAutoFightReward = DateTime.UtcNow.ToString();
 
             await _context.SaveChangesAsync();
 
@@ -129,7 +129,7 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
             if (playerProgress != null)
             {
                 result.IntRecords.SetRecord(NAME_RECORD_NUM_MAX_MISSION, playerProgress.CampaignProgress);
-                var date = string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward) ? DateTime.Now : DateTime.Parse(playerProgress.LastGetAutoFightReward);
+                var date = string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward) ? DateTime.UtcNow : DateTime.Parse(playerProgress.LastGetAutoFightReward);
                 result.DateRecords.SetRecord(NAME_RECORD_AUTOFIGHT_PREVIOUS_DATETIME, date);
             }
 

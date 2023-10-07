@@ -15,5 +15,12 @@
     ],
     "RecoveryType": 1,
     "Id": "CityMarket"
+  },
+  {
+    "Products": [
+      "TicketOnArena"
+    ],
+    "RecoveryType": 5,
+    "Id": "ResourceMarket"
   }
 ]
