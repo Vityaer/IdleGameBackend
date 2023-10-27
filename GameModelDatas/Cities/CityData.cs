@@ -1,4 +1,5 @@
 ﻿using UniverseRift.GameModelDatas.Cities.Industries;
+using UniverseRift.GameModelDatas.Cities.TravelCircleRaces;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.Models.City.DailyRewards;
 using UniverseRift.Models.City.FortuneWheels;
@@ -15,13 +16,12 @@ namespace UniverseRift.GameModelDatas.Cities
         public MarketData MallSave = new MarketData();
         public BuildingWithFightTeamsData ChallengeTowerSave = new BuildingWithFightTeamsData();
         public BuildingWithFightTeamsData MainCampaignSave = new BuildingWithFightTeamsData();
-        public BuildingWithFightTeamsData TravelCircleSave = new BuildingWithFightTeamsData();
+        public TravelBuildingData TravelCircleSave = new TravelBuildingData();
         public BuildingWithFightTeamsData GildSave = new BuildingWithFightTeamsData();
         public VoyageBuildingData VoyageSave = new VoyageBuildingData();
         public ArenaBuildingModel ArenaSave = new ArenaBuildingModel();
         public SimpleBuildingData Tutorial = new SimpleBuildingData();
         public DailyRewardContainer DailyReward = new DailyRewardContainer();
-        public DailyTaskContainer DailyTaskContainer = new DailyTaskContainer();
         public FortuneWheelData FortuneWheelData = new FortuneWheelData();
         public TaskBoardData TaskBoardData = new TaskBoardData();
     }

@@ -3,7 +3,11 @@ using Models.City.Markets;
 using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.Items;
+using UniverseRift.Models.Achievments;
 using UniverseRift.Models.City.Mines;
+using UniverseRift.Models.City.TravelCircles;
+using UniverseRift.Models.Inventories.Splinters;
+using UniverseRift.Models.Rewards;
 using UniverseRift.Models.Tasks.SimpleTask;
 
 namespace UniverseRift.Controllers.Common
@@ -23,6 +27,12 @@ namespace UniverseRift.Controllers.Common
         Dictionary<string, CostLevelUpContainer> CostContainers { get; }
         Dictionary<string, MineRestrictionModel> MineRestrictions { get; }
         Dictionary<string, MineModel> Mines { get; }
+        Dictionary<string, TravelRaceModel> TravelRaceCampaigns { get; }
+        Dictionary<string, SplinterModel> Splinters { get; }
+        Dictionary<string, AchievmentContainerModel> AchievmentContainers { get; }
+        Dictionary<string, AchievmentModel> Achievments { get; }
+        Dictionary<string, RewardContainerModel> RewardContainerModels { get; }
+
 
     }
 }

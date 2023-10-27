@@ -4,9 +4,6 @@ namespace UniverseRift.Controllers.Buildings.Arenas
 {
     public interface IArenaController
     {
-        async Task<ArenaBuildingModel> GetPlayerSave(int playerId)
-        {
-            return null;
-        }
+        Task<ArenaBuildingModel> GetPlayerSave(int playerId);
     }
 }

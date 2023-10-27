@@ -1,0 +1,12 @@
+[
+  {
+    "TaskIds": [
+      "DailySimpleHire"
+    ],
+    "Id": "DailyTasks"
+  },
+  {
+    "TaskIds": [],
+    "Id": "MainAchievments"
+  }
+]

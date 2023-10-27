@@ -7,7 +7,8 @@
       "ClassHero": "asfsadf",
       "Rating": 1,
       "ViewId": "DeathKnight",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -120,7 +121,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Demoniac",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -233,7 +235,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Imp",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -346,7 +349,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Legolas",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -459,7 +463,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Militia",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -572,7 +577,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Peasant",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -685,7 +691,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Pegasus",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -798,7 +805,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Raccoon",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -911,7 +919,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Robin",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -1024,7 +1033,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "Spirit",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -1137,7 +1147,8 @@
       "ClassHero": null,
       "Rating": 1,
       "ViewId": "TempleGuard",
-      "Rarity": null
+      "Rarity": null,
+      "AvatarPath": null
     },
     "ArrowPrefabPath": null,
     "Evolutions": {

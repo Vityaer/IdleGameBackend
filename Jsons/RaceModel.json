@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "SpritePath": "",
+    "Id": "Cat"
+  },
+  {
+    "SpritePath": null,
+    "Id": "Dog"
+  },
+  {
+    "SpritePath": null,
+    "Id": "Capybara"
+  },
+  {
+    "SpritePath": null,
+    "Id": "Rabbit"
+  },
+  {
+    "SpritePath": null,
+    "Id": "Bird"
+  },
+  {
+    "SpritePath": null,
+    "Id": "Amphibian"
+  }
+]

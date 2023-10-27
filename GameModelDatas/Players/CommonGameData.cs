@@ -1,5 +1,6 @@
 ﻿using Models.Data.Inventories;
 using UniverseRift.GameModelDatas.Cities;
+using UniverseRift.Models.Rewards;
 
 namespace UniverseRift.GameModelDatas.Players
 {
@@ -12,5 +13,6 @@ namespace UniverseRift.GameModelDatas.Players
         public HeroesStorage HeroesStorage = new HeroesStorage();
         public List<ResourceData> Resources;
         public InventoryData InventoryData = new();
+        public BattlepasData BattlepasData;
     }
 }

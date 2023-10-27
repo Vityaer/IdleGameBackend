@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Buildings.Shops;
 using UniverseRift.Controllers.Buildings.TaskBoards;
 using UniverseRift.Heplers.GameLogging;
@@ -15,7 +16,8 @@ namespace UniverseRift.Controllers.Server
 
         private readonly IMarketController _marketController;
         private readonly ITaskBoardController _taskBoardController;
-        
+        private readonly IAchievmentController _achievmentController;
+
         private readonly TimeSpan Day = new TimeSpan(24, 0, 0);
         private readonly TimeSpan Week = new TimeSpan(7, 0, 0, 0);
         private readonly TimeSpan Month = new TimeSpan(30, 0, 0, 0);
@@ -28,13 +30,15 @@ namespace UniverseRift.Controllers.Server
         public ServerController(
             AplicationContext context,
             IMarketController marketController,
-            ITaskBoardController taskBoardController
+            ITaskBoardController taskBoardController,
+            IAchievmentController achievmentController
             )
         {
             _context = context;
             _cancellationTokenSource = new CancellationTokenSource();
             _marketController = marketController;
             _taskBoardController = taskBoardController;
+            _achievmentController = achievmentController;
         }
 
         public async Task OnStartProject()
@@ -80,6 +84,7 @@ namespace UniverseRift.Controllers.Server
             GameLogging.WriteGameLog($"Start refresh all city");
             await _marketController.RefreshProducts(RecoveryType.Day);
             await _taskBoardController.DeleteTasks();
+            await _achievmentController.ClearDailyTask();
             GameLogging.WriteGameLog($"finish refresh all city");
         }
 

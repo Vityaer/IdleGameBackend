@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UniverseRift.GameModelDatas.Cities.Industries;
+using UniverseRift.GameModelDatas.Cities.TravelCircleRaces;
 using UniverseRift.Misc;
+using UniverseRift.Models.Achievments;
 using UniverseRift.Models.City.DailyRewards;
 using UniverseRift.Models.City.Markets;
 using UniverseRift.Models.Common;
@@ -34,11 +36,16 @@ namespace UniverseRift.Contexts
         public DbSet<FortuneWheelModel> FortuneWheels { get; set; }
         public DbSet<DailyRewardProgress> DailyRewardProgresses { get; set; }
         public DbSet<MineData> MineDatas { get; set; }
-
+        public DbSet<TravelRaceData> TravelRaceDatas { get; set; }
+        public DbSet<AchievmentData> MainAchievmentDatas { get; set; }
+        public DbSet<AchievmentData> DailyTaskDatas { get; set; }
+        public DbSet<AchievmentData> GameCycleTaskDatas { get; set; }
+        public DbSet<BattlepasData> BattlepasDatas { get; set; }
+        
         public AplicationContext(DbContextOptions<AplicationContext> options)
             : base(options)
         {
-            //Database.EnsureDeleted(); // удаление базы данных
+            Database.EnsureDeleted(); // удаление базы данных
             Database.EnsureCreated();   // создаем базу данных при первом обращении
         }
 

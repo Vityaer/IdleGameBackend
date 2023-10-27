@@ -7,10 +7,10 @@ using System;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Buildings.Arenas;
+using UniverseRift.Controllers.Buildings.Battlepases;
 using UniverseRift.Controllers.Buildings.Campaigns;
 using UniverseRift.Controllers.Buildings.ChallengeTowers;
 using UniverseRift.Controllers.Buildings.DailyRewards;
-using UniverseRift.Controllers.Buildings.DailyTasks;
 using UniverseRift.Controllers.Buildings.FortuneWheels;
 using UniverseRift.Controllers.Buildings.GameCycles;
 using UniverseRift.Controllers.Buildings.Guilds;
@@ -53,7 +53,6 @@ namespace UniverseRift.Controllers.Games
         private readonly IChallengeTowerController _challengeTowerController;
         private readonly ITaskBoardController _taskBoardController;
         private readonly IMarketController _mallController;
-        private readonly IDailyTasksController _dailyTasksController;
         private readonly IIndustryController _industryController;
         private readonly IGameCycleController _gameCycleController;
         private readonly IAchievmentController _achievmentController;
@@ -67,6 +66,7 @@ namespace UniverseRift.Controllers.Games
         private readonly IServerController _serverController;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IDailyRewardController _dailyRewardController;
+        private readonly IBattlepasController _battlepasController;
         private readonly AplicationContext _context;
 
         private bool _isCreated = false;
@@ -82,7 +82,6 @@ namespace UniverseRift.Controllers.Games
             IChallengeTowerController challengeTowerController,
             ITaskBoardController taskBoardController,
             IMarketController mallController,
-            IDailyTasksController dailyTasksController,
             IIndustryController industryController,
             IGameCycleController gameCycleController,
             IAchievmentController achievmentController,
@@ -95,6 +94,7 @@ namespace UniverseRift.Controllers.Games
             IFortuneWheelController fortuneWheelController,
             ICommonDictionaries commonDictionaries,
             IServerController serverController,
+            IBattlepasController battlepasController,
             IDailyRewardController dailyRewardController,
             AplicationContext context
             )
@@ -109,7 +109,6 @@ namespace UniverseRift.Controllers.Games
             _achievmentController = achievmentController;
             _gameCycleController = gameCycleController;
             _industryController = industryController;
-            _dailyTasksController = dailyTasksController;
             _mallController = mallController;
             _challengeTowerController = challengeTowerController;
             _jsonConverter = jsonConverter;
@@ -123,6 +122,7 @@ namespace UniverseRift.Controllers.Games
             _serverController = serverController;
             _commonDictionaries = commonDictionaries;
             _dailyRewardController = dailyRewardController;
+            _battlepasController = battlepasController;
         }
 
         [HttpPost]
@@ -170,17 +170,18 @@ namespace UniverseRift.Controllers.Games
             playerSave.City.TaskBoardData = await GetTaskboardSave(playerId, flagCreateNewData);
             playerSave.City.DailyReward = await _dailyRewardController.GetPlayerSave(playerId, flagCreateNewData);
 
+            playerSave.BattlepasData = await _battlepasController.GetPlayerSave(playerId, flagCreateNewData);
 
             playerSave.HeroesStorage = await GetHeroesSave(playerId);
-            playerSave.InventoryData = await GetInventory(playerId);
+            playerSave.InventoryData = await _inventoriesController.GetInventory(playerId);
             playerSave.Resources = await GetResourceSave(playerId);
             //playerSave.City.TimeManagementSave = await _timeManagerController.GetPlayerSave(playerId);
             //playerSave.City.ChallengeTowerSave = await _challengeTowerController.GetPlayerSave(playerId);
-            //playerSave.City.DailyTaskContainer = await _dailyTasksController.GetPlayerSave(playerId);
+            playerSave.AchievmentStorage = await _achievmentController.GetPlayerSave(playerId);
             playerSave.City.IndustrySave = await _industryController.GetPlayerSave(playerId, flagCreateNewData);
             //playerSave.City.VoyageSave = await _voyageController.GetPlayerSave(playerId);
             //playerSave.City.ArenaSave = await _arenaController.GetPlayerSave(playerId);
-            //playerSave.City.TravelCircleSave = await _travelCircleController.GetPlayerSave(playerId, flagCreateNewData);
+            playerSave.City.TravelCircleSave = await _travelCircleController.GetPlayerSave(playerId, flagCreateNewData);
             //playerSave.City.Tutorial = await _tutorialController.GetPlayerSave(playerId);
             //playerSave.City.GildSave = await _guildController.GetPlayerSave(playerId);
 
@@ -355,20 +356,6 @@ namespace UniverseRift.Controllers.Games
             }
 
             result.MaxCountHeroes = 100;
-
-            return result;
-        }
-
-        public async Task<InventoryData> GetInventory(int playerId)
-        {
-            var result = new InventoryData();
-            var items = await _context.Items.ToListAsync();
-            var playerItems = items.FindAll(item => item.PlayerId == playerId);
-
-            foreach (var item in playerItems)
-            {
-                result.Items.Add(new ItemData { Id = item.Name, Amount = (int)Math.Round(item.Count) });
-            }
 
             return result;
         }

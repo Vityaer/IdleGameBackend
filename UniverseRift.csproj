@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Players\Inventories\Splinters\" />
     <Folder Include="Models\PosibleObjects\" />
     <Folder Include="Views\Heroes\" />
     <Folder Include="Views\Players\" />

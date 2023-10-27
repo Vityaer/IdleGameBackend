@@ -1,0 +1,79 @@
+[
+  {
+    "Rewards": [
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 3.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 3.0,
+              "E10": 0
+            }
+          }
+        ]
+      }
+    ],
+    "Id": "BattlepasRewards"
+  }
+]

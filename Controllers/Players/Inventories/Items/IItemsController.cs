@@ -2,7 +2,7 @@
 {
     public interface IItemsController
     {
-        async Task AddItem(int playerId, string itemName, int count = 1){}
-        async Task RemoveItem(int playerId, string itemName, int count = 1) { }
+        Task AddItem(int playerId, string itemName, int count = 1);
+        Task RemoveItem(int playerId, string itemName, int count = 1);
     }
 }

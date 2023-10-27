@@ -1,11 +1,11 @@
 [
   {
-    "Type": 0,
-    "ProgressType": 1,
+    "Type": 20,
+    "ProgressType": 0,
     "Stages": [
       {
         "RequireCount": {
-          "Mantissa": 10.0,
+          "Mantissa": 2.0,
           "E10": 0
         },
         "Reward": {
@@ -14,6 +14,13 @@
               "Type": 1,
               "Amount": {
                 "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
                 "E10": 0
               }
             }
@@ -29,11 +36,20 @@
                 "Mantissa": 1000.0,
                 "E10": 0
               }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
             }
           ]
         }
       }
     ],
-    "Id": "GetLevel"
+    "ImplementationName": "SimpleHireAchievment",
+    "Id": "DailySimpleHire"
   }
 ]

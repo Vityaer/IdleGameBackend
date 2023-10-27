@@ -4,7 +4,11 @@ using Models.City.Markets;
 using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.Items;
+using UniverseRift.Models.Achievments;
 using UniverseRift.Models.City.Mines;
+using UniverseRift.Models.City.TravelCircles;
+using UniverseRift.Models.Inventories.Splinters;
+using UniverseRift.Models.Rewards;
 using UniverseRift.Models.Tasks.SimpleTask;
 
 namespace UniverseRift.Controllers.Common
@@ -22,9 +26,15 @@ namespace UniverseRift.Controllers.Common
         private Dictionary<string, MarketModel> _markets = new Dictionary<string, MarketModel>();
         private Dictionary<string, FortuneRewardModel> _fortuneRewardModels = new Dictionary<string, FortuneRewardModel>();
         private Dictionary<string, CostLevelUpContainer> _costContainers = new Dictionary<string, CostLevelUpContainer>();
-        
+        private Dictionary<string, TravelRaceModel> _travelRaceCampaigns = new Dictionary<string, TravelRaceModel>();
+        private Dictionary<string, SplinterModel> _splinters = new Dictionary<string, SplinterModel>();
+
+        private Dictionary<string, AchievmentContainerModel> _achievmentContainers = new();
+        private Dictionary<string, AchievmentModel> _achievments = new();
+
         private Dictionary<string, MineModel> _mines = new Dictionary<string, MineModel>();
         private Dictionary<string, MineRestrictionModel> _mineRestrictions = new Dictionary<string, MineRestrictionModel>();
+        private Dictionary<string, RewardContainerModel> _rewardContainerModels = new();
 
         private readonly IJsonConverter _converter;
         private bool _isInited;
@@ -42,7 +52,11 @@ namespace UniverseRift.Controllers.Common
         public Dictionary<string, CostLevelUpContainer> CostContainers => _costContainers;
         public Dictionary<string, MineRestrictionModel> MineRestrictions => _mineRestrictions;
         public Dictionary<string, MineModel> Mines => _mines;
-
+        public Dictionary<string, TravelRaceModel> TravelRaceCampaigns => _travelRaceCampaigns;
+        public Dictionary<string, SplinterModel> Splinters => _splinters;
+        public Dictionary<string, AchievmentContainerModel> AchievmentContainers => _achievmentContainers;
+        public Dictionary<string, AchievmentModel> Achievments => _achievments;
+        public Dictionary<string, RewardContainerModel> RewardContainerModels => _rewardContainerModels;
 
         public CommonDictionaries(IJsonConverter converter)
         {
@@ -70,7 +84,11 @@ namespace UniverseRift.Controllers.Common
             _costContainers = GetModels<CostLevelUpContainer>();
             _mineRestrictions = GetModels<MineRestrictionModel>();
             _mines = GetModels<MineModel>();
-            //_posibleObjects = GetModels<PosibleObjectModel>();
+            _travelRaceCampaigns = GetModels<TravelRaceModel>();
+            _splinters = GetModels<SplinterModel>();
+            _achievments = GetModels<AchievmentModel>();
+            _achievmentContainers = GetModels<AchievmentContainerModel>();
+            _rewardContainerModels = GetModels<RewardContainerModel>();
         }
 
         private Dictionary<string, T> GetModels<T>() where T : BaseModel

@@ -5,7 +5,11 @@ namespace UniverseRift.Controllers.Players.Heroes
 {
     public interface IHeroesController
     {
-        public Task<Hero> GetHero(int playerId, int heroId);
-        async Task<HeroesStorage> GetPlayerSave(int playerId) { return null; }
+        Task<Hero> GetHero(int playerId, int heroId);
+        Task<HeroesStorage> GetPlayerSave(int playerId);
+
+        UniRx.IObservable<HireDataContainer> OnSimpleHire { get; }
+        UniRx.IObservable<HireDataContainer> OnSpecialHire { get; }
+        UniRx.IObservable<HireDataContainer> OnFriendHire { get; }
     }
 }

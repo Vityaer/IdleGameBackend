@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cysharp.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
+using UniRx;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.MessageData;
 using UniverseRift.Misc;
+using UniverseRift.Models.Achievments;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
@@ -15,12 +18,21 @@ namespace UniverseRift.Controllers.Players.Heroes
 {
     public class HeroesController : Controller, IHeroesController
     {
+        private const string SIMPLE_HIRE_ACHIEVMENT_NAME = "DailySimpleHire";
+
         private readonly AplicationContext _context;
         private readonly IResourceManager _resourcesController;
         private readonly IJsonConverter _jsonConverter;
         private readonly ICommonDictionaries _commonDictionaries;
 
         private readonly Random _random = new Random();
+        private ReactiveCommand<HireDataContainer> _onSimpleHire = new();
+        private ReactiveCommand<HireDataContainer> _onSpecialHire = new();
+        private ReactiveCommand<HireDataContainer> _onFriendHire = new();
+
+        public UniRx.IObservable<HireDataContainer> OnSimpleHire => _onSimpleHire;
+        public UniRx.IObservable<HireDataContainer> OnSpecialHire => _onSpecialHire;
+        public UniRx.IObservable<HireDataContainer> OnFriendHire => _onFriendHire;
 
         public HeroesController(AplicationContext context, IJsonConverter jsonConverter, IResourceManager resourcesController, ICommonDictionaries commonDictionaries)
         {
@@ -148,6 +160,10 @@ namespace UniverseRift.Controllers.Players.Heroes
             }
 
             answer.Result = _jsonConverter.Serialize(heroesData);
+
+            var onHireMessage = new HireDataContainer(playerId, count);
+            await RecordSimpleHire(onHireMessage);
+
             return answer;
         }
 
@@ -202,6 +218,10 @@ namespace UniverseRift.Controllers.Players.Heroes
 
                 var hero = new Hero(playerId, heroTemplate);
                 _context.Heroes.Add(hero);
+
+                var onHireMessage = new HireDataContainer(playerId, count);
+                _onSpecialHire.Execute(onHireMessage);
+                
                 heroes.Add(hero);
             }
 
@@ -259,6 +279,26 @@ namespace UniverseRift.Controllers.Players.Heroes
             result.MaxCountHeroes = 100;
 
             return result;
+        }
+
+        private async Task RecordSimpleHire(HireDataContainer hireDataContainer)
+        {
+            var allAchievments = await _context.DailyTaskDatas.ToListAsync();
+
+            var playerAchievments = allAchievments
+                .FindAll(achievmentData => achievmentData.PlayerId == hireDataContainer.PlayerId);
+
+            var simpleHireDailyTask = playerAchievments
+                .Find(achievment => achievment.ModelId == SIMPLE_HIRE_ACHIEVMENT_NAME);
+
+            if (simpleHireDailyTask == null)
+            {
+                simpleHireDailyTask = new AchievmentData(hireDataContainer.PlayerId, SIMPLE_HIRE_ACHIEVMENT_NAME);
+                await _context.DailyTaskDatas.AddAsync(simpleHireDailyTask);
+            }
+
+            simpleHireDailyTask.Amount += hireDataContainer.Amount;
+            await _context.SaveChangesAsync();
         }
     }
 }

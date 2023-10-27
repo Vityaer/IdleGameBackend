@@ -103,3 +103,39 @@ finish refresh all city
 10.07.2023 10:46:37.24
 switch time, typeDay
 
+10.08.2023 09:22:01.58
+Start refresh all city
+
+10.08.2023 09:22:01.88
+finish refresh all city
+
+10.08.2023 09:22:01.88
+switch time, typeDay
+
+10.14.2023 16:54:45.34
+Start refresh all city
+
+10.14.2023 16:54:45.53
+finish refresh all city
+
+10.14.2023 16:54:45.53
+switch time, typeDay
+
+10.16.2023 17:53:43.54
+Start refresh all city
+
+10.16.2023 17:53:43.64
+finish refresh all city
+
+10.16.2023 17:53:43.64
+switch time, typeDay
+
+10.23.2023 18:09:29.90
+Start refresh all city
+
+10.23.2023 18:09:30.03
+finish refresh all city
+
+10.23.2023 18:09:30.03
+switch time, typeDay
+

@@ -73,13 +73,13 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
 
             var tact = CalculateCountTact(previousDateTime);
             playerProgress.LastGetAutoFightReward = DateTime.UtcNow.ToString();
-            var rewardData = autoReward.GetCaculateReward(tact, playerId);
+            var rewardModel = autoReward.GetCaculateReward(tact, playerId);
             
-            await _clientRewardService.AddReward(playerId, rewardData);
+            await _clientRewardService.AddReward(playerId, rewardModel);
 
             await _context.SaveChangesAsync();
 
-            answer.Result = _jsonConverter.Serialize(rewardData);
+            answer.Result = _jsonConverter.Serialize(rewardModel);
             return answer;
         }
 

@@ -5,9 +5,11 @@ using Models.Common.BigDigits;
 using Models.Data.Inventories;
 using UniRx;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Battlepases;
 using UniverseRift.Controllers.Buildings.Campaigns;
 using UniverseRift.Controllers.Buildings.ChallengeTowers;
 using UniverseRift.Controllers.Buildings.Industries.Mines;
+using UniverseRift.Controllers.Buildings.TravelCircles;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.GameModels;
@@ -28,6 +30,8 @@ namespace UniverseRift.Controllers.Players
         private readonly ICampaignController _campaignController;
         private readonly IJsonConverter _jsonConverter;
         private readonly IMineController _mineController;
+        private readonly ITravelCircleController _travelCircleController;
+        private readonly IBattlepasController _battlepasController;
 
         private ReactiveCommand<int> _onPlayerRegistration = new ReactiveCommand<int>();
 
@@ -40,7 +44,9 @@ namespace UniverseRift.Controllers.Players
             IRewardService clientRewardService,
             ICampaignController campaignController,
             IJsonConverter jsonConverter,
-            IMineController mineController
+            IMineController mineController,
+            ITravelCircleController travelCircleController,
+            IBattlepasController battlepasController
             )
         {
             _commonDictionaries = commonDictionaries;
@@ -50,6 +56,8 @@ namespace UniverseRift.Controllers.Players
             _clientRewardService = clientRewardService;
             _campaignController = campaignController;
             _mineController = mineController;
+            _travelCircleController = travelCircleController;
+            _battlepasController = battlepasController;
         }
 
         public async Task<Player> GetPlayer(int playerId)
@@ -73,6 +81,8 @@ namespace UniverseRift.Controllers.Players
 
             await _campaignController.CreatePlayerProgress(player.Id);
             await _mineController.CreateMainMine(player.Id);
+            await _travelCircleController.OnRegistrationPlayer(player.Id);
+            await _battlepasController.OnRegisterPlayer(player.Id);
 
             answer.Result = player.Id.ToString();
             var result = await _context.Players.ToListAsync();

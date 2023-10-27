@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Models.Data.Inventories;
 using UniverseRift.Contexts;
 using UniverseRift.GameModelDatas.Players;
+using UniverseRift.GameModels;
+using UniverseRift.Models.Items;
 
 namespace UniverseRift.Controllers.Players.Inventories
 {
@@ -26,6 +28,14 @@ namespace UniverseRift.Controllers.Players.Inventories
             foreach (var item in playerItems)
             {
                 result.Items.Add(new ItemData { Id = item.Name, Amount = (int)Math.Round(item.Count) });
+            }
+
+            var splinters = await _context.Splinters.ToListAsync();
+            var playerSplinters = splinters.FindAll(splinterData => splinterData.PlayerId == playerId);
+
+            foreach (var splinter in playerSplinters)
+            {
+                result.Splinters.Add(new SplinterData { Id = splinter.SplinterId, Amount = (int)Math.Round(splinter.Count) } );
             }
 
             return result;
