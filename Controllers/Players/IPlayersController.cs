@@ -8,5 +8,6 @@ namespace UniverseRift.Controllers.Players
         Task<Player> GetPlayer(int playerId);
         UniRx.IObservable<int> OnRegistrationPlayer { get; }
         Task<PlayerData> GetPlayerSave(int playerId);
+        Task<Player> CreatePlayer(string name, string avatarPath, bool isBot);
     }
 }

@@ -1,0 +1,242 @@
+[
+  {
+    "Cost": [
+      {
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 1,
+        "Count": 2,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCardSimple.png"
+      }
+    ],
+    "Id": "2"
+  },
+  {
+    "Cost": [
+      {
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 200.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 2,
+        "Count": 3,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCardSimple.png"
+      }
+    ],
+    "Id": "3"
+  },
+  {
+    "Cost": [
+      {
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 400.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 3,
+        "Count": 4,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCardLow.png"
+      },
+      {
+        "Rating": 2,
+        "Count": 6,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCardSimple.png"
+      }
+    ],
+    "Id": "4"
+  },
+  {
+    "Cost": [
+      {
+        "Type": 0,
+        "Amount": {
+          "Mantissa": 750.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 4,
+        "Count": 6,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCardLow.png"
+      },
+      {
+        "Rating": 3,
+        "Count": 8,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCardSimple.png"
+      }
+    ],
+    "Id": "5"
+  },
+  {
+    "Cost": [
+      {
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 900.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 5,
+        "Count": 1,
+        "RequireRace": 1,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      },
+      {
+        "Rating": 5,
+        "Count": 4,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      },
+      {
+        "Rating": 4,
+        "Count": 6,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCardLow.png"
+      }
+    ],
+    "Id": "6"
+  },
+  {
+    "Cost": [
+      {
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 1200.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 5,
+        "Count": 4,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      },
+      {
+        "Rating": 6,
+        "Count": 2,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      }
+    ],
+    "Id": "7"
+  },
+  {
+    "Cost": [
+      {
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 1400.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 7,
+        "Count": 3,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      },
+      {
+        "Rating": 6,
+        "Count": 4,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      },
+      {
+        "Rating": 5,
+        "Count": 6,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      }
+    ],
+    "Id": "8"
+  },
+  {
+    "Cost": [
+      {
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 1750.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 5,
+        "Count": 1,
+        "RequireRace": 1,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      },
+      {
+        "Rating": 6,
+        "Count": 2,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      }
+    ],
+    "Id": "9"
+  },
+  {
+    "Cost": [
+      {
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 2000.0,
+          "E10": 0
+        }
+      }
+    ],
+    "RequirementHeroes": [
+      {
+        "Rating": 5,
+        "Count": 2,
+        "RequireRace": 1,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      },
+      {
+        "Rating": 9,
+        "Count": 1,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      },
+      {
+        "Rating": 5,
+        "Count": 6,
+        "RequireRace": 0,
+        "IconPath": "Assets/Resources/UI/UI/RequireCard.png"
+      }
+    ],
+    "Id": "10"
+  }
+]

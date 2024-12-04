@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using UniverseRift.Controllers.Common;
+using UniverseRift.Heplers.Utils;
 
 namespace UniverseRift.Models.Tasks.SimpleTask
 {
@@ -41,12 +42,9 @@ namespace UniverseRift.Models.Tasks.SimpleTask
             if (string.IsNullOrEmpty(DateTimeStart))
                 return false;
 
+
             var now = DateTime.UtcNow;
-            var dateTimeStart = DateTime.ParseExact(
-                DateTimeStart,
-                Constants.Common.DateTimeFormat,
-                CultureInfo.InvariantCulture
-                );
+            var dateTimeStart = DateTimeUtils.TryParseOrNow(DateTimeStart);
 
             var delta = now - dateTimeStart;
             if (delta.TotalHours > hours)

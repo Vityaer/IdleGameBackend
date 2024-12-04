@@ -5,8 +5,8 @@ namespace UniverseRift.Services.Rewarders
 {
     public interface IRewardService
     {
-        public async Task AddReward(int playerId, RewardModel reward) { }
-        public async Task AddProduct(int playerId, BaseProductModel produt) { }
+        public Task AddReward(int playerId, RewardModel reward);
+        public Task AddProduct(int playerId, BaseProductModel produt);
 
     }
 }

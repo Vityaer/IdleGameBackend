@@ -82,5 +82,29 @@
         }
       }
     ]
+  },
+  {
+    "Resources": [
+      {
+        "Type": 0,
+        "Amount": {
+          "Mantissa": 35.0,
+          "E10": 3
+        }
+      }
+    ],
+    "Items": [],
+    "Splinters": [],
+    "Id": "Alchemy",
+    "Objects": [
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 0,
+        "Amount": {
+          "Mantissa": 35.0,
+          "E10": 3
+        }
+      }
+    ]
   }
 ]

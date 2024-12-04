@@ -1,5 +1,5 @@
-﻿using Models.Common.BigDigits;
-using Models.Data.Inventories;
+﻿using Models.Data.Inventories;
+using UniverseRift.GameModels.Common;
 using UniverseRift.Heplers.MathOperations;
 using UniverseRift.Models.Resources;
 

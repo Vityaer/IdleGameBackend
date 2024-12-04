@@ -86,21 +86,24 @@ namespace UniverseRift.Controllers.Players.Inventories.Splinters
             switch (model.SplinterType)
             {
                 case SplinterType.Hero:
-                    var allHeroes = await _context.HeroTemplates.ToListAsync();
-                    var heroTemplate = allHeroes.Find(template => template.Id == model.ModelId);
-                    var heroesData = new List<HeroData>();
-
-                    var heroes = new List<Hero>(count);
-                    for (var i = 0; i < count; i++)
+                    var allHeroes = _commonDictionaries.Heroes;
+                    if (_commonDictionaries.Heroes.ContainsKey(model.ModelId))
                     {
-                        var hero = new Hero(playerId, heroTemplate);
-                        heroes.Add(hero);
+                        var heroTemplate = allHeroes[model.ModelId];
+                        var heroesData = new List<HeroData>();
 
-                        var heroData = new HeroData(hero);
-                        heroesData.Add(heroData);
+                        var heroes = new List<Hero>(count);
+                        for (var i = 0; i < count; i++)
+                        {
+                            var hero = new Hero(playerId, heroTemplate);
+                            heroes.Add(hero);
+
+                            var heroData = new HeroData(hero);
+                            heroesData.Add(heroData);
+                        }
+                        await _context.Heroes.AddRangeAsync(heroes);
+                        answer.Result = _jsonConverter.Serialize(heroesData);
                     }
-                    await _context.Heroes.AddRangeAsync(heroes);
-                    answer.Result = _jsonConverter.Serialize(heroesData);
                     break;
                 case SplinterType.Item:
                     await _itemsController.AddItem(playerId, model.ModelId, count);

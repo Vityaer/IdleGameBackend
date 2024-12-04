@@ -1,8 +1,92 @@
 [
   {
     "SplinterType": 0,
-    "ModelId": "DeathKnight",
+    "ModelId": "Catcher",
     "RequireCount": 30,
-    "Id": "TestSplinter"
+    "Id": "CatcherSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Dragon",
+    "RequireCount": 30,
+    "Id": "DragonSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Fishguard",
+    "RequireCount": 30,
+    "Id": "FishguardSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Imp",
+    "RequireCount": 0,
+    "Id": "ImpSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Knight",
+    "RequireCount": 30,
+    "Id": "KnightSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Nosedman",
+    "RequireCount": 30,
+    "Id": "NosedmanSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "PitBoy",
+    "RequireCount": 30,
+    "Id": "PiBoySplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "PracticeDummy",
+    "RequireCount": 30,
+    "Id": "PracticeDummySplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Snake",
+    "RequireCount": 30,
+    "Id": "SnakeSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Spike",
+    "RequireCount": 30,
+    "Id": "SpikeSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Treestor",
+    "RequireCount": 30,
+    "Id": "TreetorSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Wedger",
+    "RequireCount": 30,
+    "Id": "WedgerSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Wolf",
+    "RequireCount": 30,
+    "Id": "WolfSplinter"
+  },
+  {
+    "SplinterType": 1,
+    "ModelId": "TitanArmor",
+    "RequireCount": 50,
+    "Id": "TitanArmorSplinter"
+  },
+  {
+    "SplinterType": 1,
+    "ModelId": "TitanWeapon",
+    "RequireCount": 50,
+    "Id": "TitanWeaponSplinter"
   }
 ]

@@ -1,5 +1,4 @@
 ﻿using Models.Data.Inventories;
-using UniverseRift.GameModels;
 
 namespace UniverseRift.GameModelDatas.Players
 {

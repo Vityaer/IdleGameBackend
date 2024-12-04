@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
+﻿
 namespace UniverseRift.Models.Players
 {
     public class PlayerProgress

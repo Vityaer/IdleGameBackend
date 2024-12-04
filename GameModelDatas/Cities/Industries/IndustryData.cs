@@ -5,6 +5,7 @@ namespace UniverseRift.GameModelDatas.Cities.Industries
 {
     public class IndustryData : BaseModel
     {
-        public List<MineData> Mines = new List<MineData>();
+        public List<MineData> Mines = new();
+        public List<MineMissionData> MissionDatas = new();
     }
 }

@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "SpritePath": "Assets/Resources/UI/Class/tank.png",
+    "Id": "WarriorVocation"
+  },
+  {
+    "SpritePath": "Assets/Resources/UI/Class/archer.png",
+    "Id": "ArcherVocation"
+  },
+  {
+    "SpritePath": "Assets/Resources/UI/Class/killer.png",
+    "Id": "KillerVocation"
+  },
+  {
+    "SpritePath": "Assets/Resources/UI/Class/mage.png",
+    "Id": "WizardVocation"
+  },
+  {
+    "SpritePath": "Assets/Resources/UI/Class/pastor.png",
+    "Id": "PastorVocation"
+  }
+]

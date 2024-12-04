@@ -2,10 +2,17 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
+using Models.City.Hires;
+using Models.Common.BigDigits;
+using Models.Data.Inventories;
+using System.Linq;
 using UniRx;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Players;
+using UniverseRift.GameModels;
+using UniverseRift.GameModels.Heroes;
 using UniverseRift.MessageData;
 using UniverseRift.Misc;
 using UniverseRift.Models.Achievments;
@@ -18,43 +25,26 @@ namespace UniverseRift.Controllers.Players.Heroes
 {
     public class HeroesController : Controller, IHeroesController
     {
-        private const string SIMPLE_HIRE_ACHIEVMENT_NAME = "DailySimpleHire";
-
         private readonly AplicationContext _context;
         private readonly IResourceManager _resourcesController;
         private readonly IJsonConverter _jsonConverter;
         private readonly ICommonDictionaries _commonDictionaries;
+        //private readonly IAchievmentController _achievmentController;
 
         private readonly Random _random = new Random();
-        private ReactiveCommand<HireDataContainer> _onSimpleHire = new();
-        private ReactiveCommand<HireDataContainer> _onSpecialHire = new();
-        private ReactiveCommand<HireDataContainer> _onFriendHire = new();
 
-        public UniRx.IObservable<HireDataContainer> OnSimpleHire => _onSimpleHire;
-        public UniRx.IObservable<HireDataContainer> OnSpecialHire => _onSpecialHire;
-        public UniRx.IObservable<HireDataContainer> OnFriendHire => _onFriendHire;
-
-        public HeroesController(AplicationContext context, IJsonConverter jsonConverter, IResourceManager resourcesController, ICommonDictionaries commonDictionaries)
+        public HeroesController(
+            AplicationContext context,
+            IJsonConverter jsonConverter,
+            IResourceManager resourcesController,
+            ICommonDictionaries commonDictionaries)
+            //IAchievmentController achievmentController)
         {
             _commonDictionaries = commonDictionaries;
             _jsonConverter = jsonConverter;
             _context = context;
             _resourcesController = resourcesController;
-        }
-
-        [HttpPost]
-        [Route("Heroes/RegistrationHero")]
-        public async Task RegistrationHero(string heroId, int rare, string defaultViewId)
-        {
-            var template = new HeroTemplate
-            {
-                Id = heroId,
-                Rare = (Rare)rare,
-                DefaultViewId = defaultViewId
-            };
-
-            _context.Add(template);
-            await _context.SaveChangesAsync();
+            //_achievmentController = achievmentController;
         }
 
         [HttpPost]
@@ -84,11 +74,7 @@ namespace UniverseRift.Controllers.Players.Heroes
             if(checkResource == false)
                 return answer;
 
-            foreach ( var resource in cost)
-            {
-                //TODO: заменить на функцию для списка ресурсов
-                await _resourcesController.SubstactResources(resource);
-            }
+            await _resourcesController.SubstactResources(cost);
 
             hero.Level += 1;
             await _context.SaveChangesAsync();
@@ -97,72 +83,76 @@ namespace UniverseRift.Controllers.Players.Heroes
         }
 
         [HttpPost]
-        [Route("Heroes/GetSimpleHeroes")]
-        public async Task<AnswerModel> GetSimpleHeroes(int playerId, int count)
+        [Route("Heroes/RatingUp")]
+        public async Task<AnswerModel> RatingUp(int playerId, int heroId, string heroesPaymentContainer)
         {
+            var allHeroes = await _context.Heroes.ToListAsync();
+            Console.WriteLine($"allHeroes: {allHeroes.Count}");
             var answer = new AnswerModel();
 
-            var cost = new Resource { PlayerId = playerId, Type = ResourceType.SimpleHireCard, Count = count, E10 = 0 };
+            var hero = await GetHero(playerId, heroId);
 
-            var permission = await _resourcesController.CheckResource(playerId, cost, answer);
-            if (!permission)
+            if (hero == null)
             {
+                answer.Error = "Not found hero";
                 return answer;
             }
 
-            var heroesData = new List<HeroData>();
-            var heroes = new List<Hero>();
-            var allHeroes = await _context.HeroTemplates.ToListAsync();
-            var workList = new List<HeroTemplate>();
-            HeroTemplate heroTemplate;
-
-            await _resourcesController.SubstactResources(cost);
-            //вынести в json
-            for (int i = 0; i < count; i++)
+            if (hero.PlayerId != playerId)
             {
-                var rand = _random.Next(0, 10001);
-                if (rand < 5600f)
-                {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.C));
-                }
-                else if (rand < 9000f)
-                {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.UC));
-                }
-                else if (rand < 9850f)
-                {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.R));
-                }
-                else if (rand < 9995f)
-                {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.SR));
-                }
-                else if (rand <= 10000f)
-                {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.SSR));
-                }
-
-                if (workList.Count > 0)
-                {
-                    heroTemplate = workList[_random.Next(0, workList.Count)];
-                }
-                else
-                {
-                    heroTemplate = allHeroes[_random.Next(0, allHeroes.Count)];
-                }
-
-                var hero = new Hero(playerId, heroTemplate);
-                _context.Heroes.Add(hero);
-                await _context.SaveChangesAsync();
-
-                var heroData = new HeroData(hero);
-                heroesData.Add(heroData);
+                answer.Error = "wrong playerId";
+                return answer;
             }
 
-            answer.Result = _jsonConverter.Serialize(heroesData);
+            var requires = _commonDictionaries.RatingUpContainers[$"{hero.Rating + 1}"];
 
-            var onHireMessage = new HireDataContainer(playerId, count);
-            await RecordSimpleHire(onHireMessage);
+            var cost = new List<Resource>();
+            foreach (var resourseData in requires.Cost)
+            {
+                var resource = new Resource
+                {
+                    Type = resourseData.Type,
+                    Count = resourseData.Amount.Mantissa,
+                    E10 = resourseData.Amount.E10,
+                    PlayerId = playerId
+                };
+                cost.Add(resource);
+            }
+
+            var checkResource = await _resourcesController.CheckResource(playerId, cost, answer);
+            if (checkResource == false)
+                return answer;
+
+            await _resourcesController.SubstactResources(cost);
+
+            var listHeroIds = _jsonConverter.Deserialize<List<int>>(heroesPaymentContainer);
+            foreach (var id in listHeroIds)
+            {
+                var costHero = await _context.Heroes.FindAsync(id);
+
+                if (costHero != null)
+                    _context.Heroes.Remove(costHero);
+            }
+
+            hero.Rating += 1;
+            await _context.SaveChangesAsync();
+            answer.Result = "Success";
+
+            allHeroes = await _context.Heroes.ToListAsync();
+            Console.WriteLine($"allHeroes: {allHeroes.Count}");
+            return answer;
+        }
+
+        [HttpPost]
+        [Route("Heroes/GetSimpleHeroes")]
+        public async Task<AnswerModel> GetSimpleHeroes(int playerId, int count)
+        {
+            var answer = await GetHeroes(playerId, count, "SimpleHireContainer");
+
+            if (string.IsNullOrEmpty(answer.Error) && !string.IsNullOrEmpty(answer.Result))
+            {
+                await AchievmentUpdataData(playerId, "SimpleHireAchievment", count);
+            }
 
             return answer;
         }
@@ -171,41 +161,80 @@ namespace UniverseRift.Controllers.Players.Heroes
         [Route("Heroes/GetSpecialHeroes")]
         public async Task<AnswerModel> GetSpecialHeroes(int playerId, int count)
         {
-            var answer = new AnswerModel();
+            var answer = await GetHeroes(playerId, count, "SpecialHireContainer");
 
-            var cost = new Resource { PlayerId = playerId, Type = ResourceType.SpecialHireCard, Count = count, E10 = 0 };
-            var permission = await _resourcesController.CheckResource(playerId, cost, answer);
-            if (!permission)
+            if (string.IsNullOrEmpty(answer.Error) && !string.IsNullOrEmpty(answer.Result))
             {
-                return answer;
+                await AchievmentUpdataData(playerId, "SpecialHireAchievment", count);
             }
 
-            List<Hero> heroes = new List<Hero>();
-            await _resourcesController.SubstactResources(cost);
+            return answer;
+        }
 
-            var allHeroes = await _context.HeroTemplates.ToListAsync();
-            List<HeroTemplate> workList = new List<HeroTemplate>();
-            HeroTemplate heroTemplate;
+        [HttpPost]
+        [Route("Heroes/GetFriendHireHeroes")]
+        public async Task<AnswerModel> GetFriendHireHeroes(int playerId, int count)
+        {
+            var answer = await GetHeroes(playerId, count, "FriendHireContainer");
+
+            if (string.IsNullOrEmpty(answer.Error) && !string.IsNullOrEmpty(answer.Result))
+            {
+                await AchievmentUpdataData(playerId, "FriendHireAchievment", count);
+            }
+
+            return answer;
+        }
+
+        private async Task<AnswerModel> GetHeroes(int playerId, int count, string hireContainerName)
+        {
+            var answer = new AnswerModel();
+            var hireContainerModel = _commonDictionaries.HireContainerModels[hireContainerName];
+            var costValue = hireContainerModel.Cost.Amount * count;
+            var resourceData = new GameResource(hireContainerModel.Cost.Type, costValue);
+            var playerCost = new Resource(playerId, resourceData);
+
+            var permission = await _resourcesController.CheckResource(playerId, playerCost, answer);
+            if (!permission)
+                return answer;
+            
+            await _resourcesController.SubstactResources(playerCost);
+            var heroesData = await CreateHeroes(playerId, count, hireContainerModel);
+            answer.Result = _jsonConverter.Serialize(heroesData);
+            return answer;
+        }
+
+        private async Task<List<HeroData>> CreateHeroes(int playerId, int count, HireContainerModel hireContainerModel)
+        {
+            var result = new List<HeroData>();
+
+            var heroes = new List<Hero>();
+            var allHeroes = _commonDictionaries.Heroes;
+            var workList = new List<HeroModel>();
+            HeroModel heroTemplate;
+
+            var sum = 0f;
+            foreach (var hireChance in hireContainerModel.ChanceHires)
+                sum += hireChance.Chance;
 
             for (int i = 0; i < count; i++)
             {
-                var rand = _random.Next(0, 10001);
-                if (rand < 6000)
+                var rand = (float) _random.NextDouble() * sum;
+                var index = -1;
+                var currentSum = sum;
+                for (var j = 0; j < hireContainerModel.ChanceHires.Count; j++)
                 {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.R));
+                    currentSum -= hireContainerModel.ChanceHires[j].Chance;
+                    index += 1;
+                    if (currentSum < 0f)
+                        break;
                 }
-                else if (rand < 8842)
-                {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.SR));
-                }
-                else if (rand < 9842)
-                {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.SSR));
-                }
-                else if (rand <= 10000)
-                {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.UR));
-                }
+
+                index = Math.Clamp(index, 0, hireContainerModel.ChanceHires.Count);
+                var selectHire = hireContainerModel.ChanceHires[index];
+                workList = allHeroes
+                    .Where(x => (x.Value.General.Rare == selectHire.Rare))
+                    .Select(x => x.Value)
+                    .ToList();
 
                 if (workList.Count > 0)
                 {
@@ -213,21 +242,23 @@ namespace UniverseRift.Controllers.Players.Heroes
                 }
                 else
                 {
-                    heroTemplate = allHeroes[_random.Next(0, allHeroes.Count)];
+                    heroTemplate = allHeroes.ElementAt(_random.Next(0, allHeroes.Count)).Value;
                 }
 
                 var hero = new Hero(playerId, heroTemplate);
-                _context.Heroes.Add(hero);
+                var rating = (int)selectHire.Rare;
+                rating = Math.Clamp(rating, 1, 5);
+                hero.Rating = rating;
 
-                var onHireMessage = new HireDataContainer(playerId, count);
-                _onSpecialHire.Execute(onHireMessage);
-                
                 heroes.Add(hero);
+                var heroData = new HeroData(hero);
+                result.Add(heroData);
             }
 
+            await _context.Heroes.AddRangeAsync(heroes);
             await _context.SaveChangesAsync();
-            answer.Result = _jsonConverter.Serialize(heroes);
-            return answer;
+
+            return result;
         }
 
         public async Task<Hero> GetHero(int playerId, int heroId)
@@ -281,23 +312,29 @@ namespace UniverseRift.Controllers.Players.Heroes
             return result;
         }
 
-        private async Task RecordSimpleHire(HireDataContainer hireDataContainer)
+        private async Task AchievmentUpdataData(int playerId, string implementationName, int amount)
         {
-            var allAchievments = await _context.DailyTaskDatas.ToListAsync();
-
+            var allAchievments = await _context.AchievmentDatas.ToListAsync();
             var playerAchievments = allAchievments
-                .FindAll(achievmentData => achievmentData.PlayerId == hireDataContainer.PlayerId);
+                .FindAll(achievmentData => achievmentData.PlayerId == playerId);
 
-            var simpleHireDailyTask = playerAchievments
-                .Find(achievment => achievment.ModelId == SIMPLE_HIRE_ACHIEVMENT_NAME);
-
-            if (simpleHireDailyTask == null)
+            var models = _commonDictionaries.Achievments
+                .Where(data => data.Value.ImplementationName.Equals(implementationName))
+                .Select(data => data.Value);
+            foreach (var achievmentModel in models)
             {
-                simpleHireDailyTask = new AchievmentData(hireDataContainer.PlayerId, SIMPLE_HIRE_ACHIEVMENT_NAME);
-                await _context.DailyTaskDatas.AddAsync(simpleHireDailyTask);
+                var achievment = allAchievments.Find(
+                    achievment => achievment.PlayerId == playerId
+                    && achievment.ModelId == achievmentModel.Id);
+
+                if (achievment == null)
+                {
+                    achievment = new AchievmentData(playerId, achievmentModel.Id);
+                    await _context.AchievmentDatas.AddAsync(achievment);
+                }
+                achievment.Amount += amount;
             }
 
-            simpleHireDailyTask.Amount += hireDataContainer.Amount;
             await _context.SaveChangesAsync();
         }
     }

@@ -117,6 +117,9 @@ namespace UniverseRift.Controllers.Players.Inventories.Items
 
         public async Task AddItem(int playerId, string itemName, int count = 1)
         {
+            if (!_commonDictionaries.Items.ContainsKey(itemName))
+                return;
+
             var items = await _context.Items.ToListAsync();
             var item = items.Find(item => item.PlayerId == playerId && item.Name == itemName);
 

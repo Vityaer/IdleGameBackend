@@ -16,6 +16,7 @@ namespace UniverseRift.Controllers.Buildings.Battlepases
         private readonly AplicationContext _context;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IResourceManager _resourceManager;
+
         public BattlepasController(
             AplicationContext context,
             ICommonDictionaries commonDictionaries,

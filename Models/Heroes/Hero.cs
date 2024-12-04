@@ -1,4 +1,6 @@
-﻿namespace UniverseRift.Models.Heroes
+﻿using UniverseRift.GameModels.Heroes;
+
+namespace UniverseRift.Models.Heroes
 {
     public class Hero
     {
@@ -17,11 +19,11 @@
         {
         }
 
-        public Hero(int playerId, HeroTemplate heroTemplate)
+        public Hero(int playerId, HeroModel heroTemplate)
         {
             PlayerId = playerId;
             HeroTemplateId = heroTemplate.Id;
-            ViewId = heroTemplate.DefaultViewId;
+            ViewId = string.Empty;
             Level = 1;
             Rating = 1;
         }

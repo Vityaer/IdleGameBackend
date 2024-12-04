@@ -31,28 +31,60 @@
           "Resources": [
             {
               "Value": {
-                "Type": 0,
+                "Type": 5,
                 "Amount": {
-                  "Mantissa": 0.0,
+                  "Mantissa": 1.0,
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 500000
             }
           ],
-          "Items": [],
-          "Splinters": [],
+          "Items": [
+            {
+              "Value": {
+                "Id": "PupilArmor",
+                "Amount": 1
+              },
+              "Posibility": 50000
+            }
+          ],
+          "Splinters": [
+            {
+              "Value": {
+                "Id": "CatcherSplinter",
+                "Amount": 1
+              },
+              "Posibility": 5000
+            }
+          ],
           "Objects": [
             {
               "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
               "Value": {
-                "Type": 0,
+                "Type": 5,
                 "Amount": {
-                  "Mantissa": 0.0,
+                  "Mantissa": 1.0,
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 500000
+            },
+            {
+              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ItemData, Assembly-CSharp]], Assembly-CSharp",
+              "Value": {
+                "Id": "PupilArmor",
+                "Amount": 1
+              },
+              "Posibility": 50000
+            },
+            {
+              "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+              "Value": {
+                "Id": "CatcherSplinter",
+                "Amount": 1
+              },
+              "Posibility": 5000
             }
           ]
         },
@@ -64,6 +96,7 @@
             "HeroId": "Imp",
             "Level": 1,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -159,11 +192,11 @@
               "Value": {
                 "Type": 0,
                 "Amount": {
-                  "Mantissa": 0.0,
+                  "Mantissa": 100.0,
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -174,11 +207,11 @@
               "Value": {
                 "Type": 0,
                 "Amount": {
-                  "Mantissa": 0.0,
+                  "Mantissa": 100.0,
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -190,6 +223,7 @@
             "HeroId": "Imp",
             "Level": 1,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -197,9 +231,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Peasant",
+            "HeroId": "Imp",
             "Level": 3,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -265,7 +300,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -280,7 +315,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -289,9 +324,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Raccoon",
+            "HeroId": "Catcher",
             "Level": 8,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -299,9 +335,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Raccoon",
+            "HeroId": "Dragon",
             "Level": 8,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -309,9 +346,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Pegasus",
+            "HeroId": "Catcher",
             "Level": 10,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -377,7 +415,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -392,7 +430,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -401,9 +439,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Militia",
+            "HeroId": "Nosedman",
             "Level": 10,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -411,9 +450,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Demoniac",
+            "HeroId": "Fishguard",
             "Level": 10,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -421,9 +461,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "DeathKnight",
+            "HeroId": "Dragon",
             "Level": 15,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -431,9 +472,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Robin",
+            "HeroId": "PitBoy",
             "Level": 10,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -509,7 +551,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -524,7 +566,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -533,9 +575,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Spirit",
+            "HeroId": "PracticeDummy",
             "Level": 18,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -543,9 +586,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Spirit",
+            "HeroId": "Snake",
             "Level": 18,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -553,9 +597,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "TempleGuard",
+            "HeroId": "Snake",
             "Level": 25,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -563,9 +608,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Imp",
+            "HeroId": "PracticeDummy",
             "Level": 30,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -641,7 +687,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -656,7 +702,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -665,9 +711,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Peasant",
+            "HeroId": "Fishguard",
             "Level": 30,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -675,9 +722,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "DeathKnight",
+            "HeroId": "Catcher",
             "Level": 30,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -685,9 +733,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Legolas",
+            "HeroId": "Imp",
             "Level": 35,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -695,9 +744,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Demoniac",
+            "HeroId": "Imp",
             "Level": 30,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -705,9 +755,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Militia",
+            "HeroId": "Treestor",
             "Level": 32,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -783,7 +834,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -798,7 +849,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -807,9 +858,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Militia",
+            "HeroId": "Knight",
             "Level": 35,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -817,9 +869,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Legolas",
+            "HeroId": "Knight",
             "Level": 36,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -827,9 +880,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Demoniac",
+            "HeroId": "Imp",
             "Level": 40,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -837,9 +891,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "DeathKnight",
+            "HeroId": "Imp",
             "Level": 40,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -850,6 +905,7 @@
             "HeroId": "Peasant",
             "Level": 40,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -925,7 +981,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -940,7 +996,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -949,9 +1005,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Militia",
+            "HeroId": "Nosedman",
             "Level": 45,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -959,9 +1016,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Pegasus",
+            "HeroId": "Spike",
             "Level": 45,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -969,9 +1027,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "DeathKnight",
+            "HeroId": "Spike",
             "Level": 45,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1047,7 +1106,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -1062,7 +1121,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -1074,6 +1133,7 @@
             "HeroId": "Imp",
             "Level": 60,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1084,6 +1144,7 @@
             "HeroId": "Imp",
             "Level": 60,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1094,6 +1155,7 @@
             "HeroId": "Imp",
             "Level": 60,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1169,7 +1231,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -1184,7 +1246,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -1193,9 +1255,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Peasant",
+            "HeroId": "Nosedman",
             "Level": 100,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1271,7 +1334,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -1286,7 +1349,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -1295,9 +1358,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Pegasus",
+            "HeroId": "Fishguard",
             "Level": 75,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1305,9 +1369,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Peasant",
+            "HeroId": "Dragon",
             "Level": 70,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1315,9 +1380,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Demoniac",
+            "HeroId": "Catcher",
             "Level": 70,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1325,9 +1391,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Pegasus",
+            "HeroId": "Catcher",
             "Level": 73,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1335,9 +1402,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Robin",
+            "HeroId": "Dragon",
             "Level": 60,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1413,7 +1481,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -1428,7 +1496,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -1437,9 +1505,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Spirit",
+            "HeroId": "Knight",
             "Level": 80,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1447,9 +1516,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Legolas",
+            "HeroId": "Fishguard",
             "Level": 80,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1457,9 +1527,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "TempleGuard",
+            "HeroId": "PracticeDummy",
             "Level": 82,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1535,7 +1606,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -1550,7 +1621,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -1559,9 +1630,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Peasant",
+            "HeroId": "PitBoy",
             "Level": 90,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1569,9 +1641,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Imp",
+            "HeroId": "Catcher",
             "Level": 90,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1579,9 +1652,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "DeathKnight",
+            "HeroId": "Snake",
             "Level": 100,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1657,7 +1731,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -1672,7 +1746,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -1681,9 +1755,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Raccoon",
+            "HeroId": "Nosedman",
             "Level": 110,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1691,9 +1766,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Legolas",
+            "HeroId": "Fishguard",
             "Level": 120,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1701,9 +1777,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Demoniac",
+            "HeroId": "Nosedman",
             "Level": 100,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1711,9 +1788,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Pegasus",
+            "HeroId": "Catcher",
             "Level": 90,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1789,7 +1867,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -1804,7 +1882,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -1813,9 +1891,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Spirit",
+            "HeroId": "Wolf",
             "Level": 150,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1823,9 +1902,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Imp",
+            "HeroId": "Wolf",
             "Level": 120,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1901,7 +1981,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -1916,7 +1996,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -1925,9 +2005,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Peasant",
+            "HeroId": "PitBoy",
             "Level": 140,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1935,9 +2016,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Demoniac",
+            "HeroId": "Wolf",
             "Level": 140,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -1945,9 +2027,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Raccoon",
+            "HeroId": "Wedger",
             "Level": 140,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -2023,7 +2106,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -2038,7 +2121,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -2047,9 +2130,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Militia",
+            "HeroId": "PitBoy",
             "Level": 180,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -2057,9 +2141,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "DeathKnight",
+            "HeroId": "Knight",
             "Level": 180,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -2135,7 +2220,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -2150,7 +2235,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -2159,9 +2244,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Demoniac",
+            "HeroId": "PitBoy",
             "Level": 200,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -2237,7 +2323,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -2252,7 +2338,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -2261,9 +2347,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Militia",
+            "HeroId": "Knight",
             "Level": 190,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -2271,9 +2358,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Legolas",
+            "HeroId": "Dragon",
             "Level": 180,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -2281,9 +2369,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Peasant",
+            "HeroId": "Wolf",
             "Level": 195,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -2359,7 +2448,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ],
           "Items": [],
@@ -2374,7 +2463,7 @@
                   "E10": 0
                 }
               },
-              "Posibility": 50.0
+              "Posibility": 50
             }
           ]
         },
@@ -2383,9 +2472,10 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Robin",
+            "HeroId": "PracticeDummy",
             "Level": 250,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null
@@ -2393,9 +2483,10 @@
           },
           {
             "Id": 0,
-            "HeroId": "Demoniac",
+            "HeroId": "PracticeDummy",
             "Level": 240,
             "Rating": 1,
+            "Stage": 0,
             "CurrentBreakthrough": 0,
             "Costume": {
               "Items": null

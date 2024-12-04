@@ -1,12 +1,10 @@
-﻿using Cysharp.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Models.Common.BigDigits;
 using UniRx;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
-using UniverseRift.Controllers.Players.Heroes;
 using UniverseRift.GameModelDatas.Cities;
-using UniverseRift.GameModelDatas.Cities.TravelCircleRaces;
 using UniverseRift.Models.Achievments;
 using UniverseRift.Models.Results;
 using UniverseRift.Services.Rewarders;
@@ -17,41 +15,39 @@ namespace UniverseRift.Controllers.Buildings.Achievments
     {
         private const string DAILY_TASKS = "DailyTasks";
 
-        private const string SIMPLE_HIRE_ACHIEVMENT_NAME = "DailySimpleHire";
-
         private readonly AplicationContext _context;
         private readonly ICommonDictionaries _commonDictionaries;
-        private readonly IHeroesController _tavernController;
         private readonly CompositeDisposable _compositeDisposable = new();
         private readonly IRewardService _clientRewardService;
 
         public AchievmentController(
             AplicationContext context,
             ICommonDictionaries commonDictionaries,
-            IHeroesController tavernController,
             IRewardService clientRewardService
             )
         {
             _context = context;
             _commonDictionaries = commonDictionaries;
-            _tavernController = tavernController;
             _clientRewardService = clientRewardService;
         }
 
         public async Task<AchievmentStorageData> GetPlayerSave(int playerId)
         {
             var result = new AchievmentStorageData();
-            var allAchievments = await _context.DailyTaskDatas.ToListAsync();
+            var allAchievments = await _context.AchievmentDatas.ToListAsync();
             var playerAchievments = allAchievments.FindAll(achievmentData => achievmentData.PlayerId == playerId);
 
             if (playerAchievments.Count == 0)
             {
-                foreach (var dailyTaskId in _commonDictionaries.AchievmentContainers[DAILY_TASKS].TaskIds)
+                foreach (var container in _commonDictionaries.AchievmentContainers.Values)
                 {
-                    var achievmentData = new AchievmentData(playerId, dailyTaskId);
-                    playerAchievments.Add(achievmentData);
+                    foreach (var dailyTaskId in container.TaskIds)
+                    {
+                        var achievmentData = new AchievmentData(playerId, dailyTaskId);
+                        playerAchievments.Add(achievmentData);
+                    }
                 }
-                await _context.DailyTaskDatas.AddRangeAsync(playerAchievments);
+                await _context.AchievmentDatas.AddRangeAsync(playerAchievments);
             }
 
             result.Achievments = playerAchievments;
@@ -60,15 +56,17 @@ namespace UniverseRift.Controllers.Buildings.Achievments
 
         public async Task OnRegistrationPlayer(int playerId)
         {
-            var newRecords = new List<TravelRaceData>();
+            var playerAchievments = new List<AchievmentData>();
 
-            foreach (var travel in _commonDictionaries.TravelRaceCampaigns.Values)
+            foreach (var container in _commonDictionaries.AchievmentContainers.Values)
             {
-                var newTravelData = new TravelRaceData(playerId, travel.Race);
-                newRecords.Add(newTravelData);
+                foreach (var dailyTaskId in container.TaskIds)
+                {
+                    var achievmentData = new AchievmentData(playerId, dailyTaskId);
+                    playerAchievments.Add(achievmentData);
+                }
             }
-
-            await _context.TravelRaceDatas.AddRangeAsync(newRecords);
+            await _context.AchievmentDatas.AddRangeAsync(playerAchievments);
             await _context.SaveChangesAsync();
         }
 
@@ -78,31 +76,89 @@ namespace UniverseRift.Controllers.Buildings.Achievments
         {
             var answer = new AnswerModel();
 
-            var dailyTask = await _context.DailyTaskDatas.FindAsync(achievmentId);
+            var dailyTask = await _context.AchievmentDatas.FindAsync(achievmentId);
             if (dailyTask == null)
             {
-                answer.Error = "Wrong data";
+                answer.Error = "Achievment not found!";
                 return answer;
             }
 
             if (dailyTask.PlayerId != playerId)
             {
-                answer.Error = "Wrong data";
+                answer.Error = "Wrong player data";
                 return answer;
             }
 
             var achievmentModel = _commonDictionaries.Achievments[dailyTask.ModelId];
+
+            if (achievmentModel.Stages.Count == dailyTask.CurrentStage || dailyTask.IsComplete)
+            {
+                answer.Error = "Achievment was done early!";
+                return answer;
+            }
+
+            var currentAmount = new BigDigit(dailyTask.Amount, dailyTask.E10);
+            var requireAmount = achievmentModel.Stages[dailyTask.CurrentStage].RequireCount;
+
+            if (!currentAmount.CheckCount(requireAmount))
+            {
+                answer.Error = "Not enough amount for reward.";
+                return answer;
+            }
+
             var rewardModel = achievmentModel.GetReward(dailyTask.CurrentStage);
             await _clientRewardService.AddReward(playerId, rewardModel);
             dailyTask.CurrentStage += 1;
+            if (dailyTask.CurrentStage == achievmentModel.Stages.Count)
+                dailyTask.IsComplete = true;
+
             await _context.SaveChangesAsync();
             answer.Result = "Success";
             return answer;
         }
 
-        public async Task ClearDailyTask()
+        public async Task AchievmentUpdataData(int playerId, string implementationName, int amount)
         {
-            await _context.DailyTaskDatas.ExecuteDeleteAsync();
+            var allAchievments = await _context.AchievmentDatas.ToListAsync();
+            var playerAchievments = allAchievments
+                .FindAll(achievmentData => achievmentData.PlayerId == playerId);
+
+            var models = _commonDictionaries.Achievments
+                .Where(data => data.Value.ImplementationName.Equals(implementationName))
+                .Select(data => data.Value);
+            foreach (var achievmentModel in models)
+            {
+                var achievment = allAchievments.Find(
+                    achievment => achievment.PlayerId == playerId
+                    && achievment.ModelId == achievmentModel.Id);
+
+                if (achievment == null)
+                {
+                    achievment = new AchievmentData(playerId, achievmentModel.Id);
+                    await _context.AchievmentDatas.AddAsync(achievment);
+                }
+                achievment.Amount += amount;
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task RefreshDailyTask()
+        {
+            var allAchievments = await _context.AchievmentDatas.ToListAsync();
+            foreach (var achievmentData in allAchievments)
+            {
+                foreach (var achievmentId in _commonDictionaries.AchievmentContainers[DAILY_TASKS].TaskIds)
+                {
+                    if (achievmentData.ModelId.Equals(achievmentId))
+                    {
+                        achievmentData.Refresh();
+                        break;
+                    }
+                }
+            }
+
+            await _context.SaveChangesAsync();
         }
 
         public void Dispose()

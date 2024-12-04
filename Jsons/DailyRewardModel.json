@@ -1,1 +1,226 @@
-[]
+[
+  {
+    "Rewards": [
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+        "Id": "PeasantArmor",
+        "Amount": 1
+      },
+      {
+        "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+        "Id": "PupilBoots",
+        "Amount": 1
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+        "Id": "RubbishAmulet",
+        "Amount": 1
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 4,
+        "Amount": {
+          "Mantissa": 2.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 11,
+        "Amount": {
+          "Mantissa": 2.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 15,
+        "Amount": {
+          "Mantissa": 1.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 5,
+        "Amount": {
+          "Mantissa": 200.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+        "Id": "MilitiamanArmor",
+        "Amount": 1
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 9,
+        "Amount": {
+          "Mantissa": 3.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 3,
+        "Amount": {
+          "Mantissa": 5.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 2,
+        "Amount": {
+          "Mantissa": 5.0,
+          "E10": 3
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+        "Id": "MilitiamanWeapon",
+        "Amount": 1
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 0,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 3
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 16,
+        "Amount": {
+          "Mantissa": 20.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 17,
+        "Amount": {
+          "Mantissa": 50.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 4,
+        "Amount": {
+          "Mantissa": 4.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+        "Id": "FellerArmor",
+        "Amount": 1
+      },
+      {
+        "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+        "Id": "FellerWeapon",
+        "Amount": 1
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 150.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 9,
+        "Amount": {
+          "Mantissa": 5.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 0,
+        "Amount": {
+          "Mantissa": 500.0,
+          "E10": 3
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 200.0,
+          "E10": 0
+        }
+      },
+      {
+        "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 500.0,
+          "E10": 0
+        }
+      }
+    ],
+    "Id": "DailyRewards"
+  }
+]

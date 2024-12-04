@@ -5,6 +5,7 @@ namespace UniverseRift.Controllers.Buildings.Voyages
 {
     public interface IVoyageController
     {
-        async Task<VoyageBuildingData> GetPlayerSave(int playerId) { return null; }
+        Task<VoyageBuildingData> GetPlayerSave(int playerId);
+        Task NextDay();
     }
 }

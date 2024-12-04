@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
+using System.Globalization;
 using UniRx;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Cities;
+using UniverseRift.GameModelDatas.Cities.Industries;
+using UniverseRift.Heplers.Utils;
 using UniverseRift.Models.Players;
 using UniverseRift.Models.Results;
 using UniverseRift.Services.Rewarders;
@@ -23,20 +27,23 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IRewardService _clientRewardService;
         private readonly IJsonConverter _jsonConverter;
-        
+        private readonly IAchievmentController _achievmentController;
+
         private CompositeDisposable _disposables = new CompositeDisposable();
 
         public CampaignController(
             AplicationContext context,
             ICommonDictionaries commonDictionaries,
             IRewardService clientRewardService,
-            IJsonConverter jsonConverter
+            IJsonConverter jsonConverter,
+            IAchievmentController achievmentController
             )
         {
-            _jsonConverter = jsonConverter;
-            _clientRewardService = clientRewardService;
             _context = context;
+            _jsonConverter = jsonConverter;
             _commonDictionaries = commonDictionaries;
+            _clientRewardService = clientRewardService;
+            _achievmentController = achievmentController;
         }
 
         public async Task CreatePlayerProgress(int playerId)
@@ -65,14 +72,14 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
             var mission = _commonDictionaries.CampaignChapters.ElementAt(numChapter).Value.Missions[numMission % CHAPTER_MISSION_COUNT];
             var autoReward = mission.AutoFightReward;
 
-            var previousDateTime = string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward)
-                ?
-                DateTime.UtcNow
-                :
-                DateTime.Parse(playerProgress.LastGetAutoFightReward);
+            var previousDateTime = DateTimeUtils.TryParseOrNow(playerProgress.LastGetAutoFightReward);
 
             var tact = CalculateCountTact(previousDateTime);
-            playerProgress.LastGetAutoFightReward = DateTime.UtcNow.ToString();
+
+            var interval = DateTime.UtcNow - previousDateTime;
+            await _achievmentController.AchievmentUpdataData(playerId, "AutoFightHoursAchievment", (int)interval.TotalHours);
+
+            playerProgress.LastGetAutoFightReward = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
             var rewardModel = autoReward.GetCaculateReward(tact, playerId);
             
             await _clientRewardService.AddReward(playerId, rewardModel);
@@ -104,9 +111,15 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
 
             var playerProgress = playerProgresses.Find(progress => progress.PlayerId == playerId);
 
+            if (playerProgress == null)
+            {
+                answer.Error = "Progress not found.";
+                return answer;
+            }
+
             playerProgress.CampaignProgress += 1;
             if (string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward))
-                playerProgress.LastGetAutoFightReward = DateTime.UtcNow.ToString();
+                playerProgress.LastGetAutoFightReward = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
 
             await _context.SaveChangesAsync();
 
@@ -114,23 +127,22 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
             var mission = _commonDictionaries.CampaignChapters.ElementAt(numChapter).Value.Missions[playerProgress.CampaignProgress % CHAPTER_MISSION_COUNT];
             await _clientRewardService.AddReward(playerId, mission.WinReward);
 
-
             answer.Result = playerProgress.CampaignProgress.ToString();
             return answer;
         }
 
-        public async Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId)
+        public async Task<MainCampaignBuildingData> GetPlayerSave(int playerId)
         {
             var playerProgresses = await _context.PlayerProgresses.ToListAsync();
             var playerProgress = playerProgresses.Find(progress => progress.PlayerId == playerId);
 
-            var result = new BuildingWithFightTeamsData();
+            var result = new MainCampaignBuildingData();
             
             if (playerProgress != null)
             {
                 result.IntRecords.SetRecord(NAME_RECORD_NUM_MAX_MISSION, playerProgress.CampaignProgress);
-                var date = string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward) ? DateTime.UtcNow : DateTime.Parse(playerProgress.LastGetAutoFightReward);
-                result.DateRecords.SetRecord(NAME_RECORD_AUTOFIGHT_PREVIOUS_DATETIME, date);
+                var date = string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward) ? string.Empty : playerProgress.LastGetAutoFightReward;
+                result.LastGetAutoFightReward = date;
             }
 
             return result;

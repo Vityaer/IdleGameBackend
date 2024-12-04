@@ -6,9 +6,11 @@ using System.Globalization;
 using System.Threading.Tasks;
 using UniRx;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.Controllers.Server;
 using UniverseRift.GameModelDatas.Players;
+using UniverseRift.Heplers.Utils;
 using UniverseRift.Models.City.Markets;
 using UniverseRift.Models.City.TaskBoards;
 using UniverseRift.Models.Resources;
@@ -30,6 +32,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
         private readonly IResourceManager _resourceController;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IRewardService _clientRewardService;
+        private readonly IAchievmentController _achievmentController;
 
         private readonly Random _random = new Random();
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
@@ -39,10 +42,12 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
             IJsonConverter jsonConverter,
             IResourceManager resourceController,
             ICommonDictionaries commonDictionaries,
-            IRewardService clientRewardService
+            IRewardService clientRewardService,
+            IAchievmentController achievmentController
             )
         {
             _commonDictionaries = commonDictionaries;
+            _achievmentController = achievmentController;
             _context = context;
             _clientRewardService = clientRewardService;
             _jsonConverter = jsonConverter;
@@ -62,11 +67,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 
                 if (task.Status != TaskStatusType.InProgress)
                 {
-                    var dateTimeCreate = DateTime.ParseExact(
-                        task.DateTimeCreate,
-                        Constants.Common.DateTimeFormat,
-                        CultureInfo.InvariantCulture
-                        );
+                    var dateTimeCreate = DateTimeUtils.TryParseOrNow(task.DateTimeCreate);
 
                     var timeSpan = now - dateTimeCreate;
                     if (timeSpan.TotalDays > DAY_FOR_DELETE)
@@ -138,6 +139,8 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 
             _context.GameTasks.Remove(task);
             await _context.SaveChangesAsync();
+
+            await _achievmentController.AchievmentUpdataData(playerId, "CompleteTaskCountAchievment", 1);
 
             answer.Result = "Success";
             return answer;

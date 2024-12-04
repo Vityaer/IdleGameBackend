@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Misc.Json;
-using System;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
+using UniverseRift.GameModels.Heroes;
 using UniverseRift.MessageData;
-using UniverseRift.Misc;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
@@ -19,15 +18,23 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
         private readonly IResourceManager _resourcesController;
         private readonly IJsonConverter _jsonConverter;
         private readonly ICommonDictionaries _commonDictionaries;
+        private readonly IAchievmentController _achievmentController;
 
         private readonly Random _random = new Random();
 
-        public MagicCircleController(AplicationContext context, IJsonConverter jsonConverter, IResourceManager resourcesController, ICommonDictionaries commonDictionaries)
+        public MagicCircleController(
+            AplicationContext context,
+            IJsonConverter jsonConverter,
+            IResourceManager resourcesController,
+            ICommonDictionaries commonDictionaries,
+            IAchievmentController achievmentController
+            )
         {
             _commonDictionaries = commonDictionaries;
             _jsonConverter = jsonConverter;
             _context = context;
             _resourcesController = resourcesController;
+            _achievmentController = achievmentController;
         }
 
         [HttpPost]
@@ -46,9 +53,9 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
 
             var heroesData = new List<HeroData>();
             var heroes = new List<Hero>();
-            var allHeroes = await _context.HeroTemplates.ToListAsync();
-            var workList = new List<HeroTemplate>();
-            HeroTemplate heroTemplate;
+            var allHeroes = _commonDictionaries.Heroes;
+            var workList = new List<HeroModel>();
+            HeroModel heroTemplate;
 
             await _resourcesController.SubstactResources(cost);
             //вынести в json
@@ -57,23 +64,38 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
                 var rand = _random.Next(0, 10001);
                 if (rand < 5600f)
                 {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.C));
+                    workList = allHeroes
+                        .Where(x => (x.Value.General.Rare.Equals("C")))
+                        .Select(x => x.Value)
+                        .ToList();
                 }
                 else if (rand < 9000f)
                 {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.UC));
+                    workList = allHeroes
+                        .Where(x => (x.Value.General.Rare.Equals("C")))
+                        .Select(x => x.Value)
+                        .ToList();
                 }
                 else if (rand < 9850f)
                 {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.R));
+                    workList = allHeroes
+                        .Where(x => (x.Value.General.Rare.Equals("C")))
+                        .Select(x => x.Value)
+                        .ToList();
                 }
                 else if (rand < 9995f)
                 {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.SR));
+                    workList = allHeroes
+                        .Where(x => (x.Value.General.Rare.Equals("C")))
+                        .Select(x => x.Value)
+                        .ToList();
                 }
                 else if (rand <= 10000f)
                 {
-                    workList = allHeroes.FindAll(x => (x.Rare == Rare.SSR));
+                    workList = allHeroes
+                        .Where(x => (x.Value.General.Rare.Equals("C")))
+                        .Select(x => x.Value)
+                        .ToList();
                 }
 
                 if (workList.Count > 0)
@@ -82,7 +104,8 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
                 }
                 else
                 {
-                    heroTemplate = allHeroes[_random.Next(0, allHeroes.Count)];
+                    var heroCount = allHeroes.Count;
+                    heroTemplate = allHeroes.ElementAt(_random.Next(0, heroCount)).Value;
                 }
 
                 var hero = new Hero(playerId, heroTemplate);
@@ -93,6 +116,7 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
                 heroesData.Add(heroData);
             }
 
+            await _achievmentController.AchievmentUpdataData(playerId, "MagicCircleHireAchievment", count);
             answer.Result = _jsonConverter.Serialize(heroesData);
             return answer;
         }

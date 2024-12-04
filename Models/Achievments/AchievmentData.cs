@@ -22,5 +22,13 @@ namespace UniverseRift.Models.Achievments
             E10 = 0;
             IsComplete = false;
         }
+
+        public void Refresh()
+        {
+            CurrentStage = 0;
+            Amount = 0;
+            E10 = 0;
+            IsComplete = false;
+        }
     }
 }

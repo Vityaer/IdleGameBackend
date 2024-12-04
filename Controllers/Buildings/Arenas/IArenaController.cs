@@ -1,9 +1,12 @@
 ﻿using UniverseRift.GameModelDatas.Cities;
+using UniverseRift.Models.Misc;
+using UniverseRift.Models.Results;
 
 namespace UniverseRift.Controllers.Buildings.Arenas
 {
     public interface IArenaController
     {
-        Task<ArenaBuildingModel> GetPlayerSave(int playerId);
+        Task<ArenaBuildingModel> GetPlayerSave(int playerId, CommunicationData communicationData);
+        Task<AnswerModel> SetDefenders(int playerId, string heroesIdsContainer);
     }
 }

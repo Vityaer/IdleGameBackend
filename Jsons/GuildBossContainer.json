@@ -1,0 +1,137 @@
+[
+  {
+    "Missions": [
+      {
+        "BossModels": [
+          {
+            "HeroId": "Imp",
+            "Level": 1,
+            "Rating": 1,
+            "Attack": {
+              "Mantissa": 1.0,
+              "E10": 3
+            },
+            "Health": {
+              "Mantissa": 20.0,
+              "E10": 3
+            }
+          }
+        ],
+        "RewardModels": [
+          {
+            "Resources": [],
+            "Items": [],
+            "Splinters": [],
+            "Id": null,
+            "Objects": []
+          }
+        ]
+      },
+      {
+        "BossModels": [
+          {
+            "HeroId": "Dragon",
+            "Level": 5,
+            "Rating": 1,
+            "Attack": {
+              "Mantissa": 1.0,
+              "E10": 3
+            },
+            "Health": {
+              "Mantissa": 20.0,
+              "E10": 3
+            }
+          }
+        ],
+        "RewardModels": [
+          {
+            "Resources": [],
+            "Items": [],
+            "Splinters": [],
+            "Id": null,
+            "Objects": []
+          }
+        ]
+      },
+      {
+        "BossModels": [
+          {
+            "HeroId": "PitBoy",
+            "Level": 10,
+            "Rating": 1,
+            "Attack": {
+              "Mantissa": 1.0,
+              "E10": 3
+            },
+            "Health": {
+              "Mantissa": 20.0,
+              "E10": 3
+            }
+          }
+        ],
+        "RewardModels": [
+          {
+            "Resources": [],
+            "Items": [],
+            "Splinters": [],
+            "Id": null,
+            "Objects": []
+          }
+        ]
+      },
+      {
+        "BossModels": [
+          {
+            "HeroId": "Snake",
+            "Level": 50,
+            "Rating": 1,
+            "Attack": {
+              "Mantissa": 1.0,
+              "E10": 3
+            },
+            "Health": {
+              "Mantissa": 20.0,
+              "E10": 3
+            }
+          }
+        ],
+        "RewardModels": [
+          {
+            "Resources": [],
+            "Items": [],
+            "Splinters": [],
+            "Id": null,
+            "Objects": []
+          }
+        ]
+      },
+      {
+        "BossModels": [
+          {
+            "HeroId": "Treestor",
+            "Level": 100,
+            "Rating": 1,
+            "Attack": {
+              "Mantissa": 1.0,
+              "E10": 3
+            },
+            "Health": {
+              "Mantissa": 20.0,
+              "E10": 3
+            }
+          }
+        ],
+        "RewardModels": [
+          {
+            "Resources": [],
+            "Items": [],
+            "Splinters": [],
+            "Id": null,
+            "Objects": []
+          }
+        ]
+      }
+    ],
+    "Id": "MainBosses"
+  }
+]

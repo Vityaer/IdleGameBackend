@@ -8,7 +8,7 @@ namespace UniverseRift.GameModelDatas.Players
         public string Name = string.Empty;
         public int Level = 1;
         public int VipLevel;
-        public int IDGuild;
+        public int GuildId;
         public string AvatarPath;
 
         public PlayerData() { }
@@ -19,6 +19,8 @@ namespace UniverseRift.GameModelDatas.Players
             Name = player.Name;
             Level = player.Level;
             VipLevel = player.VipLevel;
+            AvatarPath = player.AvatarPath;
+            GuildId = player.GuildId;
         }
     }
 }

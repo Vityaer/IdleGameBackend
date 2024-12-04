@@ -4,7 +4,9 @@ using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using UniRx;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
+using UniverseRift.Heplers.Utils;
 using UniverseRift.Models.City.Markets;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
@@ -15,22 +17,59 @@ namespace UniverseRift.Controllers.Buildings.Shops
 {
     public class MarketController : ControllerBase, IMarketController, IDisposable
     {
+        private TimeSpan ALCHEMY_TIMESPAN = new TimeSpan(8, 0, 0);
+
         private readonly AplicationContext _context;
         private readonly IResourceManager _resourceController;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IRewardService _clientRewardService;
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
+        private readonly IAchievmentController _achievmentController;
 
         public MarketController(
             AplicationContext context,
             IRewardService clientRewardService,
             IResourceManager resourceController,
-            ICommonDictionaries commonDictionaries)
+            ICommonDictionaries commonDictionaries,
+            IAchievmentController achievmentController)
         {
             _clientRewardService = clientRewardService;
             _context = context;
             _resourceController = resourceController;
             _commonDictionaries = commonDictionaries;
+            _achievmentController = achievmentController;
+        }
+
+        [HttpPost]
+        [Route("Market/GetAlchemy")]
+        public async Task<AnswerModel> GetAlchemy(int playerId)
+        {
+            var answer = new AnswerModel();
+            var player = await _context.Players.FindAsync(playerId);
+
+            if (player == null)
+            {
+                answer.Error = "Not found player";
+                return answer;
+            }
+            var lastGetAlchemyGameData = DateTimeUtils.TryParseOrNow(player.LastGetAlchemyDateTime);
+            var delta = DateTime.UtcNow - lastGetAlchemyGameData;
+
+            if (delta < ALCHEMY_TIMESPAN)
+            {
+                answer.Error = "Early, wait time";
+                return answer;
+            }
+
+            await _achievmentController.AchievmentUpdataData(playerId, "GetAlchemyGoldCountAchievment", 1);
+
+            var rewardData = _commonDictionaries.Rewards["Alchemy"];
+            await _clientRewardService.AddReward(player.Id, rewardData);
+
+            player.LastGetAlchemyDateTime = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
+            await _context.SaveChangesAsync();
+            answer.Result = "Success";
+            return answer;
         }
 
         [HttpPost]

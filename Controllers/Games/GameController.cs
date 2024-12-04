@@ -15,6 +15,7 @@ using UniverseRift.Controllers.Buildings.FortuneWheels;
 using UniverseRift.Controllers.Buildings.GameCycles;
 using UniverseRift.Controllers.Buildings.Guilds;
 using UniverseRift.Controllers.Buildings.Industries;
+using UniverseRift.Controllers.Buildings.LongTravels;
 using UniverseRift.Controllers.Buildings.Shops;
 using UniverseRift.Controllers.Buildings.TaskBoards;
 using UniverseRift.Controllers.Buildings.TimeMenagers;
@@ -22,6 +23,8 @@ using UniverseRift.Controllers.Buildings.TravelCircles;
 using UniverseRift.Controllers.Buildings.Tutorials;
 using UniverseRift.Controllers.Buildings.Voyages;
 using UniverseRift.Controllers.Common;
+using UniverseRift.Controllers.Misc.Friendships;
+using UniverseRift.Controllers.Misc.Mails;
 using UniverseRift.Controllers.Players;
 using UniverseRift.Controllers.Players.Heroes;
 using UniverseRift.Controllers.Players.Inventories;
@@ -67,6 +70,9 @@ namespace UniverseRift.Controllers.Games
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IDailyRewardController _dailyRewardController;
         private readonly IBattlepasController _battlepasController;
+        private readonly IFriendshipController _friendshipController;
+        private readonly ILongTravelController _longTravelController;
+        private readonly IMailController _mailController;
         private readonly AplicationContext _context;
 
         private bool _isCreated = false;
@@ -96,6 +102,9 @@ namespace UniverseRift.Controllers.Games
             IServerController serverController,
             IBattlepasController battlepasController,
             IDailyRewardController dailyRewardController,
+            IFriendshipController friendshipController,
+            ILongTravelController longTravelController,
+            IMailController mailController,
             AplicationContext context
             )
         {
@@ -123,6 +132,9 @@ namespace UniverseRift.Controllers.Games
             _commonDictionaries = commonDictionaries;
             _dailyRewardController = dailyRewardController;
             _battlepasController = battlepasController;
+            _friendshipController = friendshipController;
+            _longTravelController = longTravelController;
+            _mailController = mailController;
         }
 
         [HttpPost]
@@ -148,6 +160,12 @@ namespace UniverseRift.Controllers.Games
                 return answer;
             }
 
+            if (player.IsBot)
+            {
+                answer.Error = $"Player {playerId} is bot";
+                return answer;
+            }
+
             var now = DateTime.Today;
             bool flagCreateNewData;
             DateTime lastUpdateGameData;
@@ -164,7 +182,7 @@ namespace UniverseRift.Controllers.Games
             }
 
             playerSave.PlayerInfoData = GetPlayerData(player);
-            playerSave.City.MainCampaignSave = await GetCampaignSave(playerId);
+            playerSave.City.MainCampaignSave = await _campaignController.GetPlayerSave(playerId);
             playerSave.City.MallSave = await GetMarketSave(playerId);
             playerSave.City.FortuneWheelData = await GetFortuneSave(playerId, flagCreateNewData);
             playerSave.City.TaskBoardData = await GetTaskboardSave(playerId, flagCreateNewData);
@@ -175,19 +193,20 @@ namespace UniverseRift.Controllers.Games
             playerSave.HeroesStorage = await GetHeroesSave(playerId);
             playerSave.InventoryData = await _inventoriesController.GetInventory(playerId);
             playerSave.Resources = await GetResourceSave(playerId);
+            await _mailController.GetPlayerSave(playerId, playerSave.CommunicationData);
             //playerSave.City.TimeManagementSave = await _timeManagerController.GetPlayerSave(playerId);
             //playerSave.City.ChallengeTowerSave = await _challengeTowerController.GetPlayerSave(playerId);
             playerSave.AchievmentStorage = await _achievmentController.GetPlayerSave(playerId);
             playerSave.City.IndustrySave = await _industryController.GetPlayerSave(playerId, flagCreateNewData);
-            //playerSave.City.VoyageSave = await _voyageController.GetPlayerSave(playerId);
-            //playerSave.City.ArenaSave = await _arenaController.GetPlayerSave(playerId);
+            playerSave.City.VoyageSave = await _voyageController.GetPlayerSave(playerId);
+            playerSave.City.ArenaSave = await _arenaController.GetPlayerSave(playerId, playerSave.CommunicationData);
             playerSave.City.TravelCircleSave = await _travelCircleController.GetPlayerSave(playerId, flagCreateNewData);
             //playerSave.City.Tutorial = await _tutorialController.GetPlayerSave(playerId);
-            //playerSave.City.GildSave = await _guildController.GetPlayerSave(playerId);
-
-            //playerSave.CycleEventsData = await _gameCycleController.GetPlayerSave(playerId);
-            //playerSave.AchievmentStorage = await _achievmentController.GetPlayerSave(playerId);
-
+            playerSave.City.LongTravelData = await _longTravelController.GetPlayerSave(playerId, flagCreateNewData);
+            playerSave.CycleEventsData = await _gameCycleController.GetPlayerSave(playerId);
+            playerSave.AchievmentStorage = await _achievmentController.GetPlayerSave(playerId);
+            await _friendshipController.GetPlayerSave(playerId, playerSave.CommunicationData);
+            playerSave.City.GuildPlayerSaveContainer = await _guildController.GetPlayerSave(playerId, playerSave.CommunicationData);
 
             if (flagCreateNewData)
             {
@@ -202,25 +221,6 @@ namespace UniverseRift.Controllers.Games
         private PlayerData GetPlayerData(Player player)
         {
             var result = new PlayerData(player);
-            return result;
-        }
-
-        private const string NAME_RECORD_NUM_MAX_MISSION = "MaxMission";
-        private const string NAME_RECORD_AUTOFIGHT_PREVIOUS_DATETIME = "AutoFight";
-        public async Task<BuildingWithFightTeamsData> GetCampaignSave(int playerId)
-        {
-            var playerProgresses = await _context.PlayerProgresses.ToListAsync();
-            var playerProgress = playerProgresses.Find(progress => progress.PlayerId == playerId);
-
-            var result = new BuildingWithFightTeamsData();
-
-            if (playerProgress != null)
-            {
-                result.IntRecords.SetRecord(NAME_RECORD_NUM_MAX_MISSION, playerProgress.CampaignProgress);
-                var date = string.IsNullOrEmpty(playerProgress.LastGetAutoFightReward) ? DateTime.UtcNow : DateTime.Parse(playerProgress.LastGetAutoFightReward);
-                result.DateRecords.SetRecord(NAME_RECORD_AUTOFIGHT_PREVIOUS_DATETIME, date);
-            }
-
             return result;
         }
 

@@ -1,14 +1,11 @@
 [
   {
     "General": {
-      "Name": "DeathKnight",
-      "HeroId": "DeathKnight",
-      "Race": "DeathKnight",
-      "ClassHero": "asfsadf",
+      "HeroId": "Catcher",
+      "Race": "Cat",
+      "Vocation": "KillerVocation",
       "Rating": 1,
-      "ViewId": "DeathKnight",
-      "Rarity": null,
-      "AvatarPath": null
+      "Rare": 0
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -30,12 +27,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         },
         {
           "NumBreakthrough": 0,
@@ -53,12 +45,289 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
+        }
+      ]
+    },
+    "Characteristics": {
+      "limitLevel": 30,
+      "Damage": 30.0,
+      "HP": 120.0,
+      "Initiative": 40.0,
+      "ProbabilityCriticalAttack": 0.0,
+      "DamageCriticalAttack": 0.0,
+      "Accuracy": 0.0,
+      "CleanDamage": 0.0,
+      "Dodge": 0.0,
+      "CountTargetForSimpleAttack": 1,
+      "CountTargetForSpell": 1,
+      "Main": {
+        "Attack": 5,
+        "Defense": 4,
+        "Speed": 3,
+        "MovementType": 0,
+        "Mellee": true,
+        "AttackType": 0,
+        "CanRetaliation": true,
+        "CountCouterAttack": 1
+      }
+    },
+    "IncCharacts": {
+      "increaseDamage": 8.0,
+      "increaseHP": 5.0,
+      "increaseInitiative": 3.0,
+      "increaseProbabilityCriticalAttack": 0.0,
+      "increaseDamageCriticalAttack": 0.0,
+      "increaseDodge": 0.0,
+      "increaseAccuracy": 0.0,
+      "increaseCleanDamage": 0.0,
+      "increaseMagicResistance": 0.0,
+      "increaseCritResistance": 0.0,
+      "increasePoisonResistance": 0.0
+    },
+    "Resistances": {
+      "MagicResistance": 0.0,
+      "CritResistance": 0.0,
+      "PoisonResistance": 0.0,
+      "StunResistance": 0.0,
+      "PetrificationResistance": 0.0,
+      "FreezingResistance": 0.0,
+      "AstralResistance": 0.0,
+      "DumbResistance": 0.0,
+      "SilinceResistance": 0.0,
+      "EfficiencyHeal": 1.0
+    },
+    "Skills": [
+      {
+        "ID": "CatcherSpell",
+        "IsActive": true,
+        "IconPath": "Assets/Resources/Icons/CatcherSpell.png",
+        "Levels": [
+          {
+            "RequireNumBreakthrough": 0,
+            "Effects": [
+              {
+                "Performance": 2,
+                "TypeEvent": 6,
+                "CountExecutions": 0,
+                "Conditions": [],
+                "Actions": [
+                  {
+                    "$type": "Models.Heroes.Skills.Actions.Imps.SimpleActions.DamageAction, Assembly-CSharp",
+                    "RepeatCall": 0,
+                    "Rounds": [
+                      {
+                        "Amount": 10.0,
+                        "TypeNumber": 0,
+                        "IsPercent": true
+                      }
+                    ],
+                    "SideTargetType": 0,
+                    "TypeSelect": 1,
+                    "CountTarget": 1,
+                    "RecalculateTarget": 0,
+                    "Chance": 100.0,
+                    "Amount": 10.0,
+                    "TypeNumber": 0,
+                    "Owner": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Id": "Catcher"
+  },
+  {
+    "General": {
+      "HeroId": "Dragon",
+      "Race": "Cat",
+      "Vocation": "WarriorVocation",
+      "Rating": 1,
+      "Rare": 0
+    },
+    "ArrowPrefabPath": null,
+    "Evolutions": {
+      "CurrentBreakthrough": 0,
+      "Stages": [
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 0,
+          "NewLimitLevel": 30,
+          "IncCharacts": {
+            "increaseDamage": 2.0,
+            "increaseHP": 2.0,
+            "increaseInitiative": 2.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
+        },
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 30,
+          "NewLimitLevel": 60,
+          "IncCharacts": {
+            "increaseDamage": 5.0,
+            "increaseHP": 5.0,
+            "increaseInitiative": 5.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
+        }
+      ]
+    },
+    "Characteristics": {
+      "limitLevel": 30,
+      "Damage": 30.0,
+      "HP": 120.0,
+      "Initiative": 40.0,
+      "ProbabilityCriticalAttack": 0.0,
+      "DamageCriticalAttack": 0.0,
+      "Accuracy": 0.0,
+      "CleanDamage": 0.0,
+      "Dodge": 0.0,
+      "CountTargetForSimpleAttack": 1,
+      "CountTargetForSpell": 1,
+      "Main": {
+        "Attack": 5,
+        "Defense": 4,
+        "Speed": 3,
+        "MovementType": 0,
+        "Mellee": true,
+        "AttackType": 0,
+        "CanRetaliation": true,
+        "CountCouterAttack": 1
+      }
+    },
+    "IncCharacts": {
+      "increaseDamage": 8.0,
+      "increaseHP": 5.0,
+      "increaseInitiative": 3.0,
+      "increaseProbabilityCriticalAttack": 0.0,
+      "increaseDamageCriticalAttack": 0.0,
+      "increaseDodge": 0.0,
+      "increaseAccuracy": 0.0,
+      "increaseCleanDamage": 0.0,
+      "increaseMagicResistance": 0.0,
+      "increaseCritResistance": 0.0,
+      "increasePoisonResistance": 0.0
+    },
+    "Resistances": {
+      "MagicResistance": 0.0,
+      "CritResistance": 0.0,
+      "PoisonResistance": 0.0,
+      "StunResistance": 0.0,
+      "PetrificationResistance": 0.0,
+      "FreezingResistance": 0.0,
+      "AstralResistance": 0.0,
+      "DumbResistance": 0.0,
+      "SilinceResistance": 0.0,
+      "EfficiencyHeal": 1.0
+    },
+    "Skills": [
+      {
+        "ID": "DragonSpell",
+        "IsActive": true,
+        "IconPath": "Assets/Resources/Icons/DragonSpell.png",
+        "Levels": [
+          {
+            "RequireNumBreakthrough": 0,
+            "Effects": [
+              {
+                "Performance": 2,
+                "TypeEvent": 6,
+                "CountExecutions": 0,
+                "Conditions": [],
+                "Actions": [
+                  {
+                    "$type": "Models.Heroes.Skills.Actions.Imps.SimpleActions.DamageAction, Assembly-CSharp",
+                    "RepeatCall": 0,
+                    "Rounds": [
+                      {
+                        "Amount": 10.0,
+                        "TypeNumber": 0,
+                        "IsPercent": true
+                      }
+                    ],
+                    "SideTargetType": 0,
+                    "TypeSelect": 1,
+                    "CountTarget": 1,
+                    "RecalculateTarget": 0,
+                    "Chance": 100.0,
+                    "Amount": 10.0,
+                    "TypeNumber": 0,
+                    "Owner": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Id": "Dragon"
+  },
+  {
+    "General": {
+      "HeroId": "Fishguard",
+      "Race": "Dog",
+      "Vocation": "PastorVocation",
+      "Rating": 1,
+      "Rare": 0
+    },
+    "ArrowPrefabPath": null,
+    "Evolutions": {
+      "CurrentBreakthrough": 0,
+      "Stages": [
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 0,
+          "NewLimitLevel": 30,
+          "IncCharacts": {
+            "increaseDamage": 2.0,
+            "increaseHP": 2.0,
+            "increaseInitiative": 2.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
+        },
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 30,
+          "NewLimitLevel": 60,
+          "IncCharacts": {
+            "increaseDamage": 5.0,
+            "increaseHP": 5.0,
+            "increaseInitiative": 5.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
         }
       ]
     },
@@ -111,132 +380,15 @@
       "EfficiencyHeal": 1.0
     },
     "Skills": [],
-    "Id": "DeathKnight"
+    "Id": "Fishguard"
   },
   {
     "General": {
-      "Name": "Demoniac",
-      "HeroId": "Demoniac",
-      "Race": null,
-      "ClassHero": null,
-      "Rating": 1,
-      "ViewId": "Demoniac",
-      "Rarity": null,
-      "AvatarPath": null
-    },
-    "ArrowPrefabPath": null,
-    "Evolutions": {
-      "CurrentBreakthrough": 0,
-      "Stages": [
-        {
-          "NumBreakthrough": 0,
-          "RequireLevel": 0,
-          "NewLimitLevel": 30,
-          "IncCharacts": {
-            "increaseDamage": 2.0,
-            "increaseHP": 2.0,
-            "increaseInitiative": 2.0,
-            "increaseProbabilityCriticalAttack": 0.0,
-            "increaseDamageCriticalAttack": 0.0,
-            "increaseDodge": 0.0,
-            "increaseAccuracy": 0.0,
-            "increaseCleanDamage": 0.0,
-            "increaseMagicResistance": 0.0,
-            "increaseCritResistance": 0.0,
-            "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
-        },
-        {
-          "NumBreakthrough": 0,
-          "RequireLevel": 30,
-          "NewLimitLevel": 60,
-          "IncCharacts": {
-            "increaseDamage": 5.0,
-            "increaseHP": 5.0,
-            "increaseInitiative": 5.0,
-            "increaseProbabilityCriticalAttack": 0.0,
-            "increaseDamageCriticalAttack": 0.0,
-            "increaseDodge": 0.0,
-            "increaseAccuracy": 0.0,
-            "increaseCleanDamage": 0.0,
-            "increaseMagicResistance": 0.0,
-            "increaseCritResistance": 0.0,
-            "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
-        }
-      ]
-    },
-    "Characteristics": {
-      "limitLevel": 30,
-      "Damage": 30.0,
-      "HP": 120.0,
-      "Initiative": 40.0,
-      "ProbabilityCriticalAttack": 0.0,
-      "DamageCriticalAttack": 0.0,
-      "Accuracy": 0.0,
-      "CleanDamage": 0.0,
-      "Dodge": 0.0,
-      "CountTargetForSimpleAttack": 1,
-      "CountTargetForSpell": 1,
-      "Main": {
-        "Attack": 5,
-        "Defense": 4,
-        "Speed": 3,
-        "MovementType": 0,
-        "Mellee": true,
-        "AttackType": 0,
-        "CanRetaliation": true,
-        "CountCouterAttack": 1
-      }
-    },
-    "IncCharacts": {
-      "increaseDamage": 8.0,
-      "increaseHP": 5.0,
-      "increaseInitiative": 3.0,
-      "increaseProbabilityCriticalAttack": 0.0,
-      "increaseDamageCriticalAttack": 0.0,
-      "increaseDodge": 0.0,
-      "increaseAccuracy": 0.0,
-      "increaseCleanDamage": 0.0,
-      "increaseMagicResistance": 0.0,
-      "increaseCritResistance": 0.0,
-      "increasePoisonResistance": 0.0
-    },
-    "Resistances": {
-      "MagicResistance": 0.0,
-      "CritResistance": 0.0,
-      "PoisonResistance": 0.0,
-      "StunResistance": 0.0,
-      "PetrificationResistance": 0.0,
-      "FreezingResistance": 0.0,
-      "AstralResistance": 0.0,
-      "DumbResistance": 0.0,
-      "SilinceResistance": 0.0,
-      "EfficiencyHeal": 1.0
-    },
-    "Skills": [],
-    "Id": "Demoniac"
-  },
-  {
-    "General": {
-      "Name": "Imp",
       "HeroId": "Imp",
-      "Race": null,
-      "ClassHero": null,
+      "Race": "Dog",
+      "Vocation": "KillerVocation",
       "Rating": 1,
-      "ViewId": "Imp",
-      "Rarity": null,
-      "AvatarPath": null
+      "Rare": 0
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -258,12 +410,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         },
         {
           "NumBreakthrough": 0,
@@ -281,12 +428,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         }
       ]
     },
@@ -343,14 +485,11 @@
   },
   {
     "General": {
-      "Name": "Legolas",
-      "HeroId": "Legolas",
-      "Race": null,
-      "ClassHero": null,
+      "HeroId": "Knight",
+      "Race": "Rodent",
+      "Vocation": "WarriorVocation",
       "Rating": 1,
-      "ViewId": "Legolas",
-      "Rarity": null,
-      "AvatarPath": null
+      "Rare": 0
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -372,12 +511,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         },
         {
           "NumBreakthrough": 0,
@@ -395,12 +529,108 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
+        }
+      ]
+    },
+    "Characteristics": {
+      "limitLevel": 30,
+      "Damage": 30.0,
+      "HP": 120.0,
+      "Initiative": 40.0,
+      "ProbabilityCriticalAttack": 0.0,
+      "DamageCriticalAttack": 0.0,
+      "Accuracy": 0.0,
+      "CleanDamage": 0.0,
+      "Dodge": 0.0,
+      "CountTargetForSimpleAttack": 1,
+      "CountTargetForSpell": 1,
+      "Main": {
+        "Attack": 5,
+        "Defense": 4,
+        "Speed": 3,
+        "MovementType": 0,
+        "Mellee": true,
+        "AttackType": 0,
+        "CanRetaliation": true,
+        "CountCouterAttack": 1
+      }
+    },
+    "IncCharacts": {
+      "increaseDamage": 8.0,
+      "increaseHP": 5.0,
+      "increaseInitiative": 3.0,
+      "increaseProbabilityCriticalAttack": 0.0,
+      "increaseDamageCriticalAttack": 0.0,
+      "increaseDodge": 0.0,
+      "increaseAccuracy": 0.0,
+      "increaseCleanDamage": 0.0,
+      "increaseMagicResistance": 0.0,
+      "increaseCritResistance": 0.0,
+      "increasePoisonResistance": 0.0
+    },
+    "Resistances": {
+      "MagicResistance": 0.0,
+      "CritResistance": 0.0,
+      "PoisonResistance": 0.0,
+      "StunResistance": 0.0,
+      "PetrificationResistance": 0.0,
+      "FreezingResistance": 0.0,
+      "AstralResistance": 0.0,
+      "DumbResistance": 0.0,
+      "SilinceResistance": 0.0,
+      "EfficiencyHeal": 1.0
+    },
+    "Skills": [],
+    "Id": "Knight"
+  },
+  {
+    "General": {
+      "HeroId": "Nosedman",
+      "Race": "Fish",
+      "Vocation": "WizardVocation",
+      "Rating": 1,
+      "Rare": 0
+    },
+    "ArrowPrefabPath": null,
+    "Evolutions": {
+      "CurrentBreakthrough": 0,
+      "Stages": [
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 0,
+          "NewLimitLevel": 30,
+          "IncCharacts": {
+            "increaseDamage": 2.0,
+            "increaseHP": 2.0,
+            "increaseInitiative": 2.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
+        },
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 30,
+          "NewLimitLevel": 60,
+          "IncCharacts": {
+            "increaseDamage": 5.0,
+            "increaseHP": 5.0,
+            "increaseInitiative": 5.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
         }
       ]
     },
@@ -453,18 +683,15 @@
       "EfficiencyHeal": 1.0
     },
     "Skills": [],
-    "Id": "Legolas"
+    "Id": "Nosedman"
   },
   {
     "General": {
-      "Name": "Militia",
-      "HeroId": "Militia",
-      "Race": null,
-      "ClassHero": null,
+      "HeroId": "PitBoy",
+      "Race": "Fish",
+      "Vocation": "ArcherVocation",
       "Rating": 1,
-      "ViewId": "Militia",
-      "Rarity": null,
-      "AvatarPath": null
+      "Rare": 0
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -486,12 +713,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         },
         {
           "NumBreakthrough": 0,
@@ -509,12 +731,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         }
       ]
     },
@@ -567,18 +784,15 @@
       "EfficiencyHeal": 1.0
     },
     "Skills": [],
-    "Id": "Militia"
+    "Id": "PitBoy"
   },
   {
     "General": {
-      "Name": "Peasant",
-      "HeroId": "Peasant",
-      "Race": null,
-      "ClassHero": null,
+      "HeroId": "PracticeDummy",
+      "Race": "Rodent",
+      "Vocation": "WarriorVocation",
       "Rating": 1,
-      "ViewId": "Peasant",
-      "Rarity": null,
-      "AvatarPath": null
+      "Rare": 0
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -600,12 +814,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         },
         {
           "NumBreakthrough": 0,
@@ -623,12 +832,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         }
       ]
     },
@@ -681,18 +885,15 @@
       "EfficiencyHeal": 1.0
     },
     "Skills": [],
-    "Id": "Peasant"
+    "Id": "PracticeDummy"
   },
   {
     "General": {
-      "Name": "Pegasus",
-      "HeroId": "Pegasus",
-      "Race": null,
-      "ClassHero": null,
+      "HeroId": "Snake",
+      "Race": "Rodent",
+      "Vocation": "KillerVocation",
       "Rating": 1,
-      "ViewId": "Pegasus",
-      "Rarity": null,
-      "AvatarPath": null
+      "Rare": 0
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -714,12 +915,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         },
         {
           "NumBreakthrough": 0,
@@ -737,240 +933,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
-        }
-      ]
-    },
-    "Characteristics": {
-      "limitLevel": 30,
-      "Damage": 30.0,
-      "HP": 120.0,
-      "Initiative": 40.0,
-      "ProbabilityCriticalAttack": 0.0,
-      "DamageCriticalAttack": 0.0,
-      "Accuracy": 0.0,
-      "CleanDamage": 0.0,
-      "Dodge": 0.0,
-      "CountTargetForSimpleAttack": 1,
-      "CountTargetForSpell": 1,
-      "Main": {
-        "Attack": 5,
-        "Defense": 4,
-        "Speed": 3,
-        "MovementType": 0,
-        "Mellee": true,
-        "AttackType": 0,
-        "CanRetaliation": true,
-        "CountCouterAttack": 1
-      }
-    },
-    "IncCharacts": {
-      "increaseDamage": 8.0,
-      "increaseHP": 5.0,
-      "increaseInitiative": 3.0,
-      "increaseProbabilityCriticalAttack": 0.0,
-      "increaseDamageCriticalAttack": 0.0,
-      "increaseDodge": 0.0,
-      "increaseAccuracy": 0.0,
-      "increaseCleanDamage": 0.0,
-      "increaseMagicResistance": 0.0,
-      "increaseCritResistance": 0.0,
-      "increasePoisonResistance": 0.0
-    },
-    "Resistances": {
-      "MagicResistance": 0.0,
-      "CritResistance": 0.0,
-      "PoisonResistance": 0.0,
-      "StunResistance": 0.0,
-      "PetrificationResistance": 0.0,
-      "FreezingResistance": 0.0,
-      "AstralResistance": 0.0,
-      "DumbResistance": 0.0,
-      "SilinceResistance": 0.0,
-      "EfficiencyHeal": 1.0
-    },
-    "Skills": [],
-    "Id": "Pegasus"
-  },
-  {
-    "General": {
-      "Name": "Raccoon",
-      "HeroId": "Raccoon",
-      "Race": null,
-      "ClassHero": null,
-      "Rating": 1,
-      "ViewId": "Raccoon",
-      "Rarity": null,
-      "AvatarPath": null
-    },
-    "ArrowPrefabPath": null,
-    "Evolutions": {
-      "CurrentBreakthrough": 0,
-      "Stages": [
-        {
-          "NumBreakthrough": 0,
-          "RequireLevel": 0,
-          "NewLimitLevel": 30,
-          "IncCharacts": {
-            "increaseDamage": 2.0,
-            "increaseHP": 2.0,
-            "increaseInitiative": 2.0,
-            "increaseProbabilityCriticalAttack": 0.0,
-            "increaseDamageCriticalAttack": 0.0,
-            "increaseDodge": 0.0,
-            "increaseAccuracy": 0.0,
-            "increaseCleanDamage": 0.0,
-            "increaseMagicResistance": 0.0,
-            "increaseCritResistance": 0.0,
-            "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
-        },
-        {
-          "NumBreakthrough": 0,
-          "RequireLevel": 30,
-          "NewLimitLevel": 60,
-          "IncCharacts": {
-            "increaseDamage": 5.0,
-            "increaseHP": 5.0,
-            "increaseInitiative": 5.0,
-            "increaseProbabilityCriticalAttack": 0.0,
-            "increaseDamageCriticalAttack": 0.0,
-            "increaseDodge": 0.0,
-            "increaseAccuracy": 0.0,
-            "increaseCleanDamage": 0.0,
-            "increaseMagicResistance": 0.0,
-            "increaseCritResistance": 0.0,
-            "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
-        }
-      ]
-    },
-    "Characteristics": {
-      "limitLevel": 30,
-      "Damage": 30.0,
-      "HP": 120.0,
-      "Initiative": 40.0,
-      "ProbabilityCriticalAttack": 0.0,
-      "DamageCriticalAttack": 0.0,
-      "Accuracy": 0.0,
-      "CleanDamage": 0.0,
-      "Dodge": 0.0,
-      "CountTargetForSimpleAttack": 1,
-      "CountTargetForSpell": 1,
-      "Main": {
-        "Attack": 5,
-        "Defense": 4,
-        "Speed": 3,
-        "MovementType": 0,
-        "Mellee": true,
-        "AttackType": 0,
-        "CanRetaliation": true,
-        "CountCouterAttack": 1
-      }
-    },
-    "IncCharacts": {
-      "increaseDamage": 8.0,
-      "increaseHP": 5.0,
-      "increaseInitiative": 3.0,
-      "increaseProbabilityCriticalAttack": 0.0,
-      "increaseDamageCriticalAttack": 0.0,
-      "increaseDodge": 0.0,
-      "increaseAccuracy": 0.0,
-      "increaseCleanDamage": 0.0,
-      "increaseMagicResistance": 0.0,
-      "increaseCritResistance": 0.0,
-      "increasePoisonResistance": 0.0
-    },
-    "Resistances": {
-      "MagicResistance": 0.0,
-      "CritResistance": 0.0,
-      "PoisonResistance": 0.0,
-      "StunResistance": 0.0,
-      "PetrificationResistance": 0.0,
-      "FreezingResistance": 0.0,
-      "AstralResistance": 0.0,
-      "DumbResistance": 0.0,
-      "SilinceResistance": 0.0,
-      "EfficiencyHeal": 1.0
-    },
-    "Skills": [],
-    "Id": "Raccoon"
-  },
-  {
-    "General": {
-      "Name": "Robin",
-      "HeroId": "Robin",
-      "Race": null,
-      "ClassHero": null,
-      "Rating": 1,
-      "ViewId": "Robin",
-      "Rarity": null,
-      "AvatarPath": null
-    },
-    "ArrowPrefabPath": null,
-    "Evolutions": {
-      "CurrentBreakthrough": 0,
-      "Stages": [
-        {
-          "NumBreakthrough": 0,
-          "RequireLevel": 0,
-          "NewLimitLevel": 30,
-          "IncCharacts": {
-            "increaseDamage": 2.0,
-            "increaseHP": 2.0,
-            "increaseInitiative": 2.0,
-            "increaseProbabilityCriticalAttack": 0.0,
-            "increaseDamageCriticalAttack": 0.0,
-            "increaseDodge": 0.0,
-            "increaseAccuracy": 0.0,
-            "increaseCleanDamage": 0.0,
-            "increaseMagicResistance": 0.0,
-            "increaseCritResistance": 0.0,
-            "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
-        },
-        {
-          "NumBreakthrough": 0,
-          "RequireLevel": 30,
-          "NewLimitLevel": 60,
-          "IncCharacts": {
-            "increaseDamage": 5.0,
-            "increaseHP": 5.0,
-            "increaseInitiative": 5.0,
-            "increaseProbabilityCriticalAttack": 0.0,
-            "increaseDamageCriticalAttack": 0.0,
-            "increaseDodge": 0.0,
-            "increaseAccuracy": 0.0,
-            "increaseCleanDamage": 0.0,
-            "increaseMagicResistance": 0.0,
-            "increaseCritResistance": 0.0,
-            "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         }
       ]
     },
@@ -991,7 +954,7 @@
         "Defense": 0,
         "Speed": 0,
         "MovementType": 0,
-        "Mellee": false,
+        "Mellee": true,
         "AttackType": 0,
         "CanRetaliation": true,
         "CountCouterAttack": 1
@@ -1023,18 +986,15 @@
       "EfficiencyHeal": 1.0
     },
     "Skills": [],
-    "Id": "Robin"
+    "Id": "Snake"
   },
   {
     "General": {
-      "Name": "Spirit",
-      "HeroId": "Spirit",
-      "Race": null,
-      "ClassHero": null,
+      "HeroId": "Spike",
+      "Race": "Bird",
+      "Vocation": "PastorVocation",
       "Rating": 1,
-      "ViewId": "Spirit",
-      "Rarity": null,
-      "AvatarPath": null
+      "Rare": 0
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -1056,12 +1016,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         },
         {
           "NumBreakthrough": 0,
@@ -1079,12 +1034,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         }
       ]
     },
@@ -1137,18 +1087,15 @@
       "EfficiencyHeal": 1.0
     },
     "Skills": [],
-    "Id": "Spirit"
+    "Id": "Spike"
   },
   {
     "General": {
-      "Name": "TempleGuard",
-      "HeroId": "TempleGuard",
-      "Race": null,
-      "ClassHero": null,
+      "HeroId": "Treestor",
+      "Race": "Bird",
+      "Vocation": "KillerVocation",
       "Rating": 1,
-      "ViewId": "TempleGuard",
-      "Rarity": null,
-      "AvatarPath": null
+      "Rare": 0
     },
     "ArrowPrefabPath": null,
     "Evolutions": {
@@ -1170,12 +1117,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         },
         {
           "NumBreakthrough": 0,
@@ -1193,12 +1135,7 @@
             "increaseMagicResistance": 0.0,
             "increaseCritResistance": 0.0,
             "increasePoisonResistance": 0.0
-          },
-          "IsSeriousChange": false,
-          "NewName": "",
-          "NewRace": null,
-          "NewClassHero": null,
-          "NewModelId": null
+          }
         }
       ]
     },
@@ -1251,6 +1188,208 @@
       "EfficiencyHeal": 1.0
     },
     "Skills": [],
-    "Id": "TempleGuard"
+    "Id": "Treestor"
+  },
+  {
+    "General": {
+      "HeroId": "Wedger",
+      "Race": "Bird",
+      "Vocation": "PastorVocation",
+      "Rating": 1,
+      "Rare": 0
+    },
+    "ArrowPrefabPath": null,
+    "Evolutions": {
+      "CurrentBreakthrough": 0,
+      "Stages": [
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 0,
+          "NewLimitLevel": 30,
+          "IncCharacts": {
+            "increaseDamage": 2.0,
+            "increaseHP": 2.0,
+            "increaseInitiative": 2.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
+        },
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 30,
+          "NewLimitLevel": 60,
+          "IncCharacts": {
+            "increaseDamage": 5.0,
+            "increaseHP": 5.0,
+            "increaseInitiative": 5.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
+        }
+      ]
+    },
+    "Characteristics": {
+      "limitLevel": 30,
+      "Damage": 30.0,
+      "HP": 120.0,
+      "Initiative": 40.0,
+      "ProbabilityCriticalAttack": 0.0,
+      "DamageCriticalAttack": 0.0,
+      "Accuracy": 0.0,
+      "CleanDamage": 0.0,
+      "Dodge": 0.0,
+      "CountTargetForSimpleAttack": 1,
+      "CountTargetForSpell": 1,
+      "Main": {
+        "Attack": 5,
+        "Defense": 4,
+        "Speed": 3,
+        "MovementType": 0,
+        "Mellee": true,
+        "AttackType": 0,
+        "CanRetaliation": true,
+        "CountCouterAttack": 1
+      }
+    },
+    "IncCharacts": {
+      "increaseDamage": 8.0,
+      "increaseHP": 5.0,
+      "increaseInitiative": 3.0,
+      "increaseProbabilityCriticalAttack": 0.0,
+      "increaseDamageCriticalAttack": 0.0,
+      "increaseDodge": 0.0,
+      "increaseAccuracy": 0.0,
+      "increaseCleanDamage": 0.0,
+      "increaseMagicResistance": 0.0,
+      "increaseCritResistance": 0.0,
+      "increasePoisonResistance": 0.0
+    },
+    "Resistances": {
+      "MagicResistance": 0.0,
+      "CritResistance": 0.0,
+      "PoisonResistance": 0.0,
+      "StunResistance": 0.0,
+      "PetrificationResistance": 0.0,
+      "FreezingResistance": 0.0,
+      "AstralResistance": 0.0,
+      "DumbResistance": 0.0,
+      "SilinceResistance": 0.0,
+      "EfficiencyHeal": 1.0
+    },
+    "Skills": [],
+    "Id": "Wedger"
+  },
+  {
+    "General": {
+      "HeroId": "Wolf",
+      "Race": "Bird",
+      "Vocation": "KillerVocation",
+      "Rating": 1,
+      "Rare": 0
+    },
+    "ArrowPrefabPath": null,
+    "Evolutions": {
+      "CurrentBreakthrough": 0,
+      "Stages": [
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 0,
+          "NewLimitLevel": 30,
+          "IncCharacts": {
+            "increaseDamage": 2.0,
+            "increaseHP": 2.0,
+            "increaseInitiative": 2.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
+        },
+        {
+          "NumBreakthrough": 0,
+          "RequireLevel": 30,
+          "NewLimitLevel": 60,
+          "IncCharacts": {
+            "increaseDamage": 5.0,
+            "increaseHP": 5.0,
+            "increaseInitiative": 5.0,
+            "increaseProbabilityCriticalAttack": 0.0,
+            "increaseDamageCriticalAttack": 0.0,
+            "increaseDodge": 0.0,
+            "increaseAccuracy": 0.0,
+            "increaseCleanDamage": 0.0,
+            "increaseMagicResistance": 0.0,
+            "increaseCritResistance": 0.0,
+            "increasePoisonResistance": 0.0
+          }
+        }
+      ]
+    },
+    "Characteristics": {
+      "limitLevel": 30,
+      "Damage": 30.0,
+      "HP": 120.0,
+      "Initiative": 40.0,
+      "ProbabilityCriticalAttack": 0.0,
+      "DamageCriticalAttack": 0.0,
+      "Accuracy": 0.0,
+      "CleanDamage": 0.0,
+      "Dodge": 0.0,
+      "CountTargetForSimpleAttack": 1,
+      "CountTargetForSpell": 1,
+      "Main": {
+        "Attack": 5,
+        "Defense": 4,
+        "Speed": 3,
+        "MovementType": 0,
+        "Mellee": true,
+        "AttackType": 0,
+        "CanRetaliation": true,
+        "CountCouterAttack": 1
+      }
+    },
+    "IncCharacts": {
+      "increaseDamage": 8.0,
+      "increaseHP": 5.0,
+      "increaseInitiative": 3.0,
+      "increaseProbabilityCriticalAttack": 0.0,
+      "increaseDamageCriticalAttack": 0.0,
+      "increaseDodge": 0.0,
+      "increaseAccuracy": 0.0,
+      "increaseCleanDamage": 0.0,
+      "increaseMagicResistance": 0.0,
+      "increaseCritResistance": 0.0,
+      "increasePoisonResistance": 0.0
+    },
+    "Resistances": {
+      "MagicResistance": 0.0,
+      "CritResistance": 0.0,
+      "PoisonResistance": 0.0,
+      "StunResistance": 0.0,
+      "PetrificationResistance": 0.0,
+      "FreezingResistance": 0.0,
+      "AstralResistance": 0.0,
+      "DumbResistance": 0.0,
+      "SilinceResistance": 0.0,
+      "EfficiencyHeal": 1.0
+    },
+    "Skills": [],
+    "Id": "Wolf"
   }
 ]

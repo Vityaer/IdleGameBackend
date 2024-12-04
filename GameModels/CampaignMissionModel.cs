@@ -1,6 +1,4 @@
-﻿using UniverseRift.Controllers.Common;
-
-namespace UniverseRift.GameModels
+﻿namespace UniverseRift.GameModels
 {
     public class CampaignMissionModel : MissionModel
     {

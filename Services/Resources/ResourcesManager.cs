@@ -26,10 +26,6 @@ namespace UniverseRift.Services.Resources
             }
 
             await _context.SaveChangesAsync();
-
-            var result = await _context.Players.ToListAsync();
-            var resources = await _context.Resources.ToListAsync();
-
         }
 
         public async Task AddResources(Resource newRes)
@@ -42,7 +38,21 @@ namespace UniverseRift.Services.Resources
 
             resource.Add(newRes);
             await _context.SaveChangesAsync();
+        }
 
+        public async Task AddResources(List<Resource> rewardResources)
+        {
+            var resources = await _context.Resources.ToListAsync();
+            foreach (var rewardResource in rewardResources)
+            {
+                var resource = resources.Find(res => res.PlayerId == rewardResource.PlayerId && res.Type == rewardResource.Type);
+
+                if (resource == null)
+                    return;
+
+                resource.Add(rewardResource);
+            }
+            await _context.SaveChangesAsync();
         }
 
         public async Task SubstactResources(Resource newRes)

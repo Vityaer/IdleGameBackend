@@ -2,6 +2,7 @@
   {
     "Products": [
       "SimpleHireMiniSet",
+      "SimpleHireBigPack",
       "SpecialHireMiniSet",
       "SpecialHireSet",
       "RedDastSet",
@@ -11,7 +12,9 @@
       "ForceStoneMiniSet",
       "ContinuumStoneBigSet",
       "RubbishAmulet",
-      "PupilWeapon"
+      "PupilWeapon",
+      "StoneReplacementProduct",
+      "TestSplinters"
     ],
     "RecoveryType": 1,
     "Id": "CityMarket"
@@ -22,5 +25,23 @@
     ],
     "RecoveryType": 5,
     "Id": "ResourceMarket"
+  },
+  {
+    "Products": [
+      "SweetCycleCoolWeapon",
+      "SweetCycleGold",
+      "SweetCycleContiunumStone"
+    ],
+    "RecoveryType": 4,
+    "Id": "SweetCycleMarket"
+  },
+  {
+    "Products": [
+      "SweetCycleCoolWeapon",
+      "SweetCycleGold",
+      "SweetCycleContiunumStone"
+    ],
+    "RecoveryType": 3,
+    "Id": "GuildMarket"
   }
 ]

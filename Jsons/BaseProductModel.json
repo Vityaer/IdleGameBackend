@@ -200,6 +200,86 @@
     "Id": "TicketOnArena"
   },
   {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 25.0,
+        "E10": 3
+      }
+    },
+    "CountSell": 100,
+    "Cost": {
+      "Type": 23,
+      "Amount": {
+        "Mantissa": 3.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "SweetCycleGold"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 2,
+      "Amount": {
+        "Mantissa": 15.0,
+        "E10": 3
+      }
+    },
+    "CountSell": 100,
+    "Cost": {
+      "Type": 23,
+      "Amount": {
+        "Mantissa": 3.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "SweetCycleContiunumStone"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 3,
+      "Amount": {
+        "Mantissa": 10.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 1,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "SimpleHireBigPack"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 14,
+      "Amount": {
+        "Mantissa": 200.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 1,
+      "Amount": {
+        "Mantissa": 600.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "StoneReplacementProduct"
+  },
+  {
     "$type": "Models.City.Markets.ItemProductModel, Assembly-CSharp",
     "Subject": {
       "Id": "PupilWeapon",
@@ -232,5 +312,39 @@
     },
     "Type": 0,
     "Id": "RubbishAmulet"
+  },
+  {
+    "$type": "Models.City.Markets.ItemProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PeasantWeapon",
+      "Amount": 1
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 23,
+      "Amount": {
+        "Mantissa": 700.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "SweetCycleCoolWeapon"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "CatcherSplinter",
+      "Amount": 30
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 3
+      }
+    },
+    "Type": 0,
+    "Id": "TestSplinters"
   }
 ]

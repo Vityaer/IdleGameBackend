@@ -1,12 +1,91 @@
 [
   {
     "TaskIds": [
-      "DailySimpleHire"
+      "DailyCountCompleteTasks",
+      "DailyTryDeathTower",
+      "DailySendFriendHeart",
+      "DailyFortuneRoundUse",
+      "DailyAutoFightHours",
+      "DailyGetAlchemyGoldCount",
+      "DailyTryLongTravelFight",
+      "DailyArenaTryFightCount",
+      "DailySpecialHire",
+      "DailyMineGetResource"
     ],
     "Id": "DailyTasks"
   },
   {
-    "TaskIds": [],
+    "TaskIds": [
+      "ChallengeTowerMissionComplete",
+      "LongAchievmentSpecialHires"
+    ],
     "Id": "MainAchievments"
+  },
+  {
+    "TaskIds": [
+      "MonthArenaWinAchievmentFirst",
+      "MonthArenaWinAchievmentSecond",
+      "MonthArenaWinAchievmentThree",
+      "MonthArenaWinAchievmentFour"
+    ],
+    "Id": "MonthArenaTasks"
+  },
+  {
+    "TaskIds": [
+      "EvolutionThreeRatingCount",
+      "EvolutionFiveRatingCount",
+      "EvolutionSevenRatingCount",
+      "EvolutionTenRatingCount"
+    ],
+    "Id": "MonthEvolutionTasks"
+  },
+  {
+    "TaskIds": [
+      "CountCompleteTasks",
+      "CompleteTaskFourStarCount",
+      "CompleteTaskFiveStarCount",
+      "CompleteTaskSixStarCount",
+      "CompleteTaskSevenStarCount"
+    ],
+    "Id": "MonthTaskboardTasks"
+  },
+  {
+    "TaskIds": [
+      "CompleteTravelOne",
+      "CompleteTravelThree",
+      "CompleteTravelFive",
+      "CompleteTravelTen"
+    ],
+    "Id": "MonthTravelTasks"
+  },
+  {
+    "TaskIds": [
+      "RaceRoundCyclyFisrt",
+      "RaceRoundCyclySecond",
+      "RaceRoundCyclyThree",
+      "RaceRoundCyclyFour",
+      "RaceRoundCyclyFive"
+    ],
+    "Id": "MainRaceHireCycle"
+  },
+  {
+    "TaskIds": [
+      "MainTaverCycleFirst",
+      "MainTaverCycleSecond",
+      "MainTaverCycleThree",
+      "MainTaverCycleFour",
+      "MainTaverCycleFive"
+    ],
+    "Id": "MainTavernHireCycle"
+  },
+  {
+    "TaskIds": [
+      "MainFortuneCycleFirst",
+      "MainFortuneCycleSecond",
+      "MainFortuneCycleThree",
+      "MainFortuneCycleFour",
+      "MainFortuneCycleFive"
+    ],
+    "Id": "MainFortuneCycle"
   }
 ]

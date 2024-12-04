@@ -7,7 +7,7 @@ namespace UniverseRift.GameModels
     {
         public string Name;
         public string Location;
-        public List<HeroData> Units = new List<HeroData>();
+        public List<HeroData> Units;
         public RewardModel WinReward;
     }
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "Path": "Assets/Resources/UI/HeroIcons/1129.png",
+    "Id": "TestAvatar"
+  },
+  {
+    "Path": "Assets/Resources/UI/HeroIcons/1153.png",
+    "Id": "DragonAvatar"
+  },
+  {
+    "Path": "Assets/Resources/UI/HeroIcons/1233.png",
+    "Id": "CoolAvatar"
+  },
+  {
+    "Path": "Assets/Resources/UI/HeroIcons/1163.png",
+    "Id": "TinyAvatar"
+  },
+  {
+    "Path": "Assets/Resources/UI/HeroIcons/1209.png",
+    "Id": "ForestKillerAvatar"
+  }
+]

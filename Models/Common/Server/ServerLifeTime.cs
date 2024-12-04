@@ -1,4 +1,6 @@
-﻿namespace UniverseRift.Models.Common.Server
+﻿using UniverseRift.Models.Events;
+
+namespace UniverseRift.Models.Common.Server
 {
     public class ServerLifeTime
     {
@@ -9,7 +11,11 @@
         public string NextWeek { get; set; } = string.Empty;
         public string NextMonth { get; set; } = string.Empty;
         public string LastStartDateTime { get; set; } = string.Empty;
+        public GameEventType EventType { get; set; } = GameEventType.Fortune;
 
-        public ServerLifeTime(){ }
+        public ServerLifeTime()
+        {
+            EventType = GameEventType.Fortune;
+        }
     }
 }

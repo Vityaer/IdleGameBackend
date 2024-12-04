@@ -1,4 +1,6 @@
-﻿namespace UniverseRift.GameModelDatas.Cities.Industries
+﻿using UniverseRift.Controllers.Common;
+
+namespace UniverseRift.GameModelDatas.Cities.Industries
 {
     public class MineData
     {
@@ -17,7 +19,7 @@
             Level = 1;
             MineId = mineId;
             PlaceId = placeId;
-            LastDateTimeGetIncome = DateTime.UtcNow.ToString();
+            LastDateTimeGetIncome = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
         }
     }
 }

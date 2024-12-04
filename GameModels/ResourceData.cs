@@ -1,4 +1,4 @@
-﻿using Models.Common.BigDigits;
+﻿using UniverseRift.GameModels.Common;
 using UniverseRift.Models.Resources;
 
 namespace Models.Data.Inventories

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Misc.Json;
 using Models.Common.BigDigits;
 using Models.Data.Inventories;
@@ -7,10 +6,12 @@ using UniRx;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Battlepases;
 using UniverseRift.Controllers.Buildings.Campaigns;
-using UniverseRift.Controllers.Buildings.ChallengeTowers;
+using UniverseRift.Controllers.Buildings.Guilds;
 using UniverseRift.Controllers.Buildings.Industries.Mines;
+using UniverseRift.Controllers.Buildings.LongTravels;
 using UniverseRift.Controllers.Buildings.TravelCircles;
 using UniverseRift.Controllers.Common;
+using UniverseRift.Controllers.Misc.Friendships;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.GameModels;
 using UniverseRift.Models.Common;
@@ -32,8 +33,11 @@ namespace UniverseRift.Controllers.Players
         private readonly IMineController _mineController;
         private readonly ITravelCircleController _travelCircleController;
         private readonly IBattlepasController _battlepasController;
+        private readonly IFriendshipController _friendshipController;
+        private readonly IGuildController _guildController;
+        private readonly ILongTravelController _longTravelController;
 
-        private ReactiveCommand<int> _onPlayerRegistration = new ReactiveCommand<int>();
+        private ReactiveCommand<int> _onPlayerRegistration = new();
 
         public UniRx.IObservable<int> OnRegistrationPlayer => _onPlayerRegistration;
 
@@ -46,7 +50,10 @@ namespace UniverseRift.Controllers.Players
             IJsonConverter jsonConverter,
             IMineController mineController,
             ITravelCircleController travelCircleController,
-            IBattlepasController battlepasController
+            IBattlepasController battlepasController,
+            IFriendshipController friendshipController,
+            IGuildController guildController,
+            ILongTravelController longTravelController
             )
         {
             _commonDictionaries = commonDictionaries;
@@ -58,20 +65,21 @@ namespace UniverseRift.Controllers.Players
             _mineController = mineController;
             _travelCircleController = travelCircleController;
             _battlepasController = battlepasController;
+            _friendshipController = friendshipController;
+            _guildController = guildController;
+            _longTravelController = longTravelController;
+
         }
 
-        public async Task<Player> GetPlayer(int playerId)
+        public async Task<Player> CreatePlayer(string name, string avatarPath, bool isBot)
         {
-            var player = await _context.Players.FindAsync(playerId);
-            return player;
-        }
-
-        [HttpPost]
-        [Route("Players/Registration")]
-        public async Task<AnswerModel> Registration(string name)
-        {
-            var answer = new AnswerModel();
-            var player = new Player { Name = name };
+            var player = new Player
+            {
+                Name = name,
+                AvatarPath = avatarPath,
+                LastGetAlchemyDateTime = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat),
+                IsBot = isBot
+            };
             await _context.AddAsync(player);
 
             await _context.SaveChangesAsync();
@@ -80,13 +88,33 @@ namespace UniverseRift.Controllers.Players
             await _clientRewardService.AddReward(player.Id, rewardData);
 
             await _campaignController.CreatePlayerProgress(player.Id);
-            await _mineController.CreateMainMine(player.Id);
+            await _mineController.OnRegistrationPlayer(player.Id);
             await _travelCircleController.OnRegistrationPlayer(player.Id);
             await _battlepasController.OnRegisterPlayer(player.Id);
+            await _friendshipController.OnPlayerRegister(player.Id);
+            await _guildController.OnPlayerRegister(player.Id);
+            await _longTravelController.OnPlayerRegister(player.Id);
+
+            return player;
+        }
+        
+        public async Task<Player> GetPlayer(int playerId)
+        {
+            var player = await _context.Players.FindAsync(playerId);
+            return player;
+        }
+
+        [HttpPost]
+        [Route("Players/Registration")]
+        public async Task<AnswerModel> Registration(string name, string avatarPath)
+        {
+            var answer = new AnswerModel();
+            if (string.IsNullOrEmpty(avatarPath))
+                avatarPath = string.Empty;
+
+            var player = await CreatePlayer(name, avatarPath, false);
 
             answer.Result = player.Id.ToString();
-            var result = await _context.Players.ToListAsync();
-
             return answer;
         }
 
@@ -104,6 +132,19 @@ namespace UniverseRift.Controllers.Players
         }
 
         [HttpPost]
+        [Route("Players/ChangeAvatar")]
+        public async Task<AnswerModel> ChangeAvatar(int playerId, string avatarPath)
+        {
+            var answer = new AnswerModel();
+
+            var player = await GetPlayer(playerId);
+            player.AvatarPath = avatarPath;
+            await _context.SaveChangesAsync();
+            answer.Result = "Success";
+            return answer;
+        }
+
+        [HttpPost]
         [Route("Players/PlayerLevelUp")]
         public async Task<AnswerModel> PlayerLevelUp(int playerId)
         {
@@ -111,7 +152,7 @@ namespace UniverseRift.Controllers.Players
 
             var player = await GetPlayer(playerId);
 
-            if(player == null)
+            if (player == null)
             {
                 answer.Error = "Wrong data";
                 return answer;
@@ -130,7 +171,7 @@ namespace UniverseRift.Controllers.Players
             await _resourcesController.AddResources(rewardResource);
 
             await _context.SaveChangesAsync();
-            
+
             var rewardModel = new RewardModel();
             rewardModel.Add(resoureData);
 

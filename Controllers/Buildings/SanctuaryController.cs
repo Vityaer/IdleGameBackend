@@ -5,6 +5,9 @@ using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Results;
 using Misc.Json;
 using UniverseRift.MessageData;
+using Microsoft.Extensions.Hosting;
+using UniverseRift.GameModels.Heroes;
+using UniverseRift.Controllers.Common;
 
 namespace UniverseRift.Controllers.Buildings
 {
@@ -13,11 +16,16 @@ namespace UniverseRift.Controllers.Buildings
         private readonly AplicationContext _context;
         private readonly IJsonConverter _jsonConverter;
         private readonly Random _random = new Random();
+        private readonly ICommonDictionaries _commonDictionaries;
 
-        public SanctuaryController(AplicationContext context, IJsonConverter jsonConverter)
+        public SanctuaryController(
+            AplicationContext context,
+            IJsonConverter jsonConverter,
+            ICommonDictionaries commonDictionaries)
         {
             _context = context;
             _jsonConverter = jsonConverter;
+            _commonDictionaries = commonDictionaries;
         }
 
         [HttpPost]
@@ -39,8 +47,12 @@ namespace UniverseRift.Controllers.Buildings
                 return answer;
             }
 
-            var heroTemplates = await _context.HeroTemplates.ToListAsync();
-            var oldHeroTemplate = heroTemplates.Find(template => template.Id == hero.HeroTemplateId);
+            var allHeroes = _commonDictionaries.Heroes;
+            var workList = new List<HeroModel>();
+            HeroModel heroTemplate;
+
+            var heroTemplates = _commonDictionaries.Heroes;
+            var oldHeroTemplate = heroTemplates[hero.HeroTemplateId];
             
             if (oldHeroTemplate == null)
             {
@@ -48,11 +60,15 @@ namespace UniverseRift.Controllers.Buildings
                 return answer;
             }
 
-            var raceHeros = heroTemplates.FindAll(template => template.Race == oldHeroTemplate.Race);
-            raceHeros.Remove(oldHeroTemplate);
+            var raceHeroes = heroTemplates
+                .Where(template => template.Value.General.Race == oldHeroTemplate.General.Race)
+                .Select(x => x.Value)
+                .ToList();
 
-            var randomIndex = _random.Next(0, raceHeros.Count);
-            var newHero = new Hero(playerId, raceHeros[randomIndex]);
+            raceHeroes.Remove(oldHeroTemplate);
+
+            var randomIndex = _random.Next(0, raceHeroes.Count);
+            var newHero = new Hero(playerId, raceHeroes[randomIndex]);
 
             _context.Heroes.Remove(hero);
             await _context.Heroes.AddAsync(newHero);

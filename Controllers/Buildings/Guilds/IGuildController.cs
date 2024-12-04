@@ -1,9 +1,12 @@
-﻿using UniverseRift.GameModelDatas.Cities;
+﻿using UniverseRift.Models.Guilds;
+using UniverseRift.Models.Misc;
 
 namespace UniverseRift.Controllers.Buildings.Guilds
 {
     public interface IGuildController
     {
-        async Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId) { return null; }
+        Task<GuildPlayerSaveContainer> GetPlayerSave(int playerId, CommunicationData communicationData);
+        Task OnPlayerRegister(int playerId);
+        Task RefreshDay();
     }
 }

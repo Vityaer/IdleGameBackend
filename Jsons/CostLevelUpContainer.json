@@ -48,5 +48,26 @@
       }
     ],
     "Id": "PlayerLevels"
+  },
+  {
+    "LevelsCost": [
+      {
+        "level": 0,
+        "Cost": [
+          {
+            "Type": 0,
+            "Amount": {
+              "Mantissa": 200.0,
+              "E10": 3
+            }
+          }
+        ],
+        "typeIncrease": 0,
+        "ListIncrease": [
+          75.0
+        ]
+      }
+    ],
+    "Id": "GuildDonateEvolution"
   }
 ]

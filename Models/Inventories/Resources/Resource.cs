@@ -5,6 +5,8 @@ namespace UniverseRift.Models.Resources
 {
     public class Resource : BaseInventoryObject
     {
+        public ResourceType Type { get; set; }
+
         public Resource()
         {
         }
@@ -17,7 +19,13 @@ namespace UniverseRift.Models.Resources
             E10 = resource.Amount.E10;
         }
 
-        public ResourceType Type { get; set; }
+        public Resource(int playerId, ResourceType type, float count, int e10 = 0)
+        {
+            PlayerId = playerId;
+            Type = type;
+            Count = count;
+            E10 = e10;
+        }
 
         public void Add(Resource newRes)
         {

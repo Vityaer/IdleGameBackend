@@ -3,11 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Misc.Json;
 using Models.Common.BigDigits;
 using Models.Data.Inventories;
-using System.Globalization;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.GameModels;
+using UniverseRift.Heplers.Utils;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
 using UniverseRift.Services.Resources;
@@ -19,21 +20,25 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
     {
         private const string MAIN_MINE_NAME = "MainMineBuilding";
         private const string MAIN_MINE_PLACE_NAME = "MainMineBuildingPlace";
-        
+
         private const int INCOME_SECONDS = 36000;
+        private static Random _random;
 
         private readonly AplicationContext _context;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IJsonConverter _jsonConverter;
         private readonly IResourceManager _resourceController;
         private readonly IRewardService _clientRewardService;
+        private readonly IAchievmentController _achievmentController;
+
 
         public MineController(
             AplicationContext context,
             ICommonDictionaries commonDictionaries,
             IRewardService clientRewardService,
             IJsonConverter jsonConverter,
-            IResourceManager resourceController
+            IResourceManager resourceController,
+            IAchievmentController achievmentController
             )
         {
             _context = context;
@@ -41,6 +46,7 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
             _jsonConverter = jsonConverter;
             _resourceController = resourceController;
             _clientRewardService = clientRewardService;
+            _achievmentController = achievmentController;
         }
 
         [HttpPost]
@@ -65,7 +71,7 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
 
             var countMines = typeMineDatas.Count;
 
-            if (countMines == selectRestriction.MaxCount)
+            if (ReferenceEquals(selectRestriction, null) || countMines == selectRestriction.MaxCount)
             {
                 answer.Error = "Wrong data";
                 return answer;
@@ -102,7 +108,7 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
 
             var mineData = await _context.MineDatas.FindAsync(mineId);
 
-            if (mineData.PlayerId != playerId)
+            if (ReferenceEquals(mineData, null) || mineData.PlayerId != playerId)
             {
                 answer.Error = "Wrong data";
                 return answer;
@@ -136,17 +142,13 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
 
             var mineData = await _context.MineDatas.FindAsync(mineId);
 
-            if (mineData.PlayerId != playerId)
+            if (ReferenceEquals(mineData, null) || mineData.PlayerId != playerId)
             {
                 answer.Error = "Wrong data";
                 return answer;
             }
 
-            var startDateTime = DateTime.ParseExact(
-                mineData.LastDateTimeGetIncome,
-                Constants.Common.DateTimeFormat,
-                CultureInfo.InvariantCulture
-                );
+            var startDateTime = DateTimeUtils.TryParseOrNow(mineData.LastDateTimeGetIncome);
 
             var currentTimeSpan = DateTime.UtcNow - startDateTime;
 
@@ -164,7 +166,7 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
 
             await _clientRewardService.AddReward(playerId, rewardModel);
 
-            mineData.LastDateTimeGetIncome = DateTime.UtcNow.ToString();
+            mineData.LastDateTimeGetIncome = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
 
             await _context.SaveChangesAsync();
 
@@ -180,7 +182,7 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
 
             var mineData = await _context.MineDatas.FindAsync(mineId);
 
-            if (mineData.PlayerId != playerId)
+            if (ReferenceEquals(mineData, null) || mineData.PlayerId != playerId || mineData.MineId.Equals(MAIN_MINE_NAME))
             {
                 answer.Error = "Wrong data";
                 return answer;
@@ -212,11 +214,7 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
                     return answer;
                 }
 
-                var startDateTime = DateTime.ParseExact(
-                    mineData.LastDateTimeGetIncome,
-                    Constants.Common.DateTimeFormat,
-                    CultureInfo.InvariantCulture
-                    );
+                var startDateTime = DateTimeUtils.TryParseOrNow(mineData.LastDateTimeGetIncome);
 
                 var currentTimeSpan = DateTime.UtcNow - startDateTime;
 
@@ -230,21 +228,80 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
                 var currentResource = income * timeFactor;
 
                 rewardModel.Add(new ResourceData() { Type = income.Type, Amount = new BigDigit(income.Count, income.E10) });
-                mineData.LastDateTimeGetIncome = DateTime.UtcNow.ToString();
+                mineData.LastDateTimeGetIncome = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
             }
 
             await _clientRewardService.AddReward(playerId, rewardModel);
 
             await _context.SaveChangesAsync();
+            await _achievmentController.AchievmentUpdataData(playerId, "MineGetResourceCountAchievment", 1);
+
 
             answer.Result = _jsonConverter.Serialize(rewardModel);
             return answer;
         }
 
-        public async Task CreateMainMine(int playerId)
+        [HttpPost]
+        [Route("Mines/FinishMission")]
+        public async Task<AnswerModel> FinishMission(int playerId, int missionId)
+        {
+            var answer = new AnswerModel();
+
+            var mineMissionData = await _context.MineMissionDatas.FindAsync(missionId);
+
+            if (ReferenceEquals(mineMissionData, null) || mineMissionData.PlayerId != playerId)
+            {
+                answer.Error = "Not found mine mission for this player.";
+                return answer;
+            }
+
+            if (mineMissionData.IsComplete)
+            {
+                answer.Error = "This mission was completed.";
+                return answer;
+            }
+
+            var travelContainer = _commonDictionaries.StorageChallenges[mineMissionData.StorageMissionContainerId];
+            var missionModel = travelContainer.Missions.Find(mission => mission.Name.Equals(mineMissionData.MissionId));
+            if (ReferenceEquals(missionModel, null))
+            {
+                answer.Error = "Server error with mine mission model.";
+                return answer;
+            }
+
+            await _clientRewardService.AddReward(playerId, missionModel.WinReward);
+            mineMissionData.IsComplete = true;
+
+            await _context.SaveChangesAsync();
+
+            answer.Result = "Success";
+            return answer;
+        }
+
+        public async Task OnRegistrationPlayer(int playerId)
         {
             var newMineData = new MineData(playerId, MAIN_MINE_NAME, MAIN_MINE_PLACE_NAME);
             await _context.MineDatas.AddAsync(newMineData);
+
+            var travelLevel = newMineData.Level / 3;
+            var countTravelOpen = Math.Clamp(newMineData.Level / 2, 5, 15);
+
+            var tavelName = $"MineTravelLevel_{travelLevel}";
+            var travel = _commonDictionaries.StorageChallenges[tavelName];
+            var mineMissions = new List<MineMissionData>(countTravelOpen);
+
+            if (_random == null)
+                _random = new Random();
+
+            for (var i = 0; i < countTravelOpen; i++)
+            {
+                var randIndex = _random.Next(travel.Missions.Count);  
+                var mission = travel.Missions[randIndex];
+                var newMineMission = new MineMissionData(playerId, tavelName, mission);
+                mineMissions.Add(newMineMission);
+            }
+
+            await _context.MineMissionDatas.AddRangeAsync(mineMissions);
 
             await _context.SaveChangesAsync();
         }

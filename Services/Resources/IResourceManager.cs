@@ -12,6 +12,7 @@ namespace UniverseRift.Services.Resources
         Task SubstactResources(Resource res);
         Task SubstactResources(List<Resource> resources);
         Task AddResources(Resource res);
+        Task AddResources(List<Resource> resources);
 
         Task<List<ResourceData>> GetPlayerSave(int playerId);
     }

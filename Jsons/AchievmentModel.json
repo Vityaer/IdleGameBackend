@@ -5,7 +5,189 @@
     "Stages": [
       {
         "RequireCount": {
-          "Mantissa": 2.0,
+          "Mantissa": 1.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 16,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 16,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "SpecialHireAchievment",
+    "Id": "DailySpecialHire"
+  },
+  {
+    "Type": 31,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 1.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTravelAchievment",
+    "Id": "CompleteTravelOne"
+  },
+  {
+    "Type": 31,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 3.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 250.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 250.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTravelAchievment",
+    "Id": "CompleteTravelThree"
+  },
+  {
+    "Type": 31,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 5.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 8.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 8.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTravelAchievment",
+    "Id": "CompleteTravelFive"
+  },
+  {
+    "Type": 31,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 10.0,
           "E10": 0
         },
         "Reward": {
@@ -18,7 +200,14 @@
               }
             },
             {
-              "Type": 19,
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 9,
               "Amount": {
                 "Mantissa": 10.0,
                 "E10": 0
@@ -39,6 +228,105 @@
             },
             {
               "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 9,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTravelAchievment",
+    "Id": "CompleteTravelTen"
+  },
+  {
+    "Type": 27,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 30.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 3
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTaskCountAchievment",
+    "Id": "CountCompleteTasks"
+  },
+  {
+    "Type": 27,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 5.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 6,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 6,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
               "Type": 19,
               "Amount": {
                 "Mantissa": 10.0,
@@ -49,7 +337,2613 @@
         }
       }
     ],
-    "ImplementationName": "SimpleHireAchievment",
-    "Id": "DailySimpleHire"
+    "ImplementationName": "CompleteTaskCountAchievment",
+    "Id": "DailyCountCompleteTasks"
+  },
+  {
+    "Type": 23,
+    "ProgressType": 2,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 1.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 1.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 1.0,
+                "E10": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 25.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 250.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 250.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 50.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 150.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 200.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 6
+              }
+            },
+            {
+              "Type": 9,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 6
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 9,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteChallengeTowerMissionAchievment",
+    "Id": "ChallengeTowerMissionComplete"
+  },
+  {
+    "Type": 22,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 1.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "TryDeathTowerMissionAchievment",
+    "Id": "DailyTryDeathTower"
+  },
+  {
+    "Type": 24,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 15.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 3
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 3
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "SendFriendHeartAchievment",
+    "Id": "DailySendFriendHeart"
+  },
+  {
+    "Type": 7,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 2.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "FortuneSimpleSpinAchievment",
+    "Id": "DailyFortuneRoundUse"
+  },
+  {
+    "Type": 30,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 11,
+              "Amount": {
+                "Mantissa": 1.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 11,
+              "Amount": {
+                "Mantissa": 1.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "AutoFightHoursAchievment",
+    "Id": "DailyAutoFightHours"
+  },
+  {
+    "Type": 26,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 50.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "ArenaFigthWinAchievment",
+    "Id": "MonthArenaWinAchievmentFirst"
+  },
+  {
+    "Type": 26,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 200.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 200.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "ArenaFigthWinAchievment",
+    "Id": "MonthArenaWinAchievmentSecond"
+  },
+  {
+    "Type": 26,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 150.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 300.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 300.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "ArenaFigthWinAchievment",
+    "Id": "MonthArenaWinAchievmentThree"
+  },
+  {
+    "Type": 26,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 200.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 9,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 9,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "ArenaFigthWinAchievment",
+    "Id": "MonthArenaWinAchievmentFour"
+  },
+  {
+    "Type": 19,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "MagicCircleHireAchievment",
+    "Id": "RaceRoundCyclyFisrt"
+  },
+  {
+    "Type": 19,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 25.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 800.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 800.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "MagicCircleHireAchievment",
+    "Id": "RaceRoundCyclySecond"
+  },
+  {
+    "Type": 19,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 50.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "MagicCircleHireAchievment",
+    "Id": "RaceRoundCyclyThree"
+  },
+  {
+    "Type": 19,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 80.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 11,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 11,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "MagicCircleHireAchievment",
+    "Id": "RaceRoundCyclyFour"
+  },
+  {
+    "Type": 19,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 1500.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 1500.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "MagicCircleHireAchievment",
+    "Id": "RaceRoundCyclyFive"
+  },
+  {
+    "Type": 21,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 50.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 2.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 14,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 2.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 14,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "SpecialHireAchievment",
+    "Id": "MainTaverCycleFirst"
+  },
+  {
+    "Type": 21,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "SpecialHireAchievment",
+    "Id": "MainTaverCycleSecond"
+  },
+  {
+    "Type": 21,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 200.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "SpecialHireAchievment",
+    "Id": "MainTaverCycleThree"
+  },
+  {
+    "Type": 21,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 300.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "SpecialHireAchievment",
+    "Id": "MainTaverCycleFour"
+  },
+  {
+    "Type": 21,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 400.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "SpecialHireAchievment",
+    "Id": "MainTaverCycleFive"
+  },
+  {
+    "Type": 7,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "FortuneSimpleSpinAchievment",
+    "Id": "MainFortuneCycleFirst"
+  },
+  {
+    "Type": 7,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 200.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 200.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 200.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "FortuneSimpleSpinAchievment",
+    "Id": "MainFortuneCycleSecond"
+  },
+  {
+    "Type": 7,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 350.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 11,
+              "Amount": {
+                "Mantissa": 2.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 11,
+              "Amount": {
+                "Mantissa": 2.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "FortuneSimpleSpinAchievment",
+    "Id": "MainFortuneCycleThree"
+  },
+  {
+    "Type": 7,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 500.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 800.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 800.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "FortuneSimpleSpinAchievment",
+    "Id": "MainFortuneCycleFour"
+  },
+  {
+    "Type": 7,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 700.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 20.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1200.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 21,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 20.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1200.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 21,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "FortuneSimpleSpinAchievment",
+    "Id": "MainFortuneCycleFive"
+  },
+  {
+    "Type": 9,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 2.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 2.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 2.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "GetAlchemyGoldCountAchievment",
+    "Id": "DailyGetAlchemyGoldCount"
+  },
+  {
+    "Type": 4,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 2.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "LongTravelTryCountAchievment",
+    "Id": "DailyTryLongTravelFight"
+  },
+  {
+    "Type": 0,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 2.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 6,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 6,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "ArenaTryFightAchievment",
+    "Id": "DailyArenaTryFightCount"
+  },
+  {
+    "Type": 0,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 1.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 14,
+              "Amount": {
+                "Mantissa": 20.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 14,
+              "Amount": {
+                "Mantissa": 20.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 19,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "MineGetResourceCountAchievment",
+    "Id": "DailyMineGetResource"
+  },
+  {
+    "Type": 27,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 30.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 150.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 150.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTaskFourStarCountAchievment",
+    "Id": "CompleteTaskFourStarCount"
+  },
+  {
+    "Type": 27,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 20.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 300.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 300.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTaskFiveStarCountAchievment",
+    "Id": "CompleteTaskFiveStarCount"
+  },
+  {
+    "Type": 27,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTaskSixStarCountAchievment",
+    "Id": "CompleteTaskSixStarCount"
+  },
+  {
+    "Type": 27,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 2.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "CompleteTaskSevenStarCountAchievment",
+    "Id": "CompleteTaskSevenStarCount"
+  },
+  {
+    "Type": 5,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 20.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 3,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 3,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "EvolutionThreeRatingCountAchievment",
+    "Id": "EvolutionThreeRatingCount"
+  },
+  {
+    "Type": 5,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 450.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 4,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 450.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "EvolutionFiveRatingCountAchievment",
+    "Id": "EvolutionFiveRatingCount"
+  },
+  {
+    "Type": 5,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 4.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 800.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 800.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "EvolutionSevenRatingCountAchievment",
+    "Id": "EvolutionSevenRatingCount"
+  },
+  {
+    "Type": 5,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 1.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1200.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 22,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1200.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 22,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "EvolutionTenRatingCountAchievment",
+    "Id": "EvolutionTenRatingCount"
+  },
+  {
+    "Type": 21,
+    "ProgressType": 0,
+    "Stages": [
+      {
+        "RequireCount": {
+          "Mantissa": 20.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 300.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 300.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 50.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 500.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 120.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            },
+            {
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 250.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 1.0,
+                "E10": 6
+              }
+            },
+            {
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 800.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 1000.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 1.0,
+                "E10": 6
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 800.0,
+                "E10": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 500.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 2500.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 6
+              }
+            },
+            {
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 6
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 2500.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 6
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 2,
+              "Amount": {
+                "Mantissa": 3.0,
+                "E10": 6
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 1000.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 3000.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 3000.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 5,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 2500.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 3
+              }
+            },
+            {
+              "Type": 6,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 12,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 3
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 6,
+              "Amount": {
+                "Mantissa": 100.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 12,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "RequireCount": {
+          "Mantissa": 5000.0,
+          "E10": 0
+        },
+        "Reward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 3
+              }
+            },
+            {
+              "Type": 9,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 3
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 9,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 15,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "ImplementationName": "SpecialHireAchievment",
+    "Id": "LongAchievmentSpecialHires"
   }
 ]

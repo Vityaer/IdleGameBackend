@@ -5,7 +5,7 @@ namespace UIController.Rewards.PosibleRewards
 {
     public class PosibleObjectData
     {
-        public float Posibility;
+        public int Posibility;
 
         public virtual BaseObject CreateGameObject()
         {

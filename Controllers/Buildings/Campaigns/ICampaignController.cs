@@ -6,6 +6,6 @@ namespace UniverseRift.Controllers.Buildings.Campaigns
     {
         Task CreatePlayerProgress(int playerId);
 
-        Task<BuildingWithFightTeamsData> GetPlayerSave(int playerId);
+        Task<MainCampaignBuildingData> GetPlayerSave(int playerId);
     }
 }

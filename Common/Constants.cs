@@ -24,6 +24,13 @@ namespace UniverseRift.Controllers.Common
             }
 
             public static string DateTimeFormat = "dd.MM.yyyy HH:mm:ss";
+
+            public static int MAX_RANDOM = 1000000;
+        }
+
+        public class Game
+        {
+            public const int MINE_MISSION_REFRESH_HOURS = 8;
         }
     }
 }

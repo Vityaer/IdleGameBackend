@@ -25,6 +25,20 @@ namespace UniverseRift.Controllers.Cheats
         }
 
         [HttpPost]
+        [Route("Cheats/AddAllResources")]
+        public async Task AddResources(int playerId)
+        {
+            var reward = new List<Resource>();
+            foreach (var type in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
+            {
+                var resource = new Resource { PlayerId = playerId, Type = type, Count = 1, E10 = 3 };
+                reward.Add(resource);
+            }
+
+            await _resourceController.AddResources(reward);
+        }
+
+        [HttpPost]
         [Route("Cheats/AddResources")]
         public async Task AddResources(int playerId, string type, float mantissa, int e10)
         {

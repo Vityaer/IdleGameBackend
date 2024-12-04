@@ -1,26 +1,26 @@
 [
   {
-    "SpritePath": "",
+    "SpritePath": "Assets/Resources/UI/Race/demons.png",
     "Id": "Cat"
   },
   {
-    "SpritePath": null,
+    "SpritePath": "Assets/Resources/UI/Race/inquisition.png",
     "Id": "Dog"
   },
   {
-    "SpritePath": null,
-    "Id": "Capybara"
+    "SpritePath": "Assets/Resources/UI/Race/people.png",
+    "Id": "Rodent"
   },
   {
-    "SpritePath": null,
-    "Id": "Rabbit"
+    "SpritePath": "Assets/Resources/UI/Race/mech.png",
+    "Id": "Fish"
   },
   {
-    "SpritePath": null,
+    "SpritePath": "Assets/Resources/UI/Race/elf.png",
     "Id": "Bird"
   },
   {
-    "SpritePath": null,
+    "SpritePath": "Assets/Resources/UI/Race/undead.png",
     "Id": "Amphibian"
   }
 ]

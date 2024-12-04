@@ -27,7 +27,7 @@
         }
       ]
     },
-    "Id": "Kill dragon"
+    "Id": "KillDragon"
   },
   {
     "Rating": 3,
@@ -57,7 +57,7 @@
         }
       ]
     },
-    "Id": "Buy artifact"
+    "Id": "BuyArtifact"
   },
   {
     "Rating": 4,
@@ -87,7 +87,7 @@
         }
       ]
     },
-    "Id": "Create artifact"
+    "Id": "CreateArtifact"
   },
   {
     "Rating": 6,
@@ -171,7 +171,7 @@
         }
       ]
     },
-    "Id": "Kill bandits"
+    "Id": "KillBandits"
   },
   {
     "Rating": 6,
@@ -201,7 +201,7 @@
         }
       ]
     },
-    "Id": "Defend princess"
+    "Id": "DefendPrincess"
   },
   {
     "Rating": 2,
@@ -231,7 +231,7 @@
         }
       ]
     },
-    "Id": "Build fort"
+    "Id": "BuildFort"
   },
   {
     "Rating": 2,
@@ -255,7 +255,7 @@
         }
       ]
     },
-    "Id": "Repair amulet"
+    "Id": "RepairAmulet"
   },
   {
     "Rating": 6,
@@ -285,7 +285,7 @@
         }
       ]
     },
-    "Id": "Fight with Devil"
+    "Id": "FightWithDevil"
   },
   {
     "Rating": 1,
@@ -315,7 +315,7 @@
         }
       ]
     },
-    "Id": "Speak with people"
+    "Id": "SpeakWithPeople"
   },
   {
     "Rating": 1,
@@ -345,7 +345,7 @@
         }
       ]
     },
-    "Id": "Collect flowers"
+    "Id": "CollectFlowers"
   },
   {
     "Rating": 3,
@@ -375,7 +375,7 @@
         }
       ]
     },
-    "Id": "Patrol city"
+    "Id": "PatrolCity"
   },
   {
     "Rating": 3,
@@ -465,7 +465,7 @@
         }
       ]
     },
-    "Id": "Finght with guy"
+    "Id": "FightWithWolf"
   },
   {
     "Rating": 3,
@@ -495,6 +495,6 @@
         }
       ]
     },
-    "Id": "Find fortune"
+    "Id": "FindFortune"
   }
 ]

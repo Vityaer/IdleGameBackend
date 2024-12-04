@@ -3,9 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Misc.Json;
 using Models.City.FortuneRewards;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.FortuneWheels;
+using UniverseRift.Models.Achievments;
 using UniverseRift.Models.City.FortuneWheels;
 using UniverseRift.Models.FortuneWheels;
 using UniverseRift.Models.Resources;
@@ -25,6 +27,7 @@ namespace UniverseRift.Controllers.Buildings.FortuneWheels
         private readonly IJsonConverter _jsonConverter;
         private readonly IRewardService _clientRewardService;
         private readonly IResourceManager _resourceController;
+        private readonly IAchievmentController _achievmentController;
 
         private readonly Random _random = new Random();
 
@@ -33,9 +36,11 @@ namespace UniverseRift.Controllers.Buildings.FortuneWheels
             IJsonConverter jsonConverter,
             ICommonDictionaries commonDictionaries,
             IRewardService clientRewardService,
-            IResourceManager resourceController
+            IResourceManager resourceController,
+            IAchievmentController achievmentController
             )
         {
+            _achievmentController = achievmentController;
             _resourceController = resourceController;
             _clientRewardService = clientRewardService;
             _commonDictionaries = commonDictionaries;
@@ -86,6 +91,9 @@ namespace UniverseRift.Controllers.Buildings.FortuneWheels
 
             await _resourceController.SubstactResources(cost);
             await _clientRewardService.AddReward(playerId, reward);
+
+            await _achievmentController.AchievmentUpdataData(playerId, "FortuneSimpleSpinAchievment", count);
+
             var rewardContainer = new FortuneRewardContainer{ Reward = reward, ResultItemIndex = rand };
             answer.Result = _jsonConverter.Serialize(rewardContainer);
             return answer;

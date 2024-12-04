@@ -72,8 +72,1435 @@
             }
           }
         ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 15,
+            "Amount": {
+              "Mantissa": 1.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 15,
+            "Amount": {
+              "Mantissa": 1.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 5,
+            "Amount": {
+              "Mantissa": 1000.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 5,
+            "Amount": {
+              "Mantissa": 1000.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 300.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 300.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 300.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 300.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 8.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 8.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 8.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 8.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 8.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 8.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 9,
+            "Amount": {
+              "Mantissa": 10.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 9,
+            "Amount": {
+              "Mantissa": 10.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 15,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 15,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 500.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 500.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 18,
+            "Amount": {
+              "Mantissa": 600.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 18,
+            "Amount": {
+              "Mantissa": 600.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 11,
+            "Amount": {
+              "Mantissa": 8.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 11,
+            "Amount": {
+              "Mantissa": 8.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 200.0,
+              "E10": 0
+            }
+          },
+          {
+            "Type": 15,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 200.0,
+              "E10": 0
+            }
+          },
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 15,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 200.0,
+              "E10": 0
+            }
+          },
+          {
+            "Type": 22,
+            "Amount": {
+              "Mantissa": 10.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 200.0,
+              "E10": 0
+            }
+          },
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 22,
+            "Amount": {
+              "Mantissa": 10.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 1000.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 1000.0,
+              "E10": 0
+            }
+          }
+        ]
       }
     ],
     "Id": "BattlepasRewards"
+  },
+  {
+    "Rewards": [
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 9,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 9,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 4.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 4.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 100.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 3.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 3.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          },
+          {
+            "Type": 3,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 150.0,
+              "E10": 0
+            }
+          },
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 3,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [],
+        "Items": [
+          {
+            "Id": "ObedientWeapon",
+            "Amount": 1
+          }
+        ],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ItemData, Assembly-CSharp",
+            "Id": "ObedientWeapon",
+            "Amount": 1
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 0,
+            "Amount": {
+              "Mantissa": 800.0,
+              "E10": 3
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 0,
+            "Amount": {
+              "Mantissa": 800.0,
+              "E10": 3
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 250.0,
+              "E10": 0
+            }
+          }
+        ]
+      },
+      {
+        "Resources": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 500.0,
+              "E10": 0
+            }
+          },
+          {
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ],
+        "Items": [],
+        "Splinters": [],
+        "Id": null,
+        "Objects": [
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 500.0,
+              "E10": 0
+            }
+          },
+          {
+            "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+            "Type": 4,
+            "Amount": {
+              "Mantissa": 5.0,
+              "E10": 0
+            }
+          }
+        ]
+      }
+    ],
+    "Id": "DailyRewards"
   }
 ]

@@ -2,6 +2,6 @@
 {
     public interface IMineController
     {
-        Task CreateMainMine(int playerId);
+        Task OnRegistrationPlayer(int playerId);
     }
 }

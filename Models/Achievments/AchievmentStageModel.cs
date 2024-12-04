@@ -1,5 +1,5 @@
-﻿using Models.Common.BigDigits;
-using UniverseRift.GameModels;
+﻿using UniverseRift.GameModels;
+using UniverseRift.GameModels.Common;
 
 namespace UniverseRift.Models.Achievments
 {
