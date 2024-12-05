@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
-using Models.Common.BigDigits;
 using Models.Data.Inventories;
 using Newtonsoft.Json;
-using System.Text;
 using UniverseRift.Contexts;
 using UniverseRift.GameModels;
+using UniverseRift.GameModels.Common;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
@@ -33,8 +32,8 @@ namespace UniverseRift.Controllers.Buildings
         {
             var answer = new AnswerModel();
             var fireContainer = JsonConvert.DeserializeObject<FireContainer>(jsonContainer);
-            
-            if(fireContainer == null)
+
+            if (fireContainer == null)
             {
                 answer.Error = "Wrong data";
                 return answer;
@@ -53,7 +52,7 @@ namespace UniverseRift.Controllers.Buildings
             foreach (var id in heroIds)
             {
                 var hero = heroes.Find(hero => (hero.PlayerId == playerId) && (hero.Id == id));
-                if(hero != null)
+                if (hero != null)
                     _context.Heroes.Remove(hero);
             }
 

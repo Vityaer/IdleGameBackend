@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Models.Common.BigDigits;
 using Models.Data.Inventories;
 using UniverseRift.Contexts;
-using UniverseRift.Heplers.GameLogging;
+using UniverseRift.GameModels.Common;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
 

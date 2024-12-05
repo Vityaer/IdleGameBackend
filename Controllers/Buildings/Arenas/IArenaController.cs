@@ -1,4 +1,4 @@
-﻿using UniverseRift.GameModelDatas.Cities;
+﻿using UniverseRift.GameModelDatas.Cities.Buildings;
 using UniverseRift.Models.Misc;
 using UniverseRift.Models.Results;
 

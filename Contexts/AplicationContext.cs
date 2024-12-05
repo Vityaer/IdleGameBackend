@@ -61,11 +61,12 @@ namespace UniverseRift.Contexts
         public DbSet<BotData> BotsDatas { get; set; }
         public DbSet<RewardServerData> RewardServerDatas { get; set; }
         public DbSet<ChatMessageData> ChatMessageDatas { get; set; }
+        public DbSet<Promotion> Promotions { get; set; }
 
         public AplicationContext(DbContextOptions<AplicationContext> options)
             : base(options)
         {
-            Database.EnsureDeleted(); // удаление базы данных
+            //Database.EnsureDeleted(); // удаление базы данных
             Database.EnsureCreated();   // создаем базу данных при первом обращении
         }
 

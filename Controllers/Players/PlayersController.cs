@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Misc.Json;
-using Models.Common.BigDigits;
 using Models.Data.Inventories;
 using UniRx;
 using UniverseRift.Contexts;
@@ -14,6 +13,7 @@ using UniverseRift.Controllers.Common;
 using UniverseRift.Controllers.Misc.Friendships;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.GameModels;
+using UniverseRift.GameModels.Common;
 using UniverseRift.Models.Common;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
@@ -97,7 +97,7 @@ namespace UniverseRift.Controllers.Players
 
             return player;
         }
-        
+
         public async Task<Player> GetPlayer(int playerId)
         {
             var player = await _context.Players.FindAsync(playerId);

@@ -3,14 +3,17 @@ using Models.City.FortuneRewards;
 using Models.City.Hires;
 using Models.City.Markets;
 using UniverseRift.Controllers.Misc.Fights;
+using UniverseRift.GameModelDatas.Cities.Buildings;
 using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.Heroes;
 using UniverseRift.GameModels.Items;
+using UniverseRift.Misc;
 using UniverseRift.Models.Achievments;
 using UniverseRift.Models.City.Mines;
 using UniverseRift.Models.City.TravelCircles;
 using UniverseRift.Models.Guilds;
+using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Inventories.Splinters;
 using UniverseRift.Models.Players.Avatars;
 using UniverseRift.Models.Rewards;
@@ -46,6 +49,8 @@ namespace UniverseRift.Controllers.Common
         private Dictionary<string, GuildBossContainer> _guildBossContainers = new();
         private Dictionary<string, AvatarModel> _avatarModels = new();
         private Dictionary<string, HireContainerModel> _hireContainerModels = new();
+        private Dictionary<string, RaceModel> _races = new();
+        private Dictionary<string, BuildingModel> _buildings = new();
 
         private readonly IJsonConverter _converter;
         private bool _isInited;
@@ -74,6 +79,8 @@ namespace UniverseRift.Controllers.Common
         public Dictionary<string, GuildBossContainer> GuildBossContainers => _guildBossContainers;
         public Dictionary<string, AvatarModel> AvatarModels => _avatarModels;
         public Dictionary<string, HireContainerModel> HireContainerModels => _hireContainerModels;
+        public Dictionary<string, RaceModel> Races => _races;
+        public Dictionary<string, BuildingModel> Buildings => _buildings;
 
         public CommonDictionaries(IJsonConverter converter)
         {
@@ -111,6 +118,9 @@ namespace UniverseRift.Controllers.Common
             _ratingUpContainers = GetModels<RatingUpContainer>();
             _guildBossContainers = GetModels<GuildBossContainer>();
             _avatarModels = GetModels<AvatarModel>();
+            _hireContainerModels = GetModels<HireContainerModel>();
+            _races = GetModels<RaceModel>();
+            _buildings = GetModels<BuildingModel>();
         }
 
         private Dictionary<string, T> GetModels<T>() where T : BaseModel

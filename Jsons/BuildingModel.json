@@ -1,0 +1,26 @@
+[
+  {
+    "$type": "Models.City.MagicCircles.MagicCircleBuildingModel, Assembly-CSharp",
+    "HireCost": {
+      "Type": 15,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 0
+      }
+    },
+    "SubjectChances": {
+      "Splinter": 100.0,
+      "Item": 20.0,
+      "SimpleStoneReplacement": 50.0
+    },
+    "ItemIds": [
+      "PupilWeapon",
+      "PupilBoots"
+    ],
+    "SplinterIds": [
+      "TestSplinters"
+    ],
+    "name": "MagicCircle",
+    "Id": "MagicCircleBuildingModel"
+  }
+]

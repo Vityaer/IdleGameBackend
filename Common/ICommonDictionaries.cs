@@ -2,6 +2,7 @@
 using Models.City.Hires;
 using Models.City.Markets;
 using UniverseRift.Controllers.Misc.Fights;
+using UniverseRift.GameModelDatas.Cities.Buildings;
 using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.Heroes;
@@ -10,6 +11,7 @@ using UniverseRift.Models.Achievments;
 using UniverseRift.Models.City.Mines;
 using UniverseRift.Models.City.TravelCircles;
 using UniverseRift.Models.Guilds;
+using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Inventories.Splinters;
 using UniverseRift.Models.Players.Avatars;
 using UniverseRift.Models.Rewards;
@@ -42,5 +44,7 @@ namespace UniverseRift.Controllers.Common
         Dictionary<string, GuildBossContainer> GuildBossContainers { get; }
         Dictionary<string, AvatarModel> AvatarModels { get; }
         Dictionary<string, HireContainerModel> HireContainerModels { get; }
+        Dictionary<string, RaceModel> Races { get; }
+        Dictionary<string, BuildingModel> Buildings { get; }
     }
 }

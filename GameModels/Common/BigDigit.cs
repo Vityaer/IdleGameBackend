@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace UniverseRift.GameModels.Common
+﻿namespace UniverseRift.GameModels.Common
 {
-    public class BigDigit
+    public partial class BigDigit
     {
         public float Mantissa = 0f;
         public int E10 = 0;

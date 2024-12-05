@@ -1,4 +1,5 @@
-﻿using UniverseRift.GameModelDatas.Cities.Industries;
+﻿using UniverseRift.GameModelDatas.Cities.Buildings;
+using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.GameModelDatas.Cities.TravelCircleRaces;
 using UniverseRift.Models.City.DailyRewards;
 using UniverseRift.Models.City.FortuneWheels;

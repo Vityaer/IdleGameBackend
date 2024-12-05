@@ -17,6 +17,8 @@ namespace UniverseRift.Controllers.Buildings.Shops
 {
     public class MarketController : ControllerBase, IMarketController, IDisposable
     {
+        private const string CITY_MARKET_NAME = "CityMarket";
+        private const int CITY_MARKET_PROMO_PRODUCT_COUNT = 4;
         private TimeSpan ALCHEMY_TIMESPAN = new TimeSpan(8, 0, 0);
 
         private readonly AplicationContext _context;
@@ -25,6 +27,8 @@ namespace UniverseRift.Controllers.Buildings.Shops
         private readonly IRewardService _clientRewardService;
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
         private readonly IAchievmentController _achievmentController;
+
+        private readonly Random _random = new();
 
         public MarketController(
             AplicationContext context,
@@ -38,6 +42,11 @@ namespace UniverseRift.Controllers.Buildings.Shops
             _resourceController = resourceController;
             _commonDictionaries = commonDictionaries;
             _achievmentController = achievmentController;
+        }
+
+        public async Task OnStartServer()
+        {
+            await CreateDayPromotions();
         }
 
         [HttpPost]
@@ -161,6 +170,46 @@ namespace UniverseRift.Controllers.Buildings.Shops
                 }
             }
 
+            switch (recoveryType)
+            {
+                case RecoveryType.Day:
+                    await CreateDayPromotions();
+                        break;
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
+        private async Task CreateDayPromotions()
+        {
+            var allPromotions = await _context.Promotions.ToListAsync();
+            var oldCityMarketPromotions = allPromotions.FindAll(promo => promo.MarketName.Equals(CITY_MARKET_NAME));
+            _context.Promotions.RemoveRange(oldCityMarketPromotions);
+            await _context.SaveChangesAsync();
+
+            var cityMarketProductIds = _commonDictionaries.Products.Keys.ToList()
+                .FindAll(name => name.Contains($"Promo{CITY_MARKET_NAME}"));
+
+            var indexes = new List<int>(cityMarketProductIds.Count);
+            for (var i = 0; i < cityMarketProductIds.Count; i++)
+                indexes.Add(i);
+
+            var selectedIndexes = new List<int>(CITY_MARKET_PROMO_PRODUCT_COUNT);
+            for (var i = 0; i < CITY_MARKET_PROMO_PRODUCT_COUNT; i++)
+            {
+                var randomIndex = _random.Next(0, indexes.Count);
+                selectedIndexes.Add(indexes[randomIndex]);
+                indexes.RemoveAt(randomIndex);
+            }
+
+            var promotions = new List<Promotion>(selectedIndexes.Count);
+            for (var i = 0; i < selectedIndexes.Count; i++)
+            {
+                var productId = cityMarketProductIds[i];
+                promotions.Add(new Promotion {MarketName = CITY_MARKET_NAME, ProductId = productId });
+            }
+
+            await _context.Promotions.AddRangeAsync(promotions);
             await _context.SaveChangesAsync();
         }
 
@@ -178,6 +227,8 @@ namespace UniverseRift.Controllers.Buildings.Shops
                                             PurchaseCount = purchase.PurchaseCount
                                         }
                                      ).ToList();
+
+            result.ShopPromotions = await _context.Promotions.ToListAsync();
             return result;
         }
 
@@ -185,5 +236,6 @@ namespace UniverseRift.Controllers.Buildings.Shops
         {
             _disposables.Dispose();
         }
+
     }
 }

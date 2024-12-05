@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
-using Models.Common.BigDigits;
 using Models.Data.Inventories;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Cities.Industries;
 using UniverseRift.GameModels;
+using UniverseRift.GameModels.Common;
 using UniverseRift.Heplers.Utils;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
@@ -295,7 +295,7 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
 
             for (var i = 0; i < countTravelOpen; i++)
             {
-                var randIndex = _random.Next(travel.Missions.Count);  
+                var randIndex = _random.Next(travel.Missions.Count);
                 var mission = travel.Missions[randIndex];
                 var newMineMission = new MineMissionData(playerId, tavelName, mission);
                 mineMissions.Add(newMineMission);

@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Models.Common.BigDigits;
 using UniRx;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Cities;
+using UniverseRift.GameModels.Common;
 using UniverseRift.Models.Achievments;
 using UniverseRift.Models.Results;
 using UniverseRift.Services.Rewarders;

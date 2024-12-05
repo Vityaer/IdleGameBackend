@@ -5,6 +5,7 @@ namespace UniverseRift.Controllers.Buildings.Shops
 {
     public interface IMarketController
     {
+        Task OnStartServer();
         Task<MarketData> GetPlayerSave(int playerId);
         Task RefreshProducts(RecoveryType recoveryType);
     }

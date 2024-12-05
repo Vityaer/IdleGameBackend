@@ -1210,3 +1210,66 @@ Start wait time: Day
 12.04.2024 09:31:40.31
 Start wait time: GameCycle
 
+12.05.2024 17:09:59.97
+Start refresh all city
+
+12.05.2024 17:10:00.16
+finish refresh all city
+
+12.05.2024 17:12:57.34
+Start wait time: Day
+
+12.05.2024 17:12:57.36
+Start wait time: GameCycle
+
+12.05.2024 17:30:58.34
+Start refresh all city
+
+12.05.2024 17:32:51.89
+Start wait time: Day
+
+12.05.2024 17:32:51.90
+Start wait time: GameCycle
+
+12.05.2024 17:33:09.36
+Start refresh all city
+
+12.05.2024 17:33:44.32
+finish refresh all city
+
+12.05.2024 17:40:04.83
+Start wait time: Day
+
+12.05.2024 17:40:04.85
+Start wait time: GameCycle
+
+12.05.2024 17:47:50.97
+Start wait time: Day
+
+12.05.2024 17:47:50.99
+Start wait time: GameCycle
+
+12.05.2024 17:50:49.95
+Start wait time: Day
+
+12.05.2024 17:50:49.97
+Start wait time: GameCycle
+
+12.05.2024 17:57:30.79
+Start wait time: Day
+
+12.05.2024 17:57:30.81
+Start wait time: GameCycle
+
+12.05.2024 17:58:04.91
+Start wait time: Day
+
+12.05.2024 17:58:04.93
+Start wait time: GameCycle
+
+12.05.2024 18:01:36.35
+Start wait time: Day
+
+12.05.2024 18:01:36.36
+Start wait time: GameCycle
+

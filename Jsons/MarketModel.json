@@ -5,16 +5,14 @@
       "SimpleHireBigPack",
       "SpecialHireMiniSet",
       "SpecialHireSet",
+      "ArenaTickets",
       "RedDastSet",
       "RaceHireStone",
       "FortuneCoinSet",
-      "ForceStoneBigSet",
-      "ForceStoneMiniSet",
-      "ContinuumStoneBigSet",
-      "RubbishAmulet",
-      "PupilWeapon",
       "StoneReplacementProduct",
-      "TestSplinters"
+      "ContinuumStoneBigSet",
+      "ForceStoneMiniSet",
+      "ForceStoneBigSet"
     ],
     "RecoveryType": 1,
     "Id": "CityMarket"

@@ -3,18 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
 using Models.City.Hires;
-using Models.Common.BigDigits;
-using Models.Data.Inventories;
-using System.Linq;
 using UniRx;
 using UniverseRift.Contexts;
-using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.Heroes;
 using UniverseRift.MessageData;
-using UniverseRift.Misc;
 using UniverseRift.Models.Achievments;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Resources;
@@ -38,7 +33,7 @@ namespace UniverseRift.Controllers.Players.Heroes
             IJsonConverter jsonConverter,
             IResourceManager resourcesController,
             ICommonDictionaries commonDictionaries)
-            //IAchievmentController achievmentController)
+        //IAchievmentController achievmentController)
         {
             _commonDictionaries = commonDictionaries;
             _jsonConverter = jsonConverter;
@@ -71,7 +66,7 @@ namespace UniverseRift.Controllers.Players.Heroes
             var cost = costContainer.GetCostForLevelUp(hero.Level, playerId);
 
             var checkResource = await _resourcesController.CheckResource(playerId, cost, answer);
-            if(checkResource == false)
+            if (checkResource == false)
                 return answer;
 
             await _resourcesController.SubstactResources(cost);
@@ -196,14 +191,14 @@ namespace UniverseRift.Controllers.Players.Heroes
             var permission = await _resourcesController.CheckResource(playerId, playerCost, answer);
             if (!permission)
                 return answer;
-            
+
             await _resourcesController.SubstactResources(playerCost);
             var heroesData = await CreateHeroes(playerId, count, hireContainerModel);
             answer.Result = _jsonConverter.Serialize(heroesData);
             return answer;
         }
 
-        private async Task<List<HeroData>> CreateHeroes(int playerId, int count, HireContainerModel hireContainerModel)
+        public async Task<List<HeroData>> CreateHeroes(int playerId, int count, HireContainerModel hireContainerModel)
         {
             var result = new List<HeroData>();
 
@@ -218,9 +213,9 @@ namespace UniverseRift.Controllers.Players.Heroes
 
             for (int i = 0; i < count; i++)
             {
-                var rand = (float) _random.NextDouble() * sum;
+                var rand = (float)_random.NextDouble() * sum;
                 var index = -1;
-                var currentSum = sum;
+                var currentSum = rand;
                 for (var j = 0; j < hireContainerModel.ChanceHires.Count; j++)
                 {
                     currentSum -= hireContainerModel.ChanceHires[j].Chance;

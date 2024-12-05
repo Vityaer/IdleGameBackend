@@ -1,0 +1,110 @@
+[
+  {
+    "Cost": {
+      "Type": 4,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 0
+      }
+    },
+    "ChanceHires": [
+      {
+        "Chance": 5000.0,
+        "Rare": 2
+      },
+      {
+        "Chance": 1500.0,
+        "Rare": 3
+      },
+      {
+        "Chance": 600.0,
+        "Rare": 4
+      },
+      {
+        "Chance": 120.0,
+        "Rare": 5
+      },
+      {
+        "Chance": 30.0,
+        "Rare": 6
+      },
+      {
+        "Chance": 1.0,
+        "Rare": 7
+      }
+    ],
+    "Id": "SpecialHireContainer"
+  },
+  {
+    "Cost": {
+      "Type": 3,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 0
+      }
+    },
+    "ChanceHires": [
+      {
+        "Chance": 6000.0,
+        "Rare": 0
+      },
+      {
+        "Chance": 2242.0,
+        "Rare": 1
+      },
+      {
+        "Chance": 800.0,
+        "Rare": 2
+      },
+      {
+        "Chance": 200.0,
+        "Rare": 3
+      },
+      {
+        "Chance": 50.0,
+        "Rare": 4
+      },
+      {
+        "Chance": 3.0,
+        "Rare": 5
+      }
+    ],
+    "Id": "SimpleHireContainer"
+  },
+  {
+    "Cost": {
+      "Type": 16,
+      "Amount": {
+        "Mantissa": 10.0,
+        "E10": 0
+      }
+    },
+    "ChanceHires": [
+      {
+        "Chance": 6000.0,
+        "Rare": 0
+      },
+      {
+        "Chance": 2242.0,
+        "Rare": 1
+      },
+      {
+        "Chance": 800.0,
+        "Rare": 2
+      },
+      {
+        "Chance": 200.0,
+        "Rare": 3
+      },
+      {
+        "Chance": 50.0,
+        "Rare": 4
+      },
+      {
+        "Chance": 3.0,
+        "Rare": 5
+      }
+    ],
+    "Id": "FriendHireContainer"
+  }
+]

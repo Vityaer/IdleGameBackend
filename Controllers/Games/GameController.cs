@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
-using Models.Common.BigDigits;
 using Models.Data.Inventories;
-using System;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Buildings.Arenas;
@@ -29,11 +27,10 @@ using UniverseRift.Controllers.Players;
 using UniverseRift.Controllers.Players.Heroes;
 using UniverseRift.Controllers.Players.Inventories;
 using UniverseRift.Controllers.Server;
-using UniverseRift.GameModelDatas.Cities;
 using UniverseRift.GameModelDatas.Players;
+using UniverseRift.GameModels.Common;
 using UniverseRift.MessageData;
 using UniverseRift.Models.City.FortuneWheels;
-using UniverseRift.Models.City.Markets;
 using UniverseRift.Models.City.TaskBoards;
 using UniverseRift.Models.Common;
 using UniverseRift.Models.FortuneWheels;
@@ -183,7 +180,7 @@ namespace UniverseRift.Controllers.Games
 
             playerSave.PlayerInfoData = GetPlayerData(player);
             playerSave.City.MainCampaignSave = await _campaignController.GetPlayerSave(playerId);
-            playerSave.City.MallSave = await GetMarketSave(playerId);
+            playerSave.City.MallSave = await _mallController.GetPlayerSave(playerId);
             playerSave.City.FortuneWheelData = await GetFortuneSave(playerId, flagCreateNewData);
             playerSave.City.TaskBoardData = await GetTaskboardSave(playerId, flagCreateNewData);
             playerSave.City.DailyReward = await _dailyRewardController.GetPlayerSave(playerId, flagCreateNewData);
@@ -221,23 +218,6 @@ namespace UniverseRift.Controllers.Games
         private PlayerData GetPlayerData(Player player)
         {
             var result = new PlayerData(player);
-            return result;
-        }
-
-        public async Task<MarketData> GetMarketSave(int playerId)
-        {
-            var result = new MarketData();
-            var purchases = await _context.Purchases.ToListAsync();
-            var playerPurchases = purchases.FindAll(purchase => purchase.PlayerId == playerId);
-
-            result.PurchaseDatas = playerPurchases
-                                    .Select(purchase =>
-                                        new PurchaseData
-                                        {
-                                            ProductId = purchase.ProductId,
-                                            PurchaseCount = purchase.PurchaseCount
-                                        }
-                                     ).ToList();
             return result;
         }
 

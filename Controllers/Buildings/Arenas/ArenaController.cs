@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Misc.Json;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
-using UniverseRift.GameModelDatas.Cities;
+using UniverseRift.GameModelDatas.Cities.Buildings;
 using UniverseRift.GameModelDatas.Heroes;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.GameModels;

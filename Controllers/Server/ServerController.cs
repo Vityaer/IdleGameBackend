@@ -89,6 +89,7 @@ namespace UniverseRift.Controllers.Server
 
                 await _context.ServerLifeTimes.AddAsync(_server);
                 await _botController.OnStartServer();
+                await _marketController.OnStartServer();
                 await _context.SaveChangesAsync();
             }
             else

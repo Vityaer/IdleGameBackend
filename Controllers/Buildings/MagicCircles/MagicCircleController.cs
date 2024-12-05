@@ -3,9 +3,8 @@ using Misc.Json;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
-using UniverseRift.GameModels.Heroes;
-using UniverseRift.MessageData;
-using UniverseRift.Models.Heroes;
+using UniverseRift.GameModelDatas.Cities.Buildings;
+using UniverseRift.GameModels;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
 using UniverseRift.Services.Resources;
@@ -14,13 +13,14 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
 {
     public class MagicCircleController : Controller
     {
+        private const string MAGIC_CIRCLE_NAME = "MagicCircleBuildingModel";
+
         private readonly AplicationContext _context;
         private readonly IResourceManager _resourcesController;
         private readonly IJsonConverter _jsonConverter;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IAchievmentController _achievmentController;
-
-        private readonly Random _random = new Random();
+        private readonly Random _random = new();
 
         public MagicCircleController(
             AplicationContext context,
@@ -39,86 +39,84 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
 
         [HttpPost]
         [Route("MagicCircle/GetHeroes")]
-        public async Task<AnswerModel> GetHeroes(int playerId, int count)
+        public async Task<AnswerModel> GetHeroes(int playerId, int count, string raceName)
         {
             var answer = new AnswerModel();
+            var magicCircleBuildingModel = _commonDictionaries.Buildings[MAGIC_CIRCLE_NAME] as MagicCircleBuildingModel;
 
-            var cost = new Resource { PlayerId = playerId, Type = ResourceType.RaceHireCard, Count = count, E10 = 0 };
+            var costValue = magicCircleBuildingModel.HireCost.Amount * count;
+            var resourceData = new GameResource(magicCircleBuildingModel.HireCost.Type, costValue);
+            var playerCost = new Resource(playerId, resourceData);
 
-            var permission = await _resourcesController.CheckResource(playerId, cost, answer);
+            var permission = await _resourcesController.CheckResource(playerId, playerCost, answer);
             if (!permission)
-            {
                 return answer;
-            }
 
-            var heroesData = new List<HeroData>();
-            var heroes = new List<Hero>();
-            var allHeroes = _commonDictionaries.Heroes;
-            var workList = new List<HeroModel>();
-            HeroModel heroTemplate;
+            await _resourcesController.SubstactResources(playerCost);
 
-            await _resourcesController.SubstactResources(cost);
-            //вынести в json
+            var sum = 0f;
+            foreach (var hireChance in magicCircleBuildingModel.SubjectChances)
+                sum += hireChance.Value;
+
             for (int i = 0; i < count; i++)
             {
-                var rand = _random.Next(0, 10001);
-                if (rand < 5600f)
+                var rand = (float)_random.NextDouble() * sum;
+                var index = -1;
+                var currentSum = rand;
+                for (var j = 0; j < magicCircleBuildingModel.SubjectChances.Count; j++)
                 {
-                    workList = allHeroes
-                        .Where(x => (x.Value.General.Rare.Equals("C")))
-                        .Select(x => x.Value)
-                        .ToList();
-                }
-                else if (rand < 9000f)
-                {
-                    workList = allHeroes
-                        .Where(x => (x.Value.General.Rare.Equals("C")))
-                        .Select(x => x.Value)
-                        .ToList();
-                }
-                else if (rand < 9850f)
-                {
-                    workList = allHeroes
-                        .Where(x => (x.Value.General.Rare.Equals("C")))
-                        .Select(x => x.Value)
-                        .ToList();
-                }
-                else if (rand < 9995f)
-                {
-                    workList = allHeroes
-                        .Where(x => (x.Value.General.Rare.Equals("C")))
-                        .Select(x => x.Value)
-                        .ToList();
-                }
-                else if (rand <= 10000f)
-                {
-                    workList = allHeroes
-                        .Where(x => (x.Value.General.Rare.Equals("C")))
-                        .Select(x => x.Value)
-                        .ToList();
+                    currentSum -= magicCircleBuildingModel.SubjectChances.ElementAt(j).Value;
+                    index += 1;
+                    if (currentSum < 0f)
+                        break;
                 }
 
-                if (workList.Count > 0)
+                index = Math.Clamp(index, 0, magicCircleBuildingModel.SubjectChances.Count);
+                var selectBonus = magicCircleBuildingModel.SubjectChances.ElementAt(index).Key;
+                switch (selectBonus)
                 {
-                    heroTemplate = workList[_random.Next(0, workList.Count)];
-                }
-                else
-                {
-                    var heroCount = allHeroes.Count;
-                    heroTemplate = allHeroes.ElementAt(_random.Next(0, heroCount)).Value;
+                    case "Item":
+                        var itemId = GetRandomSubject(magicCircleBuildingModel.Items);
+                        break;
+                    case "Splinter":
+                        var splinterId = GetRandomSubject(magicCircleBuildingModel.Splinters);
+                        break;
                 }
 
-                var hero = new Hero(playerId, heroTemplate);
-                _context.Heroes.Add(hero);
-                await _context.SaveChangesAsync();
-
-                var heroData = new HeroData(hero);
-                heroesData.Add(heroData);
             }
 
             await _achievmentController.AchievmentUpdataData(playerId, "MagicCircleHireAchievment", count);
             answer.Result = _jsonConverter.Serialize(heroesData);
             return answer;
+        }
+
+        private string GetRandomSubject(Dictionary<string, float> subjects)
+        {
+            if (subjects.Count == 0)
+                return string.Empty;
+
+            var sum = 0f;
+            foreach (var subject in subjects)
+                sum += subject.Value;
+
+            var index = -1;
+
+            for (int i = 0; i < subjects.Count; i++)
+            {
+                var rand = (float)_random.NextDouble() * sum;
+                var currentSum = rand;
+                for (var j = 0; j < subjects.Count; j++)
+                {
+                    currentSum -= subjects.ElementAt(j).Value;
+                    index += 1;
+                    if (currentSum < 0f)
+                        break;
+                }
+            }
+            index = Math.Clamp(index, 0, subjects.Count - 1);
+
+            return subjects.ElementAt(index).Key;
+
         }
     }
 }
