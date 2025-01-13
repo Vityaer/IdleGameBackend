@@ -26,7 +26,7 @@ namespace UniverseRift.Controllers.Players.Heroes
         private readonly ICommonDictionaries _commonDictionaries;
         //private readonly IAchievmentController _achievmentController;
 
-        private readonly Random _random = new Random();
+        private readonly Random _random = new();
 
         public HeroesController(
             AplicationContext context,
@@ -82,7 +82,6 @@ namespace UniverseRift.Controllers.Players.Heroes
         public async Task<AnswerModel> RatingUp(int playerId, int heroId, string heroesPaymentContainer)
         {
             var allHeroes = await _context.Heroes.ToListAsync();
-            Console.WriteLine($"allHeroes: {allHeroes.Count}");
             var answer = new AnswerModel();
 
             var hero = await GetHero(playerId, heroId);
@@ -134,7 +133,6 @@ namespace UniverseRift.Controllers.Players.Heroes
             answer.Result = "Success";
 
             allHeroes = await _context.Heroes.ToListAsync();
-            Console.WriteLine($"allHeroes: {allHeroes.Count}");
             return answer;
         }
 
@@ -142,39 +140,30 @@ namespace UniverseRift.Controllers.Players.Heroes
         [Route("Heroes/GetSimpleHeroes")]
         public async Task<AnswerModel> GetSimpleHeroes(int playerId, int count)
         {
-            var answer = await GetHeroes(playerId, count, "SimpleHireContainer");
-
-            if (string.IsNullOrEmpty(answer.Error) && !string.IsNullOrEmpty(answer.Result))
-            {
-                await AchievmentUpdataData(playerId, "SimpleHireAchievment", count);
-            }
-
-            return answer;
+            return await GetHireHeroes(playerId, count, "SimpleHire");
         }
 
         [HttpPost]
         [Route("Heroes/GetSpecialHeroes")]
         public async Task<AnswerModel> GetSpecialHeroes(int playerId, int count)
         {
-            var answer = await GetHeroes(playerId, count, "SpecialHireContainer");
-
-            if (string.IsNullOrEmpty(answer.Error) && !string.IsNullOrEmpty(answer.Result))
-            {
-                await AchievmentUpdataData(playerId, "SpecialHireAchievment", count);
-            }
-
-            return answer;
+            return await GetHireHeroes(playerId, count, "SpecialHire");
         }
 
         [HttpPost]
         [Route("Heroes/GetFriendHireHeroes")]
         public async Task<AnswerModel> GetFriendHireHeroes(int playerId, int count)
         {
-            var answer = await GetHeroes(playerId, count, "FriendHireContainer");
+            return await GetHireHeroes(playerId, count, "FriendHire");
+        }
+
+        private async Task<AnswerModel> GetHireHeroes(int playerId, int count, string hireType)
+        {
+            var answer = await GetHeroes(playerId, count, $"{hireType}Container");
 
             if (string.IsNullOrEmpty(answer.Error) && !string.IsNullOrEmpty(answer.Result))
             {
-                await AchievmentUpdataData(playerId, "FriendHireAchievment", count);
+                await AchievmentUpdataData(playerId, $"{hireType}Achievment", count);
             }
 
             return answer;

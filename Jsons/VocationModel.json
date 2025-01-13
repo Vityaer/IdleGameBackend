@@ -1,22 +1,22 @@
 [
   {
     "SpritePath": "Assets/Resources/UI/Class/tank.png",
-    "Id": "WarriorVocation"
+    "Id": "Warrior"
   },
   {
     "SpritePath": "Assets/Resources/UI/Class/archer.png",
-    "Id": "ArcherVocation"
+    "Id": "Archer"
   },
   {
     "SpritePath": "Assets/Resources/UI/Class/killer.png",
-    "Id": "KillerVocation"
+    "Id": "Killer"
   },
   {
     "SpritePath": "Assets/Resources/UI/Class/mage.png",
-    "Id": "WizardVocation"
+    "Id": "Wizard"
   },
   {
     "SpritePath": "Assets/Resources/UI/Class/pastor.png",
-    "Id": "PastorVocation"
+    "Id": "Support"
   }
 ]

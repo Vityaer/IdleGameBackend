@@ -10,16 +10,290 @@
     },
     "SubjectChances": {
       "Splinter": 100.0,
-      "Item": 20.0,
-      "SimpleStoneReplacement": 50.0
+      "Resource": 50.0
     },
-    "ItemIds": [
-      "PupilWeapon",
-      "PupilBoots"
-    ],
-    "SplinterIds": [
-      "TestSplinters"
-    ],
+    "PosibleRewardData": {
+      "Resources": [
+        {
+          "Value": {
+            "Type": 14,
+            "Amount": {
+              "Mantissa": 10.0,
+              "E10": 0
+            }
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Type": 0,
+            "Amount": {
+              "Mantissa": 50.0,
+              "E10": 3
+            }
+          },
+          "Posibility": 80
+        },
+        {
+          "Value": {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 15.0,
+              "E10": 0
+            }
+          },
+          "Posibility": 40
+        }
+      ],
+      "Items": [],
+      "Splinters": [
+        {
+          "Value": {
+            "Id": "CatcherSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "DragonSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "FishguardSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "ImpSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "KnightSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "NosedmanSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "PiBoySplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "PiBoySplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "PracticeDummySplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "SnakeSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "SpikeSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "TreetorSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "WolfSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "Value": {
+            "Id": "WedgerSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        }
+      ],
+      "Objects": [
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Type": 14,
+            "Amount": {
+              "Mantissa": 10.0,
+              "E10": 0
+            }
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Type": 0,
+            "Amount": {
+              "Mantissa": 50.0,
+              "E10": 3
+            }
+          },
+          "Posibility": 80
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 15.0,
+              "E10": 0
+            }
+          },
+          "Posibility": 40
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "CatcherSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "DragonSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "FishguardSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "ImpSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "KnightSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "NosedmanSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "PiBoySplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "PiBoySplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "PracticeDummySplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "SnakeSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "SpikeSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "TreetorSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "WolfSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        },
+        {
+          "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+          "Value": {
+            "Id": "WedgerSplinter",
+            "Amount": 30
+          },
+          "Posibility": 100
+        }
+      ]
+    },
     "name": "MagicCircle",
     "Id": "MagicCircleBuildingModel"
   }

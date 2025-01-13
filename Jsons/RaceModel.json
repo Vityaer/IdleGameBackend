@@ -1,26 +1,26 @@
 [
   {
     "SpritePath": "Assets/Resources/UI/Race/demons.png",
-    "Id": "Cat"
+    "Id": "Renegades"
   },
   {
     "SpritePath": "Assets/Resources/UI/Race/inquisition.png",
-    "Id": "Dog"
+    "Id": "Technicians"
   },
   {
     "SpritePath": "Assets/Resources/UI/Race/people.png",
-    "Id": "Rodent"
+    "Id": "Alliance"
   },
   {
     "SpritePath": "Assets/Resources/UI/Race/mech.png",
-    "Id": "Fish"
+    "Id": "Desertes"
   },
   {
     "SpritePath": "Assets/Resources/UI/Race/elf.png",
-    "Id": "Bird"
+    "Id": "Dwellers"
   },
   {
     "SpritePath": "Assets/Resources/UI/Race/undead.png",
-    "Id": "Amphibian"
+    "Id": "Undead"
   }
 ]

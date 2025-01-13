@@ -2,8 +2,8 @@
   {
     "General": {
       "HeroId": "Catcher",
-      "Race": "Cat",
-      "Vocation": "KillerVocation",
+      "Race": "Alliance",
+      "Vocation": "Archer",
       "Rating": 1,
       "Rare": 0
     },
@@ -97,54 +97,14 @@
       "SilinceResistance": 0.0,
       "EfficiencyHeal": 1.0
     },
-    "Skills": [
-      {
-        "ID": "CatcherSpell",
-        "IsActive": true,
-        "IconPath": "Assets/Resources/Icons/CatcherSpell.png",
-        "Levels": [
-          {
-            "RequireNumBreakthrough": 0,
-            "Effects": [
-              {
-                "Performance": 2,
-                "TypeEvent": 6,
-                "CountExecutions": 0,
-                "Conditions": [],
-                "Actions": [
-                  {
-                    "$type": "Models.Heroes.Skills.Actions.Imps.SimpleActions.DamageAction, Assembly-CSharp",
-                    "RepeatCall": 0,
-                    "Rounds": [
-                      {
-                        "Amount": 10.0,
-                        "TypeNumber": 0,
-                        "IsPercent": true
-                      }
-                    ],
-                    "SideTargetType": 0,
-                    "TypeSelect": 1,
-                    "CountTarget": 1,
-                    "RecalculateTarget": 0,
-                    "Chance": 100.0,
-                    "Amount": 10.0,
-                    "TypeNumber": 0,
-                    "Owner": null
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ],
+    "Skills": [],
     "Id": "Catcher"
   },
   {
     "General": {
       "HeroId": "Dragon",
-      "Race": "Cat",
-      "Vocation": "WarriorVocation",
+      "Race": "Alliance",
+      "Vocation": "Warrior",
       "Rating": 1,
       "Rare": 0
     },
@@ -238,54 +198,14 @@
       "SilinceResistance": 0.0,
       "EfficiencyHeal": 1.0
     },
-    "Skills": [
-      {
-        "ID": "DragonSpell",
-        "IsActive": true,
-        "IconPath": "Assets/Resources/Icons/DragonSpell.png",
-        "Levels": [
-          {
-            "RequireNumBreakthrough": 0,
-            "Effects": [
-              {
-                "Performance": 2,
-                "TypeEvent": 6,
-                "CountExecutions": 0,
-                "Conditions": [],
-                "Actions": [
-                  {
-                    "$type": "Models.Heroes.Skills.Actions.Imps.SimpleActions.DamageAction, Assembly-CSharp",
-                    "RepeatCall": 0,
-                    "Rounds": [
-                      {
-                        "Amount": 10.0,
-                        "TypeNumber": 0,
-                        "IsPercent": true
-                      }
-                    ],
-                    "SideTargetType": 0,
-                    "TypeSelect": 1,
-                    "CountTarget": 1,
-                    "RecalculateTarget": 0,
-                    "Chance": 100.0,
-                    "Amount": 10.0,
-                    "TypeNumber": 0,
-                    "Owner": null
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ],
+    "Skills": [],
     "Id": "Dragon"
   },
   {
     "General": {
       "HeroId": "Fishguard",
-      "Race": "Dog",
-      "Vocation": "PastorVocation",
+      "Race": "Desertes",
+      "Vocation": "Support",
       "Rating": 1,
       "Rare": 0
     },
@@ -385,8 +305,8 @@
   {
     "General": {
       "HeroId": "Imp",
-      "Race": "Dog",
-      "Vocation": "KillerVocation",
+      "Race": "Desertes",
+      "Vocation": "Killer",
       "Rating": 1,
       "Rare": 0
     },
@@ -486,8 +406,8 @@
   {
     "General": {
       "HeroId": "Knight",
-      "Race": "Rodent",
-      "Vocation": "WarriorVocation",
+      "Race": "Dwellers",
+      "Vocation": "Warrior",
       "Rating": 1,
       "Rare": 0
     },
@@ -587,8 +507,8 @@
   {
     "General": {
       "HeroId": "Nosedman",
-      "Race": "Fish",
-      "Vocation": "WizardVocation",
+      "Race": "Dwellers",
+      "Vocation": "Wizard",
       "Rating": 1,
       "Rare": 0
     },
@@ -688,8 +608,8 @@
   {
     "General": {
       "HeroId": "PitBoy",
-      "Race": "Fish",
-      "Vocation": "ArcherVocation",
+      "Race": "Renegades",
+      "Vocation": "Archer",
       "Rating": 1,
       "Rare": 0
     },
@@ -789,8 +709,8 @@
   {
     "General": {
       "HeroId": "PracticeDummy",
-      "Race": "Rodent",
-      "Vocation": "WarriorVocation",
+      "Race": "Renegades",
+      "Vocation": "Warrior",
       "Rating": 1,
       "Rare": 0
     },
@@ -890,8 +810,8 @@
   {
     "General": {
       "HeroId": "Snake",
-      "Race": "Rodent",
-      "Vocation": "KillerVocation",
+      "Race": "Technicians",
+      "Vocation": "Killer",
       "Rating": 1,
       "Rare": 0
     },
@@ -991,8 +911,8 @@
   {
     "General": {
       "HeroId": "Spike",
-      "Race": "Bird",
-      "Vocation": "PastorVocation",
+      "Race": "Technicians",
+      "Vocation": "Support",
       "Rating": 1,
       "Rare": 0
     },
@@ -1092,8 +1012,8 @@
   {
     "General": {
       "HeroId": "Treestor",
-      "Race": "Bird",
-      "Vocation": "KillerVocation",
+      "Race": "Undead",
+      "Vocation": "Killer",
       "Rating": 1,
       "Rare": 0
     },
@@ -1193,8 +1113,8 @@
   {
     "General": {
       "HeroId": "Wedger",
-      "Race": "Bird",
-      "Vocation": "PastorVocation",
+      "Race": "Undead",
+      "Vocation": "Support",
       "Rating": 1,
       "Rare": 0
     },
@@ -1294,8 +1214,8 @@
   {
     "General": {
       "HeroId": "Wolf",
-      "Race": "Bird",
-      "Vocation": "KillerVocation",
+      "Race": "Undead",
+      "Vocation": "Killer",
       "Rating": 1,
       "Rare": 0
     },

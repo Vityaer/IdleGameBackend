@@ -46,5 +46,6 @@ namespace UniverseRift.Controllers.Common
         Dictionary<string, HireContainerModel> HireContainerModels { get; }
         Dictionary<string, RaceModel> Races { get; }
         Dictionary<string, BuildingModel> Buildings { get; }
+        
     }
 }

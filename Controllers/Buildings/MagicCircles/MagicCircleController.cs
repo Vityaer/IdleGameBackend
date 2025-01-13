@@ -1,13 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Misc.Json;
+using Models.City.MagicCircles;
+using Models.Data.Inventories;
+using UIController.Rewards.PosibleRewards;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
-using UniverseRift.GameModelDatas.Cities.Buildings;
 using UniverseRift.GameModels;
+using UniverseRift.GameModels.Common;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
 using UniverseRift.Services.Resources;
+using UniverseRift.Services.Rewarders;
 
 namespace UniverseRift.Controllers.Buildings.MagicCircles
 {
@@ -20,6 +24,7 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
         private readonly IJsonConverter _jsonConverter;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IAchievmentController _achievmentController;
+        private readonly IRewardService _clientRewardService;
         private readonly Random _random = new();
 
         public MagicCircleController(
@@ -27,7 +32,8 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
             IJsonConverter jsonConverter,
             IResourceManager resourcesController,
             ICommonDictionaries commonDictionaries,
-            IAchievmentController achievmentController
+            IAchievmentController achievmentController,
+            IRewardService clientRewardService
             )
         {
             _commonDictionaries = commonDictionaries;
@@ -35,6 +41,7 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
             _context = context;
             _resourcesController = resourcesController;
             _achievmentController = achievmentController;
+            _clientRewardService = clientRewardService;
         }
 
         [HttpPost]
@@ -52,7 +59,23 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
             if (!permission)
                 return answer;
 
+            if (!_commonDictionaries.Races.ContainsKey(raceName))
+                raceName = _commonDictionaries.Races.ElementAt(0).Key;
+
             await _resourcesController.SubstactResources(playerCost);
+            var rewardModel = new RewardModel();
+            var posibleSplinters = new List<PosibleObjectData<SplinterData>>();
+            foreach (var splinter in magicCircleBuildingModel.PosibleRewardData.Splinters)
+            {
+                var splinterModel = _commonDictionaries.Splinters[splinter.Value.Id];
+                if (_commonDictionaries.Heroes.TryGetValue(splinterModel.ModelId, out var heroModel))
+                {
+                    if (heroModel.General.Race.Equals(raceName))
+                    {
+                        posibleSplinters.Add(splinter);
+                    }
+                }
+            }
 
             var sum = 0f;
             foreach (var hireChance in magicCircleBuildingModel.SubjectChances)
@@ -73,31 +96,76 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
 
                 index = Math.Clamp(index, 0, magicCircleBuildingModel.SubjectChances.Count);
                 var selectBonus = magicCircleBuildingModel.SubjectChances.ElementAt(index).Key;
+
+                if (selectBonus.Equals("Splinter") && posibleSplinters.Count == 0)
+                {
+                    selectBonus = "Resource";
+                }
+
                 switch (selectBonus)
                 {
+                    case "Resource":
+                        var resource = GetRandomReward(magicCircleBuildingModel.PosibleRewardData.Resources);
+                        if (resource != null)
+                        {
+                            var cloneResource = new ResourceData()
+                            {
+                                Type = resource.Type,
+                                Amount = new BigDigit(resource.Amount.Mantissa, resource.Amount.E10)
+                            };
+                            rewardModel.Add(cloneResource);
+                        }
+                        break;
                     case "Item":
-                        var itemId = GetRandomSubject(magicCircleBuildingModel.Items);
+                        var item = GetRandomReward(magicCircleBuildingModel.PosibleRewardData.Items);
+                        if (item != null)
+                        {
+                            var cloneItem = new ItemData()
+                            {
+                                Id = item.Id,
+                                Amount = item.Amount,
+                            };
+
+                            rewardModel.Add(cloneItem);
+                        }
                         break;
                     case "Splinter":
-                        var splinterId = GetRandomSubject(magicCircleBuildingModel.Splinters);
+                        var splinter = GetRandomReward(posibleSplinters);
+
+                        if (splinter != null)
+                        {
+                            var cloneSplinter = new SplinterData()
+                            {
+                                Id = splinter.Id,
+                                Amount = splinter.Amount
+                            };
+                            rewardModel.Add(cloneSplinter);
+                        }
                         break;
                 }
 
             }
-
             await _achievmentController.AchievmentUpdataData(playerId, "MagicCircleHireAchievment", count);
-            answer.Result = _jsonConverter.Serialize(heroesData);
+            await _clientRewardService.AddReward(playerId, rewardModel);
+
+            await _context.SaveChangesAsync();
+
+            answer.Result = _jsonConverter.Serialize(rewardModel);
             return answer;
         }
 
-        private string GetRandomSubject(Dictionary<string, float> subjects)
+        private T GetRandomReward<T>(List<PosibleObjectData<T>> subjects)
+            where T : InventoryBaseItem
         {
             if (subjects.Count == 0)
-                return string.Empty;
+                return null;
+
+            if (subjects.Count == 1)
+                return subjects[0].Value;
 
             var sum = 0f;
             foreach (var subject in subjects)
-                sum += subject.Value;
+                sum += subject.Posibility;
 
             var index = -1;
 
@@ -107,7 +175,7 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
                 var currentSum = rand;
                 for (var j = 0; j < subjects.Count; j++)
                 {
-                    currentSum -= subjects.ElementAt(j).Value;
+                    currentSum -= subjects[j].Posibility;
                     index += 1;
                     if (currentSum < 0f)
                         break;
@@ -115,8 +183,7 @@ namespace UniverseRift.Controllers.Buildings.MagicCircles
             }
             index = Math.Clamp(index, 0, subjects.Count - 1);
 
-            return subjects.ElementAt(index).Key;
-
+            return subjects[index].Value;
         }
     }
 }

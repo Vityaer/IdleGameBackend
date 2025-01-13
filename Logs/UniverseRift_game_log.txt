@@ -1273,3 +1273,186 @@ Start wait time: Day
 12.05.2024 18:01:36.36
 Start wait time: GameCycle
 
+12.10.2024 21:41:24.74
+Start wait time: Day
+
+12.10.2024 21:41:24.75
+Start refresh all city
+
+12.10.2024 21:41:24.77
+Start wait time: GameCycle
+
+12.10.2024 21:41:25.25
+finish refresh all city
+
+12.10.2024 21:41:25.25
+delayType: Day, value: 11.12.2024 00:00:00
+
+12.10.2024 21:41:25.25
+switch time, typeDay
+
+12.10.2024 21:41:25.27
+Start wait time: Day
+
+12.14.2024 14:17:14.74
+Start wait time: Day
+
+12.14.2024 14:17:14.74
+Start refresh all city
+
+12.14.2024 14:17:14.79
+Start wait time: GameCycle
+
+12.14.2024 14:17:15.28
+finish refresh all city
+
+12.14.2024 14:17:15.28
+delayType: Day, value: 15.12.2024 00:00:00
+
+12.14.2024 14:17:15.28
+switch time, typeDay
+
+12.14.2024 14:17:15.29
+Start wait time: Day
+
+12.14.2024 14:33:53.11
+Start wait time: Day
+
+12.14.2024 14:33:53.13
+Start wait time: GameCycle
+
+12.14.2024 14:33:53.14
+Next game cycle
+
+12.14.2024 14:33:53.28
+delayType: GameCycle, value: 19.12.2024 00:00:00
+
+12.14.2024 14:33:53.28
+switch time, typeGameCycle
+
+12.14.2024 14:33:53.29
+Start wait time: GameCycle
+
+12.14.2024 14:36:42.83
+Start wait time: Day
+
+12.14.2024 14:36:42.84
+Start wait time: GameCycle
+
+12.14.2024 15:04:45.82
+Start wait time: Day
+
+12.14.2024 15:04:45.82
+Start wait time: GameCycle
+
+12.15.2024 12:13:19.41
+Start wait time: Day
+
+12.15.2024 12:13:19.42
+Start wait time: GameCycle
+
+01.09.2025 10:35:00.16
+Start wait time: Day
+
+01.09.2025 10:35:00.17
+Start wait time: GameCycle
+
+01.09.2025 10:58:05.77
+Start refresh all city
+
+01.09.2025 10:58:06.36
+finish refresh all city
+
+01.09.2025 11:35:43.60
+Start wait time: Day
+
+01.09.2025 11:35:43.62
+Start wait time: GameCycle
+
+01.09.2025 11:38:22.37
+Start refresh all city
+
+01.09.2025 11:38:50.02
+finish refresh all city
+
+01.09.2025 11:39:21.82
+Start refresh all city
+
+01.09.2025 11:39:24.39
+finish refresh all city
+
+01.09.2025 11:40:41.86
+Start refresh all city
+
+01.09.2025 11:47:40.67
+Start wait time: Day
+
+01.09.2025 11:47:40.67
+Start wait time: GameCycle
+
+01.09.2025 12:12:39.47
+Start wait time: Day
+
+01.09.2025 12:12:39.48
+Start wait time: GameCycle
+
+01.09.2025 12:26:55.51
+Start wait time: Day
+
+01.09.2025 12:26:55.51
+Start wait time: GameCycle
+
+01.09.2025 12:30:25.69
+Start wait time: Day
+
+01.09.2025 12:30:25.70
+Start wait time: GameCycle
+
+01.11.2025 14:49:55.88
+Start wait time: Day
+
+01.11.2025 14:49:55.89
+Start wait time: GameCycle
+
+01.11.2025 14:52:21.94
+Start wait time: Day
+
+01.11.2025 14:52:21.94
+Start wait time: GameCycle
+
+01.11.2025 14:59:02.43
+Start wait time: Day
+
+01.11.2025 14:59:02.44
+Start wait time: GameCycle
+
+01.11.2025 15:02:59.68
+Start wait time: Day
+
+01.11.2025 15:02:59.68
+Start wait time: GameCycle
+
+01.12.2025 12:05:07.58
+Start wait time: Day
+
+01.12.2025 12:05:07.59
+Start wait time: GameCycle
+
+01.12.2025 13:03:33.95
+Start wait time: Day
+
+01.12.2025 13:03:33.96
+Start wait time: GameCycle
+
+01.12.2025 14:05:29.20
+Start wait time: Day
+
+01.12.2025 14:05:29.21
+Start wait time: GameCycle
+
+01.12.2025 15:13:54.27
+Start wait time: Day
+
+01.12.2025 15:13:54.28
+Start wait time: GameCycle
+

@@ -1,6 +1,6 @@
 [
   {
-    "Race": "Cat",
+    "Race": "Alliance",
     "Missions": [
       {
         "SmashReward": {
@@ -653,10 +653,10 @@
         }
       }
     ],
-    "Id": "CatTravel"
+    "Id": "AllianceTravel"
   },
   {
-    "Race": "Dog",
+    "Race": "Desertes",
     "Missions": [
       {
         "SmashReward": {
@@ -1309,10 +1309,10 @@
         }
       }
     ],
-    "Id": "DogTravel"
+    "Id": "DesertesTravel"
   },
   {
-    "Race": "Rodent",
+    "Race": "Dwellers",
     "Missions": [
       {
         "SmashReward": {
@@ -1965,10 +1965,10 @@
         }
       }
     ],
-    "Id": "RodentTravel"
+    "Id": "DwellersTravel"
   },
   {
-    "Race": "Amphibian",
+    "Race": "Renegades",
     "Missions": [
       {
         "SmashReward": {
@@ -2621,10 +2621,10 @@
         }
       }
     ],
-    "Id": "AmphibianTravel"
+    "Id": "RenegadesTravel"
   },
   {
-    "Race": "Fish",
+    "Race": "Technicians",
     "Missions": [
       {
         "SmashReward": {
@@ -3277,10 +3277,10 @@
         }
       }
     ],
-    "Id": "FishTravel"
+    "Id": "TechniciansTravel"
   },
   {
-    "Race": "Bird",
+    "Race": "Undead",
     "Missions": [
       {
         "SmashReward": {
@@ -3933,6 +3933,6 @@
         }
       }
     ],
-    "Id": "BirdTravel"
+    "Id": "UndeadTravel"
   }
 ]

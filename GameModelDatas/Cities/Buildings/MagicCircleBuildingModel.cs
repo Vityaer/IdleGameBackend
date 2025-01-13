@@ -1,12 +1,13 @@
 ﻿using Models.Data.Inventories;
+using UniverseRift.GameModelDatas.Cities.Buildings;
+using UniverseRift.GameModels;
 
-namespace UniverseRift.GameModelDatas.Cities.Buildings
+namespace Models.City.MagicCircles
 {
     public class MagicCircleBuildingModel : BuildingModel
     {
         public ResourceData HireCost;
         public Dictionary<string, float> SubjectChances = new();
-        public Dictionary<string, float> Items = new();
-        public Dictionary<string, float> Splinters = new();
+        public PosibleRewardData PosibleRewardData = new();
     }
 }

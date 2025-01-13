@@ -1,7 +1,7 @@
 ﻿using UniverseRift.GameModelDatas.Players;
 using UniverseRift.Models.Arenas;
 
-namespace UniverseRift.GameModelDatas.Cities
+namespace UniverseRift.GameModelDatas.Cities.Buildings
 {
     public class ArenaBuildingModel
     {

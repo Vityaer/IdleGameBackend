@@ -205,7 +205,7 @@ namespace UniverseRift.Controllers.Buildings.Shops
             var promotions = new List<Promotion>(selectedIndexes.Count);
             for (var i = 0; i < selectedIndexes.Count; i++)
             {
-                var productId = cityMarketProductIds[i];
+                var productId = cityMarketProductIds[selectedIndexes[i]];
                 promotions.Add(new Promotion {MarketName = CITY_MARKET_NAME, ProductId = productId });
             }
 
