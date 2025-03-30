@@ -22,6 +22,7 @@ using UniverseRift.Models.Resources;
 using UniverseRift.Models.Rewards;
 using UniverseRift.Models.Tasks.SimpleTask;
 using UniverseRift.Models.Voyages;
+using Models.City.Mines;
 
 namespace UniverseRift.Contexts
 {
@@ -40,7 +41,6 @@ namespace UniverseRift.Contexts
         public DbSet<GameTask> GameTasks { get; set; }
         public DbSet<FortuneWheelModel> FortuneWheels { get; set; }
         public DbSet<DailyRewardProgress> DailyRewardProgresses { get; set; }
-        public DbSet<MineData> MineDatas { get; set; }
         public DbSet<TravelRaceData> TravelRaceDatas { get; set; }
         public DbSet<AchievmentData> AchievmentDatas { get; set; }
         public DbSet<BattlepasData> BattlepasDatas { get; set; }
@@ -57,11 +57,13 @@ namespace UniverseRift.Contexts
         public DbSet<VoyageServerData> VoyageServerDatas { get; set; }
         public DbSet<ServerArenaPlayerData> ServerArenaPlayerDatas { get; set; }
         public DbSet<LongTravelServerData> LongTravelServerDatas { get; set; }
-        public DbSet<MineMissionData> MineMissionDatas { get; set; }
         public DbSet<BotData> BotsDatas { get; set; }
         public DbSet<RewardServerData> RewardServerDatas { get; set; }
         public DbSet<ChatMessageData> ChatMessageDatas { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
+        public DbSet<MineData> MineDatas { get; set; }
+        public DbSet<MineMissionData> MineMissionDatas { get; set; }
+        public DbSet<IndustryServerData> IndustryServerDatas { get; set; }
 
         public AplicationContext(DbContextOptions<AplicationContext> options)
             : base(options)

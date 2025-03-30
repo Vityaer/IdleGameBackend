@@ -160,7 +160,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -264,7 +265,8 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -379,7 +381,8 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -515,7 +518,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -651,7 +655,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -798,7 +803,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -945,7 +951,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -1070,7 +1077,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -1195,7 +1203,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -1298,7 +1307,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -1445,7 +1455,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -1570,7 +1581,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -1695,7 +1707,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -1831,7 +1844,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -1945,7 +1959,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -2070,7 +2085,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -2184,7 +2200,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -2287,7 +2304,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -2412,7 +2430,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       },
       {
         "AutoFightReward": {
@@ -2526,7 +2545,8 @@
               "Amount": 1
             }
           ]
-        }
+        },
+        "HeroRestrictions": null
       }
     ],
     "Id": "Chapter1"

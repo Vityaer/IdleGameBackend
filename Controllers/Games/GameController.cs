@@ -74,6 +74,7 @@ namespace UniverseRift.Controllers.Games
 
         private bool _isCreated = false;
         private readonly Random _random = new Random();
+        private const int REWARD_COUNT = 8;
 
         public GameController(
             IJsonConverter jsonConverter,
@@ -181,7 +182,7 @@ namespace UniverseRift.Controllers.Games
             playerSave.PlayerInfoData = GetPlayerData(player);
             playerSave.City.MainCampaignSave = await _campaignController.GetPlayerSave(playerId);
             playerSave.City.MallSave = await _mallController.GetPlayerSave(playerId);
-            playerSave.City.FortuneWheelData = await GetFortuneSave(playerId, flagCreateNewData);
+            playerSave.City.FortuneWheelData = await _fortuneWheelController.GetPlayerSave(playerId, flagCreateNewData);
             playerSave.City.TaskBoardData = await GetTaskboardSave(playerId, flagCreateNewData);
             playerSave.City.DailyReward = await _dailyRewardController.GetPlayerSave(playerId, flagCreateNewData);
 
@@ -221,21 +222,6 @@ namespace UniverseRift.Controllers.Games
             return result;
         }
 
-        public async Task<FortuneWheelData> GetFortuneSave(int playerId, bool flagCreateNewData)
-        {
-            var playerWheel = await LoadFortuneWheel(playerId);
-
-            if (playerWheel == null || flagCreateNewData)
-            {
-                playerWheel = await CreateFortuneWheel(playerId);
-            }
-
-            var result = _jsonConverter.Deserialize<FortuneWheelData>(playerWheel.RewardsJson);
-
-            return result;
-        }
-
-        private const int REWARD_COUNT = 8;
         private async Task<FortuneWheelModel> CreateFortuneWheel(int playerId)
         {
             var playerWheel = await LoadFortuneWheel(playerId);

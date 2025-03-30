@@ -6,6 +6,6 @@ namespace UniverseRift.Models.Voyages
     {
         public int Id { get; set; }
         //public List<MissionModel> Missions { get; set; } = new();
-        public bool IsDayRest { get; set; } = false;
+        public bool IsVoyageDay { get; set; } = false;
     }
 }

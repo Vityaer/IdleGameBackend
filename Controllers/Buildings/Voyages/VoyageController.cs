@@ -1,11 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.Controllers.Players.Heroes;
 using UniverseRift.GameModelDatas.Cities;
+using UniverseRift.GameModels;
 using UniverseRift.Models.Achievments;
+using UniverseRift.Models.City.Markets;
+using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
 using UniverseRift.Models.Voyages;
 using UniverseRift.Services.Rewarders;
@@ -14,15 +18,20 @@ namespace UniverseRift.Controllers.Buildings.Voyages
 {
     public class VoyageController : ControllerBase, IVoyageController
     {
-        private const string VOYAGE_NAME = "Voyage";
+		private const string MARKET_NAME = "VoyageMarket";
+        private const int CITY_MARKET_PROMO_PRODUCT_COUNT = 5;
+
+		private const string VOYAGE_NAME = "Voyage";
         private const int MISSION_COUNT = 15;
 
-        private readonly AplicationContext _context;
+		private readonly AplicationContext _context;
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IRewardService _clientRewardService;
         private readonly IAchievmentController _achievmentController;
 
-        public VoyageController(
+		private readonly Random _random = new();
+
+		public VoyageController(
             AplicationContext context,
             ICommonDictionaries commonDictionaries,
             IRewardService clientRewardService,
@@ -49,31 +58,31 @@ namespace UniverseRift.Controllers.Buildings.Voyages
                 serverData = new VoyageServerData();
                 await _context.VoyageServerDatas.AddAsync(serverData);
                 await _context.SaveChangesAsync();
-                return;
             }
 
-            serverData.IsDayRest = !serverData.IsDayRest;
-            if (!serverData.IsDayRest)
+            serverData.IsVoyageDay = !serverData.IsVoyageDay;
+			if (serverData.IsVoyageDay)
             {
-                //var voyageContainer = _commonDictionaries.StorageChallenges[VOYAGE_NAME];
-                //for (var i = 0; i < voyageContainer.Missions.Count && i < MISSION_COUNT; i++)
-                //{
-                    //serverData.Missions.Add(voyageContainer.Missions[i]);
-                //}
-            }
+				var allVoyages = await _context.VoyageDatas.ToListAsync();
+				foreach (var voyage in allVoyages)
+					voyage.CurrentMissionIndex = 0;
+
+				//serverData.Missions.Clear();
+				await CreateDayPromotions();
+			}
             else
             {
-                var allVoyages = await _context.VoyageDatas.ToListAsync();
-                foreach (var voyage in allVoyages)
-                    voyage.CurrentMissionIndex = 0;
+				//var voyageContainer = _commonDictionaries.StorageChallenges[VOYAGE_NAME];
+				//for (var i = 0; i < voyageContainer.Missions.Count && i < MISSION_COUNT; i++)
+				//{
+				//serverData.Missions.Add(voyageContainer.Missions[i]);
+				//}
+			}
 
-                //serverData.Missions.Clear();
-            }
-
-            await _context.SaveChangesAsync();
+			await _context.SaveChangesAsync();
         }
 
-        public async Task<VoyageBuildingData> GetPlayerSave(int playerId)
+		public async Task<VoyageBuildingData> GetPlayerSave(int playerId)
         {
             var allVoyages = await _context.VoyageDatas.ToListAsync();
             var playerVoyage = allVoyages.Find(voyage => voyage.PlayerId == playerId);
@@ -92,7 +101,7 @@ namespace UniverseRift.Controllers.Buildings.Voyages
             var result = new VoyageBuildingData();
             var voyageServerData = await _context.VoyageServerDatas.FindAsync(1);
 
-            if (voyageServerData == null || voyageServerData.IsDayRest)
+            if (voyageServerData == null || !voyageServerData.IsVoyageDay)
                 return result;
 
             var voyageContainer = _commonDictionaries.StorageChallenges[VOYAGE_NAME];
@@ -122,7 +131,7 @@ namespace UniverseRift.Controllers.Buildings.Voyages
 
             var voyageServerData = await _context.VoyageServerDatas.FindAsync(1);
 
-            if (voyageServerData == null || voyageServerData.IsDayRest)
+            if (voyageServerData == null || !voyageServerData.IsVoyageDay)
             {
                 answer.Error = "Voyage is rest.";
                 return answer;
@@ -133,7 +142,8 @@ namespace UniverseRift.Controllers.Buildings.Voyages
             await _clientRewardService
                 .AddReward(playerId, voyageContainer.Missions.ToList()[playerVoyage.CurrentMissionIndex].WinReward);
 
-            playerVoyage.CurrentMissionIndex += 1;
+
+			playerVoyage.CurrentMissionIndex += 1;
             if (playerVoyage.CurrentMissionIndex == MISSION_COUNT)
             {
                 await _achievmentController.AchievmentUpdataData(playerId, "CompleteTravelAchievment", 1);
@@ -144,6 +154,38 @@ namespace UniverseRift.Controllers.Buildings.Voyages
             return answer;
         }
 
+		private async Task CreateDayPromotions()
+		{
+			var allPromotions = await _context.Promotions.ToListAsync();
+			var oldCityMarketPromotions = allPromotions.FindAll(promo => promo.MarketName.Equals(MARKET_NAME));
+			_context.Promotions.RemoveRange(oldCityMarketPromotions);
+			await _context.SaveChangesAsync();
 
-    }
+			var cityMarketProductIds = _commonDictionaries.Products.Keys.ToList()
+				.FindAll(name => name.Contains($"Promo{MARKET_NAME}"));
+
+            var createPromoCount = Math.Min(CITY_MARKET_PROMO_PRODUCT_COUNT, cityMarketProductIds.Count);
+			var indexes = new List<int>(createPromoCount);
+			for (var i = 0; i < createPromoCount; i++)
+				indexes.Add(i);
+
+			var selectedIndexes = new List<int>(createPromoCount);
+			for (var i = 0; i < createPromoCount; i++)
+			{
+				var randomIndex = _random.Next(0, indexes.Count);
+				selectedIndexes.Add(indexes[randomIndex]);
+				indexes.RemoveAt(randomIndex);
+			}
+
+			var promotions = new List<Promotion>(selectedIndexes.Count);
+			for (var i = 0; i < selectedIndexes.Count; i++)
+			{
+				var productId = cityMarketProductIds[selectedIndexes[i]];
+				promotions.Add(new Promotion { MarketName = MARKET_NAME, ProductId = productId });
+			}
+
+			await _context.Promotions.AddRangeAsync(promotions);
+			await _context.SaveChangesAsync();
+		}
+	}
 }

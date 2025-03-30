@@ -300,6 +300,26 @@
     "Id": "ArenaTickets"
   },
   {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 1,
+      "Amount": {
+        "Mantissa": 200.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 21,
+      "Amount": {
+        "Mantissa": 500.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "PromoVoyageMarketDiamond"
+  },
+  {
     "$type": "Models.City.Markets.ItemProductModel, Assembly-CSharp",
     "Subject": {
       "Id": "PupilWeapon",

@@ -69,5 +69,42 @@
       }
     ],
     "Id": "GuildDonateEvolution"
+  },
+  {
+    "LevelsCost": [
+      {
+        "level": 0,
+        "Cost": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 0.0,
+              "E10": 0
+            }
+          }
+        ],
+        "typeIncrease": 1,
+        "ListIncrease": [
+          0.0
+        ]
+      },
+      {
+        "level": 1,
+        "Cost": [
+          {
+            "Type": 1,
+            "Amount": {
+              "Mantissa": 50.0,
+              "E10": 0
+            }
+          }
+        ],
+        "typeIncrease": 1,
+        "ListIncrease": [
+          0.0
+        ]
+      }
+    ],
+    "Id": "FortuneWheelRefresh"
   }
 ]

@@ -296,5 +296,119 @@
     },
     "name": "MagicCircle",
     "Id": "MagicCircleBuildingModel"
+  },
+  {
+    "$type": "Models.City.Mines.MineBuildingModel, Assembly-CSharp",
+    "MineEnergyDatas": [
+      {
+        "RequireLevel": 1,
+        "MaxEnergyCount": 8,
+        "SecondRefresh": 14400
+      },
+      {
+        "RequireLevel": 3,
+        "MaxEnergyCount": 9,
+        "SecondRefresh": 14400
+      },
+      {
+        "RequireLevel": 5,
+        "MaxEnergyCount": 9,
+        "SecondRefresh": 14400
+      },
+      {
+        "RequireLevel": 7,
+        "MaxEnergyCount": 10,
+        "SecondRefresh": 14400
+      },
+      {
+        "RequireLevel": 9,
+        "MaxEnergyCount": 12,
+        "SecondRefresh": 14400
+      },
+      {
+        "RequireLevel": 11,
+        "MaxEnergyCount": 15,
+        "SecondRefresh": 14400
+      },
+      {
+        "RequireLevel": 13,
+        "MaxEnergyCount": 16,
+        "SecondRefresh": 14400
+      },
+      {
+        "RequireLevel": 15,
+        "MaxEnergyCount": 17,
+        "SecondRefresh": 14400
+      }
+    ],
+    "SettingsCampaigns": [
+      {
+        "RequireLevel": 1,
+        "LevelHard": 0,
+        "MissionsCount": 5
+      },
+      {
+        "RequireLevel": 2,
+        "LevelHard": 0,
+        "MissionsCount": 6
+      },
+      {
+        "RequireLevel": 3,
+        "LevelHard": 0,
+        "MissionsCount": 7
+      },
+      {
+        "RequireLevel": 4,
+        "LevelHard": 0,
+        "MissionsCount": 8
+      },
+      {
+        "RequireLevel": 5,
+        "LevelHard": 1,
+        "MissionsCount": 9
+      },
+      {
+        "RequireLevel": 6,
+        "LevelHard": 1,
+        "MissionsCount": 10
+      },
+      {
+        "RequireLevel": 7,
+        "LevelHard": 1,
+        "MissionsCount": 11
+      },
+      {
+        "RequireLevel": 8,
+        "LevelHard": 1,
+        "MissionsCount": 12
+      },
+      {
+        "RequireLevel": 9,
+        "LevelHard": 1,
+        "MissionsCount": 13
+      },
+      {
+        "RequireLevel": 10,
+        "LevelHard": 2,
+        "MissionsCount": 14
+      },
+      {
+        "RequireLevel": 15,
+        "LevelHard": 3,
+        "MissionsCount": 15
+      },
+      {
+        "RequireLevel": 20,
+        "LevelHard": 4,
+        "MissionsCount": 15
+      },
+      {
+        "RequireLevel": 25,
+        "LevelHard": 5,
+        "MissionsCount": 15
+      }
+    ],
+    "name": "MainMineBuilding",
+    "Id": "MainMineBuilding"
   }
 ]

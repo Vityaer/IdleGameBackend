@@ -6,6 +6,7 @@ using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Battlepases;
 using UniverseRift.Controllers.Buildings.Campaigns;
 using UniverseRift.Controllers.Buildings.Guilds;
+using UniverseRift.Controllers.Buildings.Industries;
 using UniverseRift.Controllers.Buildings.Industries.Mines;
 using UniverseRift.Controllers.Buildings.LongTravels;
 using UniverseRift.Controllers.Buildings.TravelCircles;
@@ -36,8 +37,9 @@ namespace UniverseRift.Controllers.Players
         private readonly IFriendshipController _friendshipController;
         private readonly IGuildController _guildController;
         private readonly ILongTravelController _longTravelController;
+        private readonly IIndustryController _industryController;
 
-        private ReactiveCommand<int> _onPlayerRegistration = new();
+		private ReactiveCommand<int> _onPlayerRegistration = new();
 
         public UniRx.IObservable<int> OnRegistrationPlayer => _onPlayerRegistration;
 
@@ -53,8 +55,9 @@ namespace UniverseRift.Controllers.Players
             IBattlepasController battlepasController,
             IFriendshipController friendshipController,
             IGuildController guildController,
-            ILongTravelController longTravelController
-            )
+            ILongTravelController longTravelController,
+			IIndustryController industryController
+			)
         {
             _commonDictionaries = commonDictionaries;
             _context = context;
@@ -68,8 +71,8 @@ namespace UniverseRift.Controllers.Players
             _friendshipController = friendshipController;
             _guildController = guildController;
             _longTravelController = longTravelController;
-
-        }
+			_industryController = industryController;
+		}
 
         public async Task<Player> CreatePlayer(string name, string avatarPath, bool isBot)
         {
@@ -94,8 +97,8 @@ namespace UniverseRift.Controllers.Players
             await _friendshipController.OnPlayerRegister(player.Id);
             await _guildController.OnPlayerRegister(player.Id);
             await _longTravelController.OnPlayerRegister(player.Id);
-
-            return player;
+            await _industryController.OnPlayerRegister(player.Id);
+			return player;
         }
 
         public async Task<Player> GetPlayer(int playerId)

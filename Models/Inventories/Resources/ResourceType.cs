@@ -23,7 +23,7 @@
         RedDust = 18,
         EventAgentMonet = 19,
         FeastCoint = 20,
-        VoyageToken = 21,
+        VoyageCoin = 21,
         AdvancedDarkStone = 22,
         Candy = 23,
     }

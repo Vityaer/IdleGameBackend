@@ -45,5 +45,11 @@
     "RecoveryType": 3,
     "Promotions": [],
     "Id": "GuildMarket"
+  },
+  {
+    "Products": [],
+    "RecoveryType": 5,
+    "Promotions": [],
+    "Id": "VoyageMarket"
   }
 ]

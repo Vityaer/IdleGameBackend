@@ -1456,3 +1456,231 @@ Start wait time: Day
 01.12.2025 15:13:54.28
 Start wait time: GameCycle
 
+01.13.2025 13:35:39.99
+Start wait time: Day
+
+01.13.2025 13:35:40.02
+Start wait time: GameCycle
+
+01.13.2025 14:44:18.31
+Start wait time: Day
+
+01.13.2025 14:44:18.31
+Start wait time: GameCycle
+
+01.14.2025 12:26:44.77
+Start wait time: Day
+
+01.14.2025 12:26:44.77
+Start wait time: GameCycle
+
+01.14.2025 16:27:29.76
+Start wait time: Day
+
+01.14.2025 16:27:29.77
+Start wait time: GameCycle
+
+01.14.2025 16:30:29.15
+Start wait time: Day
+
+01.14.2025 16:30:29.16
+Start wait time: GameCycle
+
+01.14.2025 16:42:14.01
+Start wait time: Day
+
+01.14.2025 16:42:14.01
+Start wait time: GameCycle
+
+01.15.2025 09:07:55.68
+Start wait time: Day
+
+01.15.2025 09:07:55.70
+Start wait time: GameCycle
+
+01.15.2025 11:23:09.88
+Start wait time: Day
+
+01.15.2025 11:23:09.88
+Start wait time: GameCycle
+
+01.15.2025 11:58:26.57
+Start wait time: Day
+
+01.15.2025 11:58:26.57
+Start wait time: GameCycle
+
+01.20.2025 10:31:30.95
+Start wait time: Day
+
+01.20.2025 10:31:30.95
+Start wait time: GameCycle
+
+02.23.2025 14:25:25.81
+Start wait time: Day
+
+02.23.2025 14:25:25.81
+Start wait time: GameCycle
+
+03.01.2025 19:03:48.22
+Start wait time: Day
+
+03.01.2025 19:03:48.23
+Start wait time: GameCycle
+
+03.01.2025 20:15:05.96
+Start wait time: Day
+
+03.01.2025 20:15:05.97
+Start wait time: GameCycle
+
+03.23.2025 10:35:49.22
+Start wait time: Day
+
+03.23.2025 10:35:49.22
+Start wait time: GameCycle
+
+03.30.2025 08:52:27.93
+Start wait time: Day
+
+03.30.2025 08:52:27.94
+Start wait time: GameCycle
+
+03.30.2025 09:03:03.78
+Start refresh all city
+
+03.30.2025 09:03:03.88
+finish refresh all city
+
+03.30.2025 11:11:47.27
+Start wait time: Day
+
+03.30.2025 11:11:47.28
+Start wait time: GameCycle
+
+03.30.2025 11:12:21.11
+Start refresh all city
+
+03.30.2025 11:12:21.28
+finish refresh all city
+
+03.30.2025 11:14:59.66
+Start refresh all city
+
+03.30.2025 11:15:25.15
+finish refresh all city
+
+03.30.2025 11:15:27.98
+Start refresh all city
+
+03.30.2025 11:15:54.14
+finish refresh all city
+
+03.30.2025 11:42:20.02
+Start wait time: Day
+
+03.30.2025 11:42:20.03
+Start wait time: GameCycle
+
+03.30.2025 11:42:23.77
+Start refresh all city
+
+03.30.2025 11:42:23.94
+finish refresh all city
+
+03.30.2025 13:12:21.59
+Start wait time: Day
+
+03.30.2025 13:12:21.60
+Start wait time: GameCycle
+
+03.30.2025 13:12:25.98
+Start refresh all city
+
+03.30.2025 13:12:26.19
+finish refresh all city
+
+03.30.2025 13:14:12.06
+Start wait time: Day
+
+03.30.2025 13:14:12.07
+Start wait time: GameCycle
+
+03.30.2025 13:15:00.45
+Start refresh all city
+
+03.30.2025 13:15:00.57
+finish refresh all city
+
+03.30.2025 13:15:52.83
+Start refresh all city
+
+03.30.2025 13:17:41.10
+Start wait time: Day
+
+03.30.2025 13:17:41.11
+Start wait time: GameCycle
+
+03.30.2025 13:18:13.80
+Start refresh all city
+
+03.30.2025 13:18:13.98
+finish refresh all city
+
+03.30.2025 13:27:35.62
+Start wait time: Day
+
+03.30.2025 13:27:35.63
+Start wait time: GameCycle
+
+03.30.2025 13:27:53.77
+Start refresh all city
+
+03.30.2025 13:27:53.89
+finish refresh all city
+
+03.30.2025 13:28:06.45
+Start refresh all city
+
+03.30.2025 13:28:26.36
+finish refresh all city
+
+03.30.2025 13:30:17.44
+Start wait time: Day
+
+03.30.2025 13:30:17.45
+Start wait time: GameCycle
+
+03.30.2025 13:30:23.48
+Start refresh all city
+
+03.30.2025 13:30:23.79
+finish refresh all city
+
+03.30.2025 13:30:25.62
+Start refresh all city
+
+03.30.2025 13:30:48.79
+Start wait time: Day
+
+03.30.2025 13:30:48.79
+Start wait time: GameCycle
+
+03.30.2025 13:31:00.79
+Start refresh all city
+
+03.30.2025 13:31:08.47
+finish refresh all city
+
+03.30.2025 13:35:53.03
+Start wait time: Day
+
+03.30.2025 13:35:53.04
+Start wait time: GameCycle
+
+03.30.2025 13:36:03.57
+Start refresh all city
+
+03.30.2025 13:36:07.57
+finish refresh all city
+

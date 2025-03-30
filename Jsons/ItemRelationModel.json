@@ -58,7 +58,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 15.0,
         "E10": 3
       }
     },
@@ -71,7 +71,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 15.0,
         "E10": 3
       }
     },
@@ -84,7 +84,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 15.0,
         "E10": 3
       }
     },
@@ -97,7 +97,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 15.0,
         "E10": 3
       }
     },
@@ -110,7 +110,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 50.0,
         "E10": 3
       }
     },
@@ -123,7 +123,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 50.0,
         "E10": 3
       }
     },
@@ -136,7 +136,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 50.0,
         "E10": 3
       }
     },
@@ -149,7 +149,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 50.0,
         "E10": 3
       }
     },
@@ -162,7 +162,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 120.0,
         "E10": 3
       }
     },
@@ -175,7 +175,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 120.0,
         "E10": 3
       }
     },
@@ -188,7 +188,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 120.0,
         "E10": 3
       }
     },
@@ -201,7 +201,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 120.0,
         "E10": 3
       }
     },
@@ -214,7 +214,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 200.0,
         "E10": 3
       }
     },
@@ -227,7 +227,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 200.0,
         "E10": 3
       }
     },
@@ -240,7 +240,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 200.0,
         "E10": 3
       }
     },
@@ -253,7 +253,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 200.0,
         "E10": 3
       }
     },
@@ -266,7 +266,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 300.0,
         "E10": 3
       }
     },
@@ -279,7 +279,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 300.0,
         "E10": 3
       }
     },
@@ -292,7 +292,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 300.0,
         "E10": 3
       }
     },
@@ -305,7 +305,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 300.0,
         "E10": 3
       }
     },
@@ -318,7 +318,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 450.0,
         "E10": 3
       }
     },
@@ -331,7 +331,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 450.0,
         "E10": 3
       }
     },
@@ -344,7 +344,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 450.0,
         "E10": 3
       }
     },
@@ -357,7 +357,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 450.0,
         "E10": 3
       }
     },
@@ -370,7 +370,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 600.0,
         "E10": 3
       }
     },
@@ -383,7 +383,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 600.0,
         "E10": 3
       }
     },
@@ -396,7 +396,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 600.0,
         "E10": 3
       }
     },
@@ -409,7 +409,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 600.0,
         "E10": 3
       }
     },
@@ -422,7 +422,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 800.0,
         "E10": 3
       }
     },
@@ -435,7 +435,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 800.0,
         "E10": 3
       }
     },
@@ -448,7 +448,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 800.0,
         "E10": 3
       }
     },
@@ -461,7 +461,7 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
+        "Mantissa": 800.0,
         "E10": 3
       }
     },
@@ -475,7 +475,7 @@
       "Type": 0,
       "Amount": {
         "Mantissa": 1.0,
-        "E10": 3
+        "E10": 6
       }
     },
     "Id": "RecipeObedientWeapon"
@@ -488,7 +488,7 @@
       "Type": 0,
       "Amount": {
         "Mantissa": 1.0,
-        "E10": 3
+        "E10": 6
       }
     },
     "Id": "RecipeObedientArmor"
@@ -501,7 +501,7 @@
       "Type": 0,
       "Amount": {
         "Mantissa": 1.0,
-        "E10": 3
+        "E10": 6
       }
     },
     "Id": "RecipeObedientBoots"
@@ -514,7 +514,7 @@
       "Type": 0,
       "Amount": {
         "Mantissa": 1.0,
-        "E10": 3
+        "E10": 6
       }
     },
     "Id": "RecipeObedientAmulet"
@@ -526,8 +526,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.25,
+        "E10": 6
       }
     },
     "Id": "RecipeDevilWeapon"
@@ -539,8 +539,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.25,
+        "E10": 6
       }
     },
     "Id": "RecipeDevilArmor"
@@ -552,8 +552,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.25,
+        "E10": 6
       }
     },
     "Id": "RecipeDevilBoots"
@@ -565,8 +565,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.25,
+        "E10": 6
       }
     },
     "Id": "RecipeDevilAmulet"
@@ -578,8 +578,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.5,
+        "E10": 6
       }
     },
     "Id": "RecipeDestinyWeapon"
@@ -591,8 +591,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.5,
+        "E10": 6
       }
     },
     "Id": "RecipeDestinyArmor"
@@ -604,8 +604,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.5,
+        "E10": 6
       }
     },
     "Id": "RecipeDestinyBoots"
@@ -617,8 +617,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.5,
+        "E10": 6
       }
     },
     "Id": "RecipeDestinyAmulet"
@@ -630,8 +630,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.8,
+        "E10": 6
       }
     },
     "Id": "RecipeArchangelWeapon"
@@ -643,8 +643,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.8,
+        "E10": 6
       }
     },
     "Id": "RecipeArchangelArmor"
@@ -656,8 +656,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.8,
+        "E10": 6
       }
     },
     "Id": "RecipeArchangelBoots"
@@ -669,8 +669,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 1.8,
+        "E10": 6
       }
     },
     "Id": "RecipeArchangelAmulet"
@@ -682,8 +682,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 2.2,
+        "E10": 6
       }
     },
     "Id": "RecipeTitanWeapon"
@@ -695,8 +695,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 2.2,
+        "E10": 6
       }
     },
     "Id": "RecipeTitanArmor"
@@ -708,8 +708,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 2.2,
+        "E10": 6
       }
     },
     "Id": "RecipeTitanBoots"
@@ -721,8 +721,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 2.2,
+        "E10": 6
       }
     },
     "Id": "RecipeTitanAmulet"
@@ -734,8 +734,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 3.0,
+        "E10": 6
       }
     },
     "Id": "RecipeGodWeapon"
@@ -747,8 +747,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 3.0,
+        "E10": 6
       }
     },
     "Id": "RecipeGodArmor"
@@ -760,8 +760,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 3.0,
+        "E10": 6
       }
     },
     "Id": "RecipeGodBoots"
@@ -773,8 +773,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 3.0,
+        "E10": 6
       }
     },
     "Id": "RecipeGodAmulet"
@@ -786,8 +786,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 500.0,
+        "E10": 0
       }
     },
     "Id": "RecipePupilWeapon"
@@ -799,8 +799,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 500.0,
+        "E10": 0
       }
     },
     "Id": "RecipePupilArmor"
@@ -812,8 +812,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 500.0,
+        "E10": 0
       }
     },
     "Id": "RecipePupilBoots"
@@ -825,8 +825,8 @@
     "Cost": {
       "Type": 0,
       "Amount": {
-        "Mantissa": 1.0,
-        "E10": 3
+        "Mantissa": 500.0,
+        "E10": 0
       }
     },
     "Id": "RecipePupilAmulet"

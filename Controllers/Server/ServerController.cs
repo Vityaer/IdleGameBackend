@@ -5,6 +5,7 @@ using System.Globalization;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Bots;
 using UniverseRift.Controllers.Buildings.Achievments;
+using UniverseRift.Controllers.Buildings.FortuneWheels;
 using UniverseRift.Controllers.Buildings.GameCycles;
 using UniverseRift.Controllers.Buildings.Guilds;
 using UniverseRift.Controllers.Buildings.Shops;
@@ -28,6 +29,7 @@ namespace UniverseRift.Controllers.Server
         private readonly IVoyageController _voyageController;
         private readonly IGameCycleController _gameCycleController;
         private readonly IGuildController _guildController;
+        private readonly IFortuneWheelController _fortuneWheelController;
         private readonly IBotController _botController;
 
         private readonly TimeSpan Day = new TimeSpan(24, 0, 0);
@@ -47,11 +49,12 @@ namespace UniverseRift.Controllers.Server
             IVoyageController voyageController,
             IGameCycleController gameCycleController,
             IGuildController guildController,
-            IBotController botController
+            IBotController botController,
+            IFortuneWheelController fortuneWheelController
             )
         {
             _context = context;
-            _cancellationTokenSource = new CancellationTokenSource();
+            _cancellationTokenSource = new();
             _marketController = marketController;
             _taskBoardController = taskBoardController;
             _achievmentController = achievmentController;
@@ -59,6 +62,7 @@ namespace UniverseRift.Controllers.Server
             _gameCycleController = gameCycleController;
             _guildController = guildController;
             _botController = botController;
+            _fortuneWheelController = fortuneWheelController;
         }
 
         public async Task OnStartProject()
@@ -111,7 +115,7 @@ namespace UniverseRift.Controllers.Server
             await _achievmentController.RefreshDailyTask();
             await _voyageController.NextDay();
             await _guildController.RefreshDay();
-
+            await _fortuneWheelController.RefreshDay();
             GameLogging.WriteGameLog($"finish refresh all city");
         }
 

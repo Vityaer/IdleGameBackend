@@ -40,8 +40,8 @@
     "SetName": "Pupil",
     "Bonuses": [
       {
-        "Name": 2,
-        "Count": 1.0
+        "Name": 10,
+        "Count": 0.2
       }
     ],
     "Rating": null,
@@ -88,8 +88,8 @@
     "SetName": "Peasant",
     "Bonuses": [
       {
-        "Name": 3,
-        "Count": 11.0
+        "Name": 10,
+        "Count": 1.0
       }
     ],
     "Rating": null,
@@ -112,8 +112,8 @@
     "SetName": "Militiaman",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 13.0
       }
     ],
     "Rating": null,
@@ -124,8 +124,8 @@
     "SetName": "Militiaman",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 29.0
       }
     ],
     "Rating": null,
@@ -136,8 +136,8 @@
     "SetName": "Militiaman",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 1.25
       }
     ],
     "Rating": null,
@@ -149,7 +149,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 131.0
       }
     ],
     "Rating": null,
@@ -160,8 +160,8 @@
     "SetName": "Monk",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 21.0
       }
     ],
     "Rating": null,
@@ -172,8 +172,8 @@
     "SetName": "Monk",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 46.0
       }
     ],
     "Rating": null,
@@ -184,8 +184,8 @@
     "SetName": "Monk",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 1.563
       }
     ],
     "Rating": null,
@@ -197,7 +197,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 210.0
       }
     ],
     "Rating": null,
@@ -208,8 +208,8 @@
     "SetName": "Warrior",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 74.0
       }
     ],
     "Rating": null,
@@ -220,8 +220,8 @@
     "SetName": "Warrior",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 34.0
       }
     ],
     "Rating": null,
@@ -232,8 +232,8 @@
     "SetName": "Warrior",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 1.954
       }
     ],
     "Rating": null,
@@ -245,7 +245,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 336.0
       }
     ],
     "Rating": null,
@@ -256,8 +256,8 @@
     "SetName": "Feller",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 118.0
       }
     ],
     "Rating": null,
@@ -268,8 +268,8 @@
     "SetName": "Feller",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 54.0
       }
     ],
     "Rating": null,
@@ -280,8 +280,8 @@
     "SetName": "Feller",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 2.443
       }
     ],
     "Rating": null,
@@ -293,7 +293,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 538.0
       }
     ],
     "Rating": null,
@@ -304,8 +304,8 @@
     "SetName": "Soldier",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 189.0
       }
     ],
     "Rating": null,
@@ -316,8 +316,8 @@
     "SetName": "Soldier",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 86.0
       }
     ],
     "Rating": null,
@@ -328,8 +328,8 @@
     "SetName": "Soldier",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 3.054
       }
     ],
     "Rating": null,
@@ -341,7 +341,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 861.0
       }
     ],
     "Rating": null,
@@ -352,8 +352,8 @@
     "SetName": "Minotaur",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 302.0
       }
     ],
     "Rating": null,
@@ -364,8 +364,8 @@
     "SetName": "Minotaur",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 138.0
       }
     ],
     "Rating": null,
@@ -376,8 +376,8 @@
     "SetName": "Minotaur",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 3.818
       }
     ],
     "Rating": null,
@@ -389,7 +389,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 1378.0
       }
     ],
     "Rating": null,
@@ -400,8 +400,8 @@
     "SetName": "Demon",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 483.0
       }
     ],
     "Rating": null,
@@ -412,8 +412,8 @@
     "SetName": "Demon",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 221.0
       }
     ],
     "Rating": null,
@@ -424,8 +424,8 @@
     "SetName": "Demon",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 4.773
       }
     ],
     "Rating": null,
@@ -437,7 +437,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 2205.0
       }
     ],
     "Rating": null,
@@ -448,8 +448,8 @@
     "SetName": "Druid",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 773.0
       }
     ],
     "Rating": null,
@@ -460,8 +460,8 @@
     "SetName": "Druid",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 354.0
       }
     ],
     "Rating": null,
@@ -472,8 +472,8 @@
     "SetName": "Druid",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 5.966
       }
     ],
     "Rating": null,
@@ -485,7 +485,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 3528.0
       }
     ],
     "Rating": null,
@@ -496,8 +496,8 @@
     "SetName": "Obedient",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 1237.0
       }
     ],
     "Rating": null,
@@ -508,8 +508,8 @@
     "SetName": "Obedient",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 566.0
       }
     ],
     "Rating": null,
@@ -520,8 +520,8 @@
     "SetName": "Obedient",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 7.458
       }
     ],
     "Rating": null,
@@ -533,7 +533,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 5645.0
       }
     ],
     "Rating": null,
@@ -544,8 +544,8 @@
     "SetName": "Devil",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 1979.0
       }
     ],
     "Rating": null,
@@ -556,8 +556,8 @@
     "SetName": "Devil",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 906.0
       }
     ],
     "Rating": null,
@@ -568,8 +568,8 @@
     "SetName": "Devil",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 9.323
       }
     ],
     "Rating": null,
@@ -581,7 +581,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 9032.0
       }
     ],
     "Rating": null,
@@ -592,8 +592,8 @@
     "SetName": "Destiny",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 3166.0
       }
     ],
     "Rating": null,
@@ -604,8 +604,8 @@
     "SetName": "Destiny",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 1450.0
       }
     ],
     "Rating": null,
@@ -616,8 +616,8 @@
     "SetName": "Destiny",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 11.654
       }
     ],
     "Rating": null,
@@ -629,7 +629,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 14451.0
       }
     ],
     "Rating": null,
@@ -640,8 +640,8 @@
     "SetName": "Archangel",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 5066.0
       }
     ],
     "Rating": null,
@@ -652,8 +652,8 @@
     "SetName": "Archangel",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 2320.0
       }
     ],
     "Rating": null,
@@ -664,8 +664,8 @@
     "SetName": "Archangel",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 14.568
       }
     ],
     "Rating": null,
@@ -677,7 +677,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 23122.0
       }
     ],
     "Rating": null,
@@ -688,8 +688,8 @@
     "SetName": "Titan",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 8106.0
       }
     ],
     "Rating": null,
@@ -700,8 +700,8 @@
     "SetName": "Titan",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 3712.0
       }
     ],
     "Rating": null,
@@ -712,8 +712,8 @@
     "SetName": "Titan",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 18.21
       }
     ],
     "Rating": null,
@@ -725,7 +725,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 36995.0
       }
     ],
     "Rating": null,
@@ -736,8 +736,8 @@
     "SetName": "God",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 12970.0
       }
     ],
     "Rating": null,
@@ -748,8 +748,8 @@
     "SetName": "God",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 5939.0
       }
     ],
     "Rating": null,
@@ -760,8 +760,8 @@
     "SetName": "God",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 22.763
       }
     ],
     "Rating": null,
@@ -773,7 +773,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 0.0
+        "Count": 11.0
       }
     ],
     "Rating": null,
@@ -784,8 +784,8 @@
     "SetName": "Rubbish",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 1,
+        "Count": 8.0
       }
     ],
     "Rating": null,
@@ -796,8 +796,8 @@
     "SetName": "Rubbish",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 3,
+        "Count": 6.0
       }
     ],
     "Rating": null,
@@ -808,8 +808,8 @@
     "SetName": "Rubbish",
     "Bonuses": [
       {
-        "Name": 0,
-        "Count": 0.0
+        "Name": 10,
+        "Count": 0.01
       }
     ],
     "Rating": null,

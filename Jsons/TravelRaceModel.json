@@ -65,7 +65,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -130,7 +136,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -195,7 +207,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -260,7 +278,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -325,7 +349,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -390,7 +420,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -455,7 +491,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -520,7 +562,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -585,7 +633,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -650,7 +704,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Alliance"
+          }
+        ]
       }
     ],
     "Id": "AllianceTravel"
@@ -721,7 +781,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -786,7 +852,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -851,7 +923,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -916,7 +994,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -981,7 +1065,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1046,7 +1136,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1111,7 +1207,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1176,7 +1278,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1241,7 +1349,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1306,7 +1420,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Desertes"
+          }
+        ]
       }
     ],
     "Id": "DesertesTravel"
@@ -1377,7 +1497,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1442,7 +1568,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1507,7 +1639,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1572,7 +1710,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1637,7 +1781,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1702,7 +1852,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1767,7 +1923,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1832,7 +1994,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1897,7 +2065,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -1962,7 +2136,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Dwellers"
+          }
+        ]
       }
     ],
     "Id": "DwellersTravel"
@@ -2033,7 +2213,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2098,7 +2284,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2163,7 +2355,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2228,7 +2426,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2293,7 +2497,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2358,7 +2568,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2423,7 +2639,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2488,7 +2710,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2553,7 +2781,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2618,7 +2852,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Renegades"
+          }
+        ]
       }
     ],
     "Id": "RenegadesTravel"
@@ -2689,7 +2929,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2754,7 +3000,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2819,7 +3071,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2884,7 +3142,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -2949,7 +3213,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3014,7 +3284,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3079,7 +3355,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3144,7 +3426,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3209,7 +3497,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3274,7 +3568,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Technicians"
+          }
+        ]
       }
     ],
     "Id": "TechniciansTravel"
@@ -3345,7 +3645,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3410,7 +3716,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3475,7 +3787,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3540,7 +3858,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3605,7 +3929,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3670,7 +4000,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3735,7 +4071,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3800,7 +4142,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3865,7 +4213,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       },
       {
         "SmashReward": {
@@ -3930,7 +4284,13 @@
               }
             }
           ]
-        }
+        },
+        "HeroRestrictions": [
+          {
+            "$type": "Models.Fights.Campaign.Restrictions.Imps.TypeHeroRestrictions, Assembly-CSharp",
+            "Race": "Undead"
+          }
+        ]
       }
     ],
     "Id": "UndeadTravel"
