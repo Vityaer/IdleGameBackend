@@ -248,7 +248,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 
             await _resourceController.SubstactResources(cost);
 
-            GetNewTasks(playerId, 1, out var resultTasks);
+            GetNewTasks(playerId, playerNotStartedTasks.Count, out var resultTasks);
 
             _context.GameTasks.RemoveRange(playerNotStartedTasks);
             _context.GameTasks.AddRange(resultTasks);
