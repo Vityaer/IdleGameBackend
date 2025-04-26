@@ -32,6 +32,7 @@ using UniverseRift.Controllers.Players.Inventories;
 using UniverseRift.Controllers.Players.Inventories.Items;
 using UniverseRift.Controllers.Players.Inventories.Splinters;
 using UniverseRift.Controllers.Server;
+using UniverseRift.Controllers.Services.TaskCreators;
 using UniverseRift.Services;
 using UniverseRift.Services.Resources;
 using UniverseRift.Services.Rewarders;
@@ -44,6 +45,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
+
+// Buildings
 builder.Services.AddSingleton<IServerController, ServerController>();
 builder.Services.AddSingleton<IResourceManager, ResourcesManager>();
 builder.Services.AddSingleton<IJsonConverter, JsonConverter>();
@@ -76,6 +79,10 @@ builder.Services.AddSingleton<IFriendshipController, FriendshipController>();
 builder.Services.AddSingleton<ILongTravelController, LongTravelController>();
 builder.Services.AddSingleton<IMailController, MailController>();
 builder.Services.AddSingleton<IBotController, BotController>();
+
+//Services
+builder.Services.AddSingleton<ITaskCreatorService, TaskCreatorService>();
+
 
 builder.Services.AddHostedService<MyHostedService>();
 

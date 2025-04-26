@@ -183,7 +183,7 @@ namespace UniverseRift.Controllers.Games
             playerSave.City.MainCampaignSave = await _campaignController.GetPlayerSave(playerId);
             playerSave.City.MallSave = await _mallController.GetPlayerSave(playerId);
             playerSave.City.FortuneWheelData = await _fortuneWheelController.GetPlayerSave(playerId, flagCreateNewData);
-            playerSave.City.TaskBoardData = await GetTaskboardSave(playerId, flagCreateNewData);
+            playerSave.City.TaskBoardData = await _taskBoardController.GetPlayerSave(playerId, flagCreateNewData);
             playerSave.City.DailyReward = await _dailyRewardController.GetPlayerSave(playerId, flagCreateNewData);
 
             playerSave.BattlepasData = await _battlepasController.GetPlayerSave(playerId, flagCreateNewData);
@@ -204,7 +204,7 @@ namespace UniverseRift.Controllers.Games
             playerSave.CycleEventsData = await _gameCycleController.GetPlayerSave(playerId);
             playerSave.AchievmentStorage = await _achievmentController.GetPlayerSave(playerId);
             await _friendshipController.GetPlayerSave(playerId, playerSave.CommunicationData);
-            playerSave.City.GuildPlayerSaveContainer = await _guildController.GetPlayerSave(playerId, playerSave.CommunicationData);
+            playerSave.City.GuildPlayerSaveContainer = await _guildController.GetPlayerSave(playerId, playerSave.CommunicationData, flagCreateNewData);
 
             if (flagCreateNewData)
             {
@@ -222,91 +222,6 @@ namespace UniverseRift.Controllers.Games
             return result;
         }
 
-        private async Task<FortuneWheelModel> CreateFortuneWheel(int playerId)
-        {
-            var playerWheel = await LoadFortuneWheel(playerId);
-            var newWheel = new FortuneWheelModel();
-
-            var rewardsData = new FortuneWheelData();
-
-            var rewardModels = _commonDictionaries.FortuneRewardModels.ToList();
-            for (var i = 0; i < REWARD_COUNT; i++)
-            {
-                var rand = _random.Next(0, rewardModels.Count);
-                var randomReward = rewardModels[rand].Value;
-                rewardsData.Rewards.Add(new FortuneRewardData { RewardModelId = randomReward.Id });
-            }
-            newWheel.PlayerId = playerId;
-            newWheel.RewardsJson = _jsonConverter.Serialize(rewardsData);
-
-            if (playerWheel == null)
-            {
-                await _context.FortuneWheels.AddAsync(newWheel);
-            }
-
-            playerWheel = newWheel;
-            await _context.SaveChangesAsync();
-
-            return playerWheel;
-        }
-
-        private async Task<FortuneWheelModel> LoadFortuneWheel(int playerId)
-        {
-            var wheels = await _context.FortuneWheels.ToListAsync();
-            var playerWheel = wheels.Find(wheel => wheel.PlayerId == playerId);
-            return playerWheel;
-        }
-
-        private const int DAILY_TASK_COUNT = 5;
-        public async Task<TaskBoardData> GetTaskboardSave(int playerId, bool flagCreateNewData)
-        {
-            var result = new TaskBoardData();
-            var allTasks = await _context.GameTasks.ToListAsync();
-
-            var playerTasks = allTasks.FindAll(task => task.PlayerId == playerId);
-
-            if (flagCreateNewData)
-            {
-                var notStartableTasks = playerTasks.FindAll(task => task.Status == TaskStatusType.NotStart);
-
-                if (notStartableTasks.Count < DAILY_TASK_COUNT)
-                {
-                    var notEnoughCount = DAILY_TASK_COUNT - notStartableTasks.Count;
-                    GetNewTasks(playerId, notEnoughCount, out var newTasks);
-                    playerTasks.AddRange(newTasks);
-
-                    await _context.GameTasks.AddRangeAsync(newTasks);
-                    await _context.SaveChangesAsync();
-                }
-            }
-
-            foreach (var task in playerTasks)
-            {
-                result.ListTasks.Add(new TaskData(task));
-            }
-
-            return result;
-        }
-
-        private void GetNewTasks(int playerId, int count, out List<GameTask> resultTasks)
-        {
-            var gameTaskModels = _commonDictionaries.GameTaskModels.ToList();
-
-            resultTasks = new List<GameTask>(count);
-
-            for (var i = 0; i < count; i++)
-            {
-                var random = _random.Next(0, gameTaskModels.Count);
-                var taskModel = gameTaskModels[random].Value;
-
-                var intFactorDelta = (int)(taskModel.FactorDelta * 100f);
-                var randFactor = _random.Next(100 - intFactorDelta, 100 + intFactorDelta + 1) / 100f;
-                randFactor = (float)Math.Round(randFactor, 2);
-
-                var newTask = new GameTask(playerId, taskModel, randFactor);
-                resultTasks.Add(newTask);
-            }
-        }
 
         public async Task<HeroesStorage> GetHeroesSave(int playerId)
         {

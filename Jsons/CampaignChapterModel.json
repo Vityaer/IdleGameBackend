@@ -46,7 +46,7 @@
                 "Id": "PupilArmor",
                 "Amount": 1
               },
-              "Posibility": 50000
+              "Posibility": 10000
             }
           ],
           "Splinters": [
@@ -76,7 +76,7 @@
                 "Id": "PupilArmor",
                 "Amount": 1
               },
-              "Posibility": 50000
+              "Posibility": 10000
             },
             {
               "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",

@@ -8,5 +8,6 @@ namespace UniverseRift.Models.Tasks.SimpleTask
         public int RequireHour;
         public float FactorDelta;
         public RewardModel Reward;
-    }
+		public GameTaskSourceType SourceType;
+	}
 }

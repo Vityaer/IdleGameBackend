@@ -27,6 +27,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "KillDragon"
   },
   {
@@ -57,6 +58,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "BuyArtifact"
   },
   {
@@ -87,6 +89,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "CreateArtifact"
   },
   {
@@ -111,6 +114,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "DestroyWorld"
   },
   {
@@ -141,6 +145,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "FortuneWheel"
   },
   {
@@ -171,6 +176,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "KillBandits"
   },
   {
@@ -201,6 +207,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "DefendPrincess"
   },
   {
@@ -231,6 +238,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "BuildFort"
   },
   {
@@ -255,6 +263,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "RepairAmulet"
   },
   {
@@ -285,6 +294,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "FightWithDevil"
   },
   {
@@ -315,6 +325,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "SpeakWithPeople"
   },
   {
@@ -345,6 +356,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "CollectFlowers"
   },
   {
@@ -375,6 +387,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "PatrolCity"
   },
   {
@@ -405,6 +418,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "Training"
   },
   {
@@ -435,6 +449,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "Running"
   },
   {
@@ -465,6 +480,7 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "FightWithWolf"
   },
   {
@@ -495,6 +511,193 @@
         }
       ]
     },
+    "SourceType": 0,
     "Id": "FindFortune"
+  },
+  {
+    "Rating": 1,
+    "RequireHour": 2,
+    "FactorDelta": 0.2,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 30.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 30.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "SourceType": 0,
+    "Id": "GuildTaskLevel1"
+  },
+  {
+    "Rating": 2,
+    "RequireHour": 4,
+    "FactorDelta": 0.3,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 50.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 50.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "SourceType": 1,
+    "Id": "GuildTaskLevel2"
+  },
+  {
+    "Rating": 3,
+    "RequireHour": 5,
+    "FactorDelta": 0.2,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 80.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 80.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "SourceType": 1,
+    "Id": "GuildTaskLevel3"
+  },
+  {
+    "Rating": 4,
+    "RequireHour": 6,
+    "FactorDelta": 0.2,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 110.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 110.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "SourceType": 1,
+    "Id": "GuildTaskLevel4"
+  },
+  {
+    "Rating": 5,
+    "RequireHour": 8,
+    "FactorDelta": 0.2,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 150.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 150.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "SourceType": 1,
+    "Id": "GuildTaskLevel5"
+  },
+  {
+    "Rating": 6,
+    "RequireHour": 10,
+    "FactorDelta": 0.1,
+    "Reward": {
+      "Resources": [
+        {
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 200.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Items": [],
+      "Splinters": [],
+      "Id": null,
+      "Objects": [
+        {
+          "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+          "Type": 1,
+          "Amount": {
+            "Mantissa": 200.0,
+            "E10": 0
+          }
+        }
+      ]
+    },
+    "SourceType": 1,
+    "Id": "GuildTaskLevel6"
   }
 ]
