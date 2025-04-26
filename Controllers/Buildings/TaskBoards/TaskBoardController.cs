@@ -9,6 +9,7 @@ using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
 using UniverseRift.Controllers.Server;
+using UniverseRift.Controllers.Services.TaskCreators;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.Heplers.Utils;
 using UniverseRift.Models.City.Markets;
@@ -33,9 +34,9 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
         private readonly ICommonDictionaries _commonDictionaries;
         private readonly IRewardService _clientRewardService;
         private readonly IAchievmentController _achievmentController;
+        private readonly ITaskCreatorService _taskCreatorService;
 
-        private readonly Random _random = new Random();
-        private readonly CompositeDisposable _disposables = new CompositeDisposable();
+		private readonly Random _random = new Random();
 
         public TaskBoardController(
             AplicationContext context,
@@ -43,8 +44,9 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
             IResourceManager resourceController,
             ICommonDictionaries commonDictionaries,
             IRewardService clientRewardService,
-            IAchievmentController achievmentController
-            )
+            IAchievmentController achievmentController,
+			ITaskCreatorService taskCreatorService
+			)
         {
             _commonDictionaries = commonDictionaries;
             _achievmentController = achievmentController;
@@ -52,9 +54,53 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
             _clientRewardService = clientRewardService;
             _jsonConverter = jsonConverter;
             _resourceController = resourceController;
-        }
+			_taskCreatorService = taskCreatorService;
 
-        public async Task DeleteTasks()
+		}
+
+		public async Task<TaskBoardData> GetPlayerSave(int playerId, bool flagCreateNewData)
+		{
+			var result = new TaskBoardData();
+			var allTasks = await _context.GameTasks.ToListAsync();
+
+			List<GameTask> playerTasks = new(10);
+
+			var playerAllTasks = allTasks.FindAll(task => task.PlayerId == playerId);
+			foreach (var task in playerAllTasks)
+			{
+				if (_commonDictionaries.GameTaskModels.TryGetValue(task.TaskModelId, out var taskModel))
+				{
+					if (taskModel.SourceType == GameTaskSourceType.Taskboard)
+					{
+						playerTasks.Add(task);
+					}
+				}
+			}
+
+			if (flagCreateNewData)
+			{
+				var notStartableTasks = playerTasks.FindAll(task => task.Status == TaskStatusType.NotStart);
+
+				if (notStartableTasks.Count < DAILY_TASK_COUNT)
+				{
+					var notEnoughCount = DAILY_TASK_COUNT - notStartableTasks.Count;
+					_taskCreatorService.GetNewTasks(playerId, notEnoughCount, GameTaskSourceType.Taskboard, out var newTasks);
+					playerTasks.AddRange(newTasks);
+
+					await _context.GameTasks.AddRangeAsync(newTasks);
+					await _context.SaveChangesAsync();
+				}
+			}
+
+			foreach (var task in playerTasks)
+			{
+				result.ListTasks.Add(new TaskData(task));
+			}
+
+			return result;
+		}
+
+		public async Task DeleteTasks()
         {
             var allTasks = await _context.GameTasks.ToListAsync();
             var now = DateTime.UtcNow;
@@ -162,7 +208,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 
             await _resourceController.SubstactResources(cost);
 
-            GetNewTasks(playerId, 1, out var resultTasks);
+            _taskCreatorService.GetNewTasks(playerId, 1, GameTaskSourceType.Taskboard, out var resultTasks);
 
             _context.GameTasks.AddRange(resultTasks);
             await _context.SaveChangesAsync();
@@ -220,7 +266,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 
             await _resourceController.SubstactResources(cost);
 
-            GetNewTasks(playerId, 1, out var resultTasks);
+			_taskCreatorService.GetNewTasks(playerId, 1, GameTaskSourceType.Taskboard, out var resultTasks);
             _context.GameTasks.AddRange(resultTasks);
             await _context.SaveChangesAsync();
 
@@ -248,7 +294,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 
             await _resourceController.SubstactResources(cost);
 
-            GetNewTasks(playerId, playerNotStartedTasks.Count, out var resultTasks);
+			_taskCreatorService.GetNewTasks(playerId, playerNotStartedTasks.Count, GameTaskSourceType.Taskboard, out var resultTasks);
 
             _context.GameTasks.RemoveRange(playerNotStartedTasks);
             _context.GameTasks.AddRange(resultTasks);
@@ -257,26 +303,6 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 
             answer.Result = _jsonConverter.Serialize(resultTasks);
             return answer;
-        }
-
-        private void GetNewTasks(int playerId, int count, out List<GameTask> resultTasks)
-        {
-            var gameTaskModels = _commonDictionaries.GameTaskModels.ToList();
-
-            resultTasks = new List<GameTask>(count);
-
-            for (var i = 0; i < count; i++)
-            {
-                var random = _random.Next(0, gameTaskModels.Count);
-                var taskModel = gameTaskModels[random].Value;
-
-                var intFactorDelta = (int)(taskModel.FactorDelta * 100f);
-                var randFactor = _random.Next(100 - intFactorDelta, 100 + intFactorDelta + 1) / 100f;
-                randFactor = (float)Math.Round(randFactor, 2);
-
-                var newTask = new GameTask(playerId, taskModel, randFactor);
-                resultTasks.Add(newTask);
-            }
         }
 
         private bool CheckTask(GameTask task, int playerId, AnswerModel answer)
@@ -296,34 +322,6 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
             return true;
         }
 
-        public async Task<TaskBoardData> GetPlayerSave(int playerId, bool flagCreateNewData)
-        {
-            var result = new TaskBoardData();
-            var allTasks = await _context.GameTasks.ToListAsync();
-
-            var playerTasks = allTasks.FindAll(task => task.PlayerId == playerId);
-
-            if (flagCreateNewData)
-            {
-                var notStartableTasks = playerTasks.FindAll(task => task.Status == TaskStatusType.NotStart);
-
-                if (notStartableTasks.Count < DAILY_TASK_COUNT)
-                {
-                    var notEnoughCount = DAILY_TASK_COUNT - notStartableTasks.Count;
-                    GetNewTasks(playerId, notEnoughCount, out var newTasks);
-                    playerTasks.AddRange(newTasks);
-
-                    await _context.GameTasks.AddRangeAsync(newTasks);
-                    await _context.SaveChangesAsync();
-                }
-            }
-
-            foreach (var task in playerTasks)
-            {
-                result.ListTasks.Add(new TaskData(task));
-            }
-
-            return result;
-        }
+      
     }
 }

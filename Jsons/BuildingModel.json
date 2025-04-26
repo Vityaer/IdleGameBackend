@@ -410,5 +410,25 @@
     ],
     "name": "MainMineBuilding",
     "Id": "MainMineBuilding"
+  },
+  {
+    "$type": "Models.City.Guilds.GuildBuildingModel, Assembly-CSharp",
+    "LevelContainers": [
+      {
+        "TaskPosibilityContainers": [],
+        "DailyTaskCount": 0
+      },
+      {
+        "TaskPosibilityContainers": [
+          {
+            "Rating": 1,
+            "Posibility": 100.0
+          }
+        ],
+        "DailyTaskCount": 1
+      }
+    ],
+    "name": null,
+    "Id": "GuildBuildingModel"
   }
 ]
