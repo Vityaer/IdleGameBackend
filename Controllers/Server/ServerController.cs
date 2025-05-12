@@ -5,6 +5,7 @@ using System.Globalization;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Bots;
 using UniverseRift.Controllers.Buildings.Achievments;
+using UniverseRift.Controllers.Buildings.Arenas;
 using UniverseRift.Controllers.Buildings.FortuneWheels;
 using UniverseRift.Controllers.Buildings.GameCycles;
 using UniverseRift.Controllers.Buildings.Guilds;
@@ -31,8 +32,9 @@ namespace UniverseRift.Controllers.Server
         private readonly IGuildController _guildController;
         private readonly IFortuneWheelController _fortuneWheelController;
         private readonly IBotController _botController;
+        private readonly IArenaController _arenaController;
 
-        private readonly TimeSpan Day = new TimeSpan(24, 0, 0);
+		private readonly TimeSpan Day = new TimeSpan(24, 0, 0);
         private readonly TimeSpan Week = new TimeSpan(7, 0, 0, 0);
         private readonly TimeSpan Month = new TimeSpan(30, 0, 0, 0);
         private readonly TimeSpan GameCycle = new TimeSpan(5, 0, 0, 0);
@@ -50,8 +52,9 @@ namespace UniverseRift.Controllers.Server
             IGameCycleController gameCycleController,
             IGuildController guildController,
             IBotController botController,
-            IFortuneWheelController fortuneWheelController
-            )
+            IFortuneWheelController fortuneWheelController,
+			IArenaController arenaController
+			)
         {
             _context = context;
             _cancellationTokenSource = new();
@@ -63,7 +66,9 @@ namespace UniverseRift.Controllers.Server
             _guildController = guildController;
             _botController = botController;
             _fortuneWheelController = fortuneWheelController;
-        }
+			_arenaController = arenaController;
+
+		}
 
         public async Task OnStartProject()
         {
@@ -94,7 +99,8 @@ namespace UniverseRift.Controllers.Server
                 await _context.ServerLifeTimes.AddAsync(_server);
                 await _botController.OnStartServer();
                 await _marketController.OnStartServer();
-                await _context.SaveChangesAsync();
+                await _arenaController.OnStartServer();
+				await _context.SaveChangesAsync();
             }
             else
             {

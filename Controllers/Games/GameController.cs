@@ -206,6 +206,12 @@ namespace UniverseRift.Controllers.Games
             await _friendshipController.GetPlayerSave(playerId, playerSave.CommunicationData);
             playerSave.City.GuildPlayerSaveContainer = await _guildController.GetPlayerSave(playerId, playerSave.CommunicationData, flagCreateNewData);
 
+            var allTeams = await _context.ServerPlayerTeamDatas.ToListAsync();
+            var playerTeams = allTeams.FindAll(team => team.PlayerId == playerId);
+            foreach (var team in playerTeams)
+            {
+                playerSave.Teams.Add(team.Name, team.ArmyData);
+            }
             if (flagCreateNewData)
             {
                 player.LastUpdateGameData = now.ToString();

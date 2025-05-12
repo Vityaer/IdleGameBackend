@@ -7,6 +7,7 @@
             "HeroId": "Imp",
             "Level": 1,
             "Rating": 1,
+            "Stage": 0,
             "Attack": {
               "Mantissa": 1.0,
               "E10": 3
@@ -33,6 +34,7 @@
             "HeroId": "Dragon",
             "Level": 5,
             "Rating": 1,
+            "Stage": 0,
             "Attack": {
               "Mantissa": 1.0,
               "E10": 3
@@ -59,6 +61,7 @@
             "HeroId": "PitBoy",
             "Level": 10,
             "Rating": 1,
+            "Stage": 0,
             "Attack": {
               "Mantissa": 1.0,
               "E10": 3
@@ -85,6 +88,7 @@
             "HeroId": "Snake",
             "Level": 50,
             "Rating": 1,
+            "Stage": 0,
             "Attack": {
               "Mantissa": 1.0,
               "E10": 3
@@ -111,6 +115,7 @@
             "HeroId": "Treestor",
             "Level": 100,
             "Rating": 1,
+            "Stage": 0,
             "Attack": {
               "Mantissa": 1.0,
               "E10": 3

@@ -23,6 +23,7 @@ using UniverseRift.Models.Rewards;
 using UniverseRift.Models.Tasks.SimpleTask;
 using UniverseRift.Models.Voyages;
 using Models.City.Mines;
+using UniverseRift.Models.Teams;
 
 namespace UniverseRift.Contexts
 {
@@ -64,8 +65,11 @@ namespace UniverseRift.Contexts
         public DbSet<MineData> MineDatas { get; set; }
         public DbSet<MineMissionData> MineMissionDatas { get; set; }
         public DbSet<IndustryServerData> IndustryServerDatas { get; set; }
+        public DbSet<ServerPlayerTeamData> ServerPlayerTeamDatas { get; set; }
+        public DbSet<ArenaSeason> ArenaSeasons { get; set; }
 
-        public AplicationContext(DbContextOptions<AplicationContext> options)
+
+		public AplicationContext(DbContextOptions<AplicationContext> options)
             : base(options)
         {
             Database.EnsureDeleted(); // удаление базы данных

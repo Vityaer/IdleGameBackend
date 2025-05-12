@@ -2,7 +2,7 @@
   {
     "Rating": 5,
     "RequireHour": 10,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -33,7 +33,7 @@
   {
     "Rating": 3,
     "RequireHour": 6,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -64,7 +64,7 @@
   {
     "Rating": 4,
     "RequireHour": 7,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -95,7 +95,7 @@
   {
     "Rating": 6,
     "RequireHour": 12,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [],
       "Items": [
@@ -120,7 +120,7 @@
   {
     "Rating": 5,
     "RequireHour": 9,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -151,7 +151,7 @@
   {
     "Rating": 3,
     "RequireHour": 4,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -182,7 +182,7 @@
   {
     "Rating": 6,
     "RequireHour": 11,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -213,7 +213,7 @@
   {
     "Rating": 2,
     "RequireHour": 5,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -244,7 +244,7 @@
   {
     "Rating": 2,
     "RequireHour": 4,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [],
       "Items": [
@@ -269,7 +269,7 @@
   {
     "Rating": 6,
     "RequireHour": 12,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -300,7 +300,7 @@
   {
     "Rating": 1,
     "RequireHour": 2,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -331,7 +331,7 @@
   {
     "Rating": 1,
     "RequireHour": 2,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -362,7 +362,7 @@
   {
     "Rating": 3,
     "RequireHour": 5,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -393,7 +393,7 @@
   {
     "Rating": 3,
     "RequireHour": 4,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -424,7 +424,7 @@
   {
     "Rating": 1,
     "RequireHour": 2,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -455,7 +455,7 @@
   {
     "Rating": 1,
     "RequireHour": 2,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -486,7 +486,7 @@
   {
     "Rating": 3,
     "RequireHour": 5,
-    "FactorDelta": 0.0,
+    "FactorDelta": 0.2,
     "Reward": {
       "Resources": [
         {
@@ -542,7 +542,7 @@
         }
       ]
     },
-    "SourceType": 0,
+    "SourceType": 1,
     "Id": "GuildTaskLevel1"
   },
   {

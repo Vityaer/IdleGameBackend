@@ -8,8 +8,6 @@ namespace UniverseRift.Models.Arenas
         public int Id { get; set; }
         public int PlayerId { get; set; }
         public int Score { get; set; }
-        public int CurrentAreanaLevel { get; set; }
-        public int MaxArenaLevel { get; set; }
         public string ArmyData { get; set; } = string.Empty;
         public int WinCount { get; set; }
         public int LoseCount { get; set; }
@@ -21,7 +19,9 @@ namespace UniverseRift.Models.Arenas
             Id = serverArenaPlayerData.Id;
             PlayerId = serverArenaPlayerData.PlayerId;
             Score = serverArenaPlayerData.Score;
-            CurrentAreanaLevel = serverArenaPlayerData.CurrentAreanaLevel;
-        }
+			WinCount = serverArenaPlayerData.WinCount;
+			LoseCount = serverArenaPlayerData.LoseCount;
+			ArmyData = serverArenaPlayerData.ArmyData;
+		}
     }
 }

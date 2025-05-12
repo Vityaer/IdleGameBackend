@@ -20,7 +20,7 @@ namespace UniverseRift.GameModelDatas.Cities
         public TravelBuildingData TravelCircleSave = new TravelBuildingData();
         public GuildPlayerSaveContainer GuildPlayerSaveContainer = new GuildPlayerSaveContainer();
         public VoyageBuildingData VoyageSave = new VoyageBuildingData();
-        public ArenaBuildingModel ArenaSave;
+        public ArenaData ArenaSave;
         public SimpleBuildingData Tutorial = new SimpleBuildingData();
         public DailyRewardContainer DailyReward = new DailyRewardContainer();
         public FortuneWheelData FortuneWheelData = new FortuneWheelData();

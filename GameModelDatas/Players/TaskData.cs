@@ -9,13 +9,16 @@ namespace UniverseRift.GameModelDatas.Players
         public string TaskModelId;
         public TaskStatusType Status;
         public string DateTimeStart;
+		public float Factor;
 
-        public TaskData(GameTask task)
+		public TaskData(GameTask task)
         {
             TaskId = task.Id;
             TaskModelId = task.TaskModelId;
             Status = task.Status;
             DateTimeStart = task.DateTimeStart;
-        }
+			Factor = task.RewardFactor;
+
+		}
     }
 }

@@ -590,5 +590,22 @@
     },
     "Type": 0,
     "Id": "PromoCityMarketWolfSplinters"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PiBoySplinter",
+      "Amount": 30
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 100.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "AltarMarketHero"
   }
 ]

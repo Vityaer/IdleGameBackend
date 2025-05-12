@@ -14,6 +14,7 @@ using UniverseRift.Models.Achievments;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Resources;
 using UniverseRift.Models.Results;
+using UniverseRift.Models.Teams;
 using UniverseRift.Services.Resources;
 
 namespace UniverseRift.Controllers.Players.Heroes
@@ -235,12 +236,16 @@ namespace UniverseRift.Controllers.Players.Heroes
                 hero.Rating = rating;
 
                 heroes.Add(hero);
-                var heroData = new HeroData(hero);
-                result.Add(heroData);
             }
 
             await _context.Heroes.AddRangeAsync(heroes);
             await _context.SaveChangesAsync();
+
+            foreach(var hero in heroes)
+            {
+				var heroData = new HeroData(hero);
+				result.Add(heroData);
+			}
 
             return result;
         }
@@ -278,7 +283,37 @@ namespace UniverseRift.Controllers.Players.Heroes
             return answer;
         }
 
-        public async Task<HeroesStorage> GetPlayerSave(int playerId)
+		[HttpPost]
+		[Route("Heroes/SetDefenders")]
+		public async Task<AnswerModel> SetDefenders(int playerId, string heroesIdsContainer, string teamsContainerName)
+		{
+			var answer = new AnswerModel();
+			var allTeamDatas = await _context.ServerPlayerTeamDatas.ToListAsync();
+
+			var targetTeamData = allTeamDatas.Find(data => (data.PlayerId == playerId)
+            && teamsContainerName.Equals(data.ArmyData));
+
+            if (targetTeamData == null)
+            {
+                targetTeamData = new ServerPlayerTeamData(
+                    playerId,
+                    teamsContainerName,
+                    heroesIdsContainer
+                );
+
+                await _context.ServerPlayerTeamDatas.AddAsync(targetTeamData);
+            }
+            else
+            {
+			    targetTeamData.ArmyData = heroesIdsContainer;
+            }
+
+			await _context.SaveChangesAsync();
+			answer.Result = "Success!";
+			return answer;
+		}
+
+		public async Task<HeroesStorage> GetPlayerSave(int playerId)
         {
             var result = new HeroesStorage();
 

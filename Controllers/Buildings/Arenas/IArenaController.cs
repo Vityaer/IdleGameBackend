@@ -6,7 +6,12 @@ namespace UniverseRift.Controllers.Buildings.Arenas
 {
     public interface IArenaController
     {
-        Task<ArenaBuildingModel> GetPlayerSave(int playerId, CommunicationData communicationData);
+		Task OnPlayerRegister(int playerId);
+
+		Task OnStartServer();
+        Task RefreshDay();
+
+		Task<ArenaData> GetPlayerSave(int playerId, CommunicationData communicationData);
         Task<AnswerModel> SetDefenders(int playerId, string heroesIdsContainer);
     }
 }

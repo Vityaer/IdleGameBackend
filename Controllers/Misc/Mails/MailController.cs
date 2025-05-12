@@ -4,6 +4,7 @@ using Misc.Json;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
 using UniverseRift.GameModelDatas.Players;
+using UniverseRift.GameModels;
 using UniverseRift.Models.Misc;
 using UniverseRift.Models.Misc.Communications;
 using UniverseRift.Models.Results;
@@ -88,7 +89,7 @@ namespace UniverseRift.Controllers.Misc.Mails
                 return answer;
             }
 
-            if (letter.RewardId < 0)
+            if (string.IsNullOrEmpty(letter.RewardJSON))
             {
                 answer.Error = "Reward empty";
                 return answer;
@@ -100,16 +101,12 @@ namespace UniverseRift.Controllers.Misc.Mails
                 return answer;
             }
 
-            var rewardServerData = await _context.RewardServerDatas.FindAsync(letter.RewardId);
-            if (rewardServerData == null)
-            {
-                answer.Error = "Reward not found!";
-                return answer;
-            }
+            var reward = _jsonConverter.Deserialize<RewardModel>(letter.RewardJSON);
+            await _clientRewardService.AddReward(playerId, reward);
 
             letter.IsRewardReceived = true;
             await _context.SaveChangesAsync();
-            answer.Result = rewardServerData.RewardJSON;
+            answer.Result = letter.RewardJSON;
             return answer;
         }
 

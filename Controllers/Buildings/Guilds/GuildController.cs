@@ -2,10 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
 using Models.City.Guilds;
-using Models.City.Hires;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
 using UniverseRift.Controllers.Services.TaskCreators;
+using UniverseRift.GameModelDatas.Heroes;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.Common;
@@ -37,6 +37,7 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 		private readonly IJsonConverter _jsonConverter;
 		private readonly IResourceManager _resourcesController;
 		private readonly ITaskCreatorService _taskCreatorService;
+
 		public GuildController(
 			AplicationContext context,
 			ICommonDictionaries commonDictionaries,
@@ -151,7 +152,7 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 
 			GuildBuildingModel guildBuilding = _commonDictionaries.Buildings[nameof(GuildBuildingModel)] as GuildBuildingModel;
 
-			int levelIndexContainer = Math.Clamp(guildData.Level, 0, guildBuilding.LevelContainers.Count);
+			int levelIndexContainer = Math.Clamp(guildData.DonateEvoleLevel, 0, guildBuilding.LevelContainers.Count);
 
 			GuildLevelContainer levelContainer = guildBuilding.LevelContainers[levelIndexContainer];
 
@@ -737,7 +738,7 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 
 		[HttpPost]
 		[Route("Guild/RaidBoss")]
-		public async Task<AnswerModel> RaidBoss(int playerId)
+		public async Task<AnswerModel> RaidBoss(int playerId, float damage)
 		{
 			var answer = new AnswerModel();
 
@@ -769,6 +770,7 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 				return answer;
 			}
 
+
 			await CheckRefreshRecruitRaids(recruit);
 
 			if (recruit.CountRaidBoss >= BOSS_FREE_RAID_COUNT)
@@ -786,12 +788,13 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 
 			recruit.CountRaidBoss += 1;
 
-			var damage = new BigDigit(1, 3);
+			var calculateDamage = new BigDigit(damage);
+
 			var currentHelth = new BigDigit(guild.BossHealthMantissa, guild.BossHealthE10);
-			currentHelth.Subtract(damage);
+			currentHelth.Subtract(calculateDamage);
 
 			var currentRecruitDamage = new BigDigit(recruit.ResultMantissa, recruit.ResultE10);
-			currentRecruitDamage.Add(damage);
+			currentRecruitDamage.Add(calculateDamage);
 			recruit.ResultMantissa = currentRecruitDamage.Mantissa;
 			recruit.ResultE10 = currentRecruitDamage.E10;
 

@@ -18,6 +18,6 @@ namespace UniverseRift.GameModelDatas.Players
         public BattlepasData BattlepasData;
         public CommunicationData CommunicationData = new();
         public TemporallyData TemporallyData = new();
-
+        public Dictionary<string, string> Teams = new();
     }
 }

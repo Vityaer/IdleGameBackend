@@ -294,7 +294,6 @@
         }
       ]
     },
-    "name": "MagicCircle",
     "Id": "MagicCircleBuildingModel"
   },
   {
@@ -408,7 +407,6 @@
         "MissionsCount": 15
       }
     ],
-    "name": "MainMineBuilding",
     "Id": "MainMineBuilding"
   },
   {
@@ -428,7 +426,365 @@
         "DailyTaskCount": 1
       }
     ],
-    "name": null,
     "Id": "GuildBuildingModel"
+  },
+  {
+    "$type": "Models.City.Sanctuaries.SanctuaryBuildingModel, Assembly-CSharp",
+    "SimpleReplaceResource": [
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 10.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 25.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 50.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 75.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      }
+    ],
+    "ConcreteReplaceResource": [
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 25.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 50.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 75.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 0
+        }
+      },
+      {
+        "Type": 14,
+        "Amount": {
+          "Mantissa": 150.0,
+          "E10": 0
+        }
+      }
+    ],
+    "Id": "SanctuaryBuildingModel"
+  },
+  {
+    "$type": "Models.City.Arena.ArenaBuildingModel, Assembly-CSharp",
+    "ArenaContainers": {
+      "Simple": {
+        "RewardModels": [
+          {
+            "PositionMax": 1,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 1500.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 1500.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 2,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 1200.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 1200.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 3,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 1000.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 1000.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 5,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 800.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 800.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 9,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 500.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 500.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 24,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 300.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 300.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 49,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 200.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 200.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 99,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 100.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 100.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 999,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 50.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 50.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "PositionMax": 999999,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 10.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 10.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "WorkHours": 120
+      }
+    },
+    "Id": "ArenaBuildingModel"
   }
 ]

@@ -1,13 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using UniverseRift.Contexts;
 using UniverseRift.Models.Heroes;
 using UniverseRift.Models.Results;
 using Misc.Json;
 using UniverseRift.MessageData;
-using Microsoft.Extensions.Hosting;
 using UniverseRift.GameModels.Heroes;
 using UniverseRift.Controllers.Common;
+using Models.City.Sanctuaries;
+using UniverseRift.GameModels;
+using Models.Data.Inventories;
+using UniverseRift.Services.Resources;
+using UniverseRift.Models.Resources;
+using System.Resources;
 
 namespace UniverseRift.Controllers.Buildings
 {
@@ -15,25 +19,36 @@ namespace UniverseRift.Controllers.Buildings
     {
         private readonly AplicationContext _context;
         private readonly IJsonConverter _jsonConverter;
-        private readonly Random _random = new Random();
+        private static readonly Random _random = new Random();
         private readonly ICommonDictionaries _commonDictionaries;
+		private readonly IResourceManager _resourcesController;
 
-        public SanctuaryController(
+		public SanctuaryController(
             AplicationContext context,
             IJsonConverter jsonConverter,
-            ICommonDictionaries commonDictionaries)
+            ICommonDictionaries commonDictionaries,
+			IResourceManager resourcesController)
         {
             _context = context;
             _jsonConverter = jsonConverter;
             _commonDictionaries = commonDictionaries;
-        }
+            _resourcesController = resourcesController;
+
+		}
 
         [HttpPost]
         [Route("Sanctuary/ReplaceHero")]
-        public async Task<AnswerModel> ReplaceHero(int playerId, int heroId)
+        public async Task<AnswerModel> ReplaceHero(int playerId, int heroId, string targetRace)
         {
             var answer = new AnswerModel();
-            var hero = await _context.Heroes.FindAsync(heroId);
+
+			if (!_commonDictionaries.Races.ContainsKey(targetRace) && (targetRace != "Random"))
+			{
+				answer.Error = "Race not found";
+				return answer;
+			}
+
+			var hero = await _context.Heroes.FindAsync(heroId);
 
             if (hero == null)
             {
@@ -47,7 +62,50 @@ namespace UniverseRift.Controllers.Buildings
                 return answer;
             }
 
-            var allHeroes = _commonDictionaries.Heroes;
+			var sanctuaryBuildingModel = _commonDictionaries.Buildings[nameof(SanctuaryBuildingModel)] as SanctuaryBuildingModel;
+
+			ResourceData costReplaceData = null;
+
+            string raceResult = null;
+
+			if (targetRace == "Random")
+			{
+                if ((hero.Rating - 1) >= sanctuaryBuildingModel.SimpleReplaceResource.Count)
+                {
+					answer.Error = "Error rating";
+					return answer;
+				}
+
+				costReplaceData = sanctuaryBuildingModel.SimpleReplaceResource[hero.Rating - 1];
+
+				var randomRaceIndex = _random.Next(0, _commonDictionaries.Races.Count);
+				raceResult = _commonDictionaries.Races.ElementAt(randomRaceIndex).Value.Id;
+			}
+			else
+			{
+				if ((hero.Rating - 1) >= sanctuaryBuildingModel.ConcreteReplaceResource.Count)
+				{
+					answer.Error = "Error rating";
+					return answer;
+				}
+
+				costReplaceData = sanctuaryBuildingModel.ConcreteReplaceResource[hero.Rating - 1];
+                raceResult = targetRace;
+			}
+
+			var gameResource = new GameResource(costReplaceData);
+			var resource = new Resource(playerId, gameResource);
+
+			var resourceEnough = await _resourcesController.CheckResource(playerId, resource, answer);
+			if (!resourceEnough)
+			{
+				answer.Error = "Wrong data";
+				return answer;
+			}
+
+            await _resourcesController.SubstactResources(resource);
+
+			var allHeroes = _commonDictionaries.Heroes;
             var workList = new List<HeroModel>();
             HeroModel heroTemplate;
 
@@ -61,7 +119,7 @@ namespace UniverseRift.Controllers.Buildings
             }
 
             var raceHeroes = heroTemplates
-                .Where(template => template.Value.General.Race == oldHeroTemplate.General.Race)
+                .Where(template => template.Value.General.Race == raceResult)
                 .Select(x => x.Value)
                 .ToList();
 
@@ -70,7 +128,9 @@ namespace UniverseRift.Controllers.Buildings
             var randomIndex = _random.Next(0, raceHeroes.Count);
             var newHero = new Hero(playerId, raceHeroes[randomIndex]);
 
-            _context.Heroes.Remove(hero);
+            newHero.Rating = hero.Rating;
+
+			_context.Heroes.Remove(hero);
             await _context.Heroes.AddAsync(newHero);
             await _context.SaveChangesAsync();
 

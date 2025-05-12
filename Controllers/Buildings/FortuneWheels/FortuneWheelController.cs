@@ -60,7 +60,13 @@ namespace UniverseRift.Controllers.Buildings.FortuneWheels
                 return answer;
             }
 
-            var cost = new Resource() { PlayerId = playerId, Type = ResourceType.CoinFortune, Count = count, E10 = 0 };
+            var coinCount = 1;
+            if (count == 10)
+            {
+				coinCount = 8;
+            }
+
+            var cost = new Resource() { PlayerId = playerId, Type = ResourceType.CoinFortune, Count = coinCount, E10 = 0 };
             var permission = await _resourceController.CheckResource(playerId, cost, answer);
             if (!permission)
             {

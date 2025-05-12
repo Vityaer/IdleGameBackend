@@ -3,6 +3,7 @@ using Misc.Json;
 using Models.Data.Inventories;
 using UniRx;
 using UniverseRift.Contexts;
+using UniverseRift.Controllers.Buildings.Arenas;
 using UniverseRift.Controllers.Buildings.Battlepases;
 using UniverseRift.Controllers.Buildings.Campaigns;
 using UniverseRift.Controllers.Buildings.Guilds;
@@ -38,6 +39,7 @@ namespace UniverseRift.Controllers.Players
         private readonly IGuildController _guildController;
         private readonly ILongTravelController _longTravelController;
         private readonly IIndustryController _industryController;
+		private readonly IArenaController _arenaController;
 
 		private ReactiveCommand<int> _onPlayerRegistration = new();
 
@@ -56,7 +58,8 @@ namespace UniverseRift.Controllers.Players
             IFriendshipController friendshipController,
             IGuildController guildController,
             ILongTravelController longTravelController,
-			IIndustryController industryController
+			IIndustryController industryController,
+			IArenaController arenaController
 			)
         {
             _commonDictionaries = commonDictionaries;
@@ -72,6 +75,7 @@ namespace UniverseRift.Controllers.Players
             _guildController = guildController;
             _longTravelController = longTravelController;
 			_industryController = industryController;
+			_arenaController = arenaController;
 		}
 
         public async Task<Player> CreatePlayer(string name, string avatarPath, bool isBot)
@@ -98,6 +102,7 @@ namespace UniverseRift.Controllers.Players
             await _guildController.OnPlayerRegister(player.Id);
             await _longTravelController.OnPlayerRegister(player.Id);
             await _industryController.OnPlayerRegister(player.Id);
+            await _arenaController.OnPlayerRegister(player.Id);
 			return player;
         }
 

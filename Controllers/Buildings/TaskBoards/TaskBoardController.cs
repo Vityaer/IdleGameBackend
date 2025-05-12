@@ -181,7 +181,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
                 return answer;
             }
 
-            await _clientRewardService.AddReward(playerId, taskModel.Reward);
+            await _clientRewardService.AddReward(playerId, taskModel.Reward * task.RewardFactor);
 
             _context.GameTasks.Remove(task);
             await _context.SaveChangesAsync();
@@ -232,6 +232,13 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
             }
 
             var taskModel = _commonDictionaries.GameTaskModels[task.TaskModelId];
+
+            if (taskModel.SourceType != GameTaskSourceType.Taskboard)
+            {
+                answer.Error = "You can't speed up tasks from not Taskboard";
+				return answer;
+            }
+
             var cost = new Resource() { PlayerId = playerId, Type = ResourceType.Diamond, Count = 10 * taskModel.Rating, E10 = 0 };
 
             permission = await _resourceController.CheckResource(playerId, cost, answer);
@@ -242,7 +249,7 @@ namespace UniverseRift.Controllers.Buildings.TaskBoards
 
             await _resourceController.SubstactResources(cost);
 
-            await _clientRewardService.AddReward(playerId, taskModel.Reward);
+            await _clientRewardService.AddReward(playerId, taskModel.Reward * task.RewardFactor);
             _context.GameTasks.Remove(task);
             await _context.SaveChangesAsync();
 
