@@ -188,5 +188,68 @@
     },
     "CreateCost": [],
     "Id": "MainMineBuilding"
+  },
+  {
+    "Type": 0,
+    "SpritePath": "Assets/Resources/UI/Mines/15_opened_no_shadow_no_glow_crystals.png",
+    "IncomesContainer": {
+      "LevelsCost": [
+        {
+          "level": 1,
+          "Cost": [
+            {
+              "Type": 18,
+              "Amount": {
+                "Mantissa": 5.0,
+                "E10": 0
+              }
+            }
+          ],
+          "typeIncrease": 1,
+          "ListIncrease": [
+            2.0
+          ]
+        }
+      ],
+      "Id": null
+    },
+    "CostLevelUpContainer": {
+      "LevelsCost": [
+        {
+          "level": 0,
+          "Cost": [
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 120.0,
+                "E10": 3
+              }
+            }
+          ],
+          "typeIncrease": 0,
+          "ListIncrease": [
+            10.0
+          ]
+        }
+      ],
+      "Id": null
+    },
+    "CreateCost": [
+      {
+        "Type": 0,
+        "Amount": {
+          "Mantissa": 100.0,
+          "E10": 3
+        }
+      },
+      {
+        "Type": 1,
+        "Amount": {
+          "Mantissa": 1000.0,
+          "E10": 0
+        }
+      }
+    ],
+    "Id": "RedDustMine"
   }
 ]

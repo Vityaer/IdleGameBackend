@@ -5,7 +5,6 @@ namespace UniverseRift.Models.Achievments
 {
     public class AchievmentModel : BaseModel
     {
-        public AchievmentType Type;
         public ProgressType ProgressType;
         public List<AchievmentStageModel> Stages;
         public string ImplementationName;

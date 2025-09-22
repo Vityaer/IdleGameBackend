@@ -110,8 +110,10 @@ namespace UniverseRift.Controllers.Server
             WaitTime(DelayType.Day, Day, OnChangeDay, cancellationToken).Forget();
             WaitTime(DelayType.GameCycle, GameCycle, OnChangeGameCycle, cancellationToken).Forget();
 
-            _gameCycleController.SetChangeCycle(_server.EventType);
-        }
+            _gameCycleController.SetChangeCycle(_server, _server.EventType);
+
+			await _context.SaveChangesAsync();
+		}
 
         private async Task OnChangeDay()
         {
@@ -140,10 +142,23 @@ namespace UniverseRift.Controllers.Server
             if (nextEventIndex == listEventsCount)
                 nextEventIndex = 0;
 
+            _gameCycleController.OnChangeCycle(_server, (GameEventType)currentEventIndex, (GameEventType)nextEventIndex);
+            
+            if (_server.EventType == GameEventType.Sweet)
+            {
+                int sweetEventNumber = _server.SweetEventNumber + 1;
+
+                if (sweetEventNumber > 11)
+                {
+                    sweetEventNumber = 0;
+                }
+
+                _server.SweetEventNumber = sweetEventNumber;
+            }
+
             _server.EventType = (GameEventType)nextEventIndex;
             await _context.SaveChangesAsync();
 
-            _gameCycleController.OnChangeCycle((GameEventType)currentEventIndex, (GameEventType)nextEventIndex);
         }
 
         private async UniTaskVoid WaitTime(DelayType delayType, TimeSpan waitTime, Func<Task> onFinishWait, CancellationToken cancellationToken)

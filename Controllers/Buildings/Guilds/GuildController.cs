@@ -4,8 +4,8 @@ using Misc.Json;
 using Models.City.Guilds;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Common;
+using UniverseRift.Controllers.Misc.Mails;
 using UniverseRift.Controllers.Services.TaskCreators;
-using UniverseRift.GameModelDatas.Heroes;
 using UniverseRift.GameModelDatas.Players;
 using UniverseRift.GameModels;
 using UniverseRift.GameModels.Common;
@@ -37,6 +37,7 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 		private readonly IJsonConverter _jsonConverter;
 		private readonly IResourceManager _resourcesController;
 		private readonly ITaskCreatorService _taskCreatorService;
+		private readonly IMailController _mailController;
 
 		public GuildController(
 			AplicationContext context,
@@ -44,7 +45,8 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 			IJsonConverter jsonConverter,
 			IRewardService clientRewardService,
 			IResourceManager resourcesController,
-			ITaskCreatorService taskCreatorService
+			ITaskCreatorService taskCreatorService,
+			IMailController mailController
 			)
 		{
 			_context = context;
@@ -53,6 +55,7 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 			_resourcesController = resourcesController;
 			_jsonConverter = jsonConverter;
 			_taskCreatorService = taskCreatorService;
+			_mailController = mailController;
 
 		}
 
@@ -798,17 +801,6 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 			recruit.ResultMantissa = currentRecruitDamage.Mantissa;
 			recruit.ResultE10 = currentRecruitDamage.E10;
 
-			if (currentHelth.EqualsZero() || currentHelth.Mantissa < 0f)
-			{
-				guild.CurrentBoss += 1;
-				var container = _commonDictionaries.GuildBossContainers["MainBosses"];
-				var bossData = container.Missions[guild.CurrentBoss].BossModels[0];
-				currentHelth = new BigDigit(bossData.Health.Mantissa, bossData.Health.E10);
-			}
-
-			guild.BossHealthMantissa = currentHelth.Mantissa;
-			guild.BossHealthE10 = currentHelth.E10;
-
 			if (!recruit.TodayRaidBoss)
 			{
 				recruit.TodayRaidBoss = true;
@@ -817,9 +809,21 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 
 			await _context.SaveChangesAsync();
 
+			if (currentHelth.EqualsZero() || currentHelth.Mantissa < 0f)
+			{
+				await GiveRewardAsync(guild, guild.CurrentBoss);
+				guild.CurrentBoss += 1;
+				var container = _commonDictionaries.GuildBossContainers["MainBosses"];
+				var bossData = container.Missions[guild.CurrentBoss].BossModels[0];
+				currentHelth = new BigDigit(bossData.Health.Mantissa, bossData.Health.E10);
+				await _context.SaveChangesAsync();
+			}
+
+			guild.BossHealthMantissa = currentHelth.Mantissa;
+			guild.BossHealthE10 = currentHelth.E10;
+
 			var allRecruits = await _context.RecruitDatas.ToListAsync();
 			var guildRecruits = allRecruits.FindAll(recruit => recruit.GuildId == player.GuildId);
-
 
 			List<GameTask> playerTasks = new();
 
@@ -842,6 +846,52 @@ namespace UniverseRift.Controllers.Buildings.Guilds
 			var guildPlayerSaveContainer = new GuildPlayerSaveContainer(guild, guildRecruits, playerTasks);
 			answer.Result = _jsonConverter.Serialize(guildPlayerSaveContainer);
 			return answer;
+		}
+
+		private async Task GiveRewardAsync(GuildData guild, int currentBoss)
+		{
+			if (guild == null)
+			{
+				return;
+			}
+
+
+			var container = _commonDictionaries.GuildBossContainers["MainBosses"];
+			if (container == null)
+			{
+				return;
+			}
+
+
+			if (currentBoss < 0 || currentBoss >= container.Missions.Count)
+			{
+				return;
+			}
+
+			var mission = container.Missions[currentBoss];
+			if (mission.RewardModels.Count == 0)
+			{
+				return;
+			}
+
+			var recruits = await _context.RecruitDatas.ToListAsync();
+
+			var guildRecruits = recruits.FindAll(recruit => recruit.GuildId == guild.Id);
+			guildRecruits.Sort(new GuildRecruitDamageComparer());
+
+			for (var i = 0; i < guildRecruits.Count; i++)
+			{
+				int place = i + 1;
+				var bossReward = mission.RewardModels.Find(reward => place >= reward.StartIndex && place <= reward.EndIndex);
+
+				bossReward ??= mission.RewardModels[^1];
+
+				// TODO проверить стоит ли создавать письма сразу для всех
+				await _mailController.CreateLetterWithReward(guildRecruits[i].PlayerId,
+					"GuildBossWinMessageLabel",
+					"GuildBossWin",
+					bossReward.Reward);
+			}
 		}
 
 		[HttpPost]

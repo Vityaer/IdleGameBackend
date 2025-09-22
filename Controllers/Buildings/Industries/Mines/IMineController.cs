@@ -3,5 +3,6 @@
     public interface IMineController
     {
         Task OnRegistrationPlayer(int playerId);
+        Task RefreshMissions(int playerId);
     }
 }

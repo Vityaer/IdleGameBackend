@@ -75,8 +75,8 @@ namespace UniverseRift.Controllers.Buildings.Arenas
             
             if (simpleArena == null)
             {
-				var now = DateTime.UtcNow;
-				simpleArena = new ArenaSeason(ArenaType.Simple, now.ToString());
+                var now = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
+				simpleArena = new ArenaSeason(ArenaType.Simple, now);
 
                 await _context.ArenaSeasons.AddAsync(simpleArena);
                 await _context.SaveChangesAsync();
@@ -115,10 +115,11 @@ namespace UniverseRift.Controllers.Buildings.Arenas
                         RewardJSON = m_jsonConverter.Serialize(arenaRewardModel.Reward),
 						IsOpened = false,
 						IsRewardReceived = false,
-						CreateDateTime = now.ToString(),
+						CreateDateTime = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat),
 						Topic = "SimpleArenaRewardTopic",
                         Message = "SimpleArenaRewardMessage",
                         SenderPlayerId = -1,
+                        IsAdmin = true,
 					};
 
                     allArenaFighters[i].Refresh();
@@ -126,8 +127,7 @@ namespace UniverseRift.Controllers.Buildings.Arenas
 
 				_context.ArenaSeasons.Remove(simpleArena);
 
-				now = DateTime.UtcNow;
-				simpleArena = new ArenaSeason(ArenaType.Simple, now.ToString());
+				simpleArena = new ArenaSeason(ArenaType.Simple, DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat));
 
 				await _context.ArenaSeasons.AddAsync(simpleArena);
 

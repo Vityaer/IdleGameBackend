@@ -1,0 +1,802 @@
+[
+  {
+    "Key": "MagicCircleBuildingModel",
+    "Value": {
+      "$type": "Models.City.MagicCircles.MagicCircleBuildingModel, Assembly-CSharp",
+      "HireCost": {
+        "Type": 15,
+        "Amount": {
+          "Mantissa": 1.0,
+          "E10": 0
+        }
+      },
+      "SubjectChances": {
+        "Splinter": 100.0,
+        "Resource": 50.0
+      },
+      "PosibleRewardData": {
+        "Resources": [
+          {
+            "Value": {
+              "Type": 14,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 3
+              }
+            },
+            "Posibility": 80
+          },
+          {
+            "Value": {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            "Posibility": 40
+          }
+        ],
+        "Items": [],
+        "Splinters": [
+          {
+            "Value": {
+              "Id": "CatcherSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "DragonSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "FishguardSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "ImpSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "KnightSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "NosedmanSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "PiBoySplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "PiBoySplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "PracticeDummySplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "SnakeSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "SpikeSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "TreetorSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "WolfSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "Value": {
+              "Id": "WedgerSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          }
+        ],
+        "Objects": [
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Type": 14,
+              "Amount": {
+                "Mantissa": 10.0,
+                "E10": 0
+              }
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 50.0,
+                "E10": 3
+              }
+            },
+            "Posibility": 80
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.ResourceData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 15.0,
+                "E10": 0
+              }
+            },
+            "Posibility": 40
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "CatcherSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "DragonSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "FishguardSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "ImpSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "KnightSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "NosedmanSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "PiBoySplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "PiBoySplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "PracticeDummySplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "SnakeSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "SpikeSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "TreetorSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "WolfSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          },
+          {
+            "$type": "UIController.Rewards.PosibleRewards.PosibleObjectData`1[[Models.Data.Inventories.SplinterData, Assembly-CSharp]], Assembly-CSharp",
+            "Value": {
+              "Id": "WedgerSplinter",
+              "Amount": 30
+            },
+            "Posibility": 100
+          }
+        ]
+      },
+      "Id": "MagicCircleBuildingModel"
+    }
+  },
+  {
+    "Key": "MainMineBuilding",
+    "Value": {
+      "$type": "Models.City.Mines.MineBuildingModel, Assembly-CSharp",
+      "SecondRefresh": 28800,
+      "ConfigureContainers": [
+        {
+          "RequireLevel": 1,
+          "MinesMaxCount": 2,
+          "MissionsCount": 6,
+          "MissionsLevelHard": 0,
+          "MaxEnergyCount": 5
+        },
+        {
+          "RequireLevel": 3,
+          "MinesMaxCount": 2,
+          "MissionsCount": 8,
+          "MissionsLevelHard": 0,
+          "MaxEnergyCount": 6
+        },
+        {
+          "RequireLevel": 5,
+          "MinesMaxCount": 3,
+          "MissionsCount": 9,
+          "MissionsLevelHard": 0,
+          "MaxEnergyCount": 7
+        },
+        {
+          "RequireLevel": 7,
+          "MinesMaxCount": 4,
+          "MissionsCount": 11,
+          "MissionsLevelHard": 0,
+          "MaxEnergyCount": 8
+        },
+        {
+          "RequireLevel": 9,
+          "MinesMaxCount": 4,
+          "MissionsCount": 13,
+          "MissionsLevelHard": 0,
+          "MaxEnergyCount": 11
+        },
+        {
+          "RequireLevel": 11,
+          "MinesMaxCount": 5,
+          "MissionsCount": 15,
+          "MissionsLevelHard": 0,
+          "MaxEnergyCount": 13
+        },
+        {
+          "RequireLevel": 15,
+          "MinesMaxCount": 6,
+          "MissionsCount": 15,
+          "MissionsLevelHard": 0,
+          "MaxEnergyCount": 15
+        },
+        {
+          "RequireLevel": 20,
+          "MinesMaxCount": 6,
+          "MissionsCount": 15,
+          "MissionsLevelHard": 1,
+          "MaxEnergyCount": 16
+        },
+        {
+          "RequireLevel": 25,
+          "MinesMaxCount": 6,
+          "MissionsCount": 15,
+          "MissionsLevelHard": 2,
+          "MaxEnergyCount": 16
+        },
+        {
+          "RequireLevel": 35,
+          "MinesMaxCount": 6,
+          "MissionsCount": 15,
+          "MissionsLevelHard": 3,
+          "MaxEnergyCount": 16
+        },
+        {
+          "RequireLevel": 50,
+          "MinesMaxCount": 6,
+          "MissionsCount": 15,
+          "MissionsLevelHard": 4,
+          "MaxEnergyCount": 16
+        },
+        {
+          "RequireLevel": 80,
+          "MinesMaxCount": 6,
+          "MissionsCount": 15,
+          "MissionsLevelHard": 5,
+          "MaxEnergyCount": 16
+        }
+      ],
+      "Id": "MainMineBuilding"
+    }
+  },
+  {
+    "Key": "GuildBuildingModel",
+    "Value": {
+      "$type": "Models.City.Guilds.GuildBuildingModel, Assembly-CSharp",
+      "LevelContainers": [
+        {
+          "TaskPosibilityContainers": [],
+          "DailyTaskCount": 0
+        },
+        {
+          "TaskPosibilityContainers": [
+            {
+              "Rating": 1,
+              "Posibility": 100.0
+            }
+          ],
+          "DailyTaskCount": 1
+        }
+      ],
+      "Id": "GuildBuildingModel"
+    }
+  },
+  {
+    "Key": "SanctuaryBuildingModel",
+    "Value": {
+      "$type": "Models.City.Sanctuaries.SanctuaryBuildingModel, Assembly-CSharp",
+      "SimpleReplaceResource": [
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 10.0,
+            "E10": 0
+          }
+        },
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 25.0,
+            "E10": 0
+          }
+        },
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 50.0,
+            "E10": 0
+          }
+        },
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 75.0,
+            "E10": 0
+          }
+        },
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 100.0,
+            "E10": 0
+          }
+        }
+      ],
+      "ConcreteReplaceResource": [
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 25.0,
+            "E10": 0
+          }
+        },
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 50.0,
+            "E10": 0
+          }
+        },
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 75.0,
+            "E10": 0
+          }
+        },
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 100.0,
+            "E10": 0
+          }
+        },
+        {
+          "Type": 14,
+          "Amount": {
+            "Mantissa": 150.0,
+            "E10": 0
+          }
+        }
+      ],
+      "Id": "SanctuaryBuildingModel"
+    }
+  },
+  {
+    "Key": "ArenaBuildingModel",
+    "Value": {
+      "$type": "Models.City.Arena.ArenaBuildingModel, Assembly-CSharp",
+      "ArenaContainers": {
+        "Simple": {
+          "RewardModels": [
+            {
+              "PositionMax": 1,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 1500.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 1500.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 2,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 1200.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 1200.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 3,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 1000.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 1000.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 5,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 800.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 800.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 9,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 500.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 500.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 24,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 300.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 300.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 49,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 200.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 200.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 99,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 100.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 100.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 999,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 50.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 50.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "PositionMax": 999999,
+              "Reward": {
+                "Resources": [
+                  {
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 10.0,
+                      "E10": 0
+                    }
+                  }
+                ],
+                "Items": [],
+                "Splinters": [],
+                "Id": null,
+                "Objects": [
+                  {
+                    "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                    "Type": 1,
+                    "Amount": {
+                      "Mantissa": 10.0,
+                      "E10": 0
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "WorkHours": 120
+        }
+      },
+      "Id": "ArenaBuildingModel"
+    }
+  },
+  {
+    "Key": "AlchemyPanelBuildingName",
+    "Value": {
+      "$type": "Models.City.Alchemies.AlchemyPanelBuildingModel, Assembly-CSharp",
+      "Products": [],
+      "Id": "AlchemyPanelBuildingName"
+    }
+  },
+  {
+    "Key": "AlchemyPanelBuildingModel",
+    "Value": {
+      "$type": "Models.City.Alchemies.AlchemyPanelBuildingModel, Assembly-CSharp",
+      "Products": [
+        "AlchemyLittlePackProduct",
+        "AlchemyBigPackProduct"
+      ],
+      "Id": "AlchemyPanelBuildingModel"
+    }
+  }
+]

@@ -1936,3 +1936,744 @@ Start wait time: Day
 05.12.2025 17:31:35.18
 Start wait time: GameCycle
 
+05.16.2025 09:45:40.63
+Start wait time: Day
+
+05.16.2025 09:45:40.64
+Start wait time: GameCycle
+
+05.16.2025 09:46:45.55
+Start wait time: Day
+
+05.16.2025 09:46:45.55
+Start wait time: GameCycle
+
+05.16.2025 15:34:07.05
+Start wait time: Day
+
+05.16.2025 15:34:07.06
+Start wait time: GameCycle
+
+05.16.2025 16:15:09.98
+Start wait time: Day
+
+05.16.2025 16:15:09.98
+Start wait time: GameCycle
+
+05.16.2025 16:43:24.16
+Start wait time: Day
+
+05.16.2025 16:43:24.17
+Start wait time: GameCycle
+
+05.30.2025 11:05:10.14
+Start wait time: Day
+
+05.30.2025 11:05:10.15
+Start wait time: GameCycle
+
+05.31.2025 16:12:17.59
+Start wait time: Day
+
+05.31.2025 16:12:17.60
+Start wait time: GameCycle
+
+06.01.2025 09:07:58.00
+Start wait time: Day
+
+06.01.2025 09:07:58.01
+Start wait time: GameCycle
+
+06.01.2025 09:20:59.36
+Start wait time: Day
+
+06.01.2025 09:20:59.59
+Start wait time: GameCycle
+
+06.01.2025 09:24:33.91
+Start wait time: Day
+
+06.01.2025 09:24:33.92
+Start wait time: GameCycle
+
+06.01.2025 09:30:17.06
+Start wait time: Day
+
+06.01.2025 09:30:17.07
+Start wait time: GameCycle
+
+06.01.2025 09:34:35.21
+Start wait time: Day
+
+06.01.2025 09:34:35.21
+Start wait time: GameCycle
+
+06.01.2025 09:39:11.84
+Start wait time: Day
+
+06.01.2025 09:39:11.85
+Start wait time: GameCycle
+
+06.01.2025 10:18:05.51
+Start wait time: Day
+
+06.01.2025 10:18:05.51
+Start wait time: GameCycle
+
+06.01.2025 10:27:28.55
+Start wait time: Day
+
+06.01.2025 10:27:28.55
+Start wait time: GameCycle
+
+06.01.2025 10:36:30.12
+Start wait time: Day
+
+06.01.2025 10:36:30.12
+Start wait time: GameCycle
+
+06.01.2025 11:10:00.34
+Start wait time: Day
+
+06.01.2025 11:10:00.35
+Start wait time: GameCycle
+
+06.01.2025 11:13:05.67
+Start wait time: Day
+
+06.01.2025 11:13:05.67
+Start wait time: GameCycle
+
+06.01.2025 11:15:20.12
+Start wait time: Day
+
+06.01.2025 11:15:20.12
+Start wait time: GameCycle
+
+06.01.2025 17:16:45.45
+Start wait time: Day
+
+06.01.2025 17:16:45.46
+Start wait time: GameCycle
+
+06.01.2025 18:24:55.20
+Start refresh all city
+
+06.01.2025 18:24:55.55
+finish refresh all city
+
+06.01.2025 19:23:28.05
+Start wait time: Day
+
+06.01.2025 19:23:28.06
+Start wait time: GameCycle
+
+06.02.2025 17:55:28.56
+Start wait time: Day
+
+06.02.2025 17:55:28.57
+Start wait time: GameCycle
+
+06.03.2025 08:25:09.64
+Start wait time: Day
+
+06.03.2025 08:25:09.64
+Start wait time: GameCycle
+
+06.03.2025 08:29:46.52
+Start refresh all city
+
+06.03.2025 08:29:46.71
+finish refresh all city
+
+06.03.2025 11:13:12.44
+Start wait time: Day
+
+06.03.2025 11:13:12.45
+Start wait time: GameCycle
+
+06.06.2025 05:51:17.96
+Start wait time: Day
+
+06.06.2025 05:51:17.98
+Start refresh all city
+
+06.06.2025 05:51:18.00
+Start wait time: GameCycle
+
+06.06.2025 05:51:18.36
+finish refresh all city
+
+06.06.2025 05:51:18.36
+delayType: Day, value: 07.06.2025 00:00:00
+
+06.06.2025 05:51:18.37
+switch time, typeDay
+
+06.06.2025 05:51:18.37
+Start wait time: Day
+
+06.06.2025 07:05:18.08
+Start wait time: Day
+
+06.06.2025 07:05:18.10
+Start wait time: GameCycle
+
+06.06.2025 17:38:50.98
+Start wait time: Day
+
+06.06.2025 17:38:51.00
+Start wait time: GameCycle
+
+06.07.2025 07:03:05.69
+Start wait time: Day
+
+06.07.2025 07:03:05.70
+Start refresh all city
+
+06.07.2025 07:03:05.74
+Start wait time: GameCycle
+
+06.07.2025 07:03:06.10
+finish refresh all city
+
+06.07.2025 07:03:06.10
+delayType: Day, value: 08.06.2025 00:00:00
+
+06.07.2025 07:03:06.11
+switch time, typeDay
+
+06.07.2025 07:03:06.12
+Start wait time: Day
+
+06.08.2025 06:26:48.24
+Start wait time: Day
+
+06.08.2025 06:26:48.25
+Start refresh all city
+
+06.08.2025 06:26:48.28
+Start wait time: GameCycle
+
+06.08.2025 06:26:48.79
+finish refresh all city
+
+06.08.2025 06:26:48.79
+delayType: Day, value: 09.06.2025 00:00:00
+
+06.08.2025 06:26:48.79
+switch time, typeDay
+
+06.08.2025 06:26:48.80
+Start wait time: Day
+
+06.08.2025 17:21:43.17
+Start wait time: Day
+
+06.08.2025 17:21:43.18
+Start wait time: GameCycle
+
+06.08.2025 17:21:43.19
+Next game cycle
+
+06.08.2025 17:21:43.32
+delayType: GameCycle, value: 13.06.2025 00:00:00
+
+06.08.2025 17:21:43.32
+switch time, typeGameCycle
+
+06.08.2025 17:21:43.33
+Start wait time: GameCycle
+
+06.08.2025 17:34:37.10
+Start wait time: Day
+
+06.08.2025 17:34:37.10
+Start wait time: GameCycle
+
+06.08.2025 17:59:38.44
+Start wait time: Day
+
+06.08.2025 17:59:38.45
+Start wait time: GameCycle
+
+06.11.2025 18:18:52.20
+Start wait time: Day
+
+06.11.2025 18:18:52.20
+Start wait time: GameCycle
+
+06.11.2025 18:28:34.12
+Start wait time: Day
+
+06.11.2025 18:28:34.12
+Start wait time: GameCycle
+
+06.11.2025 18:32:25.36
+Start wait time: Day
+
+06.11.2025 18:32:25.36
+Start wait time: GameCycle
+
+06.12.2025 08:04:56.33
+Start wait time: Day
+
+06.12.2025 08:04:56.34
+Start wait time: GameCycle
+
+06.12.2025 21:43:52.77
+Start wait time: Day
+
+06.12.2025 21:43:52.77
+Start wait time: GameCycle
+
+06.14.2025 07:07:53.47
+Start wait time: Day
+
+06.14.2025 07:07:53.48
+Start wait time: GameCycle
+
+06.14.2025 07:15:39.95
+Start wait time: Day
+
+06.14.2025 07:15:39.96
+Start wait time: GameCycle
+
+06.14.2025 07:17:24.13
+Start wait time: Day
+
+06.14.2025 07:17:24.13
+Start wait time: GameCycle
+
+06.14.2025 07:18:37.29
+Start wait time: Day
+
+06.14.2025 07:18:37.30
+Start wait time: GameCycle
+
+06.14.2025 07:22:19.29
+Start wait time: Day
+
+06.14.2025 07:22:19.29
+Start wait time: GameCycle
+
+06.14.2025 07:26:56.57
+Start wait time: Day
+
+06.14.2025 07:26:56.58
+Start wait time: GameCycle
+
+06.14.2025 07:41:44.11
+Start wait time: Day
+
+06.14.2025 07:41:44.12
+Start wait time: GameCycle
+
+06.14.2025 07:50:50.73
+Next game cycle
+
+06.14.2025 07:52:13.58
+Next game cycle
+
+06.14.2025 07:52:17.98
+Next game cycle
+
+06.14.2025 07:52:19.57
+Next game cycle
+
+06.14.2025 07:55:34.29
+Start wait time: Day
+
+06.14.2025 07:55:34.32
+Start wait time: GameCycle
+
+06.14.2025 08:07:59.03
+Start wait time: Day
+
+06.14.2025 08:07:59.04
+Start wait time: GameCycle
+
+06.15.2025 14:18:45.00
+Start wait time: Day
+
+06.15.2025 14:18:45.01
+Start refresh all city
+
+06.15.2025 14:18:45.03
+Start wait time: GameCycle
+
+06.15.2025 14:18:45.55
+finish refresh all city
+
+06.15.2025 14:18:45.55
+delayType: Day, value: 16.06.2025 00:00:00
+
+06.15.2025 14:18:45.55
+switch time, typeDay
+
+06.15.2025 14:18:45.56
+Start wait time: Day
+
+06.21.2025 08:50:48.81
+Start wait time: Day
+
+06.21.2025 08:50:48.82
+Start refresh all city
+
+06.21.2025 08:50:48.84
+Start wait time: GameCycle
+
+06.21.2025 08:50:48.85
+Next game cycle
+
+06.21.2025 08:50:49.49
+finish refresh all city
+
+06.21.2025 08:50:49.49
+delayType: Day, value: 22.06.2025 00:00:00
+
+06.21.2025 08:50:49.49
+switch time, typeDay
+
+06.21.2025 08:50:49.51
+Start wait time: Day
+
+06.21.2025 09:40:03.90
+Start wait time: Day
+
+06.21.2025 09:40:03.92
+Start wait time: GameCycle
+
+06.21.2025 09:40:03.94
+Next game cycle
+
+06.21.2025 09:40:03.95
+delayType: GameCycle, value: 26.06.2025 00:00:00
+
+06.21.2025 09:40:03.95
+switch time, typeGameCycle
+
+06.21.2025 09:40:03.95
+Start wait time: GameCycle
+
+06.21.2025 16:54:08.35
+Start wait time: Day
+
+06.21.2025 16:54:08.36
+Start wait time: GameCycle
+
+07.27.2025 06:59:22.37
+Start wait time: Day
+
+07.27.2025 06:59:22.38
+Start refresh all city
+
+07.27.2025 06:59:22.40
+Start wait time: GameCycle
+
+07.27.2025 06:59:24.04
+finish refresh all city
+
+07.27.2025 06:59:24.04
+delayType: Day, value: 28.07.2025 00:00:00
+
+07.27.2025 06:59:24.04
+switch time, typeDay
+
+07.27.2025 06:59:24.05
+Start wait time: Day
+
+07.27.2025 08:10:43.91
+Start wait time: Day
+
+07.27.2025 08:10:43.93
+Start wait time: GameCycle
+
+07.27.2025 08:10:43.94
+Next game cycle
+
+07.27.2025 08:10:44.17
+delayType: GameCycle, value: 01.08.2025 00:00:00
+
+07.27.2025 08:10:44.17
+switch time, typeGameCycle
+
+07.27.2025 08:10:44.19
+Start wait time: GameCycle
+
+08.10.2025 13:58:57.91
+Start wait time: Day
+
+08.10.2025 13:58:57.92
+Start refresh all city
+
+08.10.2025 13:58:57.94
+Start wait time: GameCycle
+
+08.10.2025 13:58:58.93
+finish refresh all city
+
+08.10.2025 13:58:58.93
+delayType: Day, value: 11.08.2025 00:00:00
+
+08.10.2025 13:58:58.93
+switch time, typeDay
+
+08.10.2025 13:58:58.94
+Start wait time: Day
+
+08.10.2025 14:06:30.92
+Start wait time: Day
+
+08.10.2025 14:06:30.93
+Start wait time: GameCycle
+
+08.10.2025 14:06:30.95
+Next game cycle
+
+08.10.2025 14:06:31.20
+delayType: GameCycle, value: 15.08.2025 00:00:00
+
+08.10.2025 14:06:31.20
+switch time, typeGameCycle
+
+08.10.2025 14:06:31.21
+Start wait time: GameCycle
+
+08.10.2025 14:08:37.95
+Start wait time: Day
+
+08.10.2025 14:08:37.96
+Start wait time: GameCycle
+
+08.11.2025 19:44:38.86
+Start wait time: Day
+
+08.11.2025 19:44:38.86
+Start wait time: GameCycle
+
+08.11.2025 20:40:59.30
+Start wait time: Day
+
+08.11.2025 20:40:59.31
+Start wait time: GameCycle
+
+08.18.2025 05:42:40.76
+Start wait time: Day
+
+08.18.2025 05:42:40.77
+Start wait time: GameCycle
+
+08.18.2025 05:50:08.54
+Start wait time: Day
+
+08.18.2025 05:50:08.55
+Start wait time: GameCycle
+
+08.20.2025 05:33:58.35
+Start wait time: Day
+
+08.20.2025 05:33:58.36
+Start wait time: GameCycle
+
+08.21.2025 05:25:25.35
+Start wait time: Day
+
+08.21.2025 05:25:25.35
+Start wait time: GameCycle
+
+08.27.2025 18:21:47.78
+Start wait time: Day
+
+08.27.2025 18:21:47.78
+Start wait time: GameCycle
+
+08.30.2025 17:39:46.09
+Start wait time: Day
+
+08.30.2025 17:39:46.10
+Start wait time: GameCycle
+
+08.30.2025 17:55:13.15
+Start wait time: Day
+
+08.30.2025 17:55:13.16
+Start wait time: GameCycle
+
+08.31.2025 10:23:46.42
+Start wait time: Day
+
+08.31.2025 10:23:46.43
+Start wait time: GameCycle
+
+08.31.2025 12:16:03.79
+Start wait time: Day
+
+08.31.2025 12:16:03.79
+Start wait time: GameCycle
+
+08.31.2025 12:57:09.58
+Start wait time: Day
+
+08.31.2025 12:57:09.58
+Start wait time: GameCycle
+
+08.31.2025 13:09:49.32
+Start wait time: Day
+
+08.31.2025 13:09:49.33
+Start wait time: GameCycle
+
+09.07.2025 15:38:21.57
+Start wait time: Day
+
+09.07.2025 15:38:21.58
+Start wait time: GameCycle
+
+09.07.2025 17:25:04.88
+Start wait time: Day
+
+09.07.2025 17:25:04.90
+Start wait time: GameCycle
+
+09.13.2025 10:24:00.44
+Start wait time: Day
+
+09.13.2025 10:24:00.45
+Start refresh all city
+
+09.13.2025 10:24:00.49
+Start wait time: GameCycle
+
+09.13.2025 10:24:00.50
+Next game cycle
+
+09.13.2025 10:24:01.09
+finish refresh all city
+
+09.13.2025 10:24:01.09
+delayType: Day, value: 14.09.2025 00:00:00
+
+09.13.2025 10:24:01.09
+switch time, typeDay
+
+09.13.2025 10:24:01.10
+Start wait time: Day
+
+09.13.2025 11:48:11.55
+Start wait time: Day
+
+09.13.2025 11:48:11.58
+Start wait time: GameCycle
+
+09.13.2025 11:48:11.59
+Next game cycle
+
+09.13.2025 11:48:11.83
+delayType: GameCycle, value: 18.09.2025 00:00:00
+
+09.13.2025 11:48:11.83
+switch time, typeGameCycle
+
+09.13.2025 11:48:11.85
+Start wait time: GameCycle
+
+09.13.2025 11:53:51.19
+Start wait time: Day
+
+09.13.2025 11:53:51.21
+Start wait time: GameCycle
+
+09.14.2025 13:32:25.38
+Start wait time: Day
+
+09.14.2025 13:32:25.39
+Start refresh all city
+
+09.14.2025 13:32:25.44
+Start wait time: GameCycle
+
+09.14.2025 13:32:25.92
+finish refresh all city
+
+09.14.2025 13:32:25.93
+delayType: Day, value: 15.09.2025 00:00:00
+
+09.14.2025 13:32:25.93
+switch time, typeDay
+
+09.14.2025 13:32:25.94
+Start wait time: Day
+
+09.20.2025 15:38:05.53
+Start wait time: Day
+
+09.20.2025 15:38:05.54
+Start refresh all city
+
+09.20.2025 15:38:05.57
+Start wait time: GameCycle
+
+09.20.2025 15:38:06.24
+finish refresh all city
+
+09.20.2025 15:38:06.24
+delayType: Day, value: 21.09.2025 00:00:00
+
+09.20.2025 15:38:06.24
+switch time, typeDay
+
+09.20.2025 15:38:06.25
+Start wait time: Day
+
+09.21.2025 11:33:14.07
+Start wait time: Day
+
+09.21.2025 11:33:14.08
+Start refresh all city
+
+09.21.2025 11:33:14.16
+Start wait time: GameCycle
+
+09.21.2025 11:33:14.93
+finish refresh all city
+
+09.21.2025 11:33:14.93
+delayType: Day, value: 22.09.2025 00:00:00
+
+09.21.2025 11:33:14.93
+switch time, typeDay
+
+09.21.2025 11:33:14.95
+Start wait time: Day
+
+09.21.2025 11:33:42.09
+Start wait time: Day
+
+09.21.2025 11:33:42.09
+Start wait time: GameCycle
+
+09.21.2025 11:37:24.73
+Start wait time: Day
+
+09.21.2025 11:37:24.74
+Start wait time: GameCycle
+
+09.21.2025 13:22:36.24
+Start wait time: Day
+
+09.21.2025 13:22:36.25
+Start wait time: GameCycle
+
+09.21.2025 13:39:10.32
+Start wait time: Day
+
+09.21.2025 13:39:10.33
+Start wait time: GameCycle
+
+09.22.2025 17:42:46.01
+Start wait time: Day
+
+09.22.2025 17:42:46.02
+Start wait time: GameCycle
+

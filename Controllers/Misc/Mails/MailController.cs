@@ -36,7 +36,24 @@ namespace UniverseRift.Controllers.Misc.Mails
             _commonDictionaries = commonDictionaries;
         }
 
-        public async Task GetPlayerSave(int playerId, CommunicationData communicationData)
+		public async Task CreateLetterWithReward(int playerId, string topicKey, string messageKey, RewardModel rewardModel)
+		{
+			var newLetter = new LetterData
+			{
+				SenderPlayerId = -1,
+				ReceiverPlayerId = playerId,
+				Message = messageKey,
+				Topic = topicKey,
+				CreateDateTime = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat),
+				IsAdmin = true,
+				RewardJSON = _jsonConverter.Serialize(rewardModel)
+			};
+
+			await _context.LetterDatas.AddAsync(newLetter);
+			await _context.SaveChangesAsync();
+		}
+
+		public async Task GetPlayerSave(int playerId, CommunicationData communicationData)
         {
             var allLetters = await _context.LetterDatas.ToListAsync();
             var playerLetters = allLetters
@@ -178,7 +195,8 @@ namespace UniverseRift.Controllers.Misc.Mails
                 ReceiverPlayerId = otherPlayerId,
                 Message = message,
                 Topic = "PlayerMessageLabel",
-                CreateDateTime = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat)
+                CreateDateTime = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat),
+                IsAdmin = false,
             };
 
             await _context.LetterDatas.AddAsync(newLetter);
@@ -188,7 +206,6 @@ namespace UniverseRift.Controllers.Misc.Mails
             answer.Result = "Success";
             return answer;
         }
-
         
         [HttpPost]
         [Route("Chat/CreateChatMessage")]

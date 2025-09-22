@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Misc.Json;
+using Models.City.Mines;
 using Models.Data.Inventories;
+using System.Reflection;
 using UniverseRift.Contexts;
 using UniverseRift.Controllers.Buildings.Achievments;
 using UniverseRift.Controllers.Common;
@@ -56,14 +58,35 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
             var answer = new AnswerModel();
             if (!_commonDictionaries.Mines.ContainsKey(mineModelId))
             {
-                answer.Error = "Wrong data";
+                answer.Error = "Wrong data not found mineModelId";
                 return answer;
             }
 
             var mineModel = _commonDictionaries.Mines[mineModelId];
+			var mineDatas = await _context.MineDatas.ToListAsync();
 
-            var mineDatas = await _context.MineDatas.ToListAsync();
+			var playerMineData = mineDatas.Find(mine => mine.PlayerId == playerId && mine.MineId.Equals(MAIN_MINE_NAME));
+			if (playerMineData == null)
+			{
+				answer.Error = "Wrong data not found playerMineData";
+				return answer;
+			}
+
+			var mineBuildingModel = _commonDictionaries.Buildings[MAIN_MINE_NAME] as MineBuildingModel;
+			if (mineBuildingModel == null)
+			{
+				answer.Error = "Wrong data not found mineBuildingModel";
+				return answer;
+			}
+
+			var container = mineBuildingModel.GetContainer(playerMineData.Level);
+
             var playerMineDatas = mineDatas.FindAll(data => data.PlayerId == playerId);
+            if (playerMineDatas.Count == (container.MinesMaxCount + 1))
+            {
+				answer.Error = "Wrong data limit mines";
+				return answer;
+			}
 
             var typeMineDatas = playerMineDatas.FindAll(data => data.MineId == mineModelId);
             var selectRestriction = _commonDictionaries.MineRestrictions.Values.ToList()
@@ -73,7 +96,7 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
 
             if (ReferenceEquals(selectRestriction, null) || countMines == selectRestriction.MaxCount)
             {
-                answer.Error = "Wrong data";
+                answer.Error = "Wrong data Restriction";
                 return answer;
             }
 
@@ -283,27 +306,67 @@ namespace UniverseRift.Controllers.Buildings.Industries.Mines
             var newMineData = new MineData(playerId, MAIN_MINE_NAME, MAIN_MINE_PLACE_NAME);
             await _context.MineDatas.AddAsync(newMineData);
 
-            var travelLevel = newMineData.Level / 3;
-            var countTravelOpen = Math.Clamp(newMineData.Level / 2, 5, 15);
+            await _context.SaveChangesAsync();
+            await RefreshMissions(playerId);
+        }
 
-            var tavelName = $"MineTravelLevel_{travelLevel}";
-            var travel = _commonDictionaries.StorageChallenges[tavelName];
-            var mineMissions = new List<MineMissionData>(countTravelOpen);
+		public async Task RefreshMissions(int playerId)
+		{
+			var allMines = await _context.MineDatas.ToListAsync();
 
-            if (_random == null)
-                _random = new Random();
-
-            for (var i = 0; i < countTravelOpen; i++)
+            var playerMineData = allMines.Find(mine => mine.PlayerId == playerId && mine.MineId.Equals(MAIN_MINE_NAME));
+            if (playerMineData == null)
             {
-                var randIndex = _random.Next(travel.Missions.Count);
-                var mission = travel.Missions[randIndex];
-                var newMineMission = new MineMissionData(playerId, tavelName, mission);
-                mineMissions.Add(newMineMission);
+                return;
             }
 
-            await _context.MineMissionDatas.AddRangeAsync(mineMissions);
+			var mineBuildingModel = _commonDictionaries.Buildings[MAIN_MINE_NAME] as MineBuildingModel;
+            if (mineBuildingModel == null)
+            { 
+                return;
+            }
 
-            await _context.SaveChangesAsync();
-        }
-    }
+            var container = mineBuildingModel.GetContainer(playerMineData.Level);
+			var travelLevel = container.MissionsLevelHard;
+			var countTravelOpen = container.MissionsCount;
+
+            if (!_commonDictionaries.StorageChallenges.TryGetValue($"MineTravelLevel_{travelLevel}", out var travel))
+            {
+                return;
+            }
+
+			if (!_commonDictionaries.StorageChallenges.TryGetValue($"MineBossTravelLevel_{travelLevel}", out var bossTravel))
+			{
+				return;
+			}
+
+
+			var allMineMissions = await _context.MineMissionDatas.ToListAsync();
+            var playerAllMineMissions = allMineMissions.FindAll(mission => mission.PlayerId == playerId);
+            _context.MineMissionDatas.RemoveRange(playerAllMineMissions);
+			await _context.SaveChangesAsync();
+
+			var mineMissions = new List<MineMissionData>(countTravelOpen);
+
+			if (_random == null)
+				_random = new Random();
+
+			for (var i = 0; i < countTravelOpen; i++)
+			{
+				var randIndex = _random.Next(travel.Missions.Count);
+				var mission = travel.Missions[randIndex];
+				var newMineMission = new MineMissionData(playerId, $"MineTravelLevel_{travelLevel}", mission);
+				mineMissions.Add(newMineMission);
+			}
+
+			var bossRandIndex = _random.Next(bossTravel.Missions.Count);
+			var bossMission = bossTravel.Missions[bossRandIndex];
+			var newBossMineMission = new MineMissionData(playerId, $"MineBossTravelLevel_{travelLevel}", bossMission);
+            mineMissions.Add(newBossMineMission);
+
+			await _context.MineMissionDatas.AddRangeAsync(mineMissions);
+			await _context.SaveChangesAsync();
+
+		}
+	}
 }

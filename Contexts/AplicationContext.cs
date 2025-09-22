@@ -22,7 +22,6 @@ using UniverseRift.Models.Resources;
 using UniverseRift.Models.Rewards;
 using UniverseRift.Models.Tasks.SimpleTask;
 using UniverseRift.Models.Voyages;
-using Models.City.Mines;
 using UniverseRift.Models.Teams;
 
 namespace UniverseRift.Contexts

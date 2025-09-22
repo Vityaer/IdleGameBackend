@@ -17,7 +17,11 @@
   {
     "TaskIds": [
       "ChallengeTowerMissionComplete",
-      "LongAchievmentSpecialHires"
+      "LongAchievmentSpecialHires",
+      "SimpleArenaLongWins",
+      "LongGetLevelAchievment",
+      "LongForgeCreateItemsAchievment",
+      "LongHeroEvolution10Rating"
     ],
     "Id": "MainAchievments"
   },

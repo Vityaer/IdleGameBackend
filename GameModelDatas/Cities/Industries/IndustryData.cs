@@ -7,6 +7,8 @@ namespace UniverseRift.GameModelDatas.Cities.Industries
     {
         public List<MineData> Mines = new();
         public List<MineMissionData> MissionDatas = new();
-        public int MineEnergy;
-    }
+        public MineMissionData BossMissionData = new();
+		public int MineEnergy;
+        public string DateTimeCreate;
+	}
 }

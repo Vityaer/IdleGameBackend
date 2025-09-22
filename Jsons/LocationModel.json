@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "MapPrefabPath": null,
+    "MissionBackground": null,
+    "Id": "Forest"
+  },
+  {
+    "MapPrefabPath": null,
+    "MissionBackground": null,
+    "Id": "Desert"
+  },
+  {
+    "MapPrefabPath": null,
+    "MissionBackground": null,
+    "Id": "Moutains"
+  },
+  {
+    "MapPrefabPath": null,
+    "MissionBackground": null,
+    "Id": "Dungeon"
+  }
+]

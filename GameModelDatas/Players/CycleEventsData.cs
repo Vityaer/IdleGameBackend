@@ -1,11 +1,14 @@
-﻿using UniverseRift.Models.Events;
+﻿using Models;
+using UniverseRift.Models.Events;
 
 namespace UniverseRift.GameModelDatas.Players
 {
     public class CycleEventsData
     {
-        public GameEventType CurrentEventType;
-        public string StartGameCycleDateTime = string.Empty;
-        public string LastGetAlchemyDateTime = string.Empty;
-    }
+		public GameEventType CurrentEventType;
+		public string StartGameCycleDateTime = string.Empty;
+		public string LastGetAlchemyDateTime = string.Empty;
+
+		public string CurrentCycle;
+	}
 }

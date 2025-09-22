@@ -20,11 +20,116 @@
         ],
         "RewardModels": [
           {
-            "Resources": [],
-            "Items": [],
-            "Splinters": [],
-            "Id": null,
-            "Objects": []
+            "StartIndex": 1,
+            "EndIndex": 1,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 1000.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 1000.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "StartIndex": 2,
+            "EndIndex": 5,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 500.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 500.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "StartIndex": 6,
+            "EndIndex": 9,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 300.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 300.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "StartIndex": 10,
+            "EndIndex": 100,
+            "Reward": {
+              "Resources": [
+                {
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 100.0,
+                    "E10": 0
+                  }
+                }
+              ],
+              "Items": [],
+              "Splinters": [],
+              "Id": null,
+              "Objects": [
+                {
+                  "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+                  "Type": 1,
+                  "Amount": {
+                    "Mantissa": 100.0,
+                    "E10": 0
+                  }
+                }
+              ]
+            }
           }
         ]
       },
@@ -45,15 +150,7 @@
             }
           }
         ],
-        "RewardModels": [
-          {
-            "Resources": [],
-            "Items": [],
-            "Splinters": [],
-            "Id": null,
-            "Objects": []
-          }
-        ]
+        "RewardModels": []
       },
       {
         "BossModels": [
@@ -72,15 +169,7 @@
             }
           }
         ],
-        "RewardModels": [
-          {
-            "Resources": [],
-            "Items": [],
-            "Splinters": [],
-            "Id": null,
-            "Objects": []
-          }
-        ]
+        "RewardModels": []
       },
       {
         "BossModels": [
@@ -99,15 +188,7 @@
             }
           }
         ],
-        "RewardModels": [
-          {
-            "Resources": [],
-            "Items": [],
-            "Splinters": [],
-            "Id": null,
-            "Objects": []
-          }
-        ]
+        "RewardModels": []
       },
       {
         "BossModels": [
@@ -126,15 +207,7 @@
             }
           }
         ],
-        "RewardModels": [
-          {
-            "Resources": [],
-            "Items": [],
-            "Splinters": [],
-            "Id": null,
-            "Objects": []
-          }
-        ]
+        "RewardModels": []
       }
     ],
     "Id": "MainBosses"

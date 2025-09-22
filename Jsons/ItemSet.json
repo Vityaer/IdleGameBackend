@@ -1,7 +1,12 @@
 [
   {
     "Name": "Rubbish",
-    "ExtraBonuses": [],
+    "ExtraBonuses": [
+      {
+        "Name": 1,
+        "Value": 0.0
+      }
+    ],
     "Id": "Rubbish"
   },
   {
@@ -81,7 +86,20 @@
   },
   {
     "Name": "Pupil",
-    "ExtraBonuses": [],
+    "ExtraBonuses": [
+      {
+        "Name": 0,
+        "Value": 0.0
+      },
+      {
+        "Name": 1,
+        "Value": 0.0
+      },
+      {
+        "Name": 3,
+        "Value": 0.0
+      }
+    ],
     "Id": "Pupil"
   }
 ]

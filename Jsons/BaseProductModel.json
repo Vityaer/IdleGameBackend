@@ -320,6 +320,86 @@
     "Id": "PromoVoyageMarketDiamond"
   },
   {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 15,
+      "Amount": {
+        "Mantissa": 1.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 100,
+    "Cost": {
+      "Type": 23,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "SweetCycleRaceHireProduct"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 9,
+      "Amount": {
+        "Mantissa": 0.0,
+        "E10": 0
+      }
+    },
+    "CountSell": 100,
+    "Cost": {
+      "Type": 23,
+      "Amount": {
+        "Mantissa": 80.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "SweetCycleCoinFortuneProduct"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 100.0,
+        "E10": 3
+      }
+    },
+    "CountSell": 10,
+    "Cost": {
+      "Type": 1,
+      "Amount": {
+        "Mantissa": 50.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "AlchemyLittlePackProduct"
+  },
+  {
+    "$type": "Models.City.Markets.ResourceProductModel, Assembly-CSharp",
+    "Subject": {
+      "Type": 0,
+      "Amount": {
+        "Mantissa": 750.0,
+        "E10": 3
+      }
+    },
+    "CountSell": 10,
+    "Cost": {
+      "Type": 1,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "AlchemyBigPackProduct"
+  },
+  {
     "$type": "Models.City.Markets.ItemProductModel, Assembly-CSharp",
     "Subject": {
       "Id": "PupilWeapon",
@@ -333,7 +413,7 @@
         "E10": 3
       }
     },
-    "Type": 0,
+    "Type": 1,
     "Id": "PupilWeapon"
   },
   {
@@ -350,7 +430,7 @@
         "E10": 0
       }
     },
-    "Type": 0,
+    "Type": 1,
     "Id": "RubbishAmulet"
   },
   {
@@ -367,8 +447,25 @@
         "E10": 0
       }
     },
-    "Type": 0,
+    "Type": 1,
     "Id": "SweetCycleCoolWeapon"
+  },
+  {
+    "$type": "Models.City.Markets.ItemProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "TitanWeapon",
+      "Amount": 1
+    },
+    "CountSell": 1,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 50.0,
+        "E10": 0
+      }
+    },
+    "Type": 0,
+    "Id": "TitanWeaponHeroMarket"
   },
   {
     "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
@@ -475,7 +572,7 @@
   {
     "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
     "Subject": {
-      "Id": "PiBoySplinter",
+      "Id": "PitBoySplinter",
       "Amount": 30
     },
     "CountSell": 1,
@@ -543,7 +640,7 @@
   {
     "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
     "Subject": {
-      "Id": "TreetorSplinter",
+      "Id": "TreestorSplinter",
       "Amount": 30
     },
     "CountSell": 1,
@@ -594,18 +691,1361 @@
   {
     "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
     "Subject": {
-      "Id": "PiBoySplinter",
+      "Id": "CatcherSplinter",
       "Amount": 30
     },
-    "CountSell": 1,
+    "CountSell": 2,
     "Cost": {
-      "Type": 18,
+      "Type": 37,
       "Amount": {
-        "Mantissa": 100.0,
+        "Mantissa": 30.0,
         "E10": 0
       }
     },
     "Type": 2,
-    "Id": "AltarMarketHero"
+    "Id": "CatcherHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "DragonSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "DragonHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "FishguardSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "FishguardHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "ImpSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "ImpHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "KnightSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "KnightHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "NosedmanSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "NosedmanHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PitBoySplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PitBoyHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PracticeDummySplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PracticeDummyHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SnakeSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SnakeHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SpikeSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SpikeHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "TreestorSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "TreestorHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "WedgerSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "WedgerHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "WolfSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "WolfHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "AngelSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "AngelHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "BatSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "BatHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "BeeSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "BeeHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "BirdSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "BirdHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "CactusSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "CactusHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "CatSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "CatHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "DarknessDragonSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "DarknessDragonHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "DeathSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "DeathHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "DogSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "DogHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "EggSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "EggHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "FireMageSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "FireMageHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "IceMageSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "IceMageHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "GrimSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "GrimHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "LurkerSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "LurkerHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "MolleSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "MolleHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "MushroomSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "MushroomHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PetalSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PetalHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PhantomSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PhantomHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PlantSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PlantHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "RabbitSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "RabbitHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SceletonSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SceletonHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "ScorpionSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "ScorpionHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SoulHauntSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SoulHauntHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SpiderSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SpiderHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "WindMageSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "WindMageHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "WormSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "WormHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "BomberSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 37,
+      "Amount": {
+        "Mantissa": 30.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "BomberHeroMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "CatcherSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "CatcherAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "DragonSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "DragonAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "FishguardSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "FishguardAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "ImpSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "ImpAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "KnightSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "KnightAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "NosedmanSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "NosedmanAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PitBoySplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PitBoyAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PracticeDummySplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PracticeDummyAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SnakeSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SnakeAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SpikeSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SpikeAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "TreestorSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "TreestorAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "WedgerSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "WedgerAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "WolfSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "WolfAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "AngelSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "AngelAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "BatSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "BatAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "BeeSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "BeeAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "BirdSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "BirdAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "CactusSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "CactusAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "CatSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "CatAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "DarknessDragonSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "DarknessDragonAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "DeathSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "DeathAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "DogSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "DogAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "EggSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "EggAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "FireMageSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "FireMageAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "IceMageSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "IceMageAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "GrimSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "GrimAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "LurkerSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "LurkerAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "MolleSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "MolleAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "MushroomSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "MushroomAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PetalSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PetalAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PhantomSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PhantomAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "PlantSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "PlantAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "RabbitSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "RabbitAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SceletonSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SceletonAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "ScorpionSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "ScorpionAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SoulHauntSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SoulHauntAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "SpiderSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "SpiderAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "WindMageSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "WindMageAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "WormSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "WormAltarMarketProduct"
+  },
+  {
+    "$type": "Models.City.Markets.SplinterProductModel, Assembly-CSharp",
+    "Subject": {
+      "Id": "BomberSplinter",
+      "Amount": 30
+    },
+    "CountSell": 2,
+    "Cost": {
+      "Type": 18,
+      "Amount": {
+        "Mantissa": 300.0,
+        "E10": 0
+      }
+    },
+    "Type": 2,
+    "Id": "BomberAltarMarketProduct"
   }
 ]

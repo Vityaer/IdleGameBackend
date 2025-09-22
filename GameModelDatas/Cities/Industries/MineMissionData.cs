@@ -10,7 +10,6 @@ namespace UniverseRift.GameModelDatas.Cities.Industries
         public string StorageMissionContainerId { get; set; }
         public string MissionId { get; set; } = string.Empty;
         public string UnitsStateJSON { get; set; } = string.Empty;
-        public string DateTimeCreate { get; set; } = string.Empty;
         public bool IsComplete { get; set; }
 
         public MineMissionData()
@@ -23,7 +22,6 @@ namespace UniverseRift.GameModelDatas.Cities.Industries
             IsComplete = false;
             StorageMissionContainerId = storageMissionContainerId;
             MissionId = missionModel.Name;
-            DateTimeCreate = DateTime.UtcNow.ToString(Constants.Common.DateTimeFormat);
         }
     }
 }

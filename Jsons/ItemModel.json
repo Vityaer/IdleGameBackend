@@ -5,7 +5,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 32.0
+        "Value": 0.0
       }
     ],
     "Rating": "Common",
@@ -17,7 +17,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 5.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -29,7 +29,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 11.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -41,7 +41,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 0.2
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -53,7 +53,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 51.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -65,7 +65,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 8.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -77,7 +77,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 18.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -89,7 +89,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 1.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -101,7 +101,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 82.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -113,7 +113,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 13.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -125,7 +125,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 29.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -137,7 +137,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 1.25
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -149,7 +149,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 131.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -161,7 +161,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 21.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -173,7 +173,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 46.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -185,7 +185,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 1.563
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -197,7 +197,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 210.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -209,7 +209,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 74.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -221,7 +221,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 34.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -233,7 +233,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 1.954
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -245,7 +245,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 336.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -257,7 +257,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 118.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -269,7 +269,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 54.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -281,7 +281,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 2.443
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -293,7 +293,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 538.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -305,7 +305,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 189.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -317,7 +317,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 86.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -329,7 +329,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 3.054
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -341,7 +341,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 861.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -353,7 +353,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 302.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -365,7 +365,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 138.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -377,7 +377,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 3.818
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -389,7 +389,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 1378.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -401,7 +401,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 483.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -413,7 +413,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 221.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -425,7 +425,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 4.773
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -437,7 +437,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 2205.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -449,7 +449,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 773.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -461,7 +461,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 354.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -473,7 +473,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 5.966
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -485,7 +485,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 3528.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -497,7 +497,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 1237.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -509,7 +509,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 566.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -521,7 +521,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 7.458
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -533,7 +533,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 5645.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -545,7 +545,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 1979.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -557,7 +557,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 906.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -569,7 +569,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 9.323
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -581,7 +581,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 9032.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -593,7 +593,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 3166.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -605,7 +605,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 1450.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -617,7 +617,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 11.654
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -629,7 +629,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 14451.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -641,7 +641,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 5066.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -653,7 +653,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 2320.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -665,7 +665,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 14.568
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -677,7 +677,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 23122.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -689,7 +689,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 8106.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -701,7 +701,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 3712.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -713,7 +713,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 18.21
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -725,7 +725,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 36995.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -737,7 +737,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 12970.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -749,7 +749,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 5939.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -761,7 +761,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 22.763
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -773,7 +773,7 @@
     "Bonuses": [
       {
         "Name": 0,
-        "Count": 11.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -785,7 +785,7 @@
     "Bonuses": [
       {
         "Name": 1,
-        "Count": 8.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -797,7 +797,7 @@
     "Bonuses": [
       {
         "Name": 3,
-        "Count": 6.0
+        "Value": 0.0
       }
     ],
     "Rating": null,
@@ -809,7 +809,7 @@
     "Bonuses": [
       {
         "Name": 10,
-        "Count": 0.01
+        "Value": 0.0
       }
     ],
     "Rating": null,

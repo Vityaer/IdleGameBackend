@@ -89,7 +89,7 @@
           ]
         },
         "Name": "1",
-        "Location": null,
+        "Location": "Desert",
         "Units": [
           {
             "Id": 0,
@@ -217,7 +217,7 @@
           ]
         },
         "Name": "1",
-        "Location": null,
+        "Location": "Dungeon",
         "Units": [
           {
             "Id": 0,

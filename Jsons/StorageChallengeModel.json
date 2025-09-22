@@ -60,11 +60,28 @@
           }
         ],
         "WinReward": {
-          "Resources": [],
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 125.0,
+                "E10": 0
+              }
+            }
+          ],
           "Items": [],
           "Splinters": [],
           "Id": null,
-          "Objects": []
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 125.0,
+                "E10": 0
+              }
+            }
+          ]
         },
         "HeroRestrictions": null
       },
@@ -85,11 +102,28 @@
           }
         ],
         "WinReward": {
-          "Resources": [],
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 150.0,
+                "E10": 0
+              }
+            }
+          ],
           "Items": [],
           "Splinters": [],
           "Id": null,
-          "Objects": []
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 150.0,
+                "E10": 0
+              }
+            }
+          ]
         },
         "HeroRestrictions": null
       },
@@ -121,11 +155,28 @@
           }
         ],
         "WinReward": {
-          "Resources": [],
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 175.0,
+                "E10": 0
+              }
+            }
+          ],
           "Items": [],
           "Splinters": [],
           "Id": null,
-          "Objects": []
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 175.0,
+                "E10": 0
+              }
+            }
+          ]
         },
         "HeroRestrictions": null
       },
@@ -136,6 +187,90 @@
           {
             "Id": 0,
             "HeroId": "Nosedman",
+            "Level": 50,
+            "Rating": 1,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 200.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 200.0,
+                "E10": 0
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Snake",
+            "Level": 50,
+            "Rating": 1,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 225.0,
+                "E10": 0
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 225.0,
+                "E10": 0
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "ChallengeTowerMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Treestor",
             "Level": 50,
             "Rating": 1,
             "Stage": 0,
@@ -177,56 +312,6 @@
         "Units": [
           {
             "Id": 0,
-            "HeroId": "Snake",
-            "Level": 50,
-            "Rating": 1,
-            "Stage": 0,
-            "CurrentBreakthrough": 0,
-            "Costume": {
-              "Items": null
-            }
-          }
-        ],
-        "WinReward": {
-          "Resources": [],
-          "Items": [],
-          "Splinters": [],
-          "Id": null,
-          "Objects": []
-        },
-        "HeroRestrictions": null
-      },
-      {
-        "Name": "ChallengeTowerMission",
-        "Location": null,
-        "Units": [
-          {
-            "Id": 0,
-            "HeroId": "Treestor",
-            "Level": 50,
-            "Rating": 1,
-            "Stage": 0,
-            "CurrentBreakthrough": 0,
-            "Costume": {
-              "Items": null
-            }
-          }
-        ],
-        "WinReward": {
-          "Resources": [],
-          "Items": [],
-          "Splinters": [],
-          "Id": null,
-          "Objects": []
-        },
-        "HeroRestrictions": null
-      },
-      {
-        "Name": "ChallengeTowerMission",
-        "Location": null,
-        "Units": [
-          {
-            "Id": 0,
             "HeroId": "Wedger",
             "Level": 150,
             "Rating": 1,
@@ -249,11 +334,28 @@
           }
         ],
         "WinReward": {
-          "Resources": [],
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 275.0,
+                "E10": 0
+              }
+            }
+          ],
           "Items": [],
           "Splinters": [],
           "Id": null,
-          "Objects": []
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 275.0,
+                "E10": 0
+              }
+            }
+          ]
         },
         "HeroRestrictions": null
       },
@@ -285,11 +387,28 @@
           }
         ],
         "WinReward": {
-          "Resources": [],
+          "Resources": [
+            {
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 290.0,
+                "E10": 0
+              }
+            }
+          ],
           "Items": [],
           "Splinters": [],
           "Id": null,
-          "Objects": []
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 1,
+              "Amount": {
+                "Mantissa": 290.0,
+                "E10": 0
+              }
+            }
+          ]
         },
         "HeroRestrictions": null
       },
@@ -5556,7 +5675,5229 @@
     "Id": "MineTravelLevel_0"
   },
   {
-    "Missions": [],
+    "Missions": [
+      {
+        "Name": "MineTravelMissionImp",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 1,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionCatcher",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Catcher",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionDragon",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Dragon",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionKnight",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Knight",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      }
+    ],
     "Id": "MineTravelLevel_1"
+  },
+  {
+    "Missions": [
+      {
+        "Name": "MineTravelMissionImp",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 1,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionCatcher",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Catcher",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionDragon",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Dragon",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionKnight",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Knight",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      }
+    ],
+    "Id": "MineBossTravelLevel_0"
+  },
+  {
+    "Missions": [
+      {
+        "Name": "MineTravelMissionImp",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 1,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionCatcher",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Catcher",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionDragon",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Dragon",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMissionKnight",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Knight",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      },
+      {
+        "Name": "MineTravelMission",
+        "Location": null,
+        "Units": [
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          },
+          {
+            "Id": 0,
+            "HeroId": "Imp",
+            "Level": 30,
+            "Rating": 3,
+            "Stage": 0,
+            "CurrentBreakthrough": 0,
+            "Costume": {
+              "Items": null
+            }
+          }
+        ],
+        "WinReward": {
+          "Resources": [
+            {
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ],
+          "Items": [],
+          "Splinters": [],
+          "Id": null,
+          "Objects": [
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 17,
+              "Amount": {
+                "Mantissa": 6.0,
+                "E10": 0
+              }
+            },
+            {
+              "$type": "Models.Data.Inventories.ResourceData, Assembly-CSharp",
+              "Type": 0,
+              "Amount": {
+                "Mantissa": 30.0,
+                "E10": 3
+              }
+            }
+          ]
+        },
+        "HeroRestrictions": null
+      }
+    ],
+    "Id": "MineBossTravelLevel_1"
   }
 ]

@@ -20,7 +20,7 @@
   {
     "SplinterType": 0,
     "ModelId": "Imp",
-    "RequireCount": 0,
+    "RequireCount": 30,
     "Id": "ImpSplinter"
   },
   {
@@ -39,7 +39,7 @@
     "SplinterType": 0,
     "ModelId": "PitBoy",
     "RequireCount": 30,
-    "Id": "PiBoySplinter"
+    "Id": "PitBoySplinter"
   },
   {
     "SplinterType": 0,
@@ -63,7 +63,7 @@
     "SplinterType": 0,
     "ModelId": "Treestor",
     "RequireCount": 30,
-    "Id": "TreetorSplinter"
+    "Id": "TreestorSplinter"
   },
   {
     "SplinterType": 0,
@@ -78,15 +78,165 @@
     "Id": "WolfSplinter"
   },
   {
-    "SplinterType": 1,
-    "ModelId": "TitanArmor",
-    "RequireCount": 50,
-    "Id": "TitanArmorSplinter"
+    "SplinterType": 0,
+    "ModelId": "Angel",
+    "RequireCount": 30,
+    "Id": "AngelSplinter"
   },
   {
-    "SplinterType": 1,
-    "ModelId": "TitanWeapon",
-    "RequireCount": 50,
-    "Id": "TitanWeaponSplinter"
+    "SplinterType": 0,
+    "ModelId": "Bat",
+    "RequireCount": 30,
+    "Id": "BatSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Bee",
+    "RequireCount": 30,
+    "Id": "BeeSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Bird",
+    "RequireCount": 30,
+    "Id": "BirdSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Cactus",
+    "RequireCount": 30,
+    "Id": "CactusSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Cat",
+    "RequireCount": 30,
+    "Id": "CatSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "DarknessDragon",
+    "RequireCount": 30,
+    "Id": "DarknessDragonSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Death",
+    "RequireCount": 30,
+    "Id": "DeathSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Dog",
+    "RequireCount": 30,
+    "Id": "DogSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Egg",
+    "RequireCount": 30,
+    "Id": "EggSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "FireMage",
+    "RequireCount": 30,
+    "Id": "FireMageSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "IceMage",
+    "RequireCount": 30,
+    "Id": "IceMageSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Grim",
+    "RequireCount": 30,
+    "Id": "GrimSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Lurker",
+    "RequireCount": 30,
+    "Id": "LurkerSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Molle",
+    "RequireCount": 30,
+    "Id": "MolleSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Mushroom",
+    "RequireCount": 30,
+    "Id": "MushroomSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Petal",
+    "RequireCount": 30,
+    "Id": "PetalSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Phantom",
+    "RequireCount": 30,
+    "Id": "PhantomSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Plant",
+    "RequireCount": 30,
+    "Id": "PlantSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Rabbit",
+    "RequireCount": 30,
+    "Id": "RabbitSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Sceleton",
+    "RequireCount": 30,
+    "Id": "SceletonSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Scorpion",
+    "RequireCount": 30,
+    "Id": "ScorpionSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "SoulHaunt",
+    "RequireCount": 30,
+    "Id": "SoulHauntSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Spider",
+    "RequireCount": 30,
+    "Id": "SpiderSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "WindMage",
+    "RequireCount": 30,
+    "Id": "WindMageSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Worm",
+    "RequireCount": 30,
+    "Id": "WormSplinter"
+  },
+  {
+    "SplinterType": 0,
+    "ModelId": "Bomber",
+    "RequireCount": 30,
+    "Id": "BomberSplinter"
   }
 ]

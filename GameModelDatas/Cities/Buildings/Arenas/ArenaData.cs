@@ -10,5 +10,10 @@ namespace UniverseRift.GameModelDatas.Cities.Buildings
         public List<ArenaPlayerData> Opponents = new();
         public Dictionary<int, PlayerData> PlayersData = new();
 		public ArenaGeneralData ArenaGeneralData = new();
+
+        public ArenaData()
+        {
+            ArenaGeneralData = new();
+		}
 	}
 }
